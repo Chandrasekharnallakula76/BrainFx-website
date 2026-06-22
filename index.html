@@ -220,47 +220,50 @@
       }
     </style>
     <style>
+      .provider-dropdown,
       .assessment-dropdown {
-        max-height: 80vh;
+        max-height: 38rem;
         overflow: visible;
+        border-radius: 1.4rem;
+        background: linear-gradient(180deg, #eaf5ff 0%, #f6fbff 100%);
+        box-shadow: 0 22px 44px rgba(11, 95, 149, 0.16);
+        padding: 1rem;
       }
 
+      .provider-dropdown .provider-cards,
       .assessment-dropdown .assessment-cards {
-        max-height: calc(80vh - 20px);
+        max-height: 34rem;
         overflow-y: auto;
         overflow-x: hidden;
         scroll-behavior: smooth;
+        padding-right: 0.35rem;
+        padding-bottom: 0.4rem;
 
-        padding-bottom: 20px; /* space at bottom */
-
-        /* Firefox */
         scrollbar-width: none;
       }
 
-      /* Chrome, Edge, Safari */
+      .provider-dropdown .provider-cards::-webkit-scrollbar,
       .assessment-dropdown .assessment-cards::-webkit-scrollbar {
         display: none;
       }
     </style>
     <style>
+      .provider-dropdown,
       .assessment-dropdown {
-        max-height: 80vh;
+        max-height: 38rem;
         overflow: visible;
       }
 
+      .provider-dropdown .provider-cards,
       .assessment-dropdown .assessment-cards {
-        max-height: calc(80vh - 20px);
+        max-height: 34rem;
         overflow-y: auto;
         overflow-x: hidden;
         scroll-behavior: smooth;
-
-        padding-bottom: 20px; /* space at bottom */
-
-        /* Firefox */
         scrollbar-width: none;
       }
 
-      /* Chrome, Edge, Safari */
+      .provider-dropdown .provider-cards::-webkit-scrollbar,
       .assessment-dropdown .assessment-cards::-webkit-scrollbar {
         display: none;
       }
@@ -408,6 +411,34 @@
                     <a href="about.html">
                       <i class="fas fa-user"></i> <span>About</span>
                     </a>
+                    <a href="providers.html">
+                      <i class="fab fa-product-hunt"></i> <span>Provider</span>
+                    </a>
+                    <div class="horizental-line"></div>
+
+                    <div class="submenu">
+                      <a href="physicians.html">
+                        <i class="fas fa-user-doctor"></i>
+                        <span>Physicians</span>
+                      </a>
+                      <a href="rehabilitation-acute.html">
+                        <i class="fa-solid fa-house-medical"></i>
+                        <span>Rehabilitation &amp; Acute</span>
+                      </a>
+                      <a href="senior-care.html">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                        <span>Senior Care</span>
+                      </a>
+                      <a href="employers.html">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <span>Employers</span>
+                      </a>
+                      <a href="athletics.html">
+                        <i class="fa-solid fa-person-running"></i>
+                        <span>Athletics</span>
+                      </a>
+                    </div>
+                    <div class="horizental-line"></div>
                     <a href="assessments-training.html">
                       <i class="fas fa-chalkboard-teacher"></i>
                       <span>Assessments</span>
@@ -446,6 +477,102 @@
                         <i class="fas fa-sharp fa-solid fa-user"></i> About
                       </span>
                     </a>
+                    <div class="nav-link-wrapper">
+                      <a href="providers.html">
+                        <span class="nav-link provider">
+                          <i class="fa-brands fa-product-hunt"></i> Provider
+                        </span>
+                      </a>
+                      <div class="dropdown provider-dropdown">
+                        <div class="arrow"></div>
+                        <div class="provider-cards">
+                          <a href="physicians.html">
+                            <div class="provider-card">
+                              <div class="image-container">
+                                <i class="fa-solid fa-user-doctor"></i>
+                              </div>
+                              <div class="card-text-main">
+                                <h3>Physicians</h3>
+                                <p>
+                                  Physicians carefully diagnose and effectively
+                                  treat health conditions.
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="rehabilitation-acute.html">
+                            <div class="provider-card">
+                              <div class="image-container">
+                                <i class="fa-solid fa-house-medical"></i>
+                              </div>
+                              <div class="card-text-main">
+                                <h3>Rehabilitation &amp; Acute</h3>
+                                <p>
+                                  Rehabilitation and acute care focus on
+                                  enhancing patient recovery.
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="#">
+                            <div class="provider-card">
+                              <div class="image-container">
+                                <i class="fa-solid fa-hospital"></i>
+                              </div>
+                              <div class="card-text-main">
+                                <h3>Health Care Organizations</h3>
+                                <p>
+                                  Health care organizations can use BrainFx to
+                                  support integrated care and service planning.
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="senior-care.html">
+                            <div class="provider-card">
+                              <div class="image-container">
+                                <i class="fa-solid fa-hand-holding-heart"></i>
+                              </div>
+                              <div class="card-text-main">
+                                <h3>Senior Care</h3>
+                                <p>
+                                  Senior care supports comfort, safety, and
+                                  well-being for older adults.
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="employers.html">
+                            <div class="provider-card">
+                              <div class="image-container">
+                                <i class="fa-solid fa-user-tie"></i>
+                              </div>
+                              <div class="card-text-main">
+                                <h3>Employers</h3>
+                                <p>
+                                  Employers benefit from practical cognitive
+                                  insights that support workforce health.
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="athletics.html">
+                            <div class="provider-card">
+                              <div class="image-container">
+                                <i class="fa-solid fa-person-running"></i>
+                              </div>
+                              <div class="card-text-main">
+                                <h3>Athletics</h3>
+                                <p>
+                                  Athletics programs can use BrainFx to support
+                                  performance and recovery decisions.
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                     <!-- Assessment & Training nav-link with special class 'assessment' -->
                     <div class="nav-link-wrapper">
                       <a href="assessments-training.html">
