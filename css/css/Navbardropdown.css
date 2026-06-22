@@ -1,0 +1,136 @@
+/* Container for all cards */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 990px) {
+  .container {
+    display: none;
+  }
+}
+
+/* Row container for cards */
+.row {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  gap: 30px;
+}
+
+/* Each card */
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 340px; /* default width */
+  padding: 20px;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+  text-decoration: none; /* Remove underline on links */
+  color: inherit; /* Inherit text color */
+}
+
+/* Override width for Rehabilitation card */
+.card.rehabilitation {
+  width: 360px;
+}
+
+/* Hover effect */
+.card:hover {
+  background-color: rgba(239, 211, 249, 0.6);
+}
+
+/* Title styling */
+.card p.title {
+  font-size: 20px;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Title color can be hover */
+/* .card:hover p.title {
+  color: rgb(223, 154, 248);
+} */
+/* Color change on hover */
+
+/* Description styling */
+.card p.description {
+  color: #696969;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+/* Second row container (single card) */
+.second-row {
+  margin-top: 20px;
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 1300px) {
+  .mobile-only {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name-link {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    padding: 5px;
+    margin: 2px 0;
+    border-radius: 3px;
+    font-size: 16px;
+  }
+
+  .name-link:hover {
+    color: #000109;
+  }
+}
+.name-link.current {
+  color: #000000 !important; /* Always blue */
+}
+
+/* Hide on larger screens */
+@media (min-width: 991px) {
+  .mobile-only {
+    display: none;
+  }
+}
+
+.nav-dropdown-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 100vw !important;
+  transform: translateX(-38%);
+  left: 0;
+  z-index: 10;
+  background-color: white;
+  margin-top: 8px;
+  padding: 20px;
+}
+@media (max-width: 1250px) {
+  .nav-dropdown-list {
+    transform: translateX(-36%); /* Adjust to -30% for mobile view */
+  }
+}
+@media (max-width: 1150px) {
+  .nav-dropdown-list {
+    transform: translateX(-34%); /* Adjust to -30% for mobile view */
+  }
+}
+@media (max-width: 1100px) {
+  .nav-dropdown-list {
+    transform: translateX(-33%); /* Adjust to -30% for mobile view */
+  }
+}
+@media (max-width: 1050px) {
+  .nav-dropdown-list {
+    transform: translateX(-30%); /* Adjust to -30% for mobile view */
+  }
+}
+@media (max-width: 1000px) {
+  .nav-dropdown-list {
+    display: none;
+  }
+}

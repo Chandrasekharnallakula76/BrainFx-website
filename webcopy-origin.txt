@@ -1,0 +1,548 @@
+Uri: https://brainfx.webflow.io/
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\index.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/about
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\about.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/assessments-training
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\assessments-training.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/athletics
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\athletics.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/become-an-assessor
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\become-an-assessor.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/blog
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\blog.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/blog?96e52532_page=1
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\blog-2.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/blog?96e52532_page=2
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\blog-1.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/brainfx-philosophy
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\brainfx-philosophy.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/brainfx-training
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\brainfx-training.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/Comprehensive
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\Comprehensive.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/contact
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\contact.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/employers
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\employers.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/faq
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\faq.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/login
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\login.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/neurofunction-consultancy
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\neurofunction-consultancy.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/physicians
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\physicians.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/pricing
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\pricing.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/privacy-policy
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\privacy-policy.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/providers
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\providers.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/rehabilitation-acute
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\rehabilitation-acute.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/request-a-demo
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\request-a-demo.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/research-services
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\research-services.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/research-with-brainfx
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\research-with-brainfx.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/scientific-validation
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\scientific-validation.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/screen-track
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\screen-track.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/senior-care
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\senior-care.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/study-management
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\study-management.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/telehealth
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\telehealth.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/terms-conditions
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\terms-conditions.html
+Content Type: text/html
+
+Uri: https://brainfx.webflow.io/therapeutics-development
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\therapeutics-development.html
+Content Type: text/html
+
+Uri: https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsload@1/cmsload.js
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\npm\@finsweet\attributes-cmsload@1\cmsload.js
+Content Type: application/javascript
+
+Uri: https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\npm\swiper@11\swiper-bundle.min.css
+Content Type: text/css
+
+Uri: https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\npm\swiper@11\swiper-bundle.min.js
+Content Type: application/javascript
+
+Uri: https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\npm\swiper@8\swiper-bundle.min.css
+Content Type: text/css
+
+Uri: https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\npm\swiper@8\swiper-bundle.min.js
+Content Type: application/javascript
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/6760858fd1c261f9adc849f2_pexels-photo-1103970-p-1080.webp
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\6760858fd1c261f9adc849f2_pexels-photo-1103970-p-1080.webp
+Content Type: image/webp
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/6760858fd1c261f9adc849f2_pexels-photo-1103970-p-1600.webp
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\6760858fd1c261f9adc849f2_pexels-photo-1103970-p-1600.webp
+Content Type: image/webp
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/6760858fd1c261f9adc849f2_pexels-photo-1103970-p-2000.webp
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\6760858fd1c261f9adc849f2_pexels-photo-1103970-p-2000.webp
+Content Type: image/webp
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/6760858fd1c261f9adc849f2_pexels-photo-1103970-p-500.webp
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\6760858fd1c261f9adc849f2_pexels-photo-1103970-p-500.webp
+Content Type: image/webp
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/6760858fd1c261f9adc849f2_pexels-photo-1103970-p-800.webp
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\6760858fd1c261f9adc849f2_pexels-photo-1103970-p-800.webp
+Content Type: image/webp
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/6760858fd1c261f9adc849f2_pexels-photo-1103970.webp
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\6760858fd1c261f9adc849f2_pexels-photo-1103970.webp
+Content Type: image/webp
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676086d89f30f94c51a79fc5_Satoshi-Regular.otf
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676086d89f30f94c51a79fc5_Satoshi-Regular.otf
+Content Type: font/otf
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676086f8229113941b3af5f3_Satoshi-Bold.otf
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676086f8229113941b3af5f3_Satoshi-Bold.otf
+Content Type: font/otf
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/6761bd93c76a8508c633af32_Group-of-successful-professional-clinicians-in-lab.jpg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\6761bd93c76a8508c633af32_Group-of-successful-professional-clinicians-in-lab.jpg
+Content Type: image/jpeg
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676207abe94cde4c85ba7716_Doctor and patient hero image.jpg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676207abe94cde4c85ba7716_Doctor and patient hero image.jpg
+Content Type: image/jpeg
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/6762601085e71791b961839d_BrainFX App-p-1080.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\6762601085e71791b961839d_BrainFX App-p-1080.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/6762601085e71791b961839d_BrainFX App-p-500.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\6762601085e71791b961839d_BrainFX App-p-500.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/6762601085e71791b961839d_BrainFX App-p-800.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\6762601085e71791b961839d_BrainFX App-p-800.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/6762601085e71791b961839d_BrainFX App.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\6762601085e71791b961839d_BrainFX App.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/67626a25b902d3b179d29236_Woman working on a laptop.jpg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\67626a25b902d3b179d29236_Woman working on a laptop.jpg
+Content Type: image/jpeg
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/67626e0e14d44ace8f231e15_Portrait Female-Doctor.jpg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\67626e0e14d44ace8f231e15_Portrait Female-Doctor.jpg
+Content Type: image/jpeg
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676294c48de25787020da83c_Doctor discuss rendgens in lab-p-1080.jpg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676294c48de25787020da83c_Doctor discuss rendgens in lab-p-1080.jpg
+Content Type: image/jpg
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676294c48de25787020da83c_Doctor discuss rendgens in lab-p-1600.jpg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676294c48de25787020da83c_Doctor discuss rendgens in lab-p-1600.jpg
+Content Type: image/jpg
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676294c48de25787020da83c_Doctor discuss rendgens in lab-p-2000.jpg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676294c48de25787020da83c_Doctor discuss rendgens in lab-p-2000.jpg
+Content Type: image/jpg
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676294c48de25787020da83c_Doctor discuss rendgens in lab-p-2600.jpg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676294c48de25787020da83c_Doctor discuss rendgens in lab-p-2600.jpg
+Content Type: image/jpg
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676294c48de25787020da83c_Doctor discuss rendgens in lab-p-3200.jpg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676294c48de25787020da83c_Doctor discuss rendgens in lab-p-3200.jpg
+Content Type: image/jpg
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676294c48de25787020da83c_Doctor discuss rendgens in lab-p-500.jpg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676294c48de25787020da83c_Doctor discuss rendgens in lab-p-500.jpg
+Content Type: image/jpg
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676294c48de25787020da83c_Doctor discuss rendgens in lab-p-800.jpg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676294c48de25787020da83c_Doctor discuss rendgens in lab-p-800.jpg
+Content Type: image/jpg
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676294c48de25787020da83c_Doctor discuss rendgens in lab.jpg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676294c48de25787020da83c_Doctor discuss rendgens in lab.jpg
+Content Type: image/jpeg
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/6762a740a6145fc1369d7e29_Wavy Texture-p-1080.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\6762a740a6145fc1369d7e29_Wavy Texture-p-1080.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/6762a740a6145fc1369d7e29_Wavy Texture-p-500.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\6762a740a6145fc1369d7e29_Wavy Texture-p-500.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/6762a740a6145fc1369d7e29_Wavy Texture-p-800.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\6762a740a6145fc1369d7e29_Wavy Texture-p-800.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/6762a740a6145fc1369d7e29_Wavy Texture.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\6762a740a6145fc1369d7e29_Wavy Texture.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/67656552afde4408cdfff822_ipad mockup-p-500.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\67656552afde4408cdfff822_ipad mockup-p-500.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/67656552afde4408cdfff822_ipad mockup-p-800.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\67656552afde4408cdfff822_ipad mockup-p-800.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/67656552afde4408cdfff822_ipad mockup.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\67656552afde4408cdfff822_ipad mockup.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/67657545db3dae3e331513dd_hero-topography-texture-01-01.svg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\67657545db3dae3e331513dd_hero-topography-texture-01-01.svg
+Content Type: image/svg+xml
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676582a162e58da687e58db7_Pink Blur Circle.svg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676582a162e58da687e58db7_Pink Blur Circle.svg
+Content Type: image/svg+xml
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676582a1f1cac33a8a408b34_Blue Blur Circle.svg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676582a1f1cac33a8a408b34_Blue Blur Circle.svg
+Content Type: image/svg+xml
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/67658c2ba4b9c57a5d8de84d_quote marks.svg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\67658c2ba4b9c57a5d8de84d_quote marks.svg
+Content Type: image/svg+xml
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/67659ac06fe9ec1e8288929f_Doctor discuss rendgens in lab - mobile-p-1080.jpg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\67659ac06fe9ec1e8288929f_Doctor discuss rendgens in lab - mobile-p-1080.jpg
+Content Type: image/jpg
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/67659ac06fe9ec1e8288929f_Doctor discuss rendgens in lab - mobile-p-500.jpg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\67659ac06fe9ec1e8288929f_Doctor discuss rendgens in lab - mobile-p-500.jpg
+Content Type: image/jpg
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/67659ac06fe9ec1e8288929f_Doctor discuss rendgens in lab - mobile-p-800.jpg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\67659ac06fe9ec1e8288929f_Doctor discuss rendgens in lab - mobile-p-800.jpg
+Content Type: image/jpg
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/67659ac06fe9ec1e8288929f_Doctor discuss rendgens in lab - mobile.jpg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\67659ac06fe9ec1e8288929f_Doctor discuss rendgens in lab - mobile.jpg
+Content Type: image/jpeg
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/6766751200a8b139a1291c62_Western University Logo.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\6766751200a8b139a1291c62_Western University Logo.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676675120324347a57e091a9_York University.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676675120324347a57e091a9_York University.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676675121225a66bcae49422_laurier-short 1.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676675121225a66bcae49422_laurier-short 1.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/6766751244c92e27214bbd55_Middle Tennessee.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\6766751244c92e27214bbd55_Middle Tennessee.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676675124c5404432df05b8b_Texas State.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676675124c5404432df05b8b_Texas State.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/67667512798d0b20b2096525_Lynchburk.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\67667512798d0b20b2096525_Lynchburk.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/67667512a28adfd1bb601c7f_Rush Logo.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\67667512a28adfd1bb601c7f_Rush Logo.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/6766796e1c0113b5c8cd6134_Portrait of a woman in front of lightbox.jpg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\6766796e1c0113b5c8cd6134_Portrait of a woman in front of lightbox.jpg
+Content Type: image/jpeg
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/67667e8d1058b01e4ba8e7f7_Portrait of a woman in front of lightbox- Mobile-p-1080.jpg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\67667e8d1058b01e4ba8e7f7_Portrait of a woman in front of lightbox- Mobile-p-1080.jpg
+Content Type: image/jpg
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/67667e8d1058b01e4ba8e7f7_Portrait of a woman in front of lightbox- Mobile-p-500.jpg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\67667e8d1058b01e4ba8e7f7_Portrait of a woman in front of lightbox- Mobile-p-500.jpg
+Content Type: image/jpg
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/67667e8d1058b01e4ba8e7f7_Portrait of a woman in front of lightbox- Mobile-p-800.jpg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\67667e8d1058b01e4ba8e7f7_Portrait of a woman in front of lightbox- Mobile-p-800.jpg
+Content Type: image/jpg
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/67667e8d1058b01e4ba8e7f7_Portrait of a woman in front of lightbox- Mobile.jpg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\67667e8d1058b01e4ba8e7f7_Portrait of a woman in front of lightbox- Mobile.jpg
+Content Type: image/jpeg
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/6767d935af9757bfc64dcf47_Favicon BrainFx.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\6767d935af9757bfc64dcf47_Favicon BrainFx.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/6767d93aa5ce67675dfd66a0_Webclip BrainFx.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\6767d93aa5ce67675dfd66a0_Webclip BrainFx.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676d6c67192159b2a067ac5a_Atrium Health.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676d6c67192159b2a067ac5a_Atrium Health.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676d6c6723aea35a6fead8be_Trillium Health Partners.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676d6c6723aea35a6fead8be_Trillium Health Partners.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676d6c672aa511bb4e74d886_West Park.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676d6c672aa511bb4e74d886_West Park.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676d6c672c9015a18edff507_Camh.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676d6c672c9015a18edff507_Camh.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676d6c672c9015a18edff516_UHN.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676d6c672c9015a18edff516_UHN.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676d6c672c9015a18edff519_Lifemark.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676d6c672c9015a18edff519_Lifemark.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676d6c673993a1a7b06aff61_Niagara Region.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676d6c673993a1a7b06aff61_Niagara Region.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676d6c6766597fa8140219a0_Cbi Health.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676d6c6766597fa8140219a0_Cbi Health.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676d6c678254d5e5ffa4c848_Middle Tennesseee.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676d6c678254d5e5ffa4c848_Middle Tennesseee.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676d6c67857fb3ba5d6cae1a_Ace Coat.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676d6c67857fb3ba5d6cae1a_Ace Coat.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676d6c67cc487e32fc0e8550_Texas state uni.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676d6c67cc487e32fc0e8550_Texas state uni.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676d6c67fd01288469ff8545_Canadian Mental Health.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676d6c67fd01288469ff8545_Canadian Mental Health.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676d7c9d5749d1d97d295daa_TBC1-brainfx-p-1080.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676d7c9d5749d1d97d295daa_TBC1-brainfx-p-1080.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676d7c9d5749d1d97d295daa_TBC1-brainfx-p-500.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676d7c9d5749d1d97d295daa_TBC1-brainfx-p-500.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676d7c9d5749d1d97d295daa_TBC1-brainfx-p-800.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676d7c9d5749d1d97d295daa_TBC1-brainfx-p-800.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676d7c9d5749d1d97d295daa_TBC1-brainfx.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676d7c9d5749d1d97d295daa_TBC1-brainfx.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676fb3ce2cfb822d43d8fbb9_Ontario Society of Occupation Therapists-p-500.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676fb3ce2cfb822d43d8fbb9_Ontario Society of Occupation Therapists-p-500.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676fb3ce2cfb822d43d8fbb9_Ontario Society of Occupation Therapists.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676fb3ce2cfb822d43d8fbb9_Ontario Society of Occupation Therapists.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676fb3ce786e38503264eb6c_maple logo-p-500.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676fb3ce786e38503264eb6c_maple logo-p-500.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676fb3ce786e38503264eb6c_maple logo-p-800.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676fb3ce786e38503264eb6c_maple logo-p-800.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676fb3ce786e38503264eb6c_maple logo.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676fb3ce786e38503264eb6c_maple logo.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676fb3ce96033eb8cf947abe_kisspng-canadian-association-of-occupational-therapists-p-500.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676fb3ce96033eb8cf947abe_kisspng-canadian-association-of-occupational-therapists-p-500.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676fb3ce96033eb8cf947abe_kisspng-canadian-association-of-occupational-therapists.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676fb3ce96033eb8cf947abe_kisspng-canadian-association-of-occupational-therapists.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676fb3ce96033eb8cf947ac1_NC logo-p-500.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676fb3ce96033eb8cf947ac1_NC logo-p-500.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676fb3ce96033eb8cf947ac1_NC logo.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676fb3ce96033eb8cf947ac1_NC logo.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676fb3ceaddfdfaecc41dbf5_Metriks FCE-p-1080.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676fb3ceaddfdfaecc41dbf5_Metriks FCE-p-1080.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676fb3ceaddfdfaecc41dbf5_Metriks FCE-p-500.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676fb3ceaddfdfaecc41dbf5_Metriks FCE-p-500.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676fb3ceaddfdfaecc41dbf5_Metriks FCE-p-800.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676fb3ceaddfdfaecc41dbf5_Metriks FCE-p-800.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676fb3ceaddfdfaecc41dbf5_Metriks FCE.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676fb3ceaddfdfaecc41dbf5_Metriks FCE.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676fb3ceb48efc129a07e6f6_insightin-logo-p-500.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676fb3ceb48efc129a07e6f6_insightin-logo-p-500.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676fb3ceb48efc129a07e6f6_insightin-logo.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676fb3ceb48efc129a07e6f6_insightin-logo.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676fb3ceefed8e06dc1852ea_Think Research-p-500.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676fb3ceefed8e06dc1852ea_Think Research-p-500.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676fb3ceefed8e06dc1852ea_Think Research.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676fb3ceefed8e06dc1852ea_Think Research.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676fc0b43f517436926b2141_helius logo-p-500.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676fc0b43f517436926b2141_helius logo-p-500.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/676fc0b43f517436926b2141_helius logo.png
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\676fc0b43f517436926b2141_helius logo.png
+Content Type: image/png
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/6776839b871257030348238f_BrainFX - logo Dark.svg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\6776839b871257030348238f_BrainFX - logo Dark.svg
+Content Type: image/svg+xml
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/6776839ba1c1bd68f8b901f6_BrainFX - logo Light.svg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\6776839ba1c1bd68f8b901f6_BrainFX - logo Light.svg
+Content Type: image/svg+xml
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/677908cda17dc0ede2fa366a_img-team-tracy-milner-p-500.jpg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\677908cda17dc0ede2fa366a_img-team-tracy-milner-p-500.jpg
+Content Type: image/jpg
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/677908cda17dc0ede2fa366a_img-team-tracy-milner.jpg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\677908cda17dc0ede2fa366a_img-team-tracy-milner.jpg
+Content Type: image/jpeg
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/677908cdf49358dd4d21cb64_img-team-heather-condello-p-500.jpg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\677908cdf49358dd4d21cb64_img-team-heather-condello-p-500.jpg
+Content Type: image/jpg
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/677908cdf49358dd4d21cb64_img-team-heather-condello.jpg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\677908cdf49358dd4d21cb64_img-team-heather-condello.jpg
+Content Type: image/jpeg
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/css/brainfx.webflow.6eada65e0.css
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\css\brainfx.webflow.6eada65e0.css
+Content Type: text/css
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/js/webflow.22e273b3.236af195dde825f9.js
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\js\webflow.22e273b3.236af195dde825f9.js
+Content Type: text/javascript
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/js/webflow.2436e4b3.ce2a18540c0557c8.js
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\js\webflow.2436e4b3.ce2a18540c0557c8.js
+Content Type: text/javascript
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/js/webflow.schunk.4a394eb5af8156f2.js
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\js\webflow.schunk.4a394eb5af8156f2.js
+Content Type: text/javascript
+
+Uri: https://cdn.prod.website-files.com/6760858fd1c261f9adc849e6/js/webflow.schunk.5df64632827d9c02.js
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6760858fd1c261f9adc849e6\js\webflow.schunk.5df64632827d9c02.js
+Content Type: text/javascript
+
+Uri: https://cdn.prod.website-files.com/6762ea1531460b1c9e71744f/6772d5a232d12a4ad9543493_Dummy Blog Img.jpg
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\6762ea1531460b1c9e71744f\6772d5a232d12a4ad9543493_Dummy Blog Img.jpg
+Content Type: image/jpeg
+
+Uri: https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6760858fd1c261f9adc849e6
+File Name: C:\Downloaded Web Sites\brainfx.webflow.io\js\jquery-3.5.1.min.dc5e7f18c8.js
+Content Type: application/javascript
+

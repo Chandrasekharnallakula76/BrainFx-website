@@ -1,0 +1,878 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy - BrainFx Vitals</title>
+    <meta
+      name="description"
+      content="Privacy Policy for the BrainFx Vitals mobile application."
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f5f7fb;
+        --panel: rgba(255, 255, 255, 0.92);
+        --panel-border: rgba(22, 29, 53, 0.08);
+        --text: #101828;
+        --muted: #4b5565;
+        --heading: #0a1020;
+        --accent: #2f5cff;
+        --accent-soft: rgba(47, 92, 255, 0.1);
+        --table: #e5e9f4;
+        --shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+        line-height: 1.7;
+        color: var(--text);
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(47, 92, 255, 0.12),
+            transparent 34%
+          ),
+          radial-gradient(
+            circle at top right,
+            rgba(14, 165, 233, 0.1),
+            transparent 28%
+          ),
+          linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+        min-height: 100vh;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration-thickness: 1.5px;
+        text-underline-offset: 0.18em;
+      }
+
+      a:hover {
+        text-decoration-color: rgba(47, 92, 255, 0.6);
+      }
+
+      .page {
+        width: min(1120px, calc(100% - 32px));
+        margin: 24px auto 40px;
+      }
+
+      .hero {
+        padding: 28px 28px 22px;
+        border: 1px solid var(--panel-border);
+        border-radius: 24px;
+        background: var(--panel);
+        backdrop-filter: blur(10px);
+        box-shadow: var(--shadow);
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: var(--accent-soft);
+        color: var(--accent);
+        font-size: 0.84rem;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 16px 0 10px;
+        color: var(--heading);
+        font-size: clamp(2rem, 4vw, 3.25rem);
+        line-height: 1.08;
+        letter-spacing: -0.04em;
+      }
+
+      .hero p {
+        margin: 0.5rem 0 0;
+        max-width: 78ch;
+        color: var(--muted);
+        font-size: 1.02rem;
+      }
+
+      .meta {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 14px;
+        margin-top: 20px;
+      }
+
+      .meta-card {
+        padding: 14px 16px;
+        border: 1px solid var(--panel-border);
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.78);
+      }
+
+      .meta-card .label {
+        display: block;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 4px;
+      }
+
+      .meta-card .value {
+        font-size: 0.98rem;
+        font-weight: 600;
+        color: var(--heading);
+      }
+
+      .policy {
+        margin-top: 22px;
+        padding: 8px 2px 0;
+      }
+
+      .section {
+        margin-top: 18px;
+        padding: 24px 28px;
+        border: 1px solid var(--panel-border);
+        border-radius: 24px;
+        background: var(--panel);
+        box-shadow: var(--shadow);
+      }
+
+      .section h2 {
+        margin: 0 0 10px;
+        color: var(--heading);
+        font-size: clamp(1.25rem, 2vw, 1.7rem);
+        line-height: 1.2;
+        letter-spacing: -0.03em;
+      }
+
+      .section h3 {
+        margin: 22px 0 10px;
+        color: var(--heading);
+        font-size: 1.06rem;
+        line-height: 1.35;
+      }
+
+      .section p {
+        margin: 0.75rem 0;
+        color: var(--text);
+      }
+
+      .section ul {
+        margin: 0.75rem 0 0.75rem 1.2rem;
+        padding: 0;
+      }
+
+      .section li {
+        margin: 0.38rem 0;
+      }
+
+      .callout {
+        margin: 14px 0 0;
+        padding: 16px 18px;
+        border-left: 4px solid var(--accent);
+        background: rgba(47, 92, 255, 0.06);
+        border-radius: 14px;
+      }
+
+      .table-wrap {
+        overflow-x: auto;
+        margin: 14px 0 4px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 640px;
+        overflow: hidden;
+        border: 1px solid var(--table);
+        border-radius: 16px;
+      }
+
+      th,
+      td {
+        padding: 14px 16px;
+        border-bottom: 1px solid var(--table);
+        vertical-align: top;
+        text-align: left;
+      }
+
+      th {
+        background: #f3f6ff;
+        color: var(--heading);
+        font-weight: 700;
+      }
+
+      tr:last-child td {
+        border-bottom: 0;
+      }
+
+      .inline-list {
+        display: grid;
+        gap: 8px;
+        margin: 10px 0 0;
+        padding-left: 18px;
+      }
+
+      .contact-box {
+        display: grid;
+        gap: 8px;
+        padding: 18px 20px;
+        border: 1px solid var(--panel-border);
+        border-radius: 18px;
+        background: #fff;
+      }
+
+      .contact-box strong {
+        color: var(--heading);
+      }
+
+      .footer-note {
+        margin: 18px 0 8px;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .top-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 16px;
+        margin-top: 14px;
+      }
+
+      .top-links a {
+        font-weight: 600;
+      }
+
+      @media (max-width: 720px) {
+        .page {
+          width: min(100% - 20px, 1120px);
+          margin: 10px auto 24px;
+        }
+
+        .hero,
+        .section {
+          padding: 20px 18px;
+          border-radius: 18px;
+        }
+
+        .meta {
+          grid-template-columns: 1fr;
+        }
+
+        body {
+          line-height: 1.65;
+        }
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+
+        .hero,
+        .section {
+          box-shadow: none;
+          background: #fff;
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="eyebrow">BrainFx Vitals</div>
+        <h1>Privacy Policy</h1>
+        <p>
+          This Privacy Policy outlines the practices of
+          <strong>BrainFx AI Inc.</strong> ("BrainFx", "we", "our", or "us")
+          regarding the collection, use, disclosure, and protection of
+          information in connection with your access to and use of the
+          <strong>BrainFx Vitals</strong> mobile application (the "App"), made
+          available through Google Play and the Apple App Store.
+        </p>
+        <div class="meta">
+          <div class="meta-card">
+            <span class="label">Effective Date</span>
+            <span class="value">April 22, 2026</span>
+          </div>
+          <div class="meta-card">
+            <span class="label">Last Updated</span>
+            <span class="value">April 22, 2026</span>
+          </div>
+          <div class="meta-card">
+            <span class="label">Privacy Contact</span>
+            <span class="value"
+              ><a href="mailto:privacy@brainfx.com"
+                >privacy@brainfx.com</a
+              ></span
+            >
+          </div>
+        </div>
+        <div class="callout">
+          This Privacy Policy applies only to the BrainFx Vitals mobile app. It
+          is separate from the privacy policy that governs the BrainFx corporate
+          website and other BrainFx products.
+        </div>
+      </section>
+
+      <section class="section policy">
+        <p>
+          By creating an account, completing the in-app consent screens, or
+          otherwise using the App, you acknowledge that you have read and
+          understood this Privacy Policy.
+        </p>
+
+        <h2>1. Who We Are</h2>
+        <p><strong>Data Controller:</strong> BrainFx AI Inc.</p>
+        <p>
+          <strong>Address:</strong> 1400 Bayly Street, Unit 13A, Pickering,
+          Ontario L1W 3R2, Canada
+        </p>
+        <p>
+          <strong>Privacy contact:</strong>
+          <a href="mailto:privacy@brainfx.com">privacy@brainfx.com</a>
+        </p>
+        <p>
+          Our Privacy Officer is responsible for our compliance with this
+          Privacy Policy and with applicable privacy laws, and can be reached at
+          the email address above.
+        </p>
+
+        <h2>2. Summary of the App and Why Privacy Matters</h2>
+        <p>
+          BrainFx Vitals is a session-based wellness companion for general
+          self-awareness. In a typical session, the App uses your device's
+          front-facing camera to capture a short video sequence, processes that
+          video entirely on your device to derive wellness-related signals, and
+          then optionally shares those numerical signals together with profile
+          information you provide with Google's Gemini AI service to generate a
+          personalized, informational summary.
+        </p>
+        <p class="callout">
+          The App is a wellness tool, not a medical device. The signals and
+          insights it provides are informational estimates and are not intended
+          to diagnose, treat, cure, prevent, or mitigate any disease or medical
+          condition. Always consult a qualified healthcare professional for any
+          personal health concerns.
+        </p>
+
+        <h2>3. Information We Collect</h2>
+        <h3>3.1 Information You Provide to Us</h3>
+        <p>
+          <strong>Account information.</strong> When you create an account we
+          collect:
+        </p>
+        <ul>
+          <li>Email address</li>
+          <li>Password stored in hashed form by Firebase Authentication</li>
+          <li>Optional first and last name</li>
+        </ul>
+        <p>
+          <strong>Health profile (Risk Factors).</strong> If you choose to
+          complete the health profile in the App, we collect the following
+          categories of information so the App can tailor your wellness
+          insights:
+        </p>
+        <ul>
+          <li>Demographic information: gender, country, ethnicity</li>
+          <li>
+            Physical information: age, height, weight, waist circumference
+          </li>
+          <li>
+            Family medical history: parental hypertension, family diabetes
+          </li>
+          <li>
+            Personal medical history: prior high glucose, prior hypertension,
+            hypertension treatment status, diabetes diagnosis
+          </li>
+          <li>
+            Lifestyle information: physical activity level, smoking status,
+            fruit and vegetable consumption
+          </li>
+          <li>
+            Optional clinical values: systolic and diastolic blood pressure,
+            total cholesterol, HDL cholesterol, triglycerides, fasting glucose
+          </li>
+        </ul>
+        <p>
+          Providing this information is optional. If you do not provide it, some
+          wellness insights may be less personalized or unavailable.
+        </p>
+        <p>
+          <strong>AI interactions.</strong> If you use the in-App AI Wellness
+          Assistant:
+        </p>
+        <ul>
+          <li>
+            <strong>Text chat.</strong> The text of your messages is processed
+            to generate a response.
+          </li>
+          <li>
+            <strong>Voice assistant.</strong> Your voice audio is streamed in
+            real time to Google's Gemini service so the assistant can respond.
+          </li>
+        </ul>
+
+        <h3>3.2 Information Generated by the App</h3>
+        <p>
+          <strong>Session data (wellness signals).</strong> During each scanning
+          session, the App's on-device video analysis produces numerical
+          estimates that may include:
+        </p>
+        <ul>
+          <li>Circulation estimate (blood-pressure-related)</li>
+          <li>Circulation / pulse-rhythm signal</li>
+          <li>Warmth signal (temperature-related)</li>
+          <li>Metabolic estimate (glucose-related)</li>
+          <li>Lifestyle estimate</li>
+          <li>
+            Derived organ-system signals (heart, liver, lungs, kidney, blood,
+            brain)
+          </li>
+        </ul>
+        <p>
+          These signals are saved to your account so you can see your history
+          and trends.
+        </p>
+        <p>
+          <strong>Usage and device information.</strong> We collect technical
+          information needed to operate the App and diagnose problems, including
+          device model, operating system and version, App version, language
+          preference, IP address, and anonymous crash and performance
+          diagnostics.
+        </p>
+
+        <h3>3.3 Information We Do NOT Collect or Store</h3>
+        <ul>
+          <li>
+            Raw video frames and facial images are processed entirely on your
+            device and are discarded immediately after each session.
+          </li>
+          <li>
+            No facial recognition or biometric identification is performed.
+          </li>
+          <li>We do not collect precise location (GPS) data.</li>
+          <li>
+            We do not collect contacts, calendar, photos, SMS, or files from
+            your device.
+          </li>
+        </ul>
+
+        <h2>4. Device Permissions We Request</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Permission</th>
+                <th>Why we need it</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Camera</strong></td>
+                <td>
+                  Required to capture the short face-video sequence used for
+                  on-device wellness analysis. Frames are processed locally and
+                  are never uploaded or stored.
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Microphone</strong></td>
+                <td>
+                  Required only when you choose to use the AI Voice Wellness
+                  Assistant. Audio is streamed in real time to Google Gemini to
+                  generate a response and is not retained by the App after the
+                  conversation.
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Keep screen on</strong></td>
+                <td>
+                  Prevents the screen from sleeping during an active scan.
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Internet access</strong></td>
+                <td>
+                  Required to sign in, sync session data, generate AI insights,
+                  and check network availability.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          You can revoke any permission at any time in your device settings.
+          Revoking camera access will prevent you from running wellness scans.
+        </p>
+
+        <h2>5. How We Use Your Information</h2>
+        <ul>
+          <li>
+            Create and secure your account and authenticate your sign-ins.
+          </li>
+          <li>
+            Run wellness sessions and derive the on-device signals described
+            above.
+          </li>
+          <li>
+            Generate personalized wellness insights, text summaries, and PDF
+            session reports, including through the Google Gemini AI service.
+          </li>
+          <li>Power the AI Wellness Assistant, including text and voice.</li>
+          <li>Save your session history so you can view trends over time.</li>
+          <li>
+            Enforce per-user session limits to protect the service and our AI
+            costs.
+          </li>
+          <li>
+            Detect, investigate, and prevent fraud, abuse, and security
+            incidents.
+          </li>
+          <li>
+            Diagnose crashes and improve the App's reliability and performance.
+          </li>
+          <li>
+            Communicate with you about your account, service issues, and
+            material updates to this Privacy Policy or our Terms.
+          </li>
+          <li>Comply with applicable laws and respond to lawful requests.</li>
+        </ul>
+        <p>
+          We do not use your information to serve advertising. We do not sell or
+          rent your personal information to anyone.
+        </p>
+
+        <h2>6. Legal Bases for Processing (EU/UK Users)</h2>
+        <ul>
+          <li>
+            <strong>Performance of a contract</strong> - to provide the App and
+            the features you request.
+          </li>
+          <li>
+            <strong>Consent</strong> - for the in-App consent to medical
+            disclaimer, camera/face analysis, and AI data sharing; and for
+            processing special-category health data you choose to enter.
+          </li>
+          <li>
+            <strong>Legitimate interests</strong> - for securing the App,
+            preventing abuse, and improving reliability.
+          </li>
+          <li>
+            <strong>Legal obligation</strong> - where we must retain or disclose
+            information to comply with law.
+          </li>
+        </ul>
+        <p>
+          You may withdraw consent at any time by emailing
+          <a href="mailto:privacy@brainfx.com">privacy@brainfx.com</a> or by
+          deleting your account in the App. Withdrawal does not affect the
+          lawfulness of processing before withdrawal.
+        </p>
+
+        <h2>7. Third-Party Services We Rely On</h2>
+        <p>
+          We share the minimum information necessary with the following service
+          providers. Each provider acts as our data processor and is
+          contractually required to protect your information.
+        </p>
+
+        <h3>7.1 Google Firebase (Google LLC / Google Ireland Ltd.)</h3>
+        <ul>
+          <li>
+            Firebase Authentication stores your email and hashed password and
+            authenticates sign-ins.
+          </li>
+          <li>
+            Cloud Firestore stores your profile, risk-factor answers, session
+            signals, session history, and App configuration.
+          </li>
+          <li>
+            Firebase App Check helps us verify that requests come from genuine,
+            unmodified installations of the App.
+          </li>
+          <li>
+            Firebase AI / Vertex AI (Gemini 2.5 Flash) generates wellness
+            summaries and powers the AI Wellness Assistant.
+          </li>
+        </ul>
+        <p>
+          Google's privacy practices are described at
+          <a href="https://policies.google.com/privacy"
+            >policies.google.com/privacy</a
+          >
+          and
+          <a href="https://firebase.google.com/support/privacy"
+            >firebase.google.com/support/privacy</a
+          >.
+        </p>
+
+        <h3>7.2 Google Gemini (Google LLC)</h3>
+        <p>
+          When you use the AI Wellness Assistant or request an AI-generated
+          wellness summary, we send the following to Google Gemini through the
+          Firebase AI interface:
+        </p>
+        <ul>
+          <li>
+            The numerical wellness signals from your current and/or recent
+            sessions.
+          </li>
+          <li>Relevant portions of your health profile.</li>
+          <li>
+            Your chat messages for text chat or streamed voice audio for the
+            voice assistant.
+          </li>
+        </ul>
+        <p>
+          Google Gemini returns a generated response to the App. Per the in-App
+          consent you accept before using AI features, streamed voice audio is
+          processed for real-time response and is not persisted by the App after
+          the conversation ends.
+        </p>
+
+        <h3>7.3 Apple and Google</h3>
+        <p>
+          Apple and Google receive the minimum information they require for app
+          distribution, payments if applicable, crash reporting, and compliance
+          with their store policies, under their own privacy practices.
+        </p>
+        <p>
+          We do not share your information with advertisers, data brokers, or
+          analytics providers beyond what is described above.
+        </p>
+
+        <h2>8. Where Your Data Is Processed</h2>
+        <p>
+          Your account and session data is stored in Google Cloud regions
+          operated by Google for Firebase Authentication and Cloud Firestore. AI
+          requests are processed by Google Gemini through Google-operated
+          infrastructure. Depending on Google's regional routing, your data may
+          be processed in Canada, the United States, the European Union, or
+          other regions where Google operates.
+        </p>
+        <p>
+          When personal information is transferred outside your country of
+          residence, we rely on appropriate legal transfer mechanisms including,
+          where applicable, the European Commission's Standard Contractual
+          Clauses, and on Google's own transfer frameworks.
+        </p>
+
+        <h2>9. How Long We Keep Your Information</h2>
+        <ul>
+          <li>
+            <strong>Account, profile, and session data</strong> - retained while
+            your account is active, and deleted on request or on account
+            deletion.
+          </li>
+          <li>
+            <strong>Raw video frames and facial images</strong> - never
+            retained.
+          </li>
+          <li>
+            <strong>AI voice audio</strong> - streamed for real-time processing
+            and not retained by the App after your conversation ends.
+          </li>
+          <li>
+            <strong>AI chat transcripts</strong> - retained for the length of
+            the chat session and may be stored with your session history if
+            surfaced in the App; we do not use your chats to train AI models.
+          </li>
+          <li>
+            <strong>Crash and diagnostic logs</strong> - retained for a limited
+            period needed to diagnose issues, typically no more than 90 days.
+          </li>
+          <li>
+            <strong>Backups</strong> - residual copies may persist in encrypted
+            backups for a short period after deletion and are purged on our
+            standard backup rotation.
+          </li>
+        </ul>
+        <p>We will keep information longer only where required by law.</p>
+
+        <h2>10. Your Rights and Choices</h2>
+        <p>
+          Depending on where you live, you may have some or all of the following
+          rights regarding your personal information:
+        </p>
+        <ul>
+          <li>
+            <strong>Access</strong> - request a copy of the personal information
+            we hold about you.
+          </li>
+          <li>
+            <strong>Correction</strong> - ask us to correct information that is
+            inaccurate or incomplete.
+          </li>
+          <li>
+            <strong>Deletion</strong> - ask us to delete your account and
+            associated data.
+          </li>
+          <li>
+            <strong>Portability</strong> - request a copy of the information you
+            have provided in a structured, commonly used, machine-readable
+            format.
+          </li>
+          <li>
+            <strong>Restriction / Objection</strong> - ask us to restrict or
+            object to certain processing.
+          </li>
+          <li>
+            <strong>Withdraw consent</strong> - withdraw any consent you
+            previously gave, including the in-App consents.
+          </li>
+          <li>
+            <strong>Lodge a complaint</strong> - complain to your local
+            data-protection authority.
+          </li>
+        </ul>
+
+        <h3>How to delete your account and data</h3>
+        <p>
+          You can delete your account and all associated personal information at
+          any time in one of two ways:
+        </p>
+        <ul>
+          <li>
+            <strong>From within the App</strong> - open the Profile screen and
+            use the "Delete Account" option in the Danger Zone section. Your
+            account and associated data will be deleted immediately.
+          </li>
+          <li>
+            <strong>By email</strong> - write to
+            <a href="mailto:privacy@brainfx.com">privacy@brainfx.com</a> from
+            the email address associated with your account with the subject line
+            "Delete my BrainFx Vitals account". We will confirm your identity
+            and complete the deletion within 30 days, and send you written
+            confirmation.
+          </li>
+        </ul>
+        <p>
+          Residual copies may persist briefly in encrypted backups as described
+          above. We will respond to any rights request within the time limits
+          required by applicable law. We may ask you to verify your identity
+          before acting on a request.
+        </p>
+        <p><strong>California residents (CCPA / CPRA)</strong></p>
+        <p>
+          California residents have the rights described above, including the
+          right to know, correct, delete, and limit the use of sensitive
+          personal information, and the right to opt out of "sales" and
+          "sharing" of personal information. BrainFx does not sell or share
+          personal information for cross-context behavioral advertising. You may
+          exercise your rights by emailing
+          <a href="mailto:privacy@brainfx.com">privacy@brainfx.com</a>.
+        </p>
+        <p><strong>Canadian residents (PIPEDA)</strong></p>
+        <p>
+          We comply with Canada's Personal Information Protection and Electronic
+          Documents Act ("PIPEDA"). Our Privacy Officer is accountable for our
+          handling of personal information and can be reached at
+          <a href="mailto:privacy@brainfx.com">privacy@brainfx.com</a>.
+        </p>
+        <p><strong>EU/EEA and UK residents (GDPR)</strong></p>
+        <p>
+          In addition to the rights listed above, you have the right to lodge a
+          complaint with your local supervisory authority.
+        </p>
+
+        <h2>11. Security</h2>
+        <ul>
+          <li>
+            Encryption in transit (TLS) for all network connections between the
+            App and our servers.
+          </li>
+          <li>
+            Encryption at rest for account and session data stored in Firebase.
+          </li>
+          <li>Password hashing performed by Firebase Authentication.</li>
+          <li>Firebase App Check to reduce abuse from unauthorized clients.</li>
+          <li>
+            Access controls limiting which BrainFx personnel can access
+            production data.
+          </li>
+        </ul>
+        <p>
+          No method of electronic transmission or storage is 100% secure. If we
+          become aware of a security breach that affects your personal
+          information, we will notify you and regulators as required by law.
+        </p>
+
+        <h2>12. Children</h2>
+        <p>
+          The App is not directed to children under 13 years of age, or under 16
+          in the European Economic Area and other jurisdictions where a higher
+          age of digital consent applies. We do not knowingly collect personal
+          information from children under those ages. If you believe a child has
+          provided us with personal information, please contact
+          <a href="mailto:privacy@brainfx.com">privacy@brainfx.com</a> and we
+          will promptly delete the account and data.
+        </p>
+
+        <h2>13. Medical Disclaimer</h2>
+        <p>
+          BrainFx Vitals is a session-based wellness companion for general
+          self-awareness. The signals, estimates, insights, summaries, and
+          AI-generated content produced by the App are informational only and
+          are not intended to diagnose, treat, cure, prevent, or mitigate any
+          disease or medical condition, replace consultation by a qualified
+          healthcare professional, or be used in a medical emergency.
+        </p>
+        <p>
+          If you are experiencing a medical emergency, call your local emergency
+          number immediately. Always consult a qualified healthcare professional
+          for any personal health concerns. Your use of the App is subject to
+          our Terms of Service, including the disclaimers and limitations of
+          liability set out there.
+        </p>
+
+        <h2>14. Changes to This Privacy Policy</h2>
+        <p>
+          We may update this Privacy Policy from time to time to reflect changes
+          in the App, the services we rely on, or the law. When we make material
+          changes, we will update the "Last Updated" date above and, where
+          appropriate, provide notice in the App or by email before the changes
+          take effect. Your continued use of the App after the changes take
+          effect constitutes your acceptance of the updated Privacy Policy.
+        </p>
+
+        <h2>15. Contact Us</h2>
+        <div class="contact-box">
+          <div>
+            <strong>Email:</strong>
+            <a href="mailto:privacy@brainfx.com">privacy@brainfx.com</a>
+          </div>
+          <div>
+            <strong>Mail:</strong> BrainFx AI Inc., Attention: Privacy
+            Compliance Officer, 1400 Bayly Street, Unit 13A, Pickering, Ontario
+            L1W 3R2, Canada
+          </div>
+        </div>
+        <p class="footer-note">
+          This page is self-contained and uses only embedded styling with local
+          system fonts.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
