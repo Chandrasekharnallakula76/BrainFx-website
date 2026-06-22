@@ -51,13 +51,43 @@
     <link rel="stylesheet" href="css/css/Newnavbar.css" />
     <style>
       .image-container i {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         font-size: 30px !important;
         color: var(--nav-card-icon-color, #0b5f95) !important;
+        line-height: 1;
+        transform: scale(1);
+        transform-origin: center;
+        transition:
+          transform 0.2s ease,
+          color 0.2s ease;
       }
       .provider-card:hover .image-container i,
       .assessment-card:hover .image-container i,
       .research-card:hover .image-container i {
         color: var(--nav-card-icon-hover-color, #1182cf) !important;
+        transform: scale(1.12);
+      }
+
+      .provider-card .image-container,
+      .assessment-card .image-container,
+      .research-card .image-container,
+      .science-card .image-container {
+        overflow: hidden;
+      }
+
+      .provider-card .card-text-main,
+      .assessment-card .card-text-main,
+      .research-card .card-text-main,
+      .science-card .card-text-main {
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+
+      .science-card:hover .image-container i {
+        color: var(--nav-card-icon-hover-color, #1182cf) !important;
+        transform: scale(1.12);
       }
     </style>
     <style>
