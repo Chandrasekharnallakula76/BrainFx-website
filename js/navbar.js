@@ -1,4 +1,29 @@
 (function () {
+  function getCurrentPage() {
+    return (window.location.pathname.split("/").pop() || "index.html").toLowerCase();
+  }
+
+  function closeAllDropdowns(exceptWrapper) {
+    document.querySelectorAll(".nav-link-wrapper").forEach(function (wrapper) {
+      if (exceptWrapper && wrapper === exceptWrapper) {
+        return;
+      }
+
+      const link = wrapper.querySelector(".nav-link");
+      const dropdown = wrapper.querySelector(".dropdown");
+
+      if (!link || !dropdown) {
+        return;
+      }
+
+      link.style.backgroundColor = "";
+      link.style.borderBottom = "2px solid transparent";
+      link.style.color = "";
+      link.style.borderRadius = "";
+      dropdown.style.display = "none";
+    });
+  }
+
   function setupDropdownHover(linkSelector, dropdownSelector) {
     const link = document.querySelector(linkSelector);
     const dropdown = document.querySelector(dropdownSelector);
@@ -24,6 +49,7 @@
         closeTimer = null;
       }
 
+      closeAllDropdowns(wrapper);
       link.style.backgroundColor = theme.bg;
       link.style.borderBottom = `2px solid ${theme.border}`;
       link.style.color = theme.color;
@@ -48,7 +74,7 @@
         if (!wrapper.matches(":hover") && !dropdown.matches(":hover")) {
           closeDropdown();
         }
-      }, 100);
+      }, 90);
     }
 
     wrapper.addEventListener("mouseenter", openDropdown);
@@ -99,7 +125,7 @@
   }
 
   function setActiveNavLink() {
-    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    const currentPage = getCurrentPage();
 
     document.querySelectorAll(".nav-link.active").forEach(function (link) {
       link.classList.remove("active");
@@ -137,6 +163,7 @@
   setupDropdownHover(".nav-link.provider", ".provider-dropdown");
   setupDropdownHover(".nav-link.assessment", ".assessment-dropdown");
   setupDropdownHover(".nav-link.research", ".research-dropdown");
+  setupDropdownHover(".nav-link.science", ".science-dropdown");
   setupMobileMenu();
   setActiveNavLink();
 })();
