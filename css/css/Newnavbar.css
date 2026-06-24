@@ -582,14 +582,47 @@ html[data-wf-page="6760858fd1c261f9adc849e3"] {
 }
 
 .assessment-card.is-featured {
-  background: rgba(237, 246, 255, 0.96);
+  background: #ffffff;
   border-color: rgba(17, 130, 207, 0.16);
+  box-shadow: none;
+  transform: translateY(-1px);
 }
 
 .assessment-card.is-featured:hover {
   background: rgba(255, 255, 255, 0.98);
   border-color: rgba(17, 130, 207, 0.16);
   box-shadow: none;
+}
+
+.assessment-card.is-featured h3,
+.assessment-dropdown:has(.assessment-floating-submenu:hover)
+  [data-training-card="true"]
+  h3 {
+  color: #1182cf;
+}
+
+.assessment-card.is-featured p,
+.assessment-dropdown:has(.assessment-floating-submenu:hover)
+  [data-training-card="true"]
+  p {
+  color: #0b5f95;
+}
+
+.assessment-card.is-featured .image-container i,
+.assessment-dropdown:has(.assessment-floating-submenu:hover)
+  [data-training-card="true"]
+  .image-container
+  i {
+  color: #1182cf !important;
+  transform: scale(1.12);
+}
+
+.assessment-dropdown:has(.assessment-floating-submenu:hover)
+  [data-training-card="true"] {
+  background: #ffffff;
+  border-color: rgba(17, 130, 207, 0.16);
+  box-shadow: none;
+  transform: translateY(-1px);
 }
 
 .assessment-floating-submenu {
