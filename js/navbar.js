@@ -54,7 +54,7 @@
           <div class="dropdown science-dropdown">
             <div class="arrow"></div>
             <div class="science-cards">
-              <a href="science-of-neurofunction.html">
+              <a href="science-behind-brainfx.html">
                 <div class="science-card">
                   <div class="image-container">
                     <i class="fa-solid fa-brain"></i>
