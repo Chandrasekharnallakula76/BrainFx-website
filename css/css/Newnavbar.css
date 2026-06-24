@@ -748,7 +748,8 @@ html[data-wf-page="6760858fd1c261f9adc849e3"] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 30px !important;
+  font-size: var(--nav-card-icon-size, 30px) !important;
+  line-height: 1;
   color: #0b5f95 !important;
   transition:
     color 0.25s ease,
