@@ -64,6 +64,11 @@ html[data-wf-page="6760858fd1c261f9adc849e3"] {
   color: #eaf6d9;
 }
 
+.top-bar-links .top-bar-link:not(:first-child),
+.mobile-menu-login-links .top-bar-link:not(:first-child) {
+  display: none;
+}
+
 .nav-link:hover {
   border-bottom: 2px solid var(--nav-link-accent);
   background-color: var(--nav-link-hover-bg);
