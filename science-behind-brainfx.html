@@ -611,6 +611,11 @@
         border: 1px solid rgba(17, 130, 207, 0.08);
         box-shadow: 0 18px 34px rgba(11, 95, 149, 0.08);
         padding: 1rem;
+        transition:
+          transform 0.35s ease,
+          box-shadow 0.35s ease,
+          border-color 0.35s ease;
+        animation: scienceVisualCardFloat 6s ease-in-out infinite;
       }
 
       .science-functional-visual::after {
@@ -622,6 +627,23 @@
         height: 88px;
         border-radius: 50%;
         background: rgba(17, 130, 207, 0.08);
+        animation: scienceVisualBubble 7s ease-in-out infinite;
+      }
+
+      .science-functional-visual::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          120deg,
+          transparent 0%,
+          rgba(255, 255, 255, 0.18) 32%,
+          transparent 56%
+        );
+        transform: translateX(-120%);
+        animation: scienceVisualSweep 6.5s ease-in-out infinite;
+        z-index: 2;
+        pointer-events: none;
       }
 
       .science-functional-visual img {
@@ -631,6 +653,17 @@
         width: 100%;
         height: auto;
         border-radius: 1rem;
+        transition: transform 0.35s ease;
+      }
+
+      .science-functional-visual:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 24px 42px rgba(11, 95, 149, 0.14);
+        border-color: rgba(17, 130, 207, 0.16);
+      }
+
+      .science-functional-visual:hover img {
+        transform: scale(1.02);
       }
 
       .science-functional-visual-caption {
@@ -737,6 +770,988 @@
         line-height: 1.7;
       }
 
+      .science-foundation-section {
+        background: linear-gradient(180deg, #f4f8fc 0%, #edf5fb 100%);
+        padding: 5.5rem 0;
+      }
+
+      .science-foundation-shell {
+        width: min(1380px, calc(100% - 2rem));
+        margin: 0 auto;
+      }
+
+      .science-foundation-panel {
+        padding: 3rem;
+        border-radius: 2rem;
+        background: rgba(255, 255, 255, 0.78);
+        border: 1px solid rgba(17, 130, 207, 0.08);
+        box-shadow: 0 24px 60px rgba(10, 75, 122, 0.08);
+        backdrop-filter: blur(10px);
+      }
+
+      .science-foundation-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        align-items: start;
+      }
+
+      .science-foundation-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 0.9rem;
+        border-radius: 999px;
+        background: rgba(134, 194, 62, 0.12);
+        color: #4f7d1f;
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .science-foundation-copy h2 {
+        margin: 1rem 0 1rem;
+        color: #0b5f95;
+        font-size: clamp(1.9rem, 2.7vw, 3rem);
+        line-height: 1.08;
+      }
+
+      .science-foundation-copy p {
+        margin: 0 0 1rem;
+        color: #3f6183;
+        font-size: 1rem;
+        line-height: 1.8;
+      }
+
+      .science-foundation-note {
+        margin-top: 1.5rem;
+        padding: 1rem 1.1rem;
+        border-radius: 1rem;
+        background: linear-gradient(135deg, #f7fbff 0%, #eef7e3 100%);
+        border: 1px solid rgba(17, 130, 207, 0.08);
+      }
+
+      .science-foundation-note strong {
+        display: block;
+        margin-bottom: 0.3rem;
+        color: #0b5f95;
+        font-size: 0.96rem;
+      }
+
+      .science-foundation-note span {
+        color: #5c7b99;
+        font-size: 0.84rem;
+        line-height: 1.6;
+      }
+
+      .science-foundation-side {
+        display: grid;
+        gap: 1rem;
+        width: 100%;
+      }
+
+      .science-foundation-skills {
+        padding: 0;
+        border-radius: 0;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+        width: 100%;
+      }
+
+      .science-foundation-skills h3 {
+        margin: 0 0 1rem;
+        color: #0b5f95;
+        font-size: 1.15rem;
+      }
+
+      .science-foundation-skill-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.85rem;
+        width: 100%;
+      }
+
+      .science-foundation-skill {
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.95rem 1rem;
+        border-radius: 1rem;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid rgba(17, 130, 207, 0.08);
+        box-shadow: 0 12px 26px rgba(11, 95, 149, 0.05);
+        color: #335d83;
+        font-size: 0.8rem;
+        font-weight: 600;
+        line-height: 1.35;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          border-color 0.25s ease;
+      }
+
+      .science-foundation-skill:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 32px rgba(11, 95, 149, 0.09);
+        border-color: rgba(17, 130, 207, 0.16);
+      }
+
+      .science-foundation-skill i {
+        color: #1182cf;
+        font-size: 0.82rem;
+      }
+
+      .science-foundation-impact {
+        padding: 1.2rem;
+        border-radius: 1.35rem;
+        background: linear-gradient(145deg, #0b5f95 0%, #1182cf 100%);
+        color: #ffffff;
+        box-shadow: 0 18px 34px rgba(11, 95, 149, 0.14);
+      }
+
+      .science-foundation-impact h3 {
+        margin: 0 0 0.7rem;
+        font-size: 1.05rem;
+        color: #ffffff;
+      }
+
+      .science-foundation-impact p {
+        margin: 0;
+        color: rgba(234, 246, 217, 0.92);
+        font-size: 0.84rem;
+        line-height: 1.65;
+      }
+
+      .science-measure-section {
+        background: linear-gradient(180deg, #eef6ff 0%, #e8f2fb 100%);
+        padding: 5.5rem 0;
+      }
+
+      .science-measure-shell {
+        width: min(1440px, calc(100% - 2rem));
+        margin: 0 auto;
+      }
+
+      .science-measure-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.02fr) minmax(280px, 0.98fr);
+        gap: 2.75rem;
+        align-items: start;
+      }
+
+      .science-measure-copy {
+        max-width: 48rem;
+      }
+
+      .science-measure-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.52rem 0.95rem;
+        border-radius: 999px;
+        background: rgba(17, 130, 207, 0.1);
+        color: #0b5f95;
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .science-measure-copy h2 {
+        margin: 0.8rem 0 0.8rem;
+        color: #0b5f95;
+        font-size: clamp(2rem, 2.9vw, 3.2rem);
+        line-height: 1.06;
+      }
+
+      .science-measure-copy p {
+        margin: 0 0 0.75rem;
+        color: #3e6083;
+        font-size: 1rem;
+        line-height: 1.72;
+      }
+
+      .science-measure-emphasis {
+        margin-top: 1.15rem;
+        padding-top: 0.85rem;
+        border-top: 1px solid rgba(17, 130, 207, 0.12);
+      }
+
+      .science-measure-side {
+        display: grid;
+        gap: 1rem;
+        align-content: start;
+      }
+
+      .science-measure-stat {
+        padding: 1.15rem 1.1rem;
+        border-radius: 1.2rem;
+        background: rgba(255, 255, 255, 0.82);
+        border: 1px solid rgba(17, 130, 207, 0.1);
+        box-shadow: 0 16px 34px rgba(11, 95, 149, 0.07);
+        transition:
+          transform 0.28s ease,
+          box-shadow 0.28s ease,
+          border-color 0.28s ease;
+      }
+
+      .science-measure-stat:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 22px 38px rgba(11, 95, 149, 0.11);
+        border-color: rgba(17, 130, 207, 0.16);
+      }
+
+      .science-measure-stat-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        margin-bottom: 0.55rem;
+        color: #1182cf;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .science-measure-stat strong {
+        display: block;
+        margin-bottom: 0.28rem;
+        color: #0b5f95;
+        font-size: 1.08rem;
+        line-height: 1.25;
+      }
+
+      .science-measure-stat p {
+        margin: 0;
+        color: #5b7c9b;
+        font-size: 0.84rem;
+        line-height: 1.6;
+      }
+
+      .science-measure-ribbon {
+        padding: 1.2rem 1.25rem;
+        border-radius: 1.3rem;
+        background: linear-gradient(145deg, #0b5f95 0%, #1182cf 100%);
+        box-shadow: 0 20px 40px rgba(11, 95, 149, 0.16);
+      }
+
+      .science-measure-ribbon strong {
+        display: block;
+        margin-bottom: 0.4rem;
+        color: #ffffff;
+        font-size: 1.1rem;
+      }
+
+      .science-measure-ribbon p {
+        margin: 0;
+        color: rgba(234, 246, 217, 0.94);
+        font-size: 0.86rem;
+        line-height: 1.65;
+      }
+
+      .science-detection-section {
+        background: linear-gradient(180deg, #f8fbff 0%, #eef6fd 100%);
+        padding: 5.5rem 0 6rem;
+      }
+
+      .science-detection-shell {
+        width: min(1440px, calc(100% - 1rem));
+        margin: 0 auto;
+      }
+
+      .science-detection-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.06fr) minmax(320px, 0.94fr);
+        gap: 2.5rem;
+        align-items: center;
+      }
+
+      .science-detection-copy h2 {
+        margin: 0.85rem 0 0.8rem;
+        color: #0b5f95;
+        font-size: clamp(2rem, 3vw, 3.3rem);
+        line-height: 1.06;
+      }
+
+      .science-detection-copy h3 {
+        margin: 2rem 0 0.7rem;
+        color: #4f7d1f;
+        font-size: clamp(1.2rem, 1.7vw, 1.6rem);
+        line-height: 1.25;
+      }
+
+      .science-detection-copy p {
+        margin: 0 0 0.62rem;
+        color: #3f6183;
+        font-size: 1rem;
+        line-height: 1.62;
+      }
+
+      .science-detection-impact-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.85rem;
+        margin: 1.35rem 0 1.7rem;
+      }
+
+      .science-detection-impact {
+        padding: 0.95rem 1rem;
+        border-radius: 1rem;
+        background: rgba(255, 255, 255, 0.84);
+        border: 1px solid rgba(17, 130, 207, 0.08);
+        box-shadow: 0 14px 28px rgba(11, 95, 149, 0.06);
+      }
+
+      .science-detection-impact strong {
+        display: block;
+        margin-bottom: 0.22rem;
+        color: #0b5f95;
+        font-size: 0.92rem;
+      }
+
+      .science-detection-impact span {
+        color: #5d7d9c;
+        font-size: 0.78rem;
+        line-height: 1.5;
+      }
+
+      .science-detection-tagline {
+        margin-top: 1.3rem;
+        padding: 1rem 1.1rem;
+        border-radius: 1.1rem;
+        background: linear-gradient(135deg, #0b5f95 0%, #1182cf 100%);
+        color: #ffffff;
+        box-shadow: 0 18px 34px rgba(11, 95, 149, 0.14);
+      }
+
+      .science-detection-tagline strong {
+        display: block;
+        margin-bottom: 0.3rem;
+        font-size: 1rem;
+      }
+
+      .science-detection-tagline span {
+        color: rgba(234, 246, 217, 0.94);
+        font-size: 0.86rem;
+        line-height: 1.65;
+      }
+
+      .science-detection-visual {
+        position: relative;
+        padding-left: 0.5rem;
+      }
+
+      .science-detection-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 2rem;
+        background: linear-gradient(145deg, #0b5f95 0%, #1182cf 100%);
+        box-shadow: 0 30px 60px rgba(11, 95, 149, 0.2);
+        padding: 1.35rem 1.35rem 1.1rem;
+      }
+
+      .science-detection-card::before {
+        content: "";
+        position: absolute;
+        inset: auto auto -88px -76px;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .science-detection-card::after {
+        content: "";
+        position: absolute;
+        top: -42px;
+        right: -24px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: rgba(234, 246, 217, 0.2);
+      }
+
+      .science-detection-card-top {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .science-detection-card-panel {
+        position: relative;
+        z-index: 1;
+        min-height: 320px;
+        padding: 0.65rem;
+        border-radius: 1.45rem;
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow:
+          inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+          0 12px 28px rgba(7, 52, 87, 0.12);
+      }
+
+      .science-detection-card-panel img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 1rem;
+      }
+
+      .science-detection-mini-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.8rem;
+        margin-top: 1rem;
+      }
+
+      .science-detection-mini {
+        padding: 0.9rem 0.95rem;
+        border-radius: 1rem;
+        background: rgba(255, 255, 255, 0.14);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 10px 22px rgba(8, 74, 123, 0.12);
+        backdrop-filter: blur(10px);
+      }
+
+      .science-detection-mini strong {
+        display: block;
+        margin-bottom: 0.22rem;
+        color: #ffffff;
+        font-size: 0.9rem;
+      }
+
+      .science-detection-mini span {
+        color: rgba(234, 246, 217, 0.92);
+        font-size: 0.75rem;
+        line-height: 1.52;
+      }
+
+      .science-validation-section {
+        background:
+          radial-gradient(
+            circle at top right,
+            rgba(172, 204, 249, 0.22),
+            transparent 24%
+          ),
+          linear-gradient(180deg, #f8fbff 0%, #eef6fd 100%);
+        padding: 5.2rem 0 5.4rem;
+      }
+
+      .science-validation-shell {
+        width: min(1520px, calc(100% - 1rem));
+        margin: 0 auto;
+      }
+
+      .science-validation-frame {
+        padding: 2rem;
+        border-radius: 2.1rem;
+        background: rgba(255, 255, 255, 0.74);
+        border: 1px solid rgba(17, 130, 207, 0.08);
+        box-shadow: 0 24px 58px rgba(10, 75, 122, 0.08);
+        backdrop-filter: blur(10px);
+      }
+
+      .science-validation-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.85fr);
+        gap: 2rem;
+        align-items: stretch;
+      }
+
+      .science-validation-copy {
+        padding: 0.35rem 0.3rem 0.35rem 0.1rem;
+      }
+
+      .science-validation-copy-inner {
+        max-width: none;
+      }
+
+      .science-validation-intro,
+      .science-validation-body,
+      .science-validation-close {
+        animation: scienceValidationFadeUp 0.8s ease both;
+      }
+
+      .science-validation-body {
+        animation-delay: 0.12s;
+      }
+
+      .science-validation-close {
+        animation-delay: 0.24s;
+      }
+
+      .science-validation-copy h2 {
+        margin: 0.45rem 0 0.5rem;
+        color: #0b5f95;
+        font-size: clamp(2.15rem, 3.1vw, 3.35rem);
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+        max-width: 18ch;
+      }
+
+      .science-validation-copy h3 {
+        margin: 0 0 0.95rem;
+        color: #4f7d1f;
+        font-size: clamp(1.15rem, 1.65vw, 1.5rem);
+        line-height: 1.3;
+        max-width: 30ch;
+      }
+
+      .science-validation-copy p {
+        margin: 0 0 0.85rem;
+        color: #3f6183;
+        font-size: 0.98rem;
+        line-height: 1.72;
+        max-width: 74ch;
+      }
+
+      .science-validation-intro {
+        padding-bottom: 0.55rem;
+        border-bottom: 1px solid rgba(17, 130, 207, 0.08);
+        margin-bottom: 1.1rem;
+      }
+
+      .science-validation-body p:last-of-type {
+        margin-bottom: 1rem;
+      }
+
+      .science-validation-pillars {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.9rem;
+        margin: 1rem 0 1.35rem;
+      }
+
+      .science-validation-pillar {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.8rem;
+        padding: 1rem 1.05rem;
+        border-radius: 1.1rem;
+        background: linear-gradient(180deg, #fbfdff 0%, #f2f8fe 100%);
+        border: 1px solid rgba(17, 130, 207, 0.08);
+        box-shadow: 0 12px 24px rgba(11, 95, 149, 0.05);
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          border-color 0.25s ease;
+        animation: scienceValidationFadeUp 0.7s ease both;
+      }
+
+      .science-validation-pillar:nth-child(2) {
+        animation-delay: 0.08s;
+      }
+
+      .science-validation-pillar:nth-child(3) {
+        animation-delay: 0.16s;
+      }
+
+      .science-validation-pillar:nth-child(4) {
+        animation-delay: 0.24s;
+      }
+
+      .science-validation-pillar:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 32px rgba(11, 95, 149, 0.09);
+        border-color: rgba(17, 130, 207, 0.16);
+      }
+
+      .science-validation-pillar strong {
+        display: block;
+        margin-bottom: 0.25rem;
+        color: #0b5f95;
+        font-size: 0.93rem;
+      }
+
+      .science-validation-pillar-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 0.9rem;
+        flex: 0 0 auto;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(17, 130, 207, 0.12);
+        color: #1182cf;
+        font-size: 0.95rem;
+        transition:
+          transform 0.25s ease,
+          background 0.25s ease,
+          color 0.25s ease;
+      }
+
+      .science-validation-pillar:hover .science-validation-pillar-icon {
+        transform: translateY(-2px) scale(1.04);
+        background: rgba(17, 130, 207, 0.18);
+        color: #0b5f95;
+      }
+
+      .science-validation-pillar span {
+        color: #5c7b99;
+        font-size: 0.8rem;
+        line-height: 1.52;
+      }
+
+      .science-validation-areas {
+        margin-top: 0.3rem;
+        width: 100%;
+      }
+
+      .science-validation-areas h4 {
+        margin: 0 0 0.65rem;
+        color: #0b5f95;
+        font-size: 1rem;
+      }
+
+      .science-validation-chip-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.8rem;
+        width: 100%;
+        margin-top: 0.5rem;
+      }
+
+      .science-validation-chip {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.7rem;
+        min-height: 62px;
+        padding: 0.95rem 1rem;
+        border-radius: 12px;
+        background: rgba(17, 130, 207, 0.05);
+        border: 1px solid rgba(17, 130, 207, 0.08);
+        color: #2f5d86;
+        font-size: 0.84rem;
+        font-weight: 650;
+        line-height: 1.35;
+        transition:
+          transform 0.22s ease,
+          background 0.22s ease,
+          color 0.22s ease,
+          border-color 0.22s ease,
+          box-shadow 0.22s ease;
+      }
+
+      .science-validation-chip:hover {
+        transform: translateY(-3px);
+        background: linear-gradient(180deg, #f7fbff 0%, #eef6fd 100%);
+        color: #0b5f95;
+        border-color: rgba(17, 130, 207, 0.16);
+        box-shadow: 0 14px 24px rgba(11, 95, 149, 0.08);
+      }
+
+      .science-validation-chip i {
+        color: #1182cf;
+        font-size: 0.9rem;
+        width: 1rem;
+        text-align: center;
+        flex: 0 0 auto;
+      }
+
+      .science-validation-side {
+        display: grid;
+        gap: 0.8rem;
+      }
+
+      .science-validation-panel {
+        display: grid;
+        gap: 0.9rem;
+        padding: 1.15rem;
+        border-radius: 2rem;
+        background: linear-gradient(145deg, #0b5f95 0%, #1182cf 100%);
+        box-shadow: 0 28px 54px rgba(11, 95, 149, 0.18);
+      }
+
+      .science-validation-visual {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1.5rem;
+        background: rgba(255, 255, 255, 0.08);
+        padding: 0.9rem;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+      }
+
+      .science-validation-visual img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 1.1rem;
+        object-fit: cover;
+      }
+
+      .science-validation-visual-caption {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 0.9rem;
+      }
+
+      .science-validation-visual-caption strong {
+        display: block;
+        color: #ffffff;
+        font-size: 1rem;
+        line-height: 1.3;
+      }
+
+      .science-validation-visual-caption span {
+        display: block;
+        margin-top: 0.2rem;
+        color: rgba(234, 246, 217, 0.92);
+        font-size: 0.78rem;
+        line-height: 1.5;
+      }
+
+      .science-validation-visual-tag {
+        flex: 0 0 auto;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        padding: 0.45rem 0.75rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.14);
+        color: #ffffff;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .science-validation-evidence {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1.45rem;
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: none;
+        padding: 1.05rem;
+        min-height: 100%;
+        animation: scienceValidationFloat 6s ease-in-out infinite;
+      }
+
+      .science-validation-evidence::before {
+        content: "";
+        position: absolute;
+        top: -34px;
+        right: -18px;
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.12);
+        animation: scienceVisualBubble 7s ease-in-out infinite;
+      }
+
+      .science-validation-evidence::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          120deg,
+          transparent 0%,
+          rgba(255, 255, 255, 0.12) 34%,
+          transparent 58%
+        );
+        transform: translateX(-120%);
+        animation: scienceVisualSweep 6.5s ease-in-out infinite;
+        pointer-events: none;
+      }
+
+      .science-validation-evidence-top {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 0.8rem;
+      }
+
+      .science-validation-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        padding: 0.5rem 0.8rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.14);
+        color: #ffffff;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .science-validation-evidence-label {
+        color: #eaf6d9;
+        font-size: 0.9rem;
+        font-weight: 700;
+      }
+
+      .science-validation-evidence-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        gap: 0.75rem;
+      }
+
+      .science-validation-evidence-card {
+        padding: 0.9rem;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 10px 22px rgba(8, 74, 123, 0.12);
+        backdrop-filter: blur(10px);
+        transition:
+          transform 0.26s ease,
+          background 0.26s ease,
+          border-color 0.26s ease;
+        animation: scienceValidationFadeUp 0.8s ease both;
+      }
+
+      .science-validation-evidence-card:nth-child(2) {
+        animation-delay: 0.08s;
+      }
+
+      .science-validation-evidence-card:nth-child(3) {
+        animation-delay: 0.16s;
+      }
+
+      .science-validation-evidence-card:nth-child(4) {
+        animation-delay: 0.24s;
+      }
+
+      .science-validation-evidence-card:hover {
+        transform: translateY(-4px);
+        background: rgba(255, 255, 255, 0.16);
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .science-validation-evidence-card strong {
+        display: block;
+        margin-bottom: 0.24rem;
+        color: #ffffff;
+        font-size: 0.92rem;
+      }
+
+      .science-validation-evidence-card p {
+        margin: 0;
+        color: rgba(234, 246, 217, 0.92);
+        font-size: 0.78rem;
+        line-height: 1.55;
+      }
+
+      .science-validation-evidence-card i {
+        color: #eaf6d9;
+        font-size: 0.95rem;
+      }
+
+      .science-validation-evidence-card-head {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        margin-bottom: 0.3rem;
+      }
+
+      .science-validation-evidence-card-icon {
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 12px;
+        flex: 0 0 auto;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .science-validation-summary {
+        padding: 1rem 1.05rem;
+        border-radius: 1.25rem;
+        background: linear-gradient(
+          135deg,
+          rgba(247, 251, 255, 0.97) 0%,
+          rgba(238, 247, 227, 0.96) 100%
+        );
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        box-shadow: 0 12px 24px rgba(8, 74, 123, 0.12);
+        animation: scienceValidationFadeUp 0.85s ease both;
+        animation-delay: 0.28s;
+      }
+
+      .science-validation-summary strong {
+        display: block;
+        margin-bottom: 0.28rem;
+        color: #0b5f95;
+        font-size: 0.98rem;
+      }
+
+      .science-validation-summary p {
+        margin: 0;
+        color: #5c7b99;
+        font-size: 0.84rem;
+        line-height: 1.6;
+      }
+
+      @keyframes scienceValidationFadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(16px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes scienceValidationFloat {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-4px);
+        }
+      }
+
+      @keyframes scienceVisualCardFloat {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+
+      @keyframes scienceVisualBubble {
+        0%,
+        100% {
+          transform: scale(1) translateY(0);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.08) translateY(6px);
+          opacity: 0.85;
+        }
+      }
+
+      @keyframes scienceVisualSweep {
+        0%,
+        100% {
+          transform: translateX(-120%);
+        }
+        45% {
+          transform: translateX(140%);
+        }
+      }
+
       @keyframes scienceFunctionalFloat {
         0%,
         100% {
@@ -767,6 +1782,38 @@
 
         .science-functional-grid {
           grid-template-columns: 1fr;
+        }
+
+        .science-foundation-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .science-foundation-skill-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .science-measure-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .science-detection-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .science-detection-visual {
+          padding-left: 0;
+        }
+
+        .science-validation-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .science-validation-pillars {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .science-validation-chip-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
       }
 
@@ -818,6 +1865,90 @@
         }
 
         .science-functional-point {
+          animation: none;
+        }
+
+        .science-functional-visual {
+          animation: none;
+        }
+
+        .science-functional-visual::before,
+        .science-functional-visual::after {
+          animation: none;
+        }
+
+        .science-foundation-section {
+          padding: 4rem 0;
+        }
+
+        .science-foundation-shell {
+          width: min(100% - 1rem, 1380px);
+        }
+
+        .science-foundation-panel {
+          padding: 1.5rem;
+          border-radius: 1.4rem;
+        }
+
+        .science-foundation-skill-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .science-measure-section {
+          padding: 4rem 0;
+        }
+
+        .science-measure-shell {
+          width: min(100% - 1rem, 1440px);
+        }
+
+        .science-detection-section {
+          padding: 4rem 0;
+        }
+
+        .science-detection-shell {
+          width: min(100% - 1rem, 1440px);
+        }
+
+        .science-detection-impact-grid,
+        .science-detection-mini-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .science-validation-section {
+          padding: 4rem 0;
+        }
+
+        .science-validation-shell {
+          width: min(100% - 1rem, 1440px);
+        }
+
+        .science-validation-frame {
+          padding: 1.2rem;
+          border-radius: 1.4rem;
+        }
+
+        .science-validation-copy {
+          padding: 0;
+        }
+
+        .science-validation-pillars,
+        .science-validation-chip-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .science-validation-intro,
+        .science-validation-body,
+        .science-validation-close,
+        .science-validation-pillar,
+        .science-validation-evidence-card,
+        .science-validation-summary,
+        .science-validation-evidence {
+          animation: none;
+        }
+
+        .science-validation-evidence::before,
+        .science-validation-evidence::after {
           animation: none;
         }
       }
@@ -1635,8 +2766,8 @@
                       <div>
                         <strong>Digital Performance Tasks</strong>
                         <span>
-                          Uses interactive activities to observe how
-                          information is processed in action.
+                          Uses interactive activities to observe how information
+                          is processed in action.
                         </span>
                       </div>
                     </div>
@@ -1701,6 +2832,541 @@
                       more practical and meaningful picture of brain health in
                       real-world settings.
                     </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section science-foundation-section">
+          <div class="science-foundation-shell">
+            <div class="science-foundation-panel">
+              <div class="science-foundation-grid">
+                <div class="science-foundation-copy">
+                  <div class="science-foundation-eyebrow">
+                    <i class="fa-solid fa-atom"></i>
+                    Neuroscience Foundation
+                  </div>
+                  <h2>The Neuroscience Foundation</h2>
+                  <p>
+                    BrainFx is grounded in established principles of
+                    neuroscience and neuroplasticity.
+                  </p>
+                  <p>
+                    Research has demonstrated that cognitive abilities are
+                    supported by complex neural networks distributed throughout
+                    the brain. Changes in these networks can affect performance
+                    long before major symptoms become apparent.
+                  </p>
+                  <p>
+                    BrainFx evaluates cognitive skills that reflect the
+                    functioning of these neural networks across real-world
+                    performance.
+                  </p>
+                  <div class="science-foundation-note">
+                    <strong>Why it matters</strong>
+                    <span>
+                      These cognitive skills are critical for everyday
+                      activities and are often impacted by aging, neurological
+                      conditions, mental health challenges, injury, stress,
+                      fatigue, and chronic disease.
+                    </span>
+                  </div>
+                </div>
+
+                <div class="science-foundation-side">
+                  <div class="science-foundation-skills">
+                    <h3>Cognitive Skills BrainFx Evaluates</h3>
+                    <div class="science-foundation-skill-grid">
+                      <div class="science-foundation-skill">
+                        <i class="fa-solid fa-bullseye"></i>
+                        Attention and concentration
+                      </div>
+                      <div class="science-foundation-skill">
+                        <i class="fa-solid fa-memory"></i>
+                        Working memory
+                      </div>
+                      <div class="science-foundation-skill">
+                        <i class="fa-solid fa-gauge-high"></i>
+                        Processing speed
+                      </div>
+                      <div class="science-foundation-skill">
+                        <i class="fa-solid fa-sitemap"></i>
+                        Executive functioning
+                      </div>
+                      <div class="science-foundation-skill">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                        Cognitive flexibility
+                      </div>
+                      <div class="science-foundation-skill">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                        Decision making
+                      </div>
+                      <div class="science-foundation-skill">
+                        <i class="fa-solid fa-list-check"></i>
+                        Planning and organization
+                      </div>
+                      <div class="science-foundation-skill">
+                        <i class="fa-solid fa-cube"></i>
+                        Visual-spatial processing
+                      </div>
+                      <div class="science-foundation-skill">
+                        <i class="fa-solid fa-hand"></i>
+                        Inhibitory control
+                      </div>
+                      <div class="science-foundation-skill">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                        Emotional regulation
+                      </div>
+                      <div class="science-foundation-skill">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                        Learning and retention
+                      </div>
+                      <div class="science-foundation-skill">
+                        <i class="fa-solid fa-puzzle-piece"></i>
+                        Functional problem solving
+                      </div>
+                    </div>
+                  </div>
+                  <div class="science-foundation-impact">
+                    <h3>Network-based understanding</h3>
+                    <p>
+                      By focusing on distributed cognitive systems instead of a
+                      single symptom area, BrainFx supports a broader and more
+                      clinically meaningful view of brain health.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section science-measure-section">
+          <div class="science-measure-shell">
+            <div class="science-measure-grid">
+              <div class="science-measure-copy">
+                <div class="science-measure-eyebrow">
+                  <i class="fa-solid fa-chart-column"></i>
+                  Performance Measurement
+                </div>
+                <h2>Measuring Function, Not Just Symptoms</h2>
+                <p>
+                  Traditional assessments frequently rely on self-reported
+                  symptoms or clinician observations.
+                </p>
+                <p>
+                  While valuable, these methods can be influenced by individual
+                  perception, communication ability, education level, and
+                  cultural factors.
+                </p>
+
+                <div class="science-measure-emphasis">
+                  <p>BrainFx focuses on objective performance data.</p>
+                  <p>
+                    During an assessment, users complete a series of structured
+                    digital activities that generate thousands of data points
+                    related to speed, accuracy, consistency, adaptability, and
+                    decision-making patterns.
+                  </p>
+                  <p>
+                    Advanced analytics transform this information into
+                    meaningful insights about cognitive performance and
+                    functional capacity.
+                  </p>
+                  <p>
+                    The result is a more detailed and actionable picture of
+                    brain health.
+                  </p>
+                </div>
+              </div>
+
+              <div class="science-measure-side">
+                <div class="science-measure-stat">
+                  <div class="science-measure-stat-label">
+                    <i class="fa-solid fa-sliders"></i>
+                    Input Source
+                  </div>
+                  <strong>Objective task performance</strong>
+                  <p>
+                    Structured digital activities create direct behavioral data
+                    instead of relying only on symptom reporting.
+                  </p>
+                </div>
+                <div class="science-measure-stat">
+                  <div class="science-measure-stat-label">
+                    <i class="fa-solid fa-database"></i>
+                    Data Depth
+                  </div>
+                  <strong>Thousands of measurable signals</strong>
+                  <p>
+                    Captures speed, accuracy, consistency, adaptability, and
+                    decision-making patterns across assessment tasks.
+                  </p>
+                </div>
+                <div class="science-measure-stat">
+                  <div class="science-measure-stat-label">
+                    <i class="fa-solid fa-brain"></i>
+                    Outcome
+                  </div>
+                  <strong>Actionable cognitive insight</strong>
+                  <p>
+                    Analytics translate raw performance data into a clearer view
+                    of function and real-world capacity.
+                  </p>
+                </div>
+                <div class="science-measure-ribbon">
+                  <strong>A more detailed clinical picture</strong>
+                  <p>
+                    By emphasizing function over symptom description alone,
+                    BrainFx supports a richer understanding of brain health and
+                    everyday performance.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section science-detection-section">
+          <div class="science-detection-shell">
+            <div class="science-detection-grid">
+              <div class="science-detection-copy">
+                <div class="science-story-eyebrow">
+                  <i class="fa-solid fa-bolt"></i>
+                  Early Detection
+                </div>
+                <h2>The Importance of Early Detection</h2>
+                <p>
+                  Research consistently shows that earlier identification of
+                  cognitive changes creates greater opportunities for
+                  intervention and positive outcomes.
+                </p>
+                <p>
+                  Subtle cognitive impairment may emerge years before
+                  traditional assessments detect meaningful decline. These early
+                  changes can impact:
+                </p>
+
+                <div class="science-detection-impact-grid">
+                  <div class="science-detection-impact">
+                    <strong>Daily function</strong>
+                    <span
+                      >Work, driving, academic performance, and
+                      independence.</span
+                    >
+                  </div>
+                  <div class="science-detection-impact">
+                    <strong>Decision quality</strong>
+                    <span
+                      >Medication routines and financial decision making.</span
+                    >
+                  </div>
+                  <div class="science-detection-impact">
+                    <strong>Life outcomes</strong>
+                    <span
+                      >Confidence, safety, and overall quality of life.</span
+                    >
+                  </div>
+                </div>
+
+                <p>
+                  BrainFx is designed to identify these functional changes at an
+                  earlier stage, allowing healthcare professionals and
+                  individuals to make informed decisions and implement
+                  appropriate interventions sooner.
+                </p>
+
+                <h3>Advancing the Future of Brain Health</h3>
+                <p>
+                  The future of healthcare is increasingly focused on
+                  prevention, early detection, and personalized intervention.
+                </p>
+                <p>
+                  BrainFx supports this evolution by providing objective,
+                  function-based cognitive assessment tools that help
+                  individuals and clinicians better understand how the brain is
+                  performing today and how it may be changing over time.
+                </p>
+                <p>
+                  By combining neuroscience, digital innovation, and real-world
+                  functional assessment, BrainFx is helping transform the way
+                  cognitive health is measured, monitored, and managed.
+                </p>
+
+                <div class="science-detection-tagline">
+                  <strong>Know More. Detect Earlier. Act Sooner.</strong>
+                  <span>
+                    BrainFx empowers healthcare professionals, organizations,
+                    and individuals with the insights needed to support lifelong
+                    brain health and cognitive performance.
+                  </span>
+                </div>
+              </div>
+
+              <div class="science-detection-visual">
+                <div class="science-detection-card">
+                  <div class="science-detection-card-top">
+                    <div class="science-visual-badge">
+                      <i class="fa-solid fa-magnifying-glass-chart"></i>
+                      Early Insight View
+                    </div>
+                  </div>
+                  <div class="science-detection-card-panel">
+                    <img
+                      src="assets/Science-images/image4.jfif"
+                      alt="BrainFx scientific validation visual"
+                    />
+                  </div>
+                  <div class="science-detection-mini-grid">
+                    <div class="science-detection-mini">
+                      <strong>Earlier signal recognition</strong>
+                      <span>
+                        Supports detection of subtle functional changes before
+                        broader decline becomes visible.
+                      </span>
+                    </div>
+                    <div class="science-detection-mini">
+                      <strong>Prepared for what comes next</strong>
+                      <span>
+                        Creates a natural transition into the evidence and
+                        scientific validation behind BrainFx.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section science-validation-section">
+          <div class="science-validation-shell">
+            <div class="science-validation-frame">
+              <div class="science-validation-grid">
+                <div class="science-validation-copy">
+                  <div class="science-validation-copy-inner">
+                    <div class="science-story-eyebrow">
+                      <i class="fa-solid fa-flask-vial"></i>
+                      Scientific Validation
+                    </div>
+                    <div class="science-validation-intro">
+                      <h2>
+                        Building the Evidence for Better Brain Health Assessment
+                      </h2>
+                      <h3>
+                        Science is not an afterthought. It is the foundation of
+                        everything we do.
+                      </h3>
+                      <p>
+                        BrainFx assessments are built on decades of research in
+                        cognitive science, neuroscience, occupational therapy,
+                        neurofunction, and real-world performance measurement.
+                      </p>
+                      <p>
+                        Innovation alone is not enough. To create meaningful
+                        clinical impact, every assessment must demonstrate
+                        reliability, validity, usability, and practical
+                        relevance in real-world healthcare settings.
+                      </p>
+                    </div>
+
+                    <div class="science-validation-body">
+                      <p>
+                        That is why BrainFx continues to invest in scientific
+                        validation, independent research, and clinical
+                        collaboration with healthcare organizations,
+                        universities, and research partners across North
+                        America.
+                      </p>
+
+                      <div class="science-validation-pillars">
+                        <div class="science-validation-pillar">
+                          <div class="science-validation-pillar-icon">
+                            <i class="fa-solid fa-repeat"></i>
+                          </div>
+                          <div>
+                            <strong>Reliability</strong>
+                            <span>
+                              Designed to produce consistent, repeatable results
+                              across clinical use cases.
+                            </span>
+                          </div>
+                        </div>
+                        <div class="science-validation-pillar">
+                          <div class="science-validation-pillar-icon">
+                            <i class="fa-solid fa-circle-check"></i>
+                          </div>
+                          <div>
+                            <strong>Validity</strong>
+                            <span>
+                              Evaluated to ensure each measure reflects
+                              meaningful neurofunctional performance.
+                            </span>
+                          </div>
+                        </div>
+                        <div class="science-validation-pillar">
+                          <div class="science-validation-pillar-icon">
+                            <i class="fa-solid fa-stethoscope"></i>
+                          </div>
+                          <div>
+                            <strong>Clinical Usability</strong>
+                            <span>
+                              Built to support practical adoption in real
+                              healthcare environments.
+                            </span>
+                          </div>
+                        </div>
+                        <div class="science-validation-pillar">
+                          <div class="science-validation-pillar-icon">
+                            <i class="fa-solid fa-chart-column"></i>
+                          </div>
+                          <div>
+                            <strong>Real-World Relevance</strong>
+                            <span>
+                              Focused on subtle change detection and better
+                              planning for patients and providers.
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="science-validation-areas">
+                        <h4>Research applications explored with BrainFx</h4>
+                        <div class="science-validation-chip-grid">
+                          <div class="science-validation-chip">
+                            <i class="fa-solid fa-brain"></i>
+                            Mild cognitive impairment
+                          </div>
+                          <div class="science-validation-chip">
+                            <i class="fa-solid fa-helmet-safety"></i>
+                            Concussion management
+                          </div>
+                          <div class="science-validation-chip">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                            PTSD
+                          </div>
+                          <div class="science-validation-chip">
+                            <i class="fa-solid fa-person-cane"></i>
+                            Aging populations
+                          </div>
+                          <div class="science-validation-chip">
+                            <i class="fa-solid fa-dna"></i>
+                            Neurodegenerative disease
+                          </div>
+                          <div class="science-validation-chip">
+                            <i class="fa-solid fa-lungs"></i>
+                            Long-COVID
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="science-validation-close">
+                      <p>
+                        This growing body of evidence includes peer-reviewed
+                        publications, psychometric evaluations, multi-site
+                        studies, and ongoing investigations that continue to
+                        shape the future of neurofunctional assessment.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="science-validation-side">
+                  <div class="science-validation-panel">
+                    <div class="science-validation-visual">
+                      <img
+                        src="assets/Science-images/image6.png"
+                        alt="BrainFx scientific validation dashboard"
+                      />
+                      <div class="science-validation-visual-caption">
+                        <div>
+                          <strong>Scientific evidence in action</strong>
+                          <span>
+                            Bringing research, psychometrics, and clinical
+                            usability into one clearer validation story.
+                          </span>
+                        </div>
+                        <div class="science-validation-visual-tag">
+                          <i class="fa-solid fa-flask-vial"></i>
+                          Evidence View
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="science-validation-evidence">
+                      <div class="science-validation-evidence-top">
+                        <div class="science-validation-badge">
+                          <i class="fa-solid fa-microscope"></i>
+                          Validation Focus
+                        </div>
+                        <div class="science-validation-evidence-label">
+                          Research priorities
+                        </div>
+                      </div>
+                      <div class="science-validation-evidence-grid">
+                        <div class="science-validation-evidence-card">
+                          <div class="science-validation-evidence-card-head">
+                            <div class="science-validation-evidence-card-icon">
+                              <i class="fa-solid fa-repeat"></i>
+                            </div>
+                            <strong>Reliability and psychometrics</strong>
+                          </div>
+                          <p>
+                            Demonstrates consistency, measurement quality, and
+                            sensitivity to meaningful cognitive change.
+                          </p>
+                        </div>
+                        <div class="science-validation-evidence-card">
+                          <div class="science-validation-evidence-card-head">
+                            <div class="science-validation-evidence-card-icon">
+                              <i class="fa-solid fa-laptop-medical"></i>
+                            </div>
+                            <strong>Technology acceptance</strong>
+                          </div>
+                          <p>
+                            Evaluates usability, workflow fit, and adoption in
+                            real clinical environments.
+                          </p>
+                        </div>
+                        <div class="science-validation-evidence-card">
+                          <div class="science-validation-evidence-card-head">
+                            <div class="science-validation-evidence-card-icon">
+                              <i class="fa-solid fa-wave-square"></i>
+                            </div>
+                            <strong>Subtle dysfunction detection</strong>
+                          </div>
+                          <p>
+                            Helps identify functional changes that traditional
+                            screening methods may not surface early enough.
+                          </p>
+                        </div>
+                        <div class="science-validation-evidence-card">
+                          <div class="science-validation-evidence-card-head">
+                            <div class="science-validation-evidence-card-icon">
+                              <i class="fa-solid fa-user-doctor"></i>
+                            </div>
+                            <strong>Care planning relevance</strong>
+                          </div>
+                          <p>
+                            Supports earlier detection and more personalized
+                            planning across diverse healthcare populations.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="science-validation-summary">
+                      <strong>Why this matters</strong>
+                      <p>
+                        BrainFx is committed to delivering assessments that are
+                        innovative, scientifically rigorous, clinically
+                        meaningful, and ready to support better outcomes in
+                        practice.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
