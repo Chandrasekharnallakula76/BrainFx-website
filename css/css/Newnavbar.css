@@ -552,14 +552,8 @@ html[data-wf-page="6760858fd1c261f9adc849e3"] {
   overflow: visible;
 }
 
-.assessment-mega-shell .assessment-cards,
-.assessment-floating-submenu {
-  margin-top: 15px;
-  background: #ffffff;
-  border: 1px solid rgba(17, 130, 207, 0.1);
-  box-shadow:
-    0 20px 45px rgba(8, 74, 123, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+.assessment-mega-shell .assessment-cards {
+  background: transparent;
 }
 
 .assessment-mega-shell .assessment-cards {
@@ -588,7 +582,9 @@ html[data-wf-page="6760858fd1c261f9adc849e3"] {
 }
 
 .assessment-card.is-featured:hover {
-  background: rgba(255, 255, 255, 0.98);
+  background: transparent;
+  border-color: rgba(17, 130, 207, 0.16);
+  box-shadow: none;
 }
 
 .assessment-floating-submenu {
@@ -599,6 +595,9 @@ html[data-wf-page="6760858fd1c261f9adc849e3"] {
   min-width: 18.5rem;
   padding: 0.85rem 0.8rem 0.65rem;
   border-radius: 1.45rem;
+  background: white;
+  border: 0;
+  box-shadow: none;
   min-height: 0;
   height: auto;
   opacity: 0;
@@ -628,11 +627,11 @@ html[data-wf-page="6760858fd1c261f9adc849e3"] {
   top: 82%;
   width: 20px;
   height: 20px;
-  background: #ffffff;
-  border-left: 1px solid rgba(17, 130, 207, 0.1);
-  border-bottom: 1px solid rgba(17, 130, 207, 0.1);
+  background: white;
+  border-left: 0;
+  border-bottom: 0;
   transform: translateY(-50%) rotate(45deg);
-  box-shadow: -10px 12px 24px rgba(8, 74, 123, 0.06);
+  box-shadow: none;
 }
 
 .assessment-floating-submenu.is-open {
