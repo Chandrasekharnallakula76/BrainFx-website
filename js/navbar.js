@@ -42,6 +42,7 @@
       "pricing.html",
       "pricing-contct.html",
     ]);
+    const trainingFeaturedClass = currentPage === "index.html" ? " is-featured" : "";
 
     navPagesLinks.innerHTML = `
       <div class="nav-links">
@@ -190,7 +191,7 @@
                   </div>
                 </a>
                 <a href="#">
-                  <div class="assessment-card is-featured" data-training-card="true">
+                  <div class="assessment-card${trainingFeaturedClass}" data-training-card="true">
                     <div class="image-container">
                       <i class="fa-solid fa-graduation-cap"></i>
                     </div>
@@ -381,6 +382,7 @@
     const trainingSubmenu = document.querySelector(
       "[data-training-submenu='true']",
     );
+    const keepTrainingFeaturedByDefault = getCurrentPage() === "index.html";
 
     if (!trainingCard || !trainingSubmenu || trainingCard.dataset.trainingSubmenuBound === "true") {
       return;
@@ -455,6 +457,12 @@
     const assessmentWrapper = trainingCard.closest(".nav-link-wrapper");
     if (assessmentWrapper) {
       assessmentWrapper.addEventListener("mouseleave", scheduleTrainingClose);
+    }
+
+    if (keepTrainingFeaturedByDefault) {
+      openTrainingSubmenu();
+    } else {
+      closeTrainingSubmenu();
     }
   }
 
