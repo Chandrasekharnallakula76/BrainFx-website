@@ -527,6 +527,224 @@ html[data-wf-page="6760858fd1c261f9adc849e3"] {
   overflow: hidden;
 }
 
+.assessment-dropdown.is-brainfx-mega {
+  width: min(30rem, 94vw);
+  max-width: none;
+  padding: 1rem;
+  background: linear-gradient(180deg, #edf6ff 0%, #f7fbff 100%);
+  border-radius: 1.8rem;
+  box-shadow: 0 28px 58px rgba(8, 74, 123, 0.18);
+  border: 1px solid rgba(17, 130, 207, 0.08);
+  overflow: visible;
+}
+
+.assessment-dropdown.is-brainfx-mega .arrow {
+  top: -13px;
+  border-left-width: 13px;
+  border-right-width: 13px;
+  border-bottom-width: 13px;
+  border-bottom-color: #edf6ff;
+}
+
+.assessment-mega-shell {
+  position: relative;
+  display: block;
+  overflow: visible;
+}
+
+.assessment-mega-shell .assessment-cards,
+.assessment-floating-submenu {
+  margin-top: 15px;
+  background: #ffffff;
+  border: 1px solid rgba(17, 130, 207, 0.1);
+  box-shadow:
+    0 20px 45px rgba(8, 74, 123, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.assessment-mega-shell .assessment-cards {
+  position: relative;
+  border-radius: 1.55rem;
+  padding: 0.55rem;
+  overflow: visible;
+  min-width: 0;
+  width: 100%;
+}
+
+.assessment-mega-shell .assessment-card {
+  align-items: flex-start;
+  min-height: auto;
+  padding-right: 1.1rem;
+}
+
+.assessment-mega-shell .assessment-cards > a {
+  display: block;
+  width: 100%;
+}
+
+.assessment-card.is-featured {
+  background: rgba(237, 246, 255, 0.96);
+  border-color: rgba(17, 130, 207, 0.16);
+}
+
+.assessment-card.is-featured:hover {
+  background: rgba(255, 255, 255, 0.98);
+}
+
+.assessment-floating-submenu {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 0.75rem);
+  width: min(20rem, 27vw);
+  min-width: 18.5rem;
+  padding: 0.85rem 0.8rem 0.65rem;
+  border-radius: 1.45rem;
+  min-height: 0;
+  height: auto;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(14px, 0);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0.2s ease;
+  z-index: 8;
+}
+
+.assessment-floating-submenu::before {
+  content: "";
+  position: absolute;
+  left: -24px;
+  top: 0;
+  bottom: 0;
+  width: 24px;
+}
+
+.assessment-floating-submenu::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 82%;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border-left: 1px solid rgba(17, 130, 207, 0.1);
+  border-bottom: 1px solid rgba(17, 130, 207, 0.1);
+  transform: translateY(-50%) rotate(45deg);
+  box-shadow: -10px 12px 24px rgba(8, 74, 123, 0.06);
+}
+
+.assessment-floating-submenu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(0, 0);
+}
+
+.assessment-submenu-label {
+  margin: 0 0 0.35rem 0;
+  color: #1182cf;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.assessment-submenu-links {
+  display: grid;
+  gap: 0.45rem;
+  max-height: min(18rem, calc(100vh - 12rem));
+  overflow-y: auto;
+  padding-right: 0.12rem;
+  padding-bottom: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.assessment-submenu-links::-webkit-scrollbar {
+  display: none;
+}
+
+.assessment-submenu-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  min-height: 3.6rem;
+  padding: 0.8rem 0.75rem;
+  border-radius: 0.95rem;
+  background: #eef7ff;
+  border: 1px solid rgba(17, 130, 207, 0.08);
+  color: #0b5f95;
+  text-decoration: none;
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.assessment-submenu-link:hover,
+.assessment-submenu-link.active {
+  background: #ffffff;
+  border-color: rgba(17, 130, 207, 0.16);
+  box-shadow: 0 12px 24px rgba(17, 130, 207, 0.08);
+}
+
+.assessment-submenu-link-icon {
+  flex: 0 0 auto;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(17, 130, 207, 0.1);
+}
+
+.assessment-submenu-link-icon i {
+  color: #1182cf;
+  font-size: 0.9rem;
+}
+
+.assessment-submenu-link-copy {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.assessment-submenu-link-copy span {
+  display: block;
+  margin: 0 0 0.18rem 0;
+  color: #0b5f95;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.assessment-submenu-link-copy small {
+  display: block;
+  color: #4f7da4;
+  font-size: 0.68rem;
+  line-height: 1.45;
+}
+
+@media screen and (max-width: 1280px) {
+  .assessment-dropdown.is-brainfx-mega {
+    width: min(30rem, 95vw);
+  }
+
+  .assessment-floating-submenu {
+    width: 18rem;
+    min-width: 18rem;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .assessment-floating-submenu {
+    display: none;
+  }
+}
+
 .image-container i {
   display: inline-flex;
   align-items: center;

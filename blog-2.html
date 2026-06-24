@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <!-- This site was created in Webflow. https://webflow.com --><!-- Last Published: Wed Mar 19 2025 08:12:06 GMT+0000 (Coordinated Universal Time) -->
 <html
   data-wf-domain="brainfx.webflow.io"
@@ -595,8 +595,8 @@
                               <div class="eyebrow txt-neut-5">Oct 5, 2021</div>
                               <div class="h5-size">
                                 Highmark Interactive Announces Collaboration
-                                with Mayo Clinic to Assess Impact of â€œLong
-                                COVIDâ€ on Cognitive Function
+                                with Mayo Clinic to Assess Impact of “Long
+                                COVID” on Cognitive Function
                               </div>
                             </div>
                             <div class="read-more">
@@ -878,7 +878,7 @@
                     class="footer-impressum-col-1"
                   >
                     <div class="eyebrow txt-neut-4">
-                      Copyright Â© 2026 - BrainFx AI Inc. All rights reserved.
+                      Copyright © 2026 - BrainFx AI Inc. All rights reserved.
                     </div>
                   </div>
                   <div
@@ -926,5 +926,86 @@
       type="text/javascript"
     ></script>
   </body>
-  <script src="js/navbar.js"></script>
+    <script src="js/navbar.js"></script>
+  <script>
+    const trainingCard = document.querySelector("[data-training-card='true']");
+    const trainingSubmenu = document.querySelector(
+      "[data-training-submenu='true']",
+    );
+
+    if (trainingCard && trainingSubmenu) {
+      let submenuTimer = null;
+      const assessmentDropdown = trainingSubmenu.closest(
+        ".assessment-dropdown",
+      );
+
+      function positionTrainingSubmenu() {
+        if (!assessmentDropdown) {
+          return;
+        }
+
+        const dropdownRect = assessmentDropdown.getBoundingClientRect();
+        const cardRect = trainingCard.getBoundingClientRect();
+        const submenuHeight = trainingSubmenu.offsetHeight || 260;
+        const desiredTop =
+          cardRect.top -
+          dropdownRect.top +
+          cardRect.height / 2 -
+          submenuHeight / 2 +
+          48;
+        const maxTop = Math.max(
+          16,
+          assessmentDropdown.clientHeight - submenuHeight - 16,
+        );
+
+        trainingSubmenu.style.top = `${Math.min(
+          Math.max(16, desiredTop),
+          maxTop,
+        )}px`;
+      }
+
+      function openTrainingSubmenu() {
+        if (submenuTimer) {
+          clearTimeout(submenuTimer);
+          submenuTimer = null;
+        }
+
+        positionTrainingSubmenu();
+        trainingCard.classList.add("is-featured");
+        trainingSubmenu.classList.add("is-open");
+      }
+
+      function closeTrainingSubmenu() {
+        trainingCard.classList.remove("is-featured");
+        trainingSubmenu.classList.remove("is-open");
+      }
+
+      function scheduleTrainingClose() {
+        if (submenuTimer) {
+          clearTimeout(submenuTimer);
+        }
+
+        submenuTimer = setTimeout(() => {
+          if (
+            !trainingCard.matches(":hover") &&
+            !trainingSubmenu.matches(":hover")
+          ) {
+            closeTrainingSubmenu();
+          }
+        }, 120);
+      }
+
+      trainingCard.addEventListener("mouseenter", openTrainingSubmenu);
+      trainingCard.addEventListener("mouseleave", scheduleTrainingClose);
+      trainingSubmenu.addEventListener("mouseenter", openTrainingSubmenu);
+      trainingSubmenu.addEventListener("mouseleave", scheduleTrainingClose);
+      window.addEventListener("resize", positionTrainingSubmenu);
+
+      const assessmentWrapper = trainingCard.closest(".nav-link-wrapper");
+      if (assessmentWrapper) {
+        assessmentWrapper.addEventListener("mouseleave", scheduleTrainingClose);
+      }
+    }
+  </script>
 </html>
+

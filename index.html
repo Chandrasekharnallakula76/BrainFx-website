@@ -607,293 +607,6 @@
         border-bottom-width: 13px;
         border-bottom-color: #edf6ff;
       }
-
-      .assessment-mega-shell {
-        position: relative;
-        display: block;
-        overflow: visible;
-      }
-
-      .assessment-mega-intro,
-      .assessment-mega-list,
-      .assessment-floating-submenu {
-        margin-top: 15px;
-        background: #ffffff;
-        border: 1px solid rgba(17, 130, 207, 0.1);
-        box-shadow:
-          0 20px 45px rgba(8, 74, 123, 0.08),
-          inset 0 1px 0 rgba(255, 255, 255, 0.85);
-      }
-
-      .assessment-mega-intro {
-        display: none;
-        border-radius: 1.55rem;
-        padding: 1.45rem;
-      }
-
-      .assessment-mega-eyebrow {
-        margin: 0 0 0.55rem 0;
-        color: #1182cf;
-        font-size: 0.72rem;
-        font-weight: 800;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-      }
-
-      .assessment-mega-intro h2 {
-        margin: 0;
-        color: #182457;
-        font-size: clamp(2rem, 2.8vw, 3.2rem);
-        line-height: 0.98;
-        letter-spacing: -0.04em;
-      }
-
-      .assessment-mega-intro p {
-        margin: 0;
-        color: #3f6488;
-        font-size: 0.94rem;
-        line-height: 1.75;
-      }
-
-      .assessment-mega-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.85rem;
-      }
-
-      .assessment-mega-action {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 3rem;
-        padding: 0.9rem 1.25rem;
-        border-radius: 1rem;
-        font-size: 0.88rem;
-        font-weight: 700;
-        text-decoration: none;
-        transition:
-          transform 0.2s ease,
-          box-shadow 0.2s ease;
-      }
-
-      .assessment-mega-action:hover {
-        transform: translateY(-1px);
-      }
-
-      .assessment-mega-action.primary {
-        color: #ffffff;
-        background: linear-gradient(135deg, #1182cf 0%, #0b5f95 100%);
-        box-shadow: 0 16px 30px rgba(17, 130, 207, 0.22);
-      }
-
-      .assessment-mega-action.secondary {
-        color: #0b5f95;
-        background: linear-gradient(135deg, #eaf6d9 0%, #9cd255 100%);
-        box-shadow: 0 16px 30px rgba(143, 202, 69, 0.18);
-      }
-
-      .assessment-mega-list {
-        position: relative;
-        border-radius: 1.55rem;
-        padding: 0.55rem;
-        overflow: visible;
-        min-width: 0;
-        width: 100%;
-      }
-
-      .assessment-cards {
-        display: grid;
-        gap: 0.55rem;
-      }
-
-      .assessment-card {
-        align-items: flex-start;
-        min-height: auto;
-        padding-right: 1.1rem;
-      }
-
-      .assessment-card::after {
-        display: none;
-      }
-
-      .assessment-card.is-featured {
-        background: transparent;
-        border-color: transparent;
-        box-shadow: none;
-      }
-
-      .assessment-card.is-featured:hover {
-        background: rgba(255, 255, 255, 0.98);
-      }
-
-      .assessment-floating-submenu {
-        position: absolute;
-        top: 0;
-        left: calc(100% + 0.75rem);
-        width: min(20rem, 27vw);
-        min-width: 18.5rem;
-        padding: 0.85rem 0.8rem 0.65rem;
-        border-radius: 1.45rem;
-        min-height: 0;
-        height: auto;
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-        transform: translate(14px, 0);
-        transition:
-          opacity 0.2s ease,
-          transform 0.2s ease,
-          visibility 0.2s ease;
-        z-index: 8;
-      }
-
-      .assessment-floating-submenu::before {
-        content: "";
-        position: absolute;
-        left: -24px;
-        top: 0;
-        bottom: 0;
-        width: 24px;
-      }
-
-      .assessment-floating-submenu::after {
-        content: "";
-        position: absolute;
-        left: -10px;
-        top: 82%;
-        width: 20px;
-        height: 20px;
-        background: #ffffff;
-        border-left: 1px solid rgba(17, 130, 207, 0.1);
-        border-bottom: 1px solid rgba(17, 130, 207, 0.1);
-        transform: translateY(-50%) rotate(45deg);
-        box-shadow: -10px 12px 24px rgba(8, 74, 123, 0.06);
-      }
-
-      .assessment-floating-submenu.is-open {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-        transform: translate(0, 0);
-      }
-
-      .assessment-submenu-label {
-        margin: 0 0 0.35rem 0;
-        color: #1182cf;
-        font-size: 0.65rem;
-        font-weight: 800;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-      }
-
-      .assessment-submenu-title {
-        margin: 0 0 0.45rem 0;
-        color: #163f71;
-        font-size: 1.18rem;
-        line-height: 1.2;
-      }
-
-      .assessment-submenu-description {
-        margin: 0 0 0.95rem 0;
-        color: #446a90;
-        font-size: 0.76rem;
-        line-height: 1.55;
-      }
-
-      .assessment-submenu-links {
-        display: grid;
-        gap: 0.45rem;
-        max-height: min(18rem, calc(100vh - 12rem));
-        overflow-y: auto;
-        padding-right: 0.12rem;
-        padding-bottom: 0;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-      }
-
-      .assessment-submenu-links::-webkit-scrollbar {
-        display: none;
-      }
-
-      .assessment-submenu-link {
-        display: flex;
-        align-items: flex-start;
-        gap: 0.7rem;
-        min-height: 3.6rem;
-        padding: 0.8rem 0.75rem;
-        border-radius: 0.95rem;
-        background: #eef7ff;
-        border: 1px solid rgba(17, 130, 207, 0.08);
-        color: #0b5f95;
-        text-decoration: none;
-        transition:
-          transform 0.18s ease,
-          background 0.18s ease,
-          border-color 0.18s ease,
-          box-shadow 0.18s ease;
-      }
-
-      .assessment-submenu-link:hover {
-        transform: translateX(2px);
-        background: #ffffff;
-        border-color: rgba(17, 130, 207, 0.16);
-        box-shadow: 0 12px 24px rgba(17, 130, 207, 0.08);
-      }
-
-      .assessment-submenu-link-icon {
-        flex: 0 0 auto;
-        width: 2rem;
-        height: 2rem;
-        border-radius: 0.7rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: rgba(17, 130, 207, 0.1);
-      }
-
-      .assessment-submenu-link-icon i {
-        color: #1182cf;
-        font-size: 0.9rem;
-      }
-
-      .assessment-submenu-link-copy {
-        min-width: 0;
-        flex: 1 1 auto;
-      }
-
-      .assessment-submenu-link-copy span {
-        display: block;
-        margin: 0 0 0.18rem 0;
-        color: #0b5f95;
-        font-size: 0.8rem;
-        font-weight: 700;
-        line-height: 1.25;
-      }
-
-      .assessment-submenu-link-copy small {
-        display: block;
-        color: #4f7da4;
-        font-size: 0.68rem;
-        line-height: 1.45;
-      }
-
-      @media screen and (max-width: 1280px) {
-        .assessment-dropdown.is-brainfx-mega {
-          width: min(30rem, 95vw);
-        }
-
-        .assessment-floating-submenu {
-          width: 18rem;
-          min-width: 18rem;
-          min-height: 20rem;
-        }
-      }
-
-      @media screen and (max-width: 1120px) {
-        .assessment-floating-submenu {
-          display: none;
-        }
-      }
     </style>
     <style>
       html[data-wf-page="6760858fd1c261f9adc849e3"]
@@ -1332,73 +1045,70 @@
                       <!-- Assessment Dropdown -->
                       <div class="dropdown assessment-dropdown is-brainfx-mega">
                         <div class="arrow"></div>
-                        <div class="assessment-mega-shell">
-                          <div class="assessment-cards">
-                            <a href="https://360ax.brainfx.ai/" target="_blank">
-                              <div class="assessment-card">
-                                <div class="image-container">
-                                  <i class="fa-solid fa-globe"></i>
-                                </div>
-                                <div class="card-text-main">
-                                  <h3>360</h3>
-                                  <p>
-                                    BrainFx 360 offers a broader connected view
-                                    of neurofunction and performance.
-                                  </p>
-                                </div>
+
+                        <div class="assessment-cards">
+                          <a href="https://360ax.brainfx.ai/" target="_blank">
+                            <div class="assessment-card">
+                              <div class="image-container">
+                                <i class="fa-solid fa-globe"></i>
                               </div>
-                            </a>
-                            <a
-                              href="https://screen.brainfx.ai/"
-                              target="_blank"
+                              <div class="card-text-main">
+                                <h3>360</h3>
+                                <p>
+                                  BrainFx 360 offers a broader connected view of
+                                  neurofunction and performance.
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="https://screen.brainfx.ai/" target="_blank">
+                            <div class="assessment-card">
+                              <div class="image-container">
+                                <i class="fa-solid fa-desktop"></i>
+                              </div>
+                              <div class="card-text-main">
+                                <h3>Screen</h3>
+                                <p>
+                                  BrainFx SCREEN supports fast cognitive
+                                  screening for focused clinical review.
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="https://vcax.brainfx.com" target="_blank">
+                            <div class="assessment-card">
+                              <div class="image-container">
+                                <i class="fa-solid fa-chart-column"></i>
+                              </div>
+                              <div class="card-text-main">
+                                <h3>VCA</h3>
+                                <p>
+                                  BrainFx VCA presents visual cognitive insights
+                                  in a compact and practical format.
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="#">
+                            <div
+                              class="assessment-card is-featured"
+                              data-training-card="true"
                             >
-                              <div class="assessment-card">
-                                <div class="image-container">
-                                  <i class="fa-solid fa-desktop"></i>
-                                </div>
-                                <div class="card-text-main">
-                                  <h3>Screen</h3>
-                                  <p>
-                                    BrainFx SCREEN supports fast cognitive
-                                    screening for focused clinical review.
-                                  </p>
-                                </div>
+                              <div class="image-container">
+                                <i class="fa-solid fa-graduation-cap"></i>
                               </div>
-                            </a>
-                            <a href="https://vcax.brainfx.com" target="_blank">
-                              <div class="assessment-card">
-                                <div class="image-container">
-                                  <i class="fa-solid fa-chart-column"></i>
-                                </div>
-                                <div class="card-text-main">
-                                  <h3>VCA</h3>
-                                  <p>
-                                    BrainFx VCA presents visual cognitive
-                                    insights in a compact and practical format.
-                                  </p>
-                                </div>
+                              <div class="card-text-main">
+                                <h3>Training</h3>
+                                <p>
+                                  BrainFx training supports learning,
+                                  certification, and confident assessment
+                                  delivery.
+                                </p>
                               </div>
-                            </a>
-                            <a href="#">
-                              <div
-                                class="assessment-card is-featured"
-                                data-training-card="true"
-                              >
-                                <div class="image-container">
-                                  <i class="fa-solid fa-graduation-cap"></i>
-                                </div>
-                                <div class="card-text-main">
-                                  <h3>Training</h3>
-                                  <p>
-                                    BrainFx training supports learning,
-                                    certification, and confident assessment
-                                    delivery.
-                                  </p>
-                                </div>
-                              </div>
-                            </a>
-                          </div>
+                            </div>
+                          </a>
                         </div>
+
                         <div
                           class="assessment-floating-submenu"
                           data-training-submenu="true"
@@ -3581,3 +3291,4 @@
     }
   </script>
 </html>
+

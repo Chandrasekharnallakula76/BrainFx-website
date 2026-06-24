@@ -152,53 +152,114 @@
               <i class="fas fa-chalkboard-teacher"></i> Assessments
             </span>
           </a>
-          <div class="dropdown assessment-dropdown">
+          <div class="dropdown assessment-dropdown is-brainfx-mega">
             <div class="arrow"></div>
-            <div class="assessment-cards">
-              <a href="comprehensive.html">
-                <div class="assessment-card">
-                  <div class="image-container">
-                    <i class="fa-solid fa-globe"></i>
+            <div class="assessment-mega-shell">
+              <div class="assessment-cards">
+                <a href="https://360ax.brainfx.ai/" target="_blank">
+                  <div class="assessment-card">
+                    <div class="image-container">
+                      <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <div class="card-text-main">
+                      <h3>360</h3>
+                      <p>BrainFx 360 offers a broader connected view of neurofunction and performance.</p>
+                    </div>
                   </div>
-                  <div class="card-text-main">
-                    <h3>360</h3>
-                    <p>BrainFx 360 offers a broader connected view of neurofunction and performance.</p>
+                </a>
+                <a href="https://screen.brainfx.ai/" target="_blank">
+                  <div class="assessment-card">
+                    <div class="image-container">
+                      <i class="fa-solid fa-desktop"></i>
+                    </div>
+                    <div class="card-text-main">
+                      <h3>Screen</h3>
+                      <p>BrainFx SCREEN supports fast cognitive screening for focused clinical review.</p>
+                    </div>
                   </div>
-                </div>
-              </a>
-              <a href="screen-track.html">
-                <div class="assessment-card">
-                  <div class="image-container">
-                    <i class="fa-solid fa-desktop"></i>
+                </a>
+                <a href="https://vcax.brainfx.com" target="_blank">
+                  <div class="assessment-card">
+                    <div class="image-container">
+                      <i class="fa-solid fa-chart-column"></i>
+                    </div>
+                    <div class="card-text-main">
+                      <h3>VCA</h3>
+                      <p>BrainFx VCA presents visual cognitive insights in a compact and practical format.</p>
+                    </div>
                   </div>
-                  <div class="card-text-main">
-                    <h3>Screen</h3>
-                    <p>BrainFx SCREEN supports fast cognitive screening for focused clinical review.</p>
+                </a>
+                <a href="#">
+                  <div class="assessment-card is-featured" data-training-card="true">
+                    <div class="image-container">
+                      <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="card-text-main">
+                      <h3>Training</h3>
+                      <p>BrainFx training supports learning, certification, and confident assessment delivery.</p>
+                    </div>
                   </div>
-                </div>
-              </a>
-              <a href="telehealth.html">
-                <div class="assessment-card">
-                  <div class="image-container">
-                    <i class="fa-solid fa-chart-column"></i>
+                </a>
+              </div>
+            </div>
+            <div class="assessment-floating-submenu" data-training-submenu="true">
+              <p class="assessment-submenu-label">Learning Path</p>
+              <div class="assessment-submenu-links">
+                <a href="comprehensive.html" class="assessment-submenu-link">
+                  <div class="assessment-submenu-link-icon">
+                    <i class="fa-solid fa-hand-holding-medical"></i>
                   </div>
-                  <div class="card-text-main">
-                    <h3>VCA</h3>
-                    <p>BrainFx VCA presents visual cognitive insights in a compact and practical format.</p>
+                  <div class="assessment-submenu-link-copy">
+                    <span>Comprehensive</span>
+                    <small>Good planning helps make things clear, work well, and succeed.</small>
                   </div>
-                </div>
-              </a>
-              <a href="brainfx-training.html">
-                <div class="assessment-card">
-                  <div class="image-container">
+                </a>
+                <a href="screen-track.html" class="assessment-submenu-link">
+                  <div class="assessment-submenu-link-icon">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                  </div>
+                  <div class="assessment-submenu-link-copy">
+                    <span>Screen & Track</span>
+                    <small>Check and follow progress carefully to manage the project well.</small>
+                  </div>
+                </a>
+                <a href="telehealth.html" class="assessment-submenu-link">
+                  <div class="assessment-submenu-link-icon">
+                    <i class="fa-solid fa-briefcase-medical"></i>
+                  </div>
+                  <div class="assessment-submenu-link-copy">
+                    <span>Telehealth</span>
+                    <small>Telehealth enables remote medical consultations and convenient access.</small>
+                  </div>
+                </a>
+                <a href="brainfx-training.html" class="assessment-submenu-link">
+                  <div class="assessment-submenu-link-icon">
                     <i class="fa-solid fa-graduation-cap"></i>
                   </div>
-                  <div class="card-text-main">
-                    <h3>Training</h3>
-                    <p>BrainFx training supports learning, certification, and confident assessment delivery.</p>
+                  <div class="assessment-submenu-link-copy">
+                    <span>BrainFx Training</span>
+                    <small>BrainFx training helps improve thinking skills, testing, and recovery.</small>
                   </div>
-                </div>
-              </a>
+                </a>
+                <a href="brainfx-philosophy.html" class="assessment-submenu-link">
+                  <div class="assessment-submenu-link-icon">
+                    <i class="fa-solid fa-brain"></i>
+                  </div>
+                  <div class="assessment-submenu-link-copy">
+                    <span>BrainFx Philosophy</span>
+                    <small>BrainFx philosophy values personalized cognitive assessment.</small>
+                  </div>
+                </a>
+                <a href="assessmentbundle.html" class="assessment-submenu-link">
+                  <div class="assessment-submenu-link-icon">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                  </div>
+                  <div class="assessment-submenu-link-copy">
+                    <span>Assessment Bundle</span>
+                    <small>Comprehensive cognitive assessment bundle for accurate performance evaluation today.</small>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -315,6 +376,88 @@
     dropdown.addEventListener("mouseleave", scheduleClose);
   }
 
+  function setupTrainingSubmenu() {
+    const trainingCard = document.querySelector("[data-training-card='true']");
+    const trainingSubmenu = document.querySelector(
+      "[data-training-submenu='true']",
+    );
+
+    if (!trainingCard || !trainingSubmenu || trainingCard.dataset.trainingSubmenuBound === "true") {
+      return;
+    }
+
+    trainingCard.dataset.trainingSubmenuBound = "true";
+    const assessmentDropdown = trainingSubmenu.closest(".assessment-dropdown");
+    let submenuTimer = null;
+
+    function positionTrainingSubmenu() {
+      if (!assessmentDropdown) {
+        return;
+      }
+
+      const dropdownRect = assessmentDropdown.getBoundingClientRect();
+      const cardRect = trainingCard.getBoundingClientRect();
+      const submenuHeight = trainingSubmenu.offsetHeight || 260;
+      const desiredTop =
+        cardRect.top -
+        dropdownRect.top +
+        cardRect.height / 2 -
+        submenuHeight / 2 +
+        48;
+      const maxTop = Math.max(
+        16,
+        assessmentDropdown.clientHeight - submenuHeight - 16,
+      );
+
+      trainingSubmenu.style.top = `${Math.min(
+        Math.max(16, desiredTop),
+        maxTop,
+      )}px`;
+    }
+
+    function openTrainingSubmenu() {
+      if (submenuTimer) {
+        clearTimeout(submenuTimer);
+        submenuTimer = null;
+      }
+
+      positionTrainingSubmenu();
+      trainingCard.classList.add("is-featured");
+      trainingSubmenu.classList.add("is-open");
+    }
+
+    function closeTrainingSubmenu() {
+      trainingCard.classList.remove("is-featured");
+      trainingSubmenu.classList.remove("is-open");
+    }
+
+    function scheduleTrainingClose() {
+      if (submenuTimer) {
+        clearTimeout(submenuTimer);
+      }
+
+      submenuTimer = setTimeout(function () {
+        if (
+          !trainingCard.matches(":hover") &&
+          !trainingSubmenu.matches(":hover")
+        ) {
+          closeTrainingSubmenu();
+        }
+      }, 120);
+    }
+
+    trainingCard.addEventListener("mouseenter", openTrainingSubmenu);
+    trainingCard.addEventListener("mouseleave", scheduleTrainingClose);
+    trainingSubmenu.addEventListener("mouseenter", openTrainingSubmenu);
+    trainingSubmenu.addEventListener("mouseleave", scheduleTrainingClose);
+    window.addEventListener("resize", positionTrainingSubmenu);
+
+    const assessmentWrapper = trainingCard.closest(".nav-link-wrapper");
+    if (assessmentWrapper) {
+      assessmentWrapper.addEventListener("mouseleave", scheduleTrainingClose);
+    }
+  }
+
   function setupMobileMenu() {
     const menuButton = document.querySelector(".menu-btn");
     const navLinksWrap = document.querySelector(".nav-links-wrap");
@@ -402,6 +545,7 @@
   setupDropdownHover(".nav-link.assessment", ".assessment-dropdown");
   setupDropdownHover(".nav-link.research", ".research-dropdown");
   setupDropdownHover(".nav-link.science", ".science-dropdown");
+  setupTrainingSubmenu();
   setupMobileMenu();
   setActiveNavLink();
 })();
