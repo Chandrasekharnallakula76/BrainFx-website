@@ -817,6 +817,32 @@ html[data-wf-page="6760858fd1c261f9adc849e3"] {
 }
 
 @media (max-width: 990px) {
+  .nav-links,
+  .nav-cta-group,
+  .btn-nav-wrap,
+  .btn-nav-demo {
+    display: none !important;
+  }
+
+  .nav-wrap {
+    gap: 0.75rem;
+  }
+
+  .nav-logo {
+    margin-right: 0;
+  }
+
+  .nav-links-wrap {
+    flex: 0 1 auto;
+  }
+
+  .menu-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+  }
+
   .nav-links-wrap.is-open {
     display: flex !important;
   }
@@ -846,7 +872,8 @@ html[data-wf-page="6760858fd1c261f9adc849e3"] {
   .mobile-nav {
     display: flex;
     flex-direction: column;
-    padding: 20px 85px;
+    padding: 20px 85px 0;
+    padding-left: 0.65rem;
   }
 
   .mobile-nav p {
@@ -880,6 +907,7 @@ html[data-wf-page="6760858fd1c261f9adc849e3"] {
     flex-wrap: wrap;
     gap: 20px;
     align-items: center;
+    padding-left: 0.15rem;
   }
 
   .submenu a {
@@ -905,6 +933,43 @@ html[data-wf-page="6760858fd1c261f9adc849e3"] {
     border-top: 1px solid rgb(235, 235, 235);
     width: 100%;
     margin-top: 3px;
+  }
+
+  .mobile-menu-login-links .top-bar-link.is-mob + .top-bar-link.is-mob {
+    display: none !important;
+  }
+
+  .mobile-cta-group {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 18px;
+    padding-top: 6px;
+  }
+
+  .mobile-cta {
+    flex: 1 1 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 16px;
+    border-radius: 14px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 12px 24px rgba(11, 95, 149, 0.14);
+  }
+
+  .mobile-cta.is-demo {
+    background: linear-gradient(135deg, #1182cf 0%, #0b5f95 100%);
+    color: #ffffff;
+  }
+
+  .mobile-cta.is-login {
+    background: linear-gradient(135deg, #e6f7c9 0%, #a7d95a 100%);
+    color: #0b5f95;
+    box-shadow: 0 12px 24px rgba(143, 202, 69, 0.18);
   }
 }
 
@@ -946,6 +1011,7 @@ html[data-wf-page="6760858fd1c261f9adc849e3"] {
     flex-wrap: wrap;
     gap: 20px;
     align-items: center;
+    padding-left: 0.15rem;
   }
 
   .submenu a {
@@ -1012,6 +1078,7 @@ html[data-wf-page="6760858fd1c261f9adc849e3"] {
     flex-wrap: wrap;
     gap: 20px;
     align-items: center;
+    padding-left: 0.15rem;
   }
 
   .submenu a {
