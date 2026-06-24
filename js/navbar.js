@@ -46,7 +46,7 @@
     navPagesLinks.innerHTML = `
       <div class="nav-links">
         <div class="nav-link-wrapper">
-          <a href="index.html">
+          <a href="#">
             <span class="nav-link science${scienceActive}">
               <i class="fa-solid fa-flask"></i> Science
             </span>
