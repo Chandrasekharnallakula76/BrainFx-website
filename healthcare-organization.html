@@ -516,6 +516,224 @@
         display: none;
       }
     </style>
+    <style>
+      .care-continuum-section {
+        position: relative;
+        padding: 0 2rem 7rem;
+        background: linear-gradient(
+          180deg,
+          #ffffff 0%,
+          #f4f9ff 42%,
+          #eef7e9 100%
+        );
+        overflow: hidden;
+      }
+
+      .care-continuum-section::before {
+        content: "";
+        position: absolute;
+        inset: auto auto 4rem -8rem;
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(17, 130, 207, 0.12) 0%,
+          rgba(17, 130, 207, 0) 72%
+        );
+        pointer-events: none;
+      }
+
+      .care-continuum-shell {
+        position: relative;
+        z-index: 1;
+        max-width: 1450px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .care-continuum-panel {
+        padding: 2.4rem;
+        border-radius: 34px;
+        background: rgba(255, 255, 255, 0.82);
+        border: 1px solid rgba(17, 130, 207, 0.1);
+        box-shadow: 0 28px 80px rgba(11, 95, 149, 0.09);
+        backdrop-filter: blur(10px);
+      }
+
+      .care-continuum-header {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+        gap: 2rem;
+        align-items: start;
+        margin-bottom: 2rem;
+      }
+
+      .care-continuum-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.72rem 1.08rem;
+        border-radius: 999px;
+        background: linear-gradient(
+          135deg,
+          rgba(17, 130, 207, 0.12),
+          rgba(134, 194, 62, 0.14)
+        );
+        color: #0b5f95;
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .care-continuum-title {
+        margin: 1rem 0 0.9rem;
+        color: #0b5f95;
+        font-size: clamp(1.7rem, 2.35vw, 2.6rem);
+        line-height: 1.08;
+        letter-spacing: -0.04em;
+      }
+
+      .care-continuum-lead {
+        margin: 0;
+        max-width: 40rem;
+        color: #456783;
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+
+      .care-continuum-highlight {
+        padding: 1.4rem 1.5rem;
+        border-radius: 24px;
+        background: linear-gradient(145deg, #0f6ca8 0%, #1590d3 100%);
+        color: #ffffff;
+        box-shadow: 0 18px 40px rgba(15, 108, 168, 0.2);
+      }
+
+      .care-continuum-highlight span {
+        display: block;
+        margin-bottom: 0.55rem;
+        color: rgba(255, 255, 255, 0.74);
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .care-continuum-highlight p {
+        margin: 0;
+        font-size: 0.95rem;
+        line-height: 1.65;
+      }
+
+      .care-continuum-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .care-continuum-card {
+        display: flex;
+        align-items: center;
+        gap: 0.72rem;
+        min-height: 64px;
+        padding: 0.72rem 0.88rem;
+        border-radius: 18px;
+        background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+        border: 1px solid rgba(17, 130, 207, 0.08);
+        box-shadow: 0 10px 22px rgba(11, 95, 149, 0.05);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          border-color 0.3s ease;
+      }
+
+      .care-continuum-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(17, 130, 207, 0.18);
+        box-shadow: 0 18px 36px rgba(11, 95, 149, 0.1);
+      }
+
+      .care-continuum-icon {
+        flex: 0 0 34px;
+        width: 34px;
+        height: 34px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        background: linear-gradient(145deg, #f7fbff 0%, #e8f3fd 100%);
+        color: #1182cf;
+        font-size: 0.76rem;
+        box-shadow:
+          inset 0 0 0 1px rgba(17, 130, 207, 0.05),
+          0 5px 12px rgba(17, 130, 207, 0.06);
+      }
+
+      .care-continuum-card strong {
+        display: block;
+        color: #125d97;
+        font-size: 0.9rem;
+        line-height: 1.22;
+      }
+
+      .care-continuum-summary {
+        margin-top: 1.6rem;
+        padding: 1.35rem 1.45rem;
+        border-radius: 24px;
+        background: linear-gradient(
+          135deg,
+          rgba(134, 194, 62, 0.11),
+          rgba(17, 130, 207, 0.08)
+        );
+        color: #31516b;
+        font-size: 0.96rem;
+        line-height: 1.75;
+        border: 1px solid rgba(79, 125, 31, 0.08);
+      }
+
+      @media screen and (max-width: 991px) {
+        .care-continuum-shell {
+          padding: 0 16px;
+        }
+
+        .care-continuum-header,
+        .care-continuum-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .care-continuum-section {
+          padding: 0 0 4rem;
+        }
+
+        .care-continuum-shell {
+          padding: 0 12px;
+        }
+
+        .care-continuum-panel {
+          padding: 1.35rem;
+          border-radius: 24px;
+        }
+
+        .care-continuum-title {
+          font-size: 1.8rem;
+        }
+
+        .care-continuum-card {
+          min-height: 58px;
+          padding: 0.64rem 0.78rem;
+        }
+
+        .care-continuum-icon {
+          flex: 0 0 30px;
+          width: 30px;
+          height: 30px;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="page-wrapper">
@@ -1284,6 +1502,109 @@
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="care-continuum-section">
+          <div class="care-continuum-shell">
+            <div class="care-continuum-panel">
+              <div class="care-continuum-header">
+                <div>
+                  <div class="care-continuum-tag">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    Continuum of Care
+                  </div>
+                  <h2 class="care-continuum-title">
+                    One Platform. Every Stage of Care.
+                  </h2>
+                  <p class="care-continuum-lead">
+                    BrainFx supports healthcare organizations across the full
+                    continuum of care with standardized neurofunctional insight
+                    that strengthens coordination, consistency, and visibility
+                    across every patient touchpoint.
+                  </p>
+                </div>
+                <div class="care-continuum-highlight">
+                  <span>Shared Clinical Intelligence</span>
+                  <p>
+                    From acute events to long-term follow-up, teams can work
+                    from the same neurofunctional data to guide assessment, care
+                    planning, recovery tracking, and cross-setting
+                    communication.
+                  </p>
+                </div>
+              </div>
+
+              <div class="care-continuum-grid">
+                <div class="care-continuum-card">
+                  <div class="care-continuum-icon">
+                    <i class="fa-solid fa-truck-medical"></i>
+                  </div>
+                  <strong>Emergency and Acute Care</strong>
+                </div>
+                <div class="care-continuum-card">
+                  <div class="care-continuum-icon">
+                    <i class="fa-solid fa-hospital-user"></i>
+                  </div>
+                  <strong>Inpatient Rehabilitation</strong>
+                </div>
+                <div class="care-continuum-card">
+                  <div class="care-continuum-icon">
+                    <i class="fa-solid fa-person-walking"></i>
+                  </div>
+                  <strong>Outpatient Rehabilitation</strong>
+                </div>
+                <div class="care-continuum-card">
+                  <div class="care-continuum-icon">
+                    <i class="fa-solid fa-stethoscope"></i>
+                  </div>
+                  <strong>Primary Care Networks</strong>
+                </div>
+                <div class="care-continuum-card">
+                  <div class="care-continuum-icon">
+                    <i class="fa-solid fa-hand-holding-medical"></i>
+                  </div>
+                  <strong>Community Health Centres</strong>
+                </div>
+                <div class="care-continuum-card">
+                  <div class="care-continuum-icon">
+                    <i class="fa-solid fa-house-medical"></i>
+                  </div>
+                  <strong>Home and Community Care</strong>
+                </div>
+                <div class="care-continuum-card">
+                  <div class="care-continuum-icon">
+                    <i class="fa-solid fa-bed-pulse"></i>
+                  </div>
+                  <strong>Long-Term Care</strong>
+                </div>
+                <div class="care-continuum-card">
+                  <div class="care-continuum-icon">
+                    <i class="fa-solid fa-user-doctor"></i>
+                  </div>
+                  <strong>Specialty Clinics</strong>
+                </div>
+                <div class="care-continuum-card">
+                  <div class="care-continuum-icon">
+                    <i class="fa-solid fa-brain"></i>
+                  </div>
+                  <strong>Mental Health Programs</strong>
+                </div>
+                  <div class="care-continuum-card">
+                    <div class="care-continuum-icon">
+                      <i class="fa-solid fa-microscope"></i>
+                    </div>
+                    <strong>Research and Academic Health Centres</strong>
+                  </div>
+              </div>
+
+              <div class="care-continuum-summary">
+                Whether evaluating patients following injury, managing chronic
+                neurological conditions, supporting healthy aging, or monitoring
+                recovery, BrainFx delivers consistent, standardized
+                neurofunctional data that can be shared across care teams.
               </div>
             </div>
           </div>
