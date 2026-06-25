@@ -1,6 +1,8 @@
 (function () {
   function getCurrentPage() {
-    return (window.location.pathname.split("/").pop() || "index.html").toLowerCase();
+    return (
+      window.location.pathname.split("/").pop() || "index.html"
+    ).toLowerCase();
   }
 
   function getActiveClass(currentPage, pages) {
@@ -54,11 +56,14 @@
       "scientific-validation.html",
     );
     const physiciansActive = getCardActiveClass(currentPage, "physicians.html");
-    const rehabActive = getCardActiveClass(
+    const healthCareOrganizationsActive = getCardActiveClass(
       currentPage,
-      "rehabilitation-acute.html",
+      "providers.html",
     );
-    const seniorCareActive = getCardActiveClass(currentPage, "senior-care.html");
+    const seniorCareActive = getCardActiveClass(
+      currentPage,
+      "senior-care.html",
+    );
     const employersActive = getCardActiveClass(currentPage, "employers.html");
     const athleticsActive = getCardActiveClass(currentPage, "athletics.html");
     const comprehensiveActive = getCardActiveClass(
@@ -82,7 +87,8 @@
       currentPage,
       "assessmentbundle.html",
     );
-    const trainingFeaturedClass = currentPage === "index.html" ? " is-featured" : "";
+    const trainingFeaturedClass =
+      currentPage === "index.html" ? " is-featured" : "";
 
     navPagesLinks.innerHTML = `
       <div class="nav-links">
@@ -140,14 +146,14 @@
                   </div>
                 </div>
               </a>
-              <a href="rehabilitation-acute.html">
-                <div class="provider-card${rehabActive}">
+              <a href="healthcare-organization.html">
+                <div class="provider-card${healthCareOrganizationsActive}">
                   <div class="image-container">
-                    <i class="fa-solid fa-house-medical"></i>
+                    <i class="fa-solid fa-hospital"></i>
                   </div>
                   <div class="card-text-main">
-                    <h3>Rehabilitation & Acute</h3>
-                    <p>Rehabilitation and acute care focus on enhancing patient recovery.</p>
+                    <h3>Health Care Organizations</h3>
+                    <p>Health care organizations can use BrainFx to support integrated care and service planning.</p>
                   </div>
                 </div>
               </a>
@@ -424,7 +430,11 @@
     );
     const keepTrainingFeaturedByDefault = getCurrentPage() === "index.html";
 
-    if (!trainingCard || !trainingSubmenu || trainingCard.dataset.trainingSubmenuBound === "true") {
+    if (
+      !trainingCard ||
+      !trainingSubmenu ||
+      trainingCard.dataset.trainingSubmenuBound === "true"
+    ) {
       return;
     }
 
@@ -559,34 +569,38 @@
       link.classList.remove("active");
     });
 
-    document.querySelectorAll(".nav-pages-links a[href]").forEach(function (anchor) {
-      const hrefPage = anchor.getAttribute("href").split("/").pop();
+    document
+      .querySelectorAll(".nav-pages-links a[href]")
+      .forEach(function (anchor) {
+        const hrefPage = anchor.getAttribute("href").split("/").pop();
 
-      if (hrefPage.toLowerCase() === currentPage.toLowerCase()) {
-        const navLink = anchor.querySelector(".nav-link");
+        if (hrefPage.toLowerCase() === currentPage.toLowerCase()) {
+          const navLink = anchor.querySelector(".nav-link");
 
-        if (navLink) {
-          navLink.classList.add("active");
+          if (navLink) {
+            navLink.classList.add("active");
+          }
         }
-      }
-    });
+      });
   }
 
-  window.toggleIcon = window.toggleIcon || function (element) {
-    const path = element.querySelector("path");
+  window.toggleIcon =
+    window.toggleIcon ||
+    function (element) {
+      const path = element.querySelector("path");
 
-    if (!path) {
-      return;
-    }
+      if (!path) {
+        return;
+      }
 
-    const currentD = path.getAttribute("d");
+      const currentD = path.getAttribute("d");
 
-    if (currentD === "M7 9V16H9V9H16V7H9V0H7V7H0V9H7Z") {
-      path.setAttribute("d", "M0 7H16V9H0V7Z");
-    } else {
-      path.setAttribute("d", "M7 9V16H9V9H16V7H9V0H7V7H0V9H7Z");
-    }
-  };
+      if (currentD === "M7 9V16H9V9H16V7H9V0H7V7H0V9H7Z") {
+        path.setAttribute("d", "M0 7H16V9H0V7Z");
+      } else {
+        path.setAttribute("d", "M7 9V16H9V9H16V7H9V0H7V7H0V9H7Z");
+      }
+    };
 
   renderSharedDesktopNav();
   setupDropdownHover(".nav-link.provider", ".provider-dropdown");
