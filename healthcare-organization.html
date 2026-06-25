@@ -54,6 +54,432 @@
     <link rel="stylesheet" href="css/css/Newnavbar.css" />
     <link rel="stylesheet" href="css/css/footer.css" />
     <style>
+      .healthcare-org-section {
+        position: relative;
+        padding: 9rem 2rem;
+        background: #ffffff;
+        overflow: hidden;
+      }
+
+      .healthcare-org-section::before,
+      .healthcare-org-section::after {
+        content: "";
+        position: absolute;
+        border-radius: 999px;
+        pointer-events: none;
+      }
+
+      .healthcare-org-section::before {
+        width: 280px;
+        height: 280px;
+        top: 2rem;
+        left: -5rem;
+        background: radial-gradient(
+          circle,
+          rgba(11, 95, 149, 0.12) 0%,
+          rgba(11, 95, 149, 0) 72%
+        );
+      }
+
+      .healthcare-org-section::after {
+        width: 360px;
+        height: 360px;
+        right: -8rem;
+        bottom: -4rem;
+        background: radial-gradient(
+          circle,
+          rgba(134, 194, 62, 0.14) 0%,
+          rgba(134, 194, 62, 0) 72%
+        );
+      }
+
+      .healthcare-org-shell {
+        position: relative;
+        z-index: 1;
+        max-width: 1450px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .healthcare-org-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(520px, 1.1fr);
+
+        align-items: start;
+      }
+
+      .healthcare-org-copy {
+        max-width: 580px;
+        padding-right: 1.5rem;
+        padding-top: 1rem;
+        animation: healthcareOrgFadeUp 0.9s ease both;
+      }
+
+      .healthcare-org-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.7rem 1.05rem;
+        border-radius: 999px;
+        background: linear-gradient(
+          135deg,
+          rgba(11, 95, 149, 0.1),
+          rgba(134, 194, 62, 0.12)
+        );
+        color: #0b5f95;
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .healthcare-org-copy h2 {
+        margin: 0.95rem 0 0.9rem;
+        max-width: 16ch;
+        color: #0b5f95;
+        font-size: clamp(2.3rem, 3vw, 3.55rem);
+        line-height: 1.02;
+        letter-spacing: -0.04em;
+      }
+
+      .healthcare-org-subtitle {
+        margin: 0 0 1.35rem;
+        color: #5c861f;
+        font-size: clamp(1rem, 1.3vw, 1.28rem);
+        line-height: 1.3;
+        font-weight: 500;
+      }
+
+      .healthcare-org-copy p {
+        margin: 0 0 0.9rem;
+        max-width: 34rem;
+        color: #31516b;
+        font-size: 0.95rem;
+        line-height: 1.68;
+      }
+
+      .healthcare-org-points {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.1rem;
+        margin-top: 1.8rem;
+      }
+
+      .healthcare-org-point {
+        position: relative;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+        padding: 1.15rem 1.05rem 1rem;
+        border-radius: 22px;
+        background: linear-gradient(180deg, #ffffff 0%, #f8fbfe 100%);
+        border: 1px solid rgba(17, 101, 162, 0.08);
+        box-shadow: 0 18px 36px rgba(11, 95, 149, 0.08);
+        transition:
+          transform 0.35s ease,
+          box-shadow 0.35s ease,
+          border-color 0.35s ease;
+        animation: healthcareOrgFadeUp 0.9s ease both;
+      }
+
+      .healthcare-org-point::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 1.05rem;
+        width: 56px;
+        height: 4px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, #1f86ca 0%, #86c23e 100%);
+      }
+
+      .healthcare-org-point:nth-child(2) {
+        animation-delay: 0.12s;
+      }
+
+      .healthcare-org-point:nth-child(3) {
+        animation-delay: 0.24s;
+      }
+
+      .healthcare-org-point:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 24px 52px rgba(11, 95, 149, 0.14);
+        border-color: rgba(17, 101, 162, 0.18);
+      }
+
+      .healthcare-org-point-icon {
+        width: 42px;
+        height: 42px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 14px;
+        background: linear-gradient(145deg, #f2f8ff 0%, #dceeff 100%);
+        color: #1879bf;
+        font-size: 0.82rem;
+        box-shadow:
+          0 12px 24px rgba(24, 121, 191, 0.12),
+          inset 0 0 0 1px rgba(24, 121, 191, 0.1);
+      }
+
+      .healthcare-org-point-copy {
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+        flex: 1;
+      }
+
+      .healthcare-org-point h3 {
+        margin: 0;
+        color: #1562a0;
+        font-size: 0.9rem;
+        line-height: 1.16;
+      }
+
+      .healthcare-org-point p {
+        margin: 0;
+        color: #567792;
+        font-size: 0.76rem;
+        line-height: 1.48;
+      }
+
+      .healthcare-org-visual {
+        position: relative;
+        top: 0;
+        animation: healthcareOrgFadeUp 1s ease 0.15s both;
+      }
+
+      .healthcare-org-frame {
+        position: relative;
+        overflow: hidden;
+        padding: 1.15rem;
+        border-radius: 30px;
+        background: linear-gradient(
+          160deg,
+          #126aa5 0%,
+          #1f86ca 56%,
+          #1e7fc0 100%
+        );
+        box-shadow: 0 34px 90px rgba(12, 73, 117, 0.22);
+      }
+
+      .healthcare-org-frame::before {
+        content: "";
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        top: -48px;
+        right: -52px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.12);
+      }
+
+      .healthcare-org-frame::after {
+        content: "";
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        left: -28px;
+        bottom: -42px;
+        border-radius: 50%;
+        background: rgba(134, 194, 62, 0.18);
+      }
+
+      .healthcare-org-frame-top {
+        position: relative;
+        z-index: 1;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.65rem;
+        margin-bottom: 0.8rem;
+        padding: 0.55rem 0.85rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.12);
+        color: #ffffff;
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .healthcare-org-image-card {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        border-radius: 24px;
+        min-height: 510px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+      }
+
+      .healthcare-org-image-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transform: scale(1.08);
+        transition: transform 0.6s ease;
+      }
+
+      .healthcare-org-frame:hover .healthcare-org-image-card img {
+        transform: scale(1);
+      }
+
+      .healthcare-org-image-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(9, 54, 85, 0.04) 0%,
+          rgba(9, 54, 85, 0.58) 100%
+        );
+      }
+
+      .healthcare-org-stat-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.95rem;
+        margin-top: 1.05rem;
+      }
+
+      .healthcare-org-stat-card {
+        min-height: 100%;
+        position: relative;
+        overflow: hidden;
+        padding: 1rem 1rem 1.05rem;
+        border-radius: 20px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.16) 0%,
+          rgba(255, 255, 255, 0.1) 100%
+        );
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        backdrop-filter: blur(10px);
+        color: #ffffff;
+        transition:
+          transform 0.35s ease,
+          background 0.35s ease;
+      }
+
+      .healthcare-org-stat-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.28);
+      }
+
+      .healthcare-org-stat-card:hover {
+        transform: translateY(-6px);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.2) 0%,
+          rgba(255, 255, 255, 0.13) 100%
+        );
+      }
+
+      .healthcare-org-stat-label {
+        display: block;
+        margin-bottom: 0.45rem;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .healthcare-org-stat-card strong {
+        display: block;
+        margin-bottom: 0.45rem;
+        font-size: 1rem;
+        line-height: 1.22;
+      }
+
+      .healthcare-org-stat-card p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.84);
+        font-size: 0.8rem;
+        line-height: 1.5;
+      }
+
+      @keyframes healthcareOrgFadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(26px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media screen and (max-width: 991px) {
+        .healthcare-org-shell {
+          padding: 0 16px;
+        }
+
+        .healthcare-org-layout {
+          grid-template-columns: 1fr;
+          gap: 1.75rem;
+        }
+
+        .healthcare-org-copy {
+          max-width: none;
+          padding-right: 0;
+          padding-top: 0;
+        }
+
+        .healthcare-org-copy h2 {
+          max-width: none;
+        }
+
+        .healthcare-org-points,
+        .healthcare-org-stat-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .healthcare-org-image-card {
+          min-height: 360px;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .healthcare-org-section {
+          padding: 4rem 0;
+        }
+
+        .healthcare-org-shell {
+          padding: 0 12px;
+        }
+
+        .healthcare-org-copy h2 {
+          font-size: 2.35rem;
+        }
+
+        .healthcare-org-subtitle {
+          font-size: 1rem;
+        }
+
+        .healthcare-org-frame {
+          padding: 1rem;
+          border-radius: 24px;
+        }
+
+        .healthcare-org-visual {
+          top: 0;
+        }
+
+        .healthcare-org-image-card {
+          min-height: 280px;
+          border-radius: 20px;
+        }
+      }
+
       .image-container i {
         font-size: 30px !important; /* Force the icon to be larger */
         color: var(
@@ -740,7 +1166,128 @@
             </div>
           </div>
         </nav>
-        <section class="section"></section>
+        <section class="healthcare-org-section">
+          <div class="healthcare-org-shell">
+            <div class="healthcare-org-layout">
+              <div class="healthcare-org-copy">
+                <div class="healthcare-org-eyebrow">
+                  <i class="fa-solid fa-hospital"></i>
+                  Healthcare Organizations
+                </div>
+                <h2>
+                  Transform Cognitive Care<br />Across the Entire Patient
+                  Journey
+                </h2>
+                <div class="healthcare-org-subtitle">
+                  Earlier visibility. Better coordination. Stronger outcomes.
+                </div>
+                <p>
+                  Healthcare organizations are under increasing pressure to
+                  improve patient outcomes, reduce costs, optimize clinical
+                  resources, and deliver more personalized care. Yet cognitive
+                  dysfunction often goes undetected until it significantly
+                  impacts a patient&#x27;s health, independence, or recovery.
+                </p>
+                <p>
+                  BrainFx helps healthcare organizations identify subtle
+                  cognitive dysfunction earlier, enabling multidisciplinary care
+                  teams to make more informed clinical decisions from admission
+                  through discharge, rehabilitation, and ongoing community care.
+                </p>
+                <p>
+                  Our neurofunctional assessments provide objective, actionable
+                  insights that support better care coordination, improved
+                  patient outcomes, and more efficient use of healthcare
+                  resources.
+                </p>
+
+                <div class="healthcare-org-points">
+                  <div class="healthcare-org-point">
+                    <div class="healthcare-org-point-icon">
+                      <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <div class="healthcare-org-point-copy">
+                      <h3>Function-Based View</h3>
+                      <p>
+                        Shows how cognitive challenges affect real-world
+                        performance.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="healthcare-org-point">
+                    <div class="healthcare-org-point-icon">
+                      <i class="fa-solid fa-user-group"></i>
+                    </div>
+                    <div class="healthcare-org-point-copy">
+                      <h3>Earlier Signal Detection</h3>
+                      <p>
+                        Identifies subtle changes sooner for more confident
+                        care.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="healthcare-org-point">
+                    <div class="healthcare-org-point-icon">
+                      <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div class="healthcare-org-point-copy">
+                      <h3>Actionable Clinical Insight</h3>
+                      <p>
+                        Turns neurofunctional data into clearer care decisions.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="healthcare-org-visual">
+                <div class="healthcare-org-frame">
+                  <div class="healthcare-org-frame-top">
+                    <i class="fa-solid fa-wave-square"></i>
+                    Neurofunction View
+                  </div>
+                  <div class="healthcare-org-image-card">
+                    <img
+                      src="assets/Science-images/org-1.png"
+                      alt="Professional healthcare team collaborating in a hospital"
+                    />
+                    <div class="healthcare-org-image-overlay"></div>
+                  </div>
+                  <div class="healthcare-org-stat-grid">
+                    <div class="healthcare-org-stat-card">
+                      <span class="healthcare-org-stat-label"
+                        >Assessment Lens</span
+                      >
+                      <strong>Function in Context</strong>
+                      <p>
+                        Measures how cognition affects performance in real care
+                        environments and everyday demands.
+                      </p>
+                    </div>
+                    <div class="healthcare-org-stat-card">
+                      <span class="healthcare-org-stat-label">Core Signal</span>
+                      <strong>Earlier Insight</strong>
+                      <p>
+                        Helps surface subtle shifts before they become larger
+                        barriers to recovery and independence.
+                      </p>
+                    </div>
+                    <div class="healthcare-org-stat-card">
+                      <span class="healthcare-org-stat-label"
+                        >Clinical Value</span
+                      >
+                      <strong>Better Decision Support</strong>
+                      <p>
+                        Equips teams with objective information for planning,
+                        coordination, and follow-up care.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <footer
           id="footer"
