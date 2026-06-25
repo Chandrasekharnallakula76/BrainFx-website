@@ -7,6 +7,10 @@
     return pages.indexOf(currentPage) !== -1 ? " active" : "";
   }
 
+  function getCardActiveClass(currentPage, targetPage) {
+    return currentPage === targetPage ? " active" : "";
+  }
+
   function renderSharedDesktopNav() {
     const navPagesLinks = document.querySelector(".nav-pages-links");
 
@@ -16,8 +20,7 @@
 
     const currentPage = getCurrentPage();
     const scienceActive = getActiveClass(currentPage, [
-      "index.html",
-      "science-of-neurofunction.html",
+      "science-behind-brainfx.html",
       "scientific-validation.html",
     ]);
     const providerActive = getActiveClass(currentPage, [
@@ -42,6 +45,43 @@
       "pricing.html",
       "pricing-contct.html",
     ]);
+    const scienceBehindActive = getCardActiveClass(
+      currentPage,
+      "science-behind-brainfx.html",
+    );
+    const scientificValidationActive = getCardActiveClass(
+      currentPage,
+      "scientific-validation.html",
+    );
+    const physiciansActive = getCardActiveClass(currentPage, "physicians.html");
+    const rehabActive = getCardActiveClass(
+      currentPage,
+      "rehabilitation-acute.html",
+    );
+    const seniorCareActive = getCardActiveClass(currentPage, "senior-care.html");
+    const employersActive = getCardActiveClass(currentPage, "employers.html");
+    const athleticsActive = getCardActiveClass(currentPage, "athletics.html");
+    const comprehensiveActive = getCardActiveClass(
+      currentPage,
+      "comprehensive.html",
+    );
+    const screenTrackActive = getCardActiveClass(
+      currentPage,
+      "screen-track.html",
+    );
+    const telehealthActive = getCardActiveClass(currentPage, "telehealth.html");
+    const brainfxTrainingActive = getCardActiveClass(
+      currentPage,
+      "brainfx-training.html",
+    );
+    const brainfxPhilosophyActive = getCardActiveClass(
+      currentPage,
+      "brainfx-philosophy.html",
+    );
+    const assessmentBundleActive = getCardActiveClass(
+      currentPage,
+      "assessmentbundle.html",
+    );
     const trainingFeaturedClass = currentPage === "index.html" ? " is-featured" : "";
 
     navPagesLinks.innerHTML = `
@@ -56,7 +96,7 @@
             <div class="arrow"></div>
             <div class="science-cards">
               <a href="science-behind-brainfx.html">
-                <div class="science-card">
+                <div class="science-card${scienceBehindActive}">
                   <div class="image-container">
                     <i class="fa-solid fa-brain"></i>
                   </div>
@@ -67,7 +107,7 @@
                 </div>
               </a>
               <a href="scientific-validation.html">
-                <div class="science-card">
+                <div class="science-card${scientificValidationActive}">
                   <div class="image-container">
                     <i class="fa-solid fa-vials"></i>
                   </div>
@@ -90,7 +130,7 @@
             <div class="arrow"></div>
             <div class="provider-cards">
               <a href="physicians.html">
-                <div class="provider-card">
+                <div class="provider-card${physiciansActive}">
                   <div class="image-container">
                     <i class="fa-solid fa-user-doctor"></i>
                   </div>
@@ -101,7 +141,7 @@
                 </div>
               </a>
               <a href="rehabilitation-acute.html">
-                <div class="provider-card">
+                <div class="provider-card${rehabActive}">
                   <div class="image-container">
                     <i class="fa-solid fa-house-medical"></i>
                   </div>
@@ -112,7 +152,7 @@
                 </div>
               </a>
               <a href="senior-care.html">
-                <div class="provider-card">
+                <div class="provider-card${seniorCareActive}">
                   <div class="image-container">
                     <i class="fa-solid fa-hand-holding-heart"></i>
                   </div>
@@ -123,7 +163,7 @@
                 </div>
               </a>
               <a href="employers.html">
-                <div class="provider-card">
+                <div class="provider-card${employersActive}">
                   <div class="image-container">
                     <i class="fa-solid fa-user-tie"></i>
                   </div>
@@ -134,7 +174,7 @@
                 </div>
               </a>
               <a href="athletics.html">
-                <div class="provider-card">
+                <div class="provider-card${athleticsActive}">
                   <div class="image-container">
                     <i class="fa-solid fa-person-running"></i>
                   </div>
@@ -206,7 +246,7 @@
             <div class="assessment-floating-submenu" data-training-submenu="true">
               <p class="assessment-submenu-label">Learning Path</p>
               <div class="assessment-submenu-links">
-                <a href="comprehensive.html" class="assessment-submenu-link">
+                <a href="comprehensive.html" class="assessment-submenu-link${comprehensiveActive}">
                   <div class="assessment-submenu-link-icon">
                     <i class="fa-solid fa-hand-holding-medical"></i>
                   </div>
@@ -215,7 +255,7 @@
                     <small>Good planning helps make things clear, work well, and succeed.</small>
                   </div>
                 </a>
-                <a href="screen-track.html" class="assessment-submenu-link">
+                <a href="screen-track.html" class="assessment-submenu-link${screenTrackActive}">
                   <div class="assessment-submenu-link-icon">
                     <i class="fa-solid fa-clipboard-check"></i>
                   </div>
@@ -224,7 +264,7 @@
                     <small>Check and follow progress carefully to manage the project well.</small>
                   </div>
                 </a>
-                <a href="telehealth.html" class="assessment-submenu-link">
+                <a href="telehealth.html" class="assessment-submenu-link${telehealthActive}">
                   <div class="assessment-submenu-link-icon">
                     <i class="fa-solid fa-briefcase-medical"></i>
                   </div>
@@ -233,7 +273,7 @@
                     <small>Telehealth enables remote medical consultations and convenient access.</small>
                   </div>
                 </a>
-                <a href="brainfx-training.html" class="assessment-submenu-link">
+                <a href="brainfx-training.html" class="assessment-submenu-link${brainfxTrainingActive}">
                   <div class="assessment-submenu-link-icon">
                     <i class="fa-solid fa-graduation-cap"></i>
                   </div>
@@ -242,7 +282,7 @@
                     <small>BrainFx training helps improve thinking skills, testing, and recovery.</small>
                   </div>
                 </a>
-                <a href="brainfx-philosophy.html" class="assessment-submenu-link">
+                <a href="brainfx-philosophy.html" class="assessment-submenu-link${brainfxPhilosophyActive}">
                   <div class="assessment-submenu-link-icon">
                     <i class="fa-solid fa-brain"></i>
                   </div>
@@ -251,7 +291,7 @@
                     <small>BrainFx philosophy values personalized cognitive assessment.</small>
                   </div>
                 </a>
-                <a href="assessmentbundle.html" class="assessment-submenu-link">
+                <a href="assessmentbundle.html" class="assessment-submenu-link${assessmentBundleActive}">
                   <div class="assessment-submenu-link-icon">
                     <i class="fa-solid fa-clipboard-check"></i>
                   </div>
