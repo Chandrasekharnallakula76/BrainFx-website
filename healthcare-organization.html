@@ -121,6 +121,7 @@
         gap: 0.55rem;
         padding: 0.7rem 1.05rem;
         border-radius: 999px;
+        margin-bottom: 30px;
         background: linear-gradient(
           135deg,
           rgba(11, 95, 149, 0.1),
@@ -143,7 +144,7 @@
       }
 
       .healthcare-org-subtitle {
-        margin: 0 0 1.35rem;
+        margin: 1rem 0 1.35rem;
         color: #5c861f;
         font-size: clamp(1rem, 1.3vw, 1.28rem);
         line-height: 1.3;
@@ -317,9 +318,10 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center center;
         display: block;
-        transform: scale(1.08);
-        transition: transform 0.6s ease;
+        transform: scale(1.05);
+        transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
       }
 
       .healthcare-org-frame:hover .healthcare-org-image-card img {
@@ -1811,6 +1813,247 @@
         line-height: 1.66;
       }
 
+      .enterprise-ready-section {
+        position: relative;
+        padding: 2rem 2rem 2rem;
+        background: linear-gradient(
+          180deg,
+          #f5fbff 0%,
+          #eef7ff 48%,
+          #ffffff 100%
+        );
+        overflow: hidden;
+      }
+
+      .enterprise-ready-section::before,
+      .enterprise-ready-section::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      .enterprise-ready-section::before {
+        top: 4rem;
+        right: -7rem;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(
+          circle,
+          rgba(17, 130, 207, 0.12) 0%,
+          rgba(17, 130, 207, 0) 72%
+        );
+      }
+
+      .enterprise-ready-section::after {
+        left: -8rem;
+        bottom: 2rem;
+        width: 340px;
+        height: 340px;
+        background: radial-gradient(
+          circle,
+          rgba(134, 194, 62, 0.12) 0%,
+          rgba(134, 194, 62, 0) 72%
+        );
+      }
+
+      .enterprise-ready-shell {
+        position: relative;
+        z-index: 1;
+        max-width: 1450px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .enterprise-ready-panel {
+        padding: 2.4rem;
+        border-radius: 34px;
+        background: #ffffff;
+        border: 1px solid rgba(17, 130, 207, 0.1);
+      }
+
+      .enterprise-ready-header {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.78fr);
+        gap: 1.5rem;
+        align-items: start;
+        margin-bottom: 1.7rem;
+      }
+
+      .enterprise-ready-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.68rem 1rem;
+        border-radius: 999px;
+        background: linear-gradient(
+          135deg,
+          rgba(17, 130, 207, 0.1),
+          rgba(134, 194, 62, 0.12)
+        );
+        color: #0b5f95;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .enterprise-ready-title {
+        margin: 1rem 0 0.8rem;
+        max-width: 14ch;
+        color: #0b5f95;
+        font-size: clamp(1.9rem, 2.5vw, 3rem);
+        line-height: 1.05;
+        letter-spacing: -0.04em;
+      }
+
+      .enterprise-ready-lead {
+        margin: 0;
+        max-width: 42rem;
+        color: #456783;
+        font-size: 0.96rem;
+        line-height: 1.7;
+      }
+
+      .enterprise-ready-highlight {
+        padding: 1.4rem 1.5rem;
+        border-radius: 26px;
+        background: linear-gradient(145deg, #0f6ca8 0%, #1182cf 100%);
+        color: #ffffff;
+      }
+
+      .enterprise-ready-highlight span {
+        display: block;
+        margin-bottom: 0.48rem;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 0.74rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .enterprise-ready-highlight strong {
+        display: block;
+        margin-bottom: 0.55rem;
+        font-size: 1.06rem;
+        line-height: 1.32;
+      }
+
+      .enterprise-ready-highlight p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.86rem;
+        line-height: 1.58;
+      }
+
+      .enterprise-ready-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.9rem;
+        margin-bottom: 1.35rem;
+      }
+
+      .enterprise-ready-card {
+        padding: 1rem 1rem 0.95rem;
+        border-radius: 22px;
+        background: linear-gradient(180deg, #ffffff 0%, #f9fcff 100%);
+        border: 1px solid rgba(17, 130, 207, 0.08);
+        transition:
+          transform 0.35s ease,
+          border-color 0.35s ease,
+          background 0.35s ease;
+      }
+
+      .enterprise-ready-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(17, 130, 207, 0.16);
+        background: linear-gradient(180deg, #ffffff 0%, #f4faff 100%);
+      }
+
+      .enterprise-ready-card-badge {
+        width: 42px;
+        height: 42px;
+        margin-bottom: 0.75rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 14px;
+        background: linear-gradient(145deg, #eff7ff 0%, #dfefff 100%);
+        color: #1182cf;
+        font-size: 0.88rem;
+        box-shadow: inset 0 0 0 1px rgba(17, 130, 207, 0.08);
+      }
+
+      .enterprise-ready-card strong {
+        display: block;
+        margin-bottom: 0.25rem;
+        color: #125d97;
+        font-size: 0.84rem;
+        line-height: 1.28;
+      }
+
+      .enterprise-ready-card p {
+        margin: 0;
+        color: #557791;
+        font-size: 0.73rem;
+        line-height: 1.5;
+      }
+
+      .enterprise-ready-summary {
+        padding: 1.2rem 1.3rem;
+        border-radius: 24px;
+        background: linear-gradient(
+          135deg,
+          rgba(134, 194, 62, 0.1),
+          rgba(17, 130, 207, 0.08)
+        );
+        border: 1px solid rgba(79, 125, 31, 0.08);
+        color: #31516b;
+        font-size: 0.92rem;
+        line-height: 1.68;
+      }
+
+      .enterprise-ready-future {
+        margin-top: 1.35rem;
+        padding: 1.5rem 1.55rem;
+        border-radius: 26px;
+        background: linear-gradient(145deg, #0b5f95 0%, #1182cf 100%);
+        color: #ffffff;
+      }
+
+      .enterprise-ready-future span {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 0.76rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .enterprise-ready-future h3 {
+        margin: 0 0 0.7rem;
+        font-size: clamp(1.35rem, 1.9vw, 1.9rem);
+        line-height: 1.14;
+        letter-spacing: -0.03em;
+      }
+
+      .enterprise-ready-future p {
+        margin: 0 0 0.75rem;
+        max-width: 58rem;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.9rem;
+        line-height: 1.64;
+      }
+
+      .enterprise-ready-future strong {
+        display: inline-block;
+        margin-top: 0.1rem;
+        color: #ffffff;
+        font-size: 0.98rem;
+        letter-spacing: 0.01em;
+      }
+
       @media screen and (max-width: 991px) {
         .care-continuum-shell {
           padding: 0 16px;
@@ -1840,7 +2083,8 @@
         .clinical-decisions-side,
         .outcomes-efficiency-header,
         .outcomes-efficiency-grid,
-        .multidisciplinary-header {
+        .multidisciplinary-header,
+        .enterprise-ready-header {
           grid-template-columns: 1fr;
         }
 
@@ -1854,6 +2098,14 @@
 
         .multidisciplinary-grid {
           grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .enterprise-ready-shell {
+          padding: 0 16px;
+        }
+
+        .enterprise-ready-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
       }
 
@@ -1983,6 +2235,28 @@
         .multidisciplinary-role-media {
           height: 96px;
           border-radius: 15px;
+        }
+
+        .enterprise-ready-section {
+          padding: 0 0 4rem;
+        }
+
+        .enterprise-ready-shell {
+          padding: 0 12px;
+        }
+
+        .enterprise-ready-panel {
+          padding: 1.35rem;
+          border-radius: 24px;
+        }
+
+        .enterprise-ready-title {
+          font-size: 2rem;
+        }
+
+        .enterprise-ready-grid {
+          grid-template-columns: 1fr;
+          gap: 0.75rem;
         }
       }
     </style>
@@ -2644,10 +2918,10 @@
                   <i class="fa-solid fa-hospital"></i>
                   Healthcare Organizations
                 </div>
-                <h2>
+                <h4>
                   Transform Cognitive Care<br />Across the Entire Patient
                   Journey
-                </h2>
+                </h4>
                 <div class="healthcare-org-subtitle">
                   Earlier visibility. Better coordination. Stronger outcomes.
                 </div>
@@ -3378,6 +3652,157 @@
                 With standardized reporting and shared patient insights, every
                 member of the care team can contribute to more personalized
                 treatment planning.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="enterprise-ready-section">
+          <div class="enterprise-ready-shell">
+            <div class="enterprise-ready-panel">
+              <div class="enterprise-ready-header">
+                <div>
+                  <div class="enterprise-ready-tag">
+                    <i class="fa-solid fa-hospital-user"></i>
+                    Enterprise Platform
+                  </div>
+                  <h2 class="detect-miss-title">
+                    Enterprise-Ready for Modern Healthcare
+                  </h2>
+                  <p class="enterprise-ready-lead">
+                    BrainFx is built to scale across healthcare organizations of
+                    every size, from a single department to an integrated health
+                    system. The platform is designed to support modern,
+                    connected models of care with the flexibility required for
+                    implementation across diverse clinical environments.
+                  </p>
+                </div>
+
+                <div class="enterprise-ready-highlight">
+                  <span>Built To Scale</span>
+                  <strong>
+                    A flexible neurofunctional platform for implementation,
+                    expansion, and long-term organizational value.
+                  </strong>
+                  <p>
+                    Whether adopting BrainFx within one service area or across
+                    an entire healthcare network, organizations gain a digital
+                    platform that supports consistency, insight, and continuity
+                    at scale.
+                  </p>
+                </div>
+              </div>
+
+              <div class="enterprise-ready-grid">
+                <div class="enterprise-ready-card">
+                  <div class="enterprise-ready-card-badge">
+                    <i class="fa-solid fa-laptop-medical"></i>
+                  </div>
+                  <strong>Digital, standardized assessments</strong>
+                  <p>
+                    Support consistent evaluation workflows across teams and
+                    settings.
+                  </p>
+                </div>
+                <div class="enterprise-ready-card">
+                  <div class="enterprise-ready-card-badge">
+                    <i class="fa-solid fa-file-lines"></i>
+                  </div>
+                  <strong>Automated reporting</strong>
+                  <p>
+                    Reduce manual documentation and speed access to clinical
+                    insight.
+                  </p>
+                </div>
+                <div class="enterprise-ready-card">
+                  <div class="enterprise-ready-card-badge">
+                    <i class="fa-solid fa-timeline"></i>
+                  </div>
+                  <strong>Longitudinal patient tracking</strong>
+                  <p>
+                    Monitor change over time with a shared neurofunctional
+                    record.
+                  </p>
+                </div>
+                <div class="enterprise-ready-card">
+                  <div class="enterprise-ready-card-badge">
+                    <i class="fa-solid fa-chart-column"></i>
+                  </div>
+                  <strong>Population-level analytics</strong>
+                  <p>
+                    Generate system-wide insight for planning, quality, and
+                    outcomes review.
+                  </p>
+                </div>
+                <div class="enterprise-ready-card">
+                  <div class="enterprise-ready-card-badge">
+                    <i class="fa-solid fa-microscope"></i>
+                  </div>
+                  <strong>Research-ready data collection</strong>
+                  <p>
+                    Capture structured data that can support clinical and
+                    research initiatives.
+                  </p>
+                </div>
+                <div class="enterprise-ready-card">
+                  <div class="enterprise-ready-card-badge">
+                    <i class="fa-solid fa-video"></i>
+                  </div>
+                  <strong>Telehealth-compatible workflows</strong>
+                  <p>
+                    Extend assessment and follow-up into remote care
+                    environments.
+                  </p>
+                </div>
+                <div class="enterprise-ready-card">
+                  <div class="enterprise-ready-card-badge">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                  </div>
+                  <strong>Comprehensive training and onboarding</strong>
+                  <p>
+                    Equip teams for adoption with structured learning and
+                    implementation support.
+                  </p>
+                </div>
+                <div class="enterprise-ready-card">
+                  <div class="enterprise-ready-card-badge">
+                    <i class="fa-solid fa-headset"></i>
+                  </div>
+                  <strong>Ongoing clinical support</strong>
+                  <p>
+                    Provide organizations with continued guidance as programs
+                    grow and evolve.
+                  </p>
+                </div>
+              </div>
+
+              <div class="enterprise-ready-summary">
+                Whether implementing BrainFx within a single department or
+                across an entire health system, organizations gain a flexible
+                platform that integrates into modern models of care.
+              </div>
+
+              <div class="enterprise-ready-future">
+                <span>Advancing The Future Of Brain Health</span>
+                <h3>
+                  Better insight for earlier detection, personalized care, and
+                  stronger clinical decision making.
+                </h3>
+                <p>
+                  As healthcare continues to shift toward earlier detection,
+                  personalized medicine, and outcome-based care, organizations
+                  need tools that provide more than a cognitive score. They need
+                  meaningful insight that improves how decisions are made across
+                  the care journey.
+                </p>
+                <p>
+                  BrainFx empowers healthcare organizations to detect subtle
+                  cognitive dysfunction earlier, monitor neurofunctional health
+                  over time, and deliver more targeted, person-centred care.
+                </p>
+                <strong
+                  >Better Insights. Better Decisions. Better Outcomes.</strong
+                >
               </div>
             </div>
           </div>
