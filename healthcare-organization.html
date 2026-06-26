@@ -590,8 +590,8 @@
       .care-continuum-title {
         margin: 1rem 0 0.9rem;
         color: #0b5f95;
-        font-size: clamp(1.7rem, 2.35vw, 2.6rem);
-        line-height: 1.08;
+        font-size: clamp(1.45rem, 1.8vw, 2rem);
+        line-height: 1.1;
         letter-spacing: -0.04em;
       }
 
@@ -1070,6 +1070,249 @@
         line-height: 1.6;
       }
 
+      .clinical-decisions-section {
+        position: relative;
+        padding: 0 2rem 7rem;
+        background: linear-gradient(
+          180deg,
+          #ffffff 0%,
+          #eef7ff 38%,
+          #e7f4ff 100%
+        );
+        overflow: hidden;
+      }
+
+      .clinical-decisions-section::before,
+      .clinical-decisions-section::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      .clinical-decisions-section::before {
+        top: 3rem;
+        left: -7rem;
+        width: 260px;
+        height: 260px;
+        background: radial-gradient(
+          circle,
+          rgba(17, 130, 207, 0.14) 0%,
+          rgba(17, 130, 207, 0) 72%
+        );
+      }
+
+      .clinical-decisions-section::after {
+        right: -8rem;
+        bottom: 2rem;
+        width: 320px;
+        height: 320px;
+        background: radial-gradient(
+          circle,
+          rgba(134, 194, 62, 0.12) 0%,
+          rgba(134, 194, 62, 0) 72%
+        );
+      }
+
+      .clinical-decisions-shell {
+        position: relative;
+        z-index: 1;
+        max-width: 1450px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .clinical-decisions-panel {
+        padding: 2.5rem;
+        border-radius: 34px;
+        background: rgba(255, 255, 255, 0.82);
+        border: 1px solid rgba(17, 130, 207, 0.1);
+        box-shadow: 0 28px 68px rgba(11, 95, 149, 0.08);
+        backdrop-filter: blur(10px);
+      }
+
+      .clinical-decisions-layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.6rem;
+        align-items: start;
+      }
+
+      .clinical-decisions-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.68rem 1rem;
+        border-radius: 999px;
+        background: linear-gradient(
+          135deg,
+          rgba(17, 130, 207, 0.1),
+          rgba(134, 194, 62, 0.12)
+        );
+        color: #0b5f95;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .clinical-decisions-title {
+        margin: 1rem 0 0.9rem;
+        color: #0b5f95;
+        font-size: clamp(1.45rem, 1.8vw, 2rem);
+        line-height: 1.1;
+        letter-spacing: -0.04em;
+        max-width: 16ch;
+      }
+
+      .clinical-decisions-copy p {
+        margin: 0 0 1rem;
+        color: #456783;
+        font-size: 0.95rem;
+        line-height: 1.64;
+        max-width: 42rem;
+      }
+
+      .clinical-decisions-copy {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.7fr);
+        gap: 1.4rem;
+        align-items: start;
+      }
+
+      .clinical-decisions-copy-main {
+        max-width: 100%;
+      }
+
+      .clinical-decisions-summary {
+        padding: 1.2rem 1.25rem;
+        border-radius: 24px;
+        background: linear-gradient(145deg, #0f6ca8 0%, #1590d3 100%);
+        box-shadow: 0 18px 42px rgba(15, 108, 168, 0.18);
+      }
+
+      .clinical-decisions-summary span {
+        display: block;
+        margin-bottom: 0.45rem;
+        color: rgba(255, 255, 255, 0.76);
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .clinical-decisions-summary strong {
+        display: block;
+        margin-bottom: 0.55rem;
+        color: #ffffff;
+        font-size: 1rem;
+        line-height: 1.28;
+      }
+
+      .clinical-decisions-summary p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 0.84rem;
+        line-height: 1.58;
+        max-width: none;
+      }
+
+      .clinical-decisions-side {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .clinical-decisions-list {
+        padding: 1.15rem;
+        border-radius: 26px;
+        background: linear-gradient(145deg, #f7fbff 0%, #eef7ff 100%);
+        border: 1px solid rgba(17, 130, 207, 0.08);
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.46);
+      }
+
+      .clinical-decisions-list-title {
+        margin: 0 0 0.9rem;
+        color: #0b5f95;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .clinical-decisions-list-items {
+        display: grid;
+        gap: 0.8rem;
+      }
+
+      .clinical-decisions-item {
+        position: relative;
+        min-height: 100%;
+        padding: 0.95rem 1rem 0.95rem 1.15rem;
+        border-radius: 22px;
+        background: linear-gradient(180deg, #ffffff 0%, #f8fbfe 100%);
+        border: 1px solid rgba(17, 130, 207, 0.08);
+        box-shadow: 0 12px 24px rgba(11, 95, 149, 0.05);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          border-color 0.3s ease;
+      }
+
+      .clinical-decisions-item::before {
+        content: "";
+        position: absolute;
+        top: 1rem;
+        left: 0;
+        width: 4px;
+        height: calc(100% - 2rem);
+        border-radius: 999px;
+        background: linear-gradient(180deg, #1182cf 0%, #86c23e 100%);
+      }
+
+      .clinical-decisions-item:hover {
+        transform: translateY(-4px);
+        border-color: rgba(17, 130, 207, 0.16);
+        box-shadow: 0 18px 34px rgba(11, 95, 149, 0.09);
+      }
+
+      .clinical-decisions-item strong {
+        display: block;
+        color: #125d97;
+        font-size: 0.92rem;
+        line-height: 1.4;
+      }
+
+      .clinical-decisions-note {
+        height: 100%;
+        padding: 1.25rem 1.3rem;
+        border-radius: 24px;
+        background: linear-gradient(145deg, #0f6ca8 0%, #1590d3 100%);
+        color: #ffffff;
+        border: 0;
+        box-shadow: 0 18px 40px rgba(15, 108, 168, 0.18);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .clinical-decisions-note span {
+        display: block;
+        margin-bottom: 0.45rem;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .clinical-decisions-note p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+
       @media screen and (max-width: 991px) {
         .care-continuum-shell {
           padding: 0 16px;
@@ -1087,6 +1330,16 @@
         .detect-miss-layout,
         .detect-miss-flow,
         .detect-miss-metrics {
+          grid-template-columns: 1fr;
+        }
+
+        .clinical-decisions-shell {
+          padding: 0 16px;
+        }
+
+        .clinical-decisions-layout,
+        .clinical-decisions-copy,
+        .clinical-decisions-side {
           grid-template-columns: 1fr;
         }
       }
@@ -1146,6 +1399,24 @@
         .detect-miss-image-card {
           min-height: 260px;
           border-radius: 20px;
+        }
+
+        .clinical-decisions-section {
+          padding: 0 0 4rem;
+        }
+
+        .clinical-decisions-shell {
+          padding: 0 12px;
+        }
+
+        .clinical-decisions-panel {
+          padding: 1.35rem;
+          border-radius: 24px;
+        }
+
+        .clinical-decisions-panel {
+          padding: 1.35rem;
+          border-radius: 24px;
         }
       }
     </style>
@@ -1931,7 +2202,7 @@
                     <i class="fa-solid fa-diagram-project"></i>
                     Continuum of Care
                   </div>
-                  <h2 class="care-continuum-title">
+                  <h2 class="detect-miss-title">
                     One Platform. Every Stage of Care.
                   </h2>
                   <p class="care-continuum-lead">
@@ -2098,6 +2369,102 @@
                         be missed by traditional paper-based assessments.
                       </p>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="clinical-decisions-section">
+          <div class="clinical-decisions-shell">
+            <div class="clinical-decisions-panel">
+              <div class="clinical-decisions-layout">
+                <div class="clinical-decisions-copy">
+                  <div class="clinical-decisions-copy-main">
+                    <div class="clinical-decisions-tag">
+                      <i class="fa-solid fa-stethoscope"></i>
+                      Clinical Decision Support
+                    </div>
+                    <h2 class="detect-miss-title">
+                      Improve Clinical Decision Making
+                    </h2>
+                    <p>
+                      BrainFx provides clinicians with objective data that
+                      supports better decisions throughout the care pathway.
+                    </p>
+                    <p>
+                      Healthcare organizations use BrainFx to build clearer
+                      cognitive baselines, strengthen rehabilitation planning,
+                      support safer transitions, and monitor change over time
+                      with more confidence.
+                    </p>
+                  </div>
+
+                  <div class="clinical-decisions-summary">
+                    <span>Care Pathway Value</span>
+                    <strong>
+                      Practical neurofunctional insight across evaluation,
+                      intervention, discharge, and follow-up.
+                    </strong>
+                    <p>
+                      BrainFx turns objective data into a more usable
+                      decision-support layer for multidisciplinary teams.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="clinical-decisions-side">
+                  <div class="clinical-decisions-list">
+                    <div class="clinical-decisions-list-title">
+                      Assessment and Planning
+                    </div>
+                    <div class="clinical-decisions-list-items">
+                      <div class="clinical-decisions-item">
+                        <strong
+                          >Identify patients requiring further cognitive
+                          evaluation</strong
+                        >
+                      </div>
+                      <div class="clinical-decisions-item">
+                        <strong>Establish objective cognitive baselines</strong>
+                      </div>
+                      <div class="clinical-decisions-item">
+                        <strong>Support discharge planning</strong>
+                      </div>
+                      <div class="clinical-decisions-item">
+                        <strong>Guide rehabilitation programs</strong>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="clinical-decisions-list">
+                    <div class="clinical-decisions-list-title">
+                      Monitoring and Outcomes
+                    </div>
+                    <div class="clinical-decisions-list-items">
+                      <div class="clinical-decisions-item">
+                        <strong>Measure treatment effectiveness</strong>
+                      </div>
+                      <div class="clinical-decisions-item">
+                        <strong>Monitor recovery over time</strong>
+                      </div>
+                      <div class="clinical-decisions-item">
+                        <strong>Improve interdisciplinary communication</strong>
+                      </div>
+                      <div class="clinical-decisions-item">
+                        <strong>Track longitudinal patient outcomes</strong>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="clinical-decisions-note">
+                    <span>Operational Advantage</span>
+                    <p>
+                      Immediate automated scoring and reporting allow clinicians
+                      to spend less time documenting and more time delivering
+                      patient care.
+                    </p>
                   </div>
                 </div>
               </div>
