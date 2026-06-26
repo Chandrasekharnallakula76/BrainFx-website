@@ -1313,6 +1313,223 @@
         line-height: 1.6;
       }
 
+      .outcomes-efficiency-section {
+        position: relative;
+        padding: 2rem 2rem 2rem;
+        background: linear-gradient(
+          180deg,
+          #f7fbff 0%,
+          #eef7ff 48%,
+          #ffffff 100%
+        );
+        overflow: hidden;
+      }
+
+      .outcomes-efficiency-section::before,
+      .outcomes-efficiency-section::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      .outcomes-efficiency-section::before {
+        top: 3rem;
+        right: -7rem;
+        width: 280px;
+        height: 280px;
+        background: radial-gradient(
+          circle,
+          rgba(17, 130, 207, 0.14) 0%,
+          rgba(17, 130, 207, 0) 72%
+        );
+      }
+
+      .outcomes-efficiency-section::after {
+        left: -7rem;
+        bottom: 2rem;
+        width: 320px;
+        height: 320px;
+        background: radial-gradient(
+          circle,
+          rgba(134, 194, 62, 0.14) 0%,
+          rgba(134, 194, 62, 0) 72%
+        );
+      }
+
+      .outcomes-efficiency-shell {
+        position: relative;
+        z-index: 1;
+        max-width: 1450px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .outcomes-efficiency-panel {
+        padding: 2.5rem;
+        border-radius: 34px;
+        background: linear-gradient(180deg, #ffffff 0%, #fdfefe 100%);
+        border: 1px solid rgba(17, 130, 207, 0.1);
+        box-shadow: 0 28px 80px rgba(11, 95, 149, 0.08);
+      }
+
+      .outcomes-efficiency-header {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(300px, 0.75fr);
+        gap: 1.5rem;
+        align-items: start;
+        margin-bottom: 1.8rem;
+      }
+
+      .outcomes-efficiency-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.68rem 1rem;
+        border-radius: 999px;
+        background: linear-gradient(
+          135deg,
+          rgba(17, 130, 207, 0.1),
+          rgba(134, 194, 62, 0.12)
+        );
+        color: #0b5f95;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .outcomes-efficiency-title {
+        margin: 1rem 0 0.9rem;
+        color: #0b5f95;
+        font-size: clamp(1.9rem, 2.4vw, 3rem);
+        line-height: 1.05;
+        letter-spacing: -0.04em;
+        max-width: 13ch;
+      }
+
+      .outcomes-efficiency-lead {
+        margin: 0;
+        max-width: 42rem;
+        color: #456783;
+        font-size: 0.98rem;
+        line-height: 1.68;
+      }
+
+      .outcomes-efficiency-highlight {
+        padding: 1.45rem 1.5rem;
+        border-radius: 26px;
+        background: linear-gradient(145deg, #0f6ca8 0%, #1182cf 100%);
+        color: #ffffff;
+        box-shadow: 0 22px 44px rgba(15, 108, 168, 0.2);
+      }
+
+      .outcomes-efficiency-highlight span {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: rgba(255, 255, 255, 0.76);
+        font-size: 0.74rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .outcomes-efficiency-highlight strong {
+        display: block;
+        margin-bottom: 0.55rem;
+        font-size: 1.1rem;
+        line-height: 1.3;
+      }
+
+      .outcomes-efficiency-highlight p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.88rem;
+        line-height: 1.6;
+      }
+
+      .outcomes-efficiency-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.9rem;
+      }
+
+      .outcomes-efficiency-card {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.85rem;
+        min-height: 100%;
+        padding: 0.95rem 1.05rem;
+        border-radius: 22px;
+        background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+        border: 1px solid rgba(17, 130, 207, 0.09);
+        box-shadow: 0 14px 28px rgba(11, 95, 149, 0.06);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          border-color 0.3s ease,
+          background 0.3s ease;
+      }
+
+      .outcomes-efficiency-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(17, 130, 207, 0.18);
+        background: linear-gradient(180deg, #ffffff 0%, #f6fbff 100%);
+        box-shadow: 0 18px 34px rgba(11, 95, 149, 0.09);
+      }
+
+      .outcomes-efficiency-icon {
+        flex: 0 0 38px;
+        width: 38px;
+        height: 38px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 13px;
+        background: linear-gradient(145deg, #eff7ff 0%, #dfefff 100%);
+        color: #1182cf;
+        font-size: 0.84rem;
+        box-shadow:
+          inset 0 0 0 1px rgba(17, 130, 207, 0.08),
+          0 8px 18px rgba(17, 130, 207, 0.08);
+      }
+
+      .outcomes-efficiency-card-copy {
+        flex: 1;
+        min-width: 0;
+        padding-top: 0.1rem;
+      }
+
+      .outcomes-efficiency-card strong {
+        display: block;
+        margin-bottom: 0.16rem;
+        color: #125d97;
+        font-size: 0.84rem;
+        line-height: 1.25;
+      }
+
+      .outcomes-efficiency-card p {
+        margin: 0;
+        color: #557791;
+        font-size: 0.72rem;
+        line-height: 1.42;
+      }
+
+      .outcomes-efficiency-summary {
+        margin-top: 1.4rem;
+        padding: 1.35rem 1.45rem;
+        border-radius: 24px;
+        background: linear-gradient(
+          135deg,
+          rgba(134, 194, 62, 0.12),
+          rgba(17, 130, 207, 0.08)
+        );
+        border: 1px solid rgba(79, 125, 31, 0.08);
+        color: #31516b;
+        font-size: 0.96rem;
+        line-height: 1.72;
+      }
+
       @media screen and (max-width: 991px) {
         .care-continuum-shell {
           padding: 0 16px;
@@ -1339,8 +1556,14 @@
 
         .clinical-decisions-layout,
         .clinical-decisions-copy,
-        .clinical-decisions-side {
+        .clinical-decisions-side,
+        .outcomes-efficiency-header,
+        .outcomes-efficiency-grid {
           grid-template-columns: 1fr;
+        }
+
+        .outcomes-efficiency-shell {
+          padding: 0 16px;
         }
       }
 
@@ -1414,9 +1637,21 @@
           border-radius: 24px;
         }
 
-        .clinical-decisions-panel {
+        .outcomes-efficiency-section {
+          padding: 0 0 4rem;
+        }
+
+        .outcomes-efficiency-shell {
+          padding: 0 12px;
+        }
+
+        .outcomes-efficiency-panel {
           padding: 1.35rem;
           border-radius: 24px;
+        }
+
+        .outcomes-efficiency-title {
+          font-size: 2rem;
         }
       }
     </style>
@@ -2467,6 +2702,135 @@
                     </p>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="outcomes-efficiency-section">
+          <div class="outcomes-efficiency-shell">
+            <div class="outcomes-efficiency-panel">
+              <div class="outcomes-efficiency-header">
+                <div>
+                  <div class="outcomes-efficiency-tag">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Better Outcomes
+                  </div>
+                  <h2 class="detect-miss-title">
+                    Deliver Better Outcomes While Improving Efficiency
+                  </h2>
+                  <p class="outcomes-efficiency-lead">
+                    Healthcare leaders are challenged to do more with limited
+                    resources. BrainFx helps organizations create a more
+                    coordinated, data-driven approach to brain health while
+                    reducing administrative burden across the care journey.
+                  </p>
+                </div>
+
+                <div class="outcomes-efficiency-highlight">
+                  <span>Why It Matters</span>
+                  <strong>
+                    Operational efficiency and clinical consistency can improve
+                    together.
+                  </strong>
+                  <p>
+                    Standardized neurofunctional insight supports earlier
+                    intervention, stronger referral pathways, and clearer
+                    documentation for teams working across departments.
+                  </p>
+                </div>
+              </div>
+
+              <div class="outcomes-efficiency-grid">
+                <div class="outcomes-efficiency-card">
+                  <div class="outcomes-efficiency-icon">
+                    <i class="fa-solid fa-sitemap"></i>
+                  </div>
+                  <div class="outcomes-efficiency-card-copy">
+                    <strong>Standardize assessment across departments</strong>
+                    <p>Bring teams onto one consistent assessment model.</p>
+                  </div>
+                </div>
+
+                <div class="outcomes-efficiency-card">
+                  <div class="outcomes-efficiency-icon">
+                    <i class="fa-solid fa-file-waveform"></i>
+                  </div>
+                  <div class="outcomes-efficiency-card-copy">
+                    <strong>Reduce manual scoring and reporting time</strong>
+                    <p>Automate reporting so clinicians can focus on care.</p>
+                  </div>
+                </div>
+
+                <div class="outcomes-efficiency-card">
+                  <div class="outcomes-efficiency-icon">
+                    <i class="fa-solid fa-bell"></i>
+                  </div>
+                  <div class="outcomes-efficiency-card-copy">
+                    <strong>Support earlier intervention</strong>
+                    <p>Catch subtle concerns sooner and act earlier.</p>
+                  </div>
+                </div>
+
+                <div class="outcomes-efficiency-card">
+                  <div class="outcomes-efficiency-icon">
+                    <i class="fa-solid fa-share-nodes"></i>
+                  </div>
+                  <div class="outcomes-efficiency-card-copy">
+                    <strong>Improve referral pathways</strong>
+                    <p>Help teams route patients with clearer handoffs.</p>
+                  </div>
+                </div>
+
+                <div class="outcomes-efficiency-card">
+                  <div class="outcomes-efficiency-icon">
+                    <i class="fa-solid fa-user-group"></i>
+                  </div>
+                  <div class="outcomes-efficiency-card-copy">
+                    <strong>Enhance patient engagement</strong>
+                    <p>Make progress easier for patients to understand.</p>
+                  </div>
+                </div>
+
+                <div class="outcomes-efficiency-card">
+                  <div class="outcomes-efficiency-icon">
+                    <i class="fa-solid fa-notes-medical"></i>
+                  </div>
+                  <div class="outcomes-efficiency-card-copy">
+                    <strong>Provide consistent clinical documentation</strong>
+                    <p>
+                      Keep documentation objective, repeatable, and aligned.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="outcomes-efficiency-card">
+                  <div class="outcomes-efficiency-icon">
+                    <i class="fa-solid fa-timeline"></i>
+                  </div>
+                  <div class="outcomes-efficiency-card-copy">
+                    <strong>Enable longitudinal outcome measurement</strong>
+                    <p>Track change over time with a consistent data set.</p>
+                  </div>
+                </div>
+
+                <div class="outcomes-efficiency-card">
+                  <div class="outcomes-efficiency-icon">
+                    <i class="fa-solid fa-brain"></i>
+                  </div>
+                  <div class="outcomes-efficiency-card-copy">
+                    <strong
+                      >Strengthen coordinated brain health strategy</strong
+                    >
+                    <p>Turn fragmented observations into one shared view.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="outcomes-efficiency-summary">
+                The result is a more coordinated, data-driven approach to brain
+                health that supports better patient outcomes while improving
+                operational efficiency across the healthcare system.
               </div>
             </div>
           </div>
