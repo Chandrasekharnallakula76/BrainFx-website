@@ -701,6 +701,96 @@
         }
       }
     </style>
+    <style>
+      .footer-bottom-row {
+        display: flex;
+        align-items: stretch;
+        gap: 0.75rem;
+        margin-top: 0.2rem;
+      }
+
+      .footer-bottom-row .footer-info-wrap {
+        flex: 1 1 0;
+        margin-top: 0;
+      }
+
+      .recognition-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 1.2rem;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 1rem;
+        background: rgba(255, 255, 255, 0.04);
+        flex: 0 0 auto;
+        white-space: nowrap;
+      }
+
+      @media (max-width: 768px) {
+        .footer-bottom-row {
+          flex-direction: column;
+        }
+        .recognition-section {
+          white-space: normal;
+        }
+      }
+
+      .recognition-heading {
+        margin: 0 0 20px;
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .recognition-logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .recognition-card {
+        width: 70px;
+        height: 70px;
+        background: #ffffff;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        transition: all 0.3s ease;
+      }
+
+      .recognition-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+      }
+
+      .recognition-card img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+      }
+
+      @media (max-width: 768px) {
+        .recognition-heading {
+          font-size: 20px;
+        }
+
+        .recognition-card {
+          width: 75px;
+          height: 75px;
+        }
+
+        .recognition-card img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="page-wrapper">
@@ -2617,121 +2707,6 @@
             </div>
           </div>
         </section>
-        <section
-          style="
-            padding: 100px 20px;
-            text-align: center;
-            background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
-          "
-        >
-          <!-- Heading -->
-          <h3
-            style="
-              font-size: 36px;
-              font-weight: 600;
-              margin-bottom: 70px;
-              color: #111827;
-              letter-spacing: 0.3px;
-            "
-          >
-            See where we’ve been recognized
-          </h3>
-
-          <!-- Cards Wrapper -->
-          <div
-            style="
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              gap: 60px;
-              flex-wrap: wrap;
-            "
-          >
-            <!-- CARD 1 -->
-            <div
-              onmouseover="
-                this.style.transform = 'translateY(-8px) scale(1.02)';
-                this.style.boxShadow = '0 25px 60px rgba(0,0,0,0.12)';
-              "
-              onmouseout="
-                this.style.transform = 'translateY(0) scale(1)';
-                this.style.boxShadow = '0 10px 30px rgba(0,0,0,0.06)';
-              "
-              style="
-                width: 200px;
-                background: #ffffff;
-                border-radius: 20px;
-                padding: 30px 20px;
-                border: 1px solid #e5e7eb;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-                transition: all 0.35s ease;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 16px;
-              "
-            >
-              <img
-                src="/assets/images/ISO_27001_Final-Logo-removebg-preview.png"
-                alt="ISO 27001"
-                style="max-width: 120px; max-height: 100px"
-              />
-
-              <p
-                style="
-                  font-size: 14px;
-                  font-weight: 500;
-                  color: #374151;
-                  margin: 0;
-                "
-              >
-                ISO 27001 Certified
-              </p>
-            </div>
-
-            <!-- CARD 2 -->
-            <div
-              onmouseover="
-                this.style.transform = 'translateY(-8px) scale(1.02)';
-                this.style.boxShadow = '0 25px 60px rgba(0,0,0,0.12)';
-              "
-              onmouseout="
-                this.style.transform = 'translateY(0) scale(1)';
-                this.style.boxShadow = '0 10px 30px rgba(0,0,0,0.06)';
-              "
-              style="
-                width: 200px;
-                background: #ffffff;
-                border-radius: 20px;
-                padding: 30px 20px;
-                border: 1px solid #e5e7eb;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-                transition: all 0.35s ease;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 16px;
-              "
-            >
-              <img
-                src="/assets/images/SOC2-removebg-preview.png"
-                alt="SOC 2"
-                style="max-width: 120px; max-height: 100px"
-              />
-
-              <p
-                style="
-                  font-size: 14px;
-                  font-weight: 500;
-                  color: #374151;
-                  margin: 0;
-                "
-              >
-                SOC 2 Type II Compliant
-              </p>
-            </div>
-          </div>
-        </section>
 
         <footer
           id="footer"
@@ -2950,30 +2925,54 @@
                     >
                   </div>
                 </div>
-                <div class="footer-info-wrap">
-                  <p class="eyebrow">
-                    Important Information: BrainFx Assessments only provide
-                    information about neurofunctional performance. Assessment
-                    results detail the patient/client&#x27;s performance on
-                    assessment activities completed and only assist the health
-                    care team in identifying potential areas of strength or
-                    challenge as related to function. Assessments DO NOT provide
-                    any diagnosis or treatment recommendations. BrainFx
-                    Assessments are only permitted to be delivered by trained
-                    clinicians. Assessment reports are not stand-alone and
-                    require the interpretation of a health professional within
-                    their scope of practice and in the context of all
-                    information that they have gathered about their
-                    patient/client. In Canada, BrainFx Assessments are cleared
-                    by Health Canada as a Class 1 Software as a Medical Device.
-                    BrainFx Assessments and the statements made on this website
-                    have not been evaluated by any other regulatory bodies.
-                    Assessments are not intended to diagnose, treat, cure, or
-                    prevent any disease. Information provided by BrainFx is not
-                    a substitute for face-to-face consultation with your health
-                    care professional and should not be construed as individual
-                    medical advice.
-                  </p>
+                <div class="footer-bottom-row">
+                  <div class="recognition-section">
+                    <h5 class="recognition-heading">
+                      See where we've been recognized
+                    </h5>
+
+                    <div class="recognition-logos">
+                      <div class="recognition-card">
+                        <img
+                          src="/assets/images/SOC2-removebg-preview.png"
+                          alt="SOC 2"
+                        />
+                      </div>
+
+                      <div class="recognition-card">
+                        <img
+                          src="/assets/images/ISO_27001_Final-Logo-removebg-preview.png"
+                          alt="ISO 27001"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="footer-info-wrap">
+                    <p class="eyebrow">
+                      Important Information: BrainFx Assessments only provide
+                      information about neurofunctional performance. Assessment
+                      results detail the patient/client&#x27;s performance on
+                      assessment activities completed and only assist the health
+                      care team in identifying potential areas of strength or
+                      challenge as related to function. Assessments DO NOT provide
+                      any diagnosis or treatment recommendations. BrainFx
+                      Assessments are only permitted to be delivered by trained
+                      clinicians. Assessment reports are not stand-alone and
+                      require the interpretation of a health professional within
+                      their scope of practice and in the context of all
+                      information that they have gathered about their
+                      patient/client. In Canada, BrainFx Assessments are cleared
+                      by Health Canada as a Class 1 Software as a Medical Device.
+                      BrainFx Assessments and the statements made on this website
+                      have not been evaluated by any other regulatory bodies.
+                      Assessments are not intended to diagnose, treat, cure, or
+                      prevent any disease. Information provided by BrainFx is not
+                      a substitute for face-to-face consultation with your health
+                      care professional and should not be construed as individual
+                      medical advice.
+                    </p>
+                  </div>
                 </div>
                 <div class="footer-divider-line"></div>
                 <div class="base-grid is-footer-imressum">
