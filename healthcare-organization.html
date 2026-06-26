@@ -1072,7 +1072,7 @@
 
       .clinical-decisions-section {
         position: relative;
-        padding: 0 2rem 7rem;
+        padding: 0 2rem 2rem;
         background: linear-gradient(
           180deg,
           #ffffff 0%,
@@ -1514,6 +1514,303 @@
         box-shadow: none;
       }
 
+      .multidisciplinary-section {
+        position: relative;
+        padding: 2rem 2rem 2rem;
+        background: linear-gradient(
+          180deg,
+          #ffffff 0%,
+          #f7fbff 52%,
+          #f2f9ff 100%
+        );
+        overflow: hidden;
+      }
+
+      .multidisciplinary-section::before {
+        content: "";
+        position: absolute;
+        top: 4rem;
+        left: -7rem;
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(17, 130, 207, 0.1) 0%,
+          rgba(17, 130, 207, 0) 72%
+        );
+        pointer-events: none;
+      }
+
+      .multidisciplinary-shell {
+        position: relative;
+        z-index: 1;
+        max-width: 1450px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* .multidisciplinary-panel {
+        padding: 2.4rem;
+        border-radius: 34px;
+        background: #ffffff;
+        border: 1px solid rgba(17, 130, 207, 0.1);
+      } */
+
+      .multidisciplinary-header {
+        display: grid;
+        grid-template-columns: minmax(0, 0.88fr) minmax(320px, 0.8fr);
+        gap: 1.6rem;
+        align-items: center;
+        margin-bottom: 1.7rem;
+      }
+
+      .multidisciplinary-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.68rem 1rem;
+        border-radius: 999px;
+        background: linear-gradient(
+          135deg,
+          rgba(17, 130, 207, 0.1),
+          rgba(134, 194, 62, 0.12)
+        );
+        color: #0b5f95;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .multidisciplinary-title {
+        margin: 1rem 0 0.85rem;
+        max-width: 13ch;
+        color: #0b5f95;
+        font-size: clamp(1.9rem, 2.6vw, 3rem);
+        line-height: 1.05;
+        letter-spacing: -0.04em;
+      }
+
+      .multidisciplinary-lead {
+        margin: 0;
+        max-width: 40rem;
+        color: #456783;
+        font-size: 0.96rem;
+        line-height: 1.68;
+      }
+
+      .multidisciplinary-subheading {
+        margin: 0 0 0.7rem;
+        max-width: 36rem;
+        color: #125d97;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.45;
+      }
+
+      .multidisciplinary-detail {
+        margin: 1rem 0 0;
+        max-width: 42rem;
+        color: #5a7a93;
+        font-size: 0.84rem;
+        line-height: 1.65;
+      }
+
+      .multidisciplinary-image-wrap {
+        position: relative;
+        overflow: hidden;
+        padding: 0.9rem;
+        border-radius: 30px;
+        min-height: 260px;
+        background: linear-gradient(
+          145deg,
+          #0f6ca8 0%,
+          #1182cf 58%,
+          #0b5f95 100%
+        );
+        border: 1px solid rgba(17, 130, 207, 0.14);
+      }
+
+      .multidisciplinary-image-frame {
+        position: relative;
+        overflow: hidden;
+        min-height: 242px;
+        height: 100%;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+      }
+
+      .multidisciplinary-image-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .multidisciplinary-image-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(7, 52, 84, 0.06) 0%,
+          rgba(7, 52, 84, 0.3) 100%
+        );
+      }
+
+      .multidisciplinary-image-note {
+        position: absolute;
+        left: 1rem;
+        right: 1rem;
+        bottom: 1rem;
+        padding: 0.95rem 1.05rem;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(10px);
+        color: #31516b;
+        font-size: 0.84rem;
+        line-height: 1.5;
+        box-shadow: 0 14px 28px rgba(8, 56, 90, 0.14);
+      }
+
+      .multidisciplinary-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 0.9rem;
+      }
+
+      .multidisciplinary-role {
+        padding: 0.8rem 0.8rem 1rem;
+        border-radius: 22px;
+        background: linear-gradient(180deg, #ffffff 0%, #f9fcff 100%);
+        border: 1px solid rgba(17, 130, 207, 0.08);
+        text-align: left;
+        position: relative;
+        overflow: hidden;
+        transition:
+          transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+          border-color 0.45s ease,
+          box-shadow 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+          background 0.45s ease;
+      }
+
+      .multidisciplinary-role::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(17, 130, 207, 0) 0%,
+          rgba(17, 130, 207, 0.045) 55%,
+          rgba(255, 255, 255, 0.28) 100%
+        );
+        opacity: 0;
+        transition: opacity 0.45s ease;
+        pointer-events: none;
+      }
+
+      .multidisciplinary-role:hover {
+        transform: translateY(-8px);
+        border-color: rgba(17, 130, 207, 0.16);
+        background: linear-gradient(180deg, #ffffff 0%, #f6fbff 100%);
+        box-shadow: 0 20px 44px rgba(11, 95, 149, 0.1);
+      }
+
+      .multidisciplinary-role:hover::before {
+        opacity: 1;
+      }
+
+      .multidisciplinary-role-media {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 112px;
+        margin-bottom: 0.8rem;
+        border-radius: 18px;
+        background: linear-gradient(145deg, #0f6ca8 0%, #1182cf 100%);
+      }
+
+      .multidisciplinary-role-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transform: scale(1.1);
+        transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      .multidisciplinary-role-media::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(7, 52, 84, 0.1) 0%,
+          rgba(7, 52, 84, 0.24) 100%
+        );
+        opacity: 0.82;
+        transition: opacity 0.55s ease;
+      }
+
+      .multidisciplinary-role:hover .multidisciplinary-role-media img {
+        transform: scale(1.03);
+      }
+
+      .multidisciplinary-role:hover .multidisciplinary-role-media::after {
+        opacity: 0.5;
+      }
+
+      .multidisciplinary-role-copy {
+        padding: 0 0.1rem;
+        transform: translateY(0);
+        transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      .multidisciplinary-role:hover .multidisciplinary-role-copy {
+        transform: translateY(-2px);
+      }
+
+      .multidisciplinary-role span {
+        display: block;
+        margin-bottom: 0.28rem;
+        color: #125d97;
+        font-size: 0.82rem;
+        font-weight: 700;
+        line-height: 1.3;
+        transition: color 0.35s ease;
+      }
+
+      .multidisciplinary-role p {
+        margin: 0;
+        color: #557791;
+        font-size: 0.72rem;
+        line-height: 1.48;
+        transition: color 0.35s ease;
+      }
+
+      .multidisciplinary-role:hover span {
+        color: #0f6ca8;
+      }
+
+      .multidisciplinary-role:hover p {
+        color: #456783;
+      }
+
+      .multidisciplinary-summary {
+        margin-top: 1.35rem;
+        padding: 1.2rem 1.3rem;
+        border-radius: 22px;
+        background: linear-gradient(
+          135deg,
+          rgba(134, 194, 62, 0.1),
+          rgba(17, 130, 207, 0.08)
+        );
+        border: 1px solid rgba(79, 125, 31, 0.08);
+        color: #31516b;
+        font-size: 0.92rem;
+        line-height: 1.66;
+      }
+
       @media screen and (max-width: 991px) {
         .care-continuum-shell {
           padding: 0 16px;
@@ -1542,12 +1839,21 @@
         .clinical-decisions-copy,
         .clinical-decisions-side,
         .outcomes-efficiency-header,
-        .outcomes-efficiency-grid {
+        .outcomes-efficiency-grid,
+        .multidisciplinary-header {
           grid-template-columns: 1fr;
         }
 
         .outcomes-efficiency-shell {
           padding: 0 16px;
+        }
+
+        .multidisciplinary-shell {
+          padding: 0 16px;
+        }
+
+        .multidisciplinary-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
         }
       }
 
@@ -1636,6 +1942,47 @@
 
         .outcomes-efficiency-title {
           font-size: 2rem;
+        }
+
+        .multidisciplinary-section {
+          padding: 0 0 4rem;
+        }
+
+        .multidisciplinary-shell {
+          padding: 0 12px;
+        }
+
+        .multidisciplinary-panel {
+          padding: 1.35rem;
+          border-radius: 24px;
+        }
+
+        .multidisciplinary-title {
+          font-size: 2rem;
+        }
+
+        .multidisciplinary-image-wrap {
+          min-height: 220px;
+          border-radius: 22px;
+        }
+
+        .multidisciplinary-image-frame {
+          min-height: 202px;
+          border-radius: 18px;
+        }
+
+        .multidisciplinary-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 0.75rem;
+        }
+
+        .multidisciplinary-role {
+          border-radius: 18px;
+        }
+
+        .multidisciplinary-role-media {
+          height: 96px;
+          border-radius: 15px;
         }
       }
     </style>
@@ -2815,6 +3162,222 @@
                 The result is a more coordinated, data-driven approach to brain
                 health that supports better patient outcomes while improving
                 operational efficiency across the healthcare system.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="multidisciplinary-section">
+          <div class="multidisciplinary-shell">
+            <div class="multidisciplinary-panel">
+              <div class="multidisciplinary-header">
+                <div>
+                  <div class="multidisciplinary-tag">
+                    <i class="fa-solid fa-people-group"></i>
+                    Collaborative Care
+                  </div>
+                  <h2 class="detect-miss-title">
+                    Designed for Multidisciplinary Teams
+                  </h2>
+                  <p class="multidisciplinary-subheading">
+                    A shared neurofunctional view enables every discipline to
+                    contribute with greater clarity, consistency, and clinical
+                    confidence.
+                  </p>
+                  <p class="multidisciplinary-lead">
+                    BrainFx is designed to strengthen collaborative care by
+                    delivering meaningful, standardized insight to the
+                    healthcare professionals involved in assessment,
+                    rehabilitation, care planning, and long-term outcomes
+                    monitoring.
+                  </p>
+                  <p class="multidisciplinary-detail">
+                    By giving physicians, therapists, nurses, case managers, and
+                    researchers access to a consistent view of patient function,
+                    BrainFx helps reduce fragmentation across the care pathway
+                    and supports more coordinated, patient-centered
+                    decision-making.
+                  </p>
+                  <p class="multidisciplinary-detail">
+                    Whether the priority is early identification,
+                    interdisciplinary communication, discharge planning, or
+                    progress tracking over time, BrainFx provides a shared
+                    foundation for more aligned treatment planning and better
+                    continuity of care.
+                  </p>
+                </div>
+
+                <div class="multidisciplinary-image-wrap">
+                  <div class="multidisciplinary-image-frame">
+                    <img
+                      src="assets/Science-images/org-3.png"
+                      alt="Multidisciplinary healthcare team reviewing patient information together"
+                    />
+                    <div class="multidisciplinary-image-overlay"></div>
+                    <div class="multidisciplinary-image-note">
+                      Shared patient insight helps teams align around more
+                      personalized treatment planning.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="multidisciplinary-grid">
+                <div class="multidisciplinary-role">
+                  <div class="multidisciplinary-role-media">
+                    <img
+                      src="assets/Science-images/sub14.png"
+                      alt="Physician collaborating in care planning"
+                    />
+                  </div>
+                  <div class="multidisciplinary-role-copy">
+                    <span>Physicians</span>
+                    <p>
+                      Use objective insight to support diagnosis and care
+                      planning.
+                    </p>
+                  </div>
+                </div>
+                <div class="multidisciplinary-role">
+                  <div class="multidisciplinary-role-media">
+                    <img
+                      src="assets/Science-images/sub1.avif"
+                      alt="Occupational therapy collaboration in a clinical setting"
+                    />
+                  </div>
+                  <div class="multidisciplinary-role-copy">
+                    <span>Occupational Therapists</span>
+                    <p>
+                      Connect functional findings to daily living and
+                      independence goals.
+                    </p>
+                  </div>
+                </div>
+                <div class="multidisciplinary-role">
+                  <div class="multidisciplinary-role-media">
+                    <img
+                      src="assets/Science-images/sub3.jfif"
+                      alt="Physiotherapy and mobility-focused care team"
+                    />
+                  </div>
+                  <div class="multidisciplinary-role-copy">
+                    <span>Physiotherapists</span>
+                    <p>
+                      Use brain health context to guide recovery and movement
+                      strategies.
+                    </p>
+                  </div>
+                </div>
+                <div class="multidisciplinary-role">
+                  <div class="multidisciplinary-role-media">
+                    <img
+                      src="assets/Science-images/sub4.jfif"
+                      alt="Neuropsychology and cognitive assessment team"
+                    />
+                  </div>
+                  <div class="multidisciplinary-role-copy">
+                    <span>Neuropsychologists</span>
+                    <p>
+                      Add deeper neurofunctional context to cognitive evaluation
+                      and review.
+                    </p>
+                  </div>
+                </div>
+                <div class="multidisciplinary-role">
+                  <div class="multidisciplinary-role-media">
+                    <img
+                      src="assets/Science-images/sub5.png"
+                      alt="Speech and communication care discussion"
+                    />
+                  </div>
+                  <div class="multidisciplinary-role-copy">
+                    <span>Speech-Language Pathologists</span>
+                    <p>
+                      Support communication and cognitive strategy planning with
+                      shared data.
+                    </p>
+                  </div>
+                </div>
+                <div class="multidisciplinary-role">
+                  <div class="multidisciplinary-role-media">
+                    <img
+                      src="assets/Science-images/sub6.png"
+                      alt="Nursing team supporting care continuity"
+                    />
+                  </div>
+                  <div class="multidisciplinary-role-copy">
+                    <span>Nurses</span>
+                    <p>
+                      Use consistent reporting to inform monitoring and patient
+                      transitions.
+                    </p>
+                  </div>
+                </div>
+                <div class="multidisciplinary-role">
+                  <div class="multidisciplinary-role-media">
+                    <img
+                      src="assets/images/New images/cheerful-group-medics-reading-papers.jpg"
+                      alt="Social work and care coordination team"
+                    />
+                  </div>
+                  <div class="multidisciplinary-role-copy">
+                    <span>Social Workers</span>
+                    <p>
+                      Coordinate support needs with a clearer picture of patient
+                      function.
+                    </p>
+                  </div>
+                </div>
+                <div class="multidisciplinary-role">
+                  <div class="multidisciplinary-role-media">
+                    <img
+                      src="assets/Science-images/sub8.png"
+                      alt="Case management team reviewing care pathways"
+                    />
+                  </div>
+                  <div class="multidisciplinary-role-copy">
+                    <span>Case Managers</span>
+                    <p>
+                      Improve pathway coordination with standardized shared
+                      reporting.
+                    </p>
+                  </div>
+                </div>
+                <div class="multidisciplinary-role">
+                  <div class="multidisciplinary-role-media">
+                    <img
+                      src="assets/Science-images/sub9.png"
+                      alt="Rehabilitation specialists coordinating recovery plans"
+                    />
+                  </div>
+                  <div class="multidisciplinary-role-copy">
+                    <span>Rehabilitation Specialists</span>
+                    <p>
+                      Track progress over time and refine intervention planning.
+                    </p>
+                  </div>
+                </div>
+                <div class="multidisciplinary-role">
+                  <div class="multidisciplinary-role-media">
+                    <img
+                      src="assets/Science-images/sub10.png"
+                      alt="Clinical researchers reviewing standardized outcome data"
+                    />
+                  </div>
+                  <div class="multidisciplinary-role-copy">
+                    <span>Clinical Researchers</span>
+                    <p>
+                      Work with standardized outcome data across patient
+                      populations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="multidisciplinary-summary">
+                With standardized reporting and shared patient insights, every
+                member of the care team can contribute to more personalized
+                treatment planning.
               </div>
             </div>
           </div>
