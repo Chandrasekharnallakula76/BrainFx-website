@@ -2130,43 +2130,107 @@
 
       .enterprise-ready-future {
         margin-top: 1.35rem;
-        padding: 1.5rem 1.55rem;
-        border-radius: 26px;
-        background: linear-gradient(145deg, #0b5f95 0%, #1182cf 100%);
+        position: relative;
+        overflow: hidden;
+        padding: 1.8rem 1.75rem;
+        border-radius: 30px;
+        background: linear-gradient(145deg, #09517f 0%, #1182cf 58%, #1b95db 100%);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        box-shadow: 0 26px 56px rgba(10, 73, 116, 0.22);
         color: #ffffff;
       }
 
+      .enterprise-ready-future::before {
+        content: "";
+        position: absolute;
+        top: -88px;
+        right: -72px;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.09);
+      }
+
+      .enterprise-ready-future::after {
+        content: "";
+        position: absolute;
+        left: -64px;
+        bottom: -92px;
+        width: 190px;
+        height: 190px;
+        border-radius: 50%;
+        background: rgba(134, 194, 62, 0.16);
+      }
+
+      .enterprise-ready-future > * {
+        position: relative;
+        z-index: 1;
+      }
+
       .enterprise-ready-future span {
-        display: block;
-        margin-bottom: 0.5rem;
-        color: rgba(255, 255, 255, 0.78);
-        font-size: 0.76rem;
+        display: inline-flex;
+        align-items: center;
+        padding: 0.36rem 0.7rem;
+        margin-bottom: 0.95rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.16);
+        color: #ffd08a;
+        font-size: 0.72rem;
         font-weight: 800;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
       }
 
       .enterprise-ready-future h3 {
-        margin: 0 0 0.7rem;
-        font-size: clamp(1.35rem, 1.9vw, 1.9rem);
-        line-height: 1.14;
-        letter-spacing: -0.03em;
+        margin: 0 0 1rem;
+        max-width: 34ch;
+        font-size: clamp(1.5rem, 2vw, 2.3rem);
+        line-height: 1.12;
+        letter-spacing: -0.04em;
       }
 
       .enterprise-ready-future p {
-        margin: 0 0 0.75rem;
-        max-width: 58rem;
+        margin: 0;
+        max-width: 68ch;
         color: rgba(255, 255, 255, 0.9);
-        font-size: 0.9rem;
-        line-height: 1.64;
+        font-size: 0.96rem;
+        line-height: 1.72;
+      }
+
+      .enterprise-ready-future-copy {
+        display: grid;
+        gap: 0.9rem;
+      }
+
+      .enterprise-ready-future-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 1.35rem;
+        padding-top: 1.15rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.16);
       }
 
       .enterprise-ready-future strong {
         display: inline-block;
-        margin-top: 0.1rem;
         color: #ffffff;
-        font-size: 0.98rem;
+        font-size: 1rem;
+        line-height: 1.4;
         letter-spacing: 0.01em;
+      }
+
+      .enterprise-ready-future-mark {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.48rem 0.82rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.14);
+        color: rgba(255, 255, 255, 0.88);
+        font-size: 0.74rem;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
       }
 
       @media screen and (max-width: 991px) {
@@ -2372,6 +2436,27 @@
         .enterprise-ready-grid {
           grid-template-columns: 1fr;
           gap: 0.75rem;
+        }
+
+        .enterprise-ready-future {
+          padding: 1.35rem 1.2rem;
+          border-radius: 24px;
+        }
+
+        .enterprise-ready-future h3 {
+          font-size: 1.9rem;
+        }
+
+        .enterprise-ready-future p {
+          font-size: 0.92rem;
+        }
+
+        .enterprise-ready-future-footer {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.65rem;
+          margin-top: 1.1rem;
+          padding-top: 0.95rem;
         }
       }
     </style>
@@ -3115,7 +3200,10 @@
                       <i class="fa-solid fa-user-doctor"></i>
                       <div>
                         <strong>Multidisciplinary care coordination</strong>
-                        <span>Designed to feel clear, credible, and professional on mobile.</span>
+                        <span
+                          >Designed to feel clear, credible, and professional on
+                          mobile.</span
+                        >
                       </div>
                     </div>
                   </div>
@@ -3910,21 +3998,27 @@
                   Better insight for earlier detection, personalized care, and
                   stronger clinical decision making.
                 </h3>
-                <p>
-                  As healthcare continues to shift toward earlier detection,
-                  personalized medicine, and outcome-based care, organizations
-                  need tools that provide more than a cognitive score. They need
-                  meaningful insight that improves how decisions are made across
-                  the care journey.
-                </p>
-                <p>
-                  BrainFx empowers healthcare organizations to detect subtle
-                  cognitive dysfunction earlier, monitor neurofunctional health
-                  over time, and deliver more targeted, person-centred care.
-                </p>
-                <strong
-                  >Better Insights. Better Decisions. Better Outcomes.</strong
-                >
+                <div class="enterprise-ready-future-copy">
+                  <p>
+                    As healthcare continues to shift toward earlier detection,
+                    personalized medicine, and outcome-based care,
+                    organizations need tools that provide more than a cognitive
+                    score. They need meaningful insight that improves how
+                    decisions are made across the care journey.
+                  </p>
+                  <p>
+                    BrainFx empowers healthcare organizations to detect subtle
+                    cognitive dysfunction earlier, monitor neurofunctional
+                    health over time, and deliver more targeted,
+                    person-centred care.
+                  </p>
+                </div>
+                <div class="enterprise-ready-future-footer">
+                  <strong
+                    >Better Insights. Better Decisions. Better Outcomes.</strong
+                  >
+                  <div class="enterprise-ready-future-mark">Clinical Impact</div>
+                </div>
               </div>
             </div>
           </div>
