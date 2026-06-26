@@ -83,10 +83,11 @@
       currentPage,
       "brainfx-philosophy.html",
     );
-    const assessmentBundleActive = getCardActiveClass(
-      currentPage,
-      "assessmentbundle.html",
-    );
+    const assessmentBundleActive =
+      currentPage === "assessmentbundle.html" ||
+      currentPage === "assessmentbundlenew.html"
+        ? " active"
+        : "";
     const trainingFeaturedClass =
       currentPage === "index.html" ? " is-featured" : "";
 
@@ -233,6 +234,18 @@
                     <div class="card-text-main">
                       <h3>VCA</h3>
                       <p>BrainFx VCA presents visual cognitive insights in a compact and practical format.</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="assessmentbundle.html" target="_blank">
+                  <div class="assessment-card${assessmentBundleActive}">
+                    <div class="image-container">
+                      <i class="fa-solid fa-clipboard-list"></i>
+                    </div>
+                    <div class="card-text-main">
+                      <h3>Assessment Bundle</h3>
+  <p>Integrated BrainFx assessments supporting
+                                  faster, smarter clinical decision-making.</p>
                     </div>
                   </div>
                 </a>
