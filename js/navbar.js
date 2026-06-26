@@ -237,7 +237,7 @@
                     </div>
                   </div>
                 </a>
-                <a href="assessmentbundle.html" target="_blank">
+                <a href="assessmentbundle.html">
                   <div class="assessment-card${assessmentBundleActive}">
                     <div class="image-container">
                       <i class="fa-solid fa-clipboard-list"></i>
