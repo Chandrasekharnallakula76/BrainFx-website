@@ -297,15 +297,7 @@
                     <small>BrainFx philosophy values personalized cognitive assessment.</small>
                   </div>
                 </a>
-                <a href="assessmentbundle.html" class="assessment-submenu-link${assessmentBundleActive}">
-                  <div class="assessment-submenu-link-icon">
-                    <i class="fa-solid fa-clipboard-check"></i>
-                  </div>
-                  <div class="assessment-submenu-link-copy">
-                    <span>Assessment Bundle</span>
-                    <small>Comprehensive cognitive assessment bundle for accurate performance evaluation today.</small>
-                  </div>
-                </a>
+               
               </div>
             </div>
           </div>
