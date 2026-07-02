@@ -204,7 +204,7 @@
             <div class="arrow"></div>
             <div class="assessment-mega-shell">
               <div class="assessment-cards">
-                <a href="https://360ax.brainfx.ai/" target="_blank">
+                <a href="#">
                   <div class="assessment-card">
                     <div class="image-container">
                       <i class="fa-solid fa-globe"></i>
@@ -215,7 +215,7 @@
                     </div>
                   </div>
                 </a>
-                <a href="https://screen.brainfx.ai/" target="_blank">
+                <a href="#">
                   <div class="assessment-card">
                     <div class="image-container">
                       <i class="fa-solid fa-desktop"></i>
@@ -226,7 +226,7 @@
                     </div>
                   </div>
                 </a>
-                <a href="https://vcax.brainfx.com" target="_blank">
+                <a href="#">
                   <div class="assessment-card">
                     <div class="image-container">
                       <i class="fa-solid fa-chart-column"></i>
