@@ -64,6 +64,11 @@ html[data-wf-page="6760858fd1c261f9adc849e3"] {
   color: #eaf6d9;
 }
 
+.top-page-bar .top-bar-links,
+.top-page-bar .mobile-menu-login-links {
+  display: none !important;
+}
+
 .top-bar-links .top-bar-link:not(:first-child),
 .mobile-menu-login-links .top-bar-link:not(:first-child) {
   display: none;
