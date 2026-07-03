@@ -213,6 +213,806 @@
         color: #ffffff !important;
       }
     </style>
+    <style>
+      .ascr-overview-section {
+        padding: 5.5rem 0;
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(172, 204, 249, 0.3),
+            transparent 32%
+          ),
+          linear-gradient(180deg, #f8fbff 0%, #eef6fd 100%);
+      }
+
+      .ascr-overview-section.ascr-overview-section--hero {
+        padding: 9.5rem 0 2.5rem;
+      }
+
+      .ascr-shell {
+        width: min(1440px, calc(100% - 1rem));
+        margin: 0 auto;
+      }
+
+      .ascr-overview-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+        gap: 2.75rem;
+        align-items: center;
+      }
+
+      .ascr-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.45rem 0.9rem;
+        border-radius: 999px;
+        background: rgba(17, 130, 207, 0.1);
+        color: #0b5f95;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .ascr-copy h2 {
+        margin: 1rem 0 0.75rem;
+        color: #0b5f95;
+        font-size: clamp(1.7rem, 2.4vw, 2.5rem);
+        line-height: 1.12;
+      }
+
+      .ascr-copy h3 {
+        margin: 0 0 1.2rem;
+        color: #4f7d1f;
+        font-size: clamp(1rem, 1.3vw, 1.2rem);
+        line-height: 1.4;
+      }
+
+      .ascr-copy p {
+        margin: 0 0 1rem;
+        color: #35597d;
+        font-size: 1rem;
+        line-height: 1.8;
+      }
+
+      .ascr-highlights {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.9rem;
+        margin-top: 1.8rem;
+      }
+
+      .ascr-pill {
+        padding: 1rem;
+        border-radius: 1.1rem;
+        background: rgba(255, 255, 255, 0.82);
+        border: 1px solid rgba(17, 130, 207, 0.1);
+        box-shadow: 0 16px 32px rgba(11, 95, 149, 0.08);
+        position: relative;
+        overflow: hidden;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          border-color 0.3s ease;
+        animation: ascrCardFloat 5.6s ease-in-out infinite;
+      }
+
+      .ascr-pill:nth-child(2) {
+        animation-delay: 0.4s;
+      }
+
+      .ascr-pill:nth-child(3) {
+        animation-delay: 0.8s;
+      }
+
+      .ascr-pill:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 36px rgba(11, 95, 149, 0.14);
+        border-color: rgba(17, 130, 207, 0.22);
+      }
+
+      .ascr-pill-icon {
+        width: 2.35rem;
+        height: 2.35rem;
+        border-radius: 0.85rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(17, 130, 207, 0.12);
+        color: #0b5f95;
+        font-size: 0.95rem;
+        margin-bottom: 0.65rem;
+      }
+
+      .ascr-pill strong {
+        display: block;
+        margin-bottom: 0.3rem;
+        color: #0b5f95;
+        font-size: 0.95rem;
+      }
+
+      .ascr-pill span {
+        color: #577899;
+        font-size: 0.84rem;
+        line-height: 1.55;
+      }
+
+      @keyframes ascrCardFloat {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-4px);
+        }
+      }
+
+      .ascr-visual-wrap {
+        position: relative;
+        padding: 0.25rem 0 0.25rem 0.5rem;
+      }
+
+      .ascr-visual-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 2rem;
+        background: linear-gradient(145deg, #0b5f95 0%, #1182cf 100%);
+        box-shadow: 0 30px 60px rgba(11, 95, 149, 0.2);
+        padding: 1.6rem;
+      }
+
+      .ascr-visual-card::before {
+        content: "";
+        position: absolute;
+        inset: auto auto -80px -70px;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .ascr-visual-card::after {
+        content: "";
+        position: absolute;
+        top: -48px;
+        right: -26px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: rgba(234, 246, 217, 0.2);
+      }
+
+      .ascr-visual-top {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1.1rem;
+      }
+
+      .ascr-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.55rem 0.9rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.14);
+        color: #ffffff;
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .ascr-visual-icon-panel {
+        position: relative;
+        z-index: 1;
+        border-radius: 1.45rem;
+        min-height: 200px;
+        max-height: 200px;
+        background: rgba(255, 255, 255, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.9rem;
+        padding: 1.5rem;
+        text-align: center;
+        box-shadow:
+          inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+          0 12px 28px rgba(7, 52, 87, 0.12);
+        overflow: hidden;
+      }
+
+      .ascr-visual-icon-panel i {
+        font-size: 2.6rem;
+        color: #eaf6d9;
+      }
+
+      .ascr-visual-icon-panel strong {
+        color: #ffffff;
+        font-size: 1.1rem;
+      }
+
+      .ascr-visual-icon-panel span {
+        color: rgba(234, 246, 217, 0.92);
+        font-size: 0.85rem;
+        line-height: 1.6;
+        max-width: 26ch;
+      }
+
+      .ascr-icon-image {
+        display: block;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 140px;
+        object-fit: contain;
+        border-radius: 0.9rem;
+        box-shadow: 0 10px 22px rgba(7, 52, 87, 0.18);
+      }
+
+      .ascr-visual-icon-panel--image {
+        padding: 0;
+        min-height: 280px;
+        max-height: 280px;
+      }
+
+      .ascr-icon-image-full {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 1.45rem;
+        opacity: 0.96;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+        animation: ascrImageZoom 6s ease-in-out infinite;
+      }
+
+      @keyframes ascrImageZoom {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.08);
+        }
+      }
+
+      .ascr-visual-mini-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.8rem;
+        margin-top: 1rem;
+      }
+
+      .ascr-mini-card {
+        padding: 0.9rem 0.85rem;
+        border-radius: 1rem;
+        background: rgba(255, 255, 255, 0.14);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        box-shadow: 0 10px 22px rgba(8, 74, 123, 0.12);
+        backdrop-filter: blur(10px);
+        transition:
+          transform 0.25s ease,
+          background 0.25s ease,
+          border-color 0.25s ease;
+      }
+
+      .ascr-mini-card:hover {
+        transform: translateY(-4px);
+        background: rgba(255, 255, 255, 0.18);
+        border-color: rgba(255, 255, 255, 0.24);
+      }
+
+      .ascr-mini-card i {
+        color: #eaf6d9;
+        font-size: 1rem;
+        margin-bottom: 0.35rem;
+        display: inline-block;
+      }
+
+      .ascr-mini-title {
+        display: block;
+        color: #ffffff;
+        font-size: 0.86rem;
+        font-weight: 700;
+        line-height: 1.3;
+      }
+
+      .ascr-advantages-section {
+        background: #ffffff;
+        padding: 5.5rem 0;
+      }
+
+      .ascr-advantages-panel {
+        border-radius: 2rem;
+        background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+        box-shadow: 0 24px 60px rgba(10, 75, 122, 0.08);
+        border: 1px solid rgba(17, 130, 207, 0.08);
+        padding: 3rem;
+      }
+
+      .ascr-advantages-grid {
+        display: grid;
+        grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.15fr);
+        gap: 2.25rem;
+        align-items: center;
+      }
+
+      .ascr-advantages-visual {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1.75rem;
+        background: linear-gradient(145deg, #0b5f95 0%, #1182cf 100%);
+        box-shadow: 0 24px 46px rgba(11, 95, 149, 0.18);
+        padding: 2rem 1.5rem;
+        text-align: center;
+      }
+
+      .ascr-advantages-visual::after {
+        content: "";
+        position: absolute;
+        bottom: -30px;
+        left: -24px;
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .ascr-advantages-visual i {
+        position: relative;
+        z-index: 1;
+        font-size: 3rem;
+        color: #eaf6d9;
+        margin-bottom: 1rem;
+        display: inline-block;
+      }
+
+      .ascr-advantages-visual strong {
+        position: relative;
+        z-index: 1;
+        display: block;
+        color: #ffffff;
+        font-size: 1.25rem;
+        margin-bottom: 0.6rem;
+      }
+
+      .ascr-advantages-visual p {
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        color: rgba(234, 246, 217, 0.94);
+        font-size: 0.88rem;
+        line-height: 1.6;
+      }
+
+      .ascr-advantages-copy-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 0.9rem;
+        border-radius: 999px;
+        background: rgba(17, 130, 207, 0.08);
+        color: #0b5f95;
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .ascr-advantages-copy h2 {
+        margin: 1rem 0 1.4rem;
+        color: #0b5f95;
+        font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+        line-height: 1.12;
+      }
+
+      .ascr-advantages-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.9rem;
+      }
+
+      .ascr-advantages-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.9rem 1rem;
+        border-radius: 1rem;
+        background: #f6fbff;
+        border: 1px solid rgba(17, 130, 207, 0.08);
+        box-shadow: 0 10px 24px rgba(11, 95, 149, 0.04);
+        transition:
+          transform 0.28s ease,
+          box-shadow 0.28s ease,
+          border-color 0.28s ease,
+          background 0.28s ease;
+      }
+
+      .ascr-advantages-item:hover {
+        transform: translateY(-4px);
+        background: #ffffff;
+        border-color: rgba(17, 130, 207, 0.16);
+        box-shadow: 0 18px 36px rgba(11, 95, 149, 0.1);
+      }
+
+      .ascr-advantages-item-icon {
+        width: 2.1rem;
+        height: 2.1rem;
+        border-radius: 0.7rem;
+        flex: 0 0 auto;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(134, 194, 62, 0.14);
+        color: #4f7d1f;
+        font-size: 0.85rem;
+      }
+
+      .ascr-advantages-item span {
+        color: #375a7c;
+        font-size: 0.88rem;
+        line-height: 1.5;
+      }
+
+      .ascr-advantages-list.is-single {
+        grid-template-columns: 1fr;
+        max-width: 640px;
+      }
+
+      .ascr-skills-section {
+        background: linear-gradient(180deg, #f4f8fc 0%, #edf5fb 100%);
+        padding: 5.5rem 0 6rem;
+      }
+
+      .ascr-skills-panel {
+        padding: 3rem;
+        border-radius: 2rem;
+        background: rgba(255, 255, 255, 0.78);
+        border: 1px solid rgba(17, 130, 207, 0.08);
+        box-shadow: 0 24px 60px rgba(10, 75, 122, 0.08);
+        backdrop-filter: blur(10px);
+      }
+
+      .ascr-skills-grid-outer {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
+        gap: 2.5rem;
+        align-items: start;
+      }
+
+      .ascr-skills-copy-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 0.9rem;
+        border-radius: 999px;
+        background: rgba(134, 194, 62, 0.12);
+        color: #4f7d1f;
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .ascr-skills-copy h2 {
+        margin: 1rem 0 1rem;
+        color: #0b5f95;
+        font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+        line-height: 1.12;
+      }
+
+      .ascr-skills-copy p {
+        margin: 0 0 1rem;
+        color: #3f6183;
+        font-size: 1rem;
+        line-height: 1.8;
+      }
+
+      .ascr-skills-note {
+        margin-top: 1.5rem;
+        padding: 1rem 1.1rem;
+        border-radius: 1rem;
+        background: linear-gradient(135deg, #f7fbff 0%, #eef7e3 100%);
+        border: 1px solid rgba(17, 130, 207, 0.08);
+      }
+
+      .ascr-skills-note strong {
+        display: block;
+        margin-bottom: 0.3rem;
+        color: #0b5f95;
+        font-size: 0.96rem;
+      }
+
+      .ascr-skills-note span {
+        color: #5c7b99;
+        font-size: 0.84rem;
+        line-height: 1.6;
+      }
+
+      .ascr-skill-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.85rem;
+        width: 100%;
+      }
+
+      .ascr-skill {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.95rem 1rem;
+        border-radius: 1rem;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid rgba(17, 130, 207, 0.08);
+        box-shadow: 0 12px 26px rgba(11, 95, 149, 0.05);
+        color: #335d83;
+        font-size: 0.85rem;
+        font-weight: 600;
+        line-height: 1.35;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          border-color 0.25s ease;
+      }
+
+      .ascr-skill:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 32px rgba(11, 95, 149, 0.09);
+        border-color: rgba(17, 130, 207, 0.16);
+      }
+
+      .ascr-skill i {
+        color: #1182cf;
+        font-size: 0.9rem;
+        width: 1.1rem;
+        text-align: center;
+        flex: 0 0 auto;
+      }
+
+      .ascr-reasons-section {
+        background: linear-gradient(180deg, #eef6fd 0%, #f8fbff 100%);
+        padding: 5.5rem 0;
+      }
+
+      .ascr-reasons-header {
+        text-align: center;
+        max-width: 720px;
+        margin: 0 auto 3rem;
+      }
+
+      .ascr-reasons-header h2 {
+        margin: 1rem 0 0.75rem;
+        color: #0b5f95;
+        font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+        line-height: 1.12;
+      }
+
+      .ascr-reasons-header p {
+        margin: 0;
+        color: #3f6183;
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+
+      .ascr-reasons-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1.5rem;
+      }
+
+      .ascr-reason-card {
+        background: #ffffff;
+        border-radius: 1.25rem;
+        border: 1px solid rgba(17, 130, 207, 0.08);
+        box-shadow: 0 16px 32px rgba(11, 95, 149, 0.08);
+        padding: 1.75rem 1.5rem;
+        transition:
+          transform 0.28s ease,
+          box-shadow 0.28s ease,
+          border-color 0.28s ease;
+      }
+
+      .ascr-reason-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 22px 42px rgba(11, 95, 149, 0.14);
+        border-color: rgba(17, 130, 207, 0.2);
+      }
+
+      .ascr-reason-icon {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 0.9rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(17, 130, 207, 0.1);
+        color: #0b5f95;
+        font-size: 1.15rem;
+        margin-bottom: 1rem;
+      }
+
+      .ascr-reason-card h3 {
+        margin: 0 0 0.5rem;
+        color: #0b5f95;
+        font-size: 1rem;
+        line-height: 1.3;
+      }
+
+      .ascr-reason-card p {
+        margin: 0;
+        color: #577899;
+        font-size: 0.86rem;
+        line-height: 1.6;
+      }
+
+      @media screen and (max-width: 991px) {
+        .ascr-overview-grid,
+        .ascr-advantages-grid,
+        .ascr-skills-grid-outer {
+          grid-template-columns: 1fr;
+        }
+
+        .ascr-visual-wrap {
+          padding-left: 0;
+        }
+
+        .ascr-advantages-list {
+          grid-template-columns: 1fr;
+        }
+
+        .ascr-reasons-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .ascr-overview-section.ascr-overview-section--hero {
+          padding: 7rem 0 3.5rem;
+        }
+
+        .ascr-shell {
+          width: min(100% - 1.25rem, 1440px);
+        }
+
+        .ascr-overview-grid,
+        .ascr-advantages-grid,
+        .ascr-skills-grid-outer {
+          gap: 1.4rem;
+        }
+
+        .ascr-copy h2,
+        .ascr-advantages-copy h2,
+        .ascr-skills-copy h2 {
+          font-size: clamp(1.5rem, 6vw, 1.85rem);
+          line-height: 1.12;
+        }
+
+        .ascr-highlights {
+          grid-template-columns: 1fr;
+        }
+
+        .ascr-visual-mini-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .ascr-skill-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .ascr-advantages-panel,
+        .ascr-skills-panel {
+          padding: 1.75rem;
+        }
+
+        .ascr-reasons-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .ascr-report-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .ascr-report-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.5rem;
+      }
+
+      .ascr-report-card {
+        position: relative;
+        overflow: hidden;
+        background: #ffffff;
+        border-radius: 1.25rem;
+        border: 1px solid rgba(17, 130, 207, 0.08);
+        box-shadow: 0 16px 32px rgba(11, 95, 149, 0.08);
+        padding: 2rem 1.75rem;
+        transition:
+          transform 0.28s ease,
+          box-shadow 0.28s ease,
+          border-color 0.28s ease;
+      }
+
+      .ascr-report-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: var(--report-color, #1182cf);
+      }
+
+      .ascr-report-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 22px 42px rgba(11, 95, 149, 0.14);
+        border-color: rgba(17, 130, 207, 0.2);
+      }
+
+      .ascr-report-icon {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 0.9rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--report-bg, rgba(17, 130, 207, 0.1));
+        color: var(--report-color, #0b5f95);
+        font-size: 1.15rem;
+        margin-bottom: 1rem;
+      }
+
+      .ascr-report-tag {
+        display: block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--report-color, #0b5f95);
+        margin-bottom: 0.4rem;
+      }
+
+      .ascr-report-card h3 {
+        margin: 0 0 1rem;
+        color: #0b5f95;
+        font-size: 1.1rem;
+        line-height: 1.3;
+      }
+
+      .ascr-report-card ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+
+      .ascr-report-card li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.55rem;
+        color: #4a6b8a;
+        font-size: 0.86rem;
+        line-height: 1.55;
+      }
+
+      .ascr-report-card li i {
+        color: var(--report-color, #1182cf);
+        font-size: 0.78rem;
+        margin-top: 0.3rem;
+        flex: 0 0 auto;
+      }
+    </style>
   </head>
   <body>
     <div class="page-wrapper">
@@ -783,10 +1583,1050 @@
           </div>
         </nav>
 
-        <section class="section">
-          
+        <section class="ascr-overview-section ascr-overview-section--hero">
+          <div class="ascr-shell">
+            <div class="ascr-overview-grid">
+              <div class="ascr-copy">
+                <div class="ascr-eyebrow">
+                  <i class="fa-solid fa-desktop"></i>
+                  BrainFx SCREEN Assessment
+                </div>
+                <h2>Rapid Functional Cognitive Screening</h2>
+                <h3>A Fast, Objective Way to Flag Cognitive Concerns</h3>
+                <p>
+                  BrainFx SCREEN is a quick cognitive screening tool designed
+                  to identify early signs of functional cognitive challenges.
+                  It provides clinicians with a fast and objective way to
+                  assess cognitive health and determine whether further
+                  evaluation may be required.
+                </p>
+
+                <div class="ascr-highlights">
+                  <div class="ascr-pill">
+                    <div class="ascr-pill-icon">
+                      <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <strong>Quick &amp; Efficient</strong>
+                    <span> Identifies cognitive concerns in minutes. </span>
+                  </div>
+                  <div class="ascr-pill">
+                    <div class="ascr-pill-icon">
+                      <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <strong>Objective Results</strong>
+                    <span>
+                      Standardized, performance-based assessment methodology.
+                    </span>
+                  </div>
+                  <div class="ascr-pill">
+                    <div class="ascr-pill-icon">
+                      <i class="fa-solid fa-hand-holding-medical"></i>
+                    </div>
+                    <strong>Early Intervention</strong>
+                    <span>
+                      Supports planning and reduces reliance on subjective
+                      observation.
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ascr-visual-wrap">
+                <div class="ascr-visual-card">
+                  <div class="ascr-visual-top">
+                    <div class="ascr-badge">
+                      <i class="fa-solid fa-brain"></i>
+                      Rapid Cognitive Screening
+                    </div>
+                  </div>
+                  <div class="ascr-visual-icon-panel">
+                    <img
+                      src="/assets/Science-images/360image1.png"
+                      alt="BrainFx SCREEN Snapshot"
+                      class="ascr-icon-image"
+                    />
+                  </div>
+                  <div class="ascr-visual-mini-grid">
+                    <div class="ascr-mini-card">
+                      <i class="fa-solid fa-stethoscope"></i>
+                      <span class="ascr-mini-title"
+                        >Initial Cognitive Screening</span
+                      >
+                    </div>
+                    <div class="ascr-mini-card">
+                      <i class="fa-solid fa-head-side-virus"></i>
+                      <span class="ascr-mini-title"
+                        >Concussion Management</span
+                      >
+                    </div>
+                    <div class="ascr-mini-card">
+                      <i class="fa-solid fa-briefcase"></i>
+                      <span class="ascr-mini-title"
+                        >Return-to-Work Assessments</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
-      
+
+        <section class="section ascr-advantages-section">
+          <div class="ascr-shell">
+            <div class="ascr-advantages-panel">
+              <div class="ascr-advantages-grid">
+                <div class="ascr-advantages-visual">
+                  <i class="fa-solid fa-bolt"></i>
+                  <strong>Why BrainFx SCREEN</strong>
+                  <p>
+                    A fast, objective way to identify cognitive concerns and
+                    guide next steps.
+                  </p>
+                </div>
+
+                <div class="ascr-advantages-copy">
+                  <div class="ascr-advantages-copy-eyebrow">
+                    <i class="fa-solid fa-list-check"></i>
+                    Key Advantages
+                  </div>
+                  <h2>What Sets BrainFx SCREEN Apart</h2>
+                  <div class="ascr-advantages-list">
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-gauge-high"></i>
+                      </div>
+                      <span>Quick and efficient screening process.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-stopwatch"></i>
+                      </div>
+                      <span>Identifies cognitive concerns in minutes.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-house-medical"></i>
+                      </div>
+                      <span
+                        >Easy to administer in clinics or remote
+                        settings.</span
+                      >
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                      </div>
+                      <span>Standardized assessment methodology.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                      </div>
+                      <span>Objective performance-based results.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-seedling"></i>
+                      </div>
+                      <span>Supports early intervention planning.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-eye"></i>
+                      </div>
+                      <span
+                        >Reduces reliance on subjective observations.</span
+                      >
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                      </div>
+                      <span
+                        >Helps determine if a comprehensive assessment is
+                        needed.</span
+                      >
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-user-group"></i>
+                      </div>
+                      <span
+                        >Suitable for adults across multiple healthcare
+                        settings.</span
+                      >
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                      </div>
+                      <span>Digital and user-friendly platform.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section ascr-skills-section">
+          <div class="ascr-shell">
+            <div class="ascr-skills-panel">
+              <div class="ascr-skills-grid-outer">
+                <div class="ascr-skills-copy">
+                  <div class="ascr-skills-copy-eyebrow">
+                    <i class="fa-solid fa-list-ul"></i>
+                    Best For
+                  </div>
+                  <h2>Built for a Wide Range of Care Settings</h2>
+                  <p>
+                    BrainFx SCREEN fits naturally into the workflows of
+                    clinicians and organizations who need a fast, reliable
+                    read on cognitive health.
+                  </p>
+                  <div class="ascr-skills-note">
+                    <strong>Why it matters</strong>
+                    <span>
+                      A short, standardized screen helps teams decide quickly
+                      whether a deeper, comprehensive assessment is warranted.
+                    </span>
+                  </div>
+                </div>
+
+                <div class="ascr-skill-grid">
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-stethoscope"></i>
+                    Initial Cognitive Screening
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-hand-holding-medical"></i>
+                    Occupational Therapy
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-person-walking-arrow-right"></i>
+                    Rehabilitation Programs
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-head-side-virus"></i>
+                    Concussion Management
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    Mental Health Services
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-hospital"></i>
+                    Community Healthcare
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-briefcase"></i>
+                    Return-to-Work Assessments
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    Return-to-School Evaluations
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section ascr-overview-section">
+          <div class="ascr-shell">
+            <div class="ascr-overview-grid">
+              <div class="ascr-copy">
+                <div class="ascr-eyebrow">
+                  <i class="fa-solid fa-shapes"></i>
+                  2. Functional Cognitive Skills Assessment
+                </div>
+                <h2>Functional Cognitive Skills Assessment</h2>
+                <h3>Practical Thinking Skills for Everyday Life</h3>
+                <p>
+                  BrainFx SCREEN evaluates essential cognitive abilities
+                  required for daily life, work, education, and independent
+                  living through interactive activities.
+                </p>
+
+                <div class="ascr-highlights">
+                  <div class="ascr-pill">
+                    <div class="ascr-pill-icon">
+                      <i class="fa-solid fa-house-chimney"></i>
+                    </div>
+                    <strong>Real-World Functioning</strong>
+                    <span>
+                      Measures cognitive abilities as they show up in daily
+                      life.
+                    </span>
+                  </div>
+                  <div class="ascr-pill">
+                    <div class="ascr-pill-icon">
+                      <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+                    <strong>Multiple Domains</strong>
+                    <span>
+                      Assesses several cognitive domains simultaneously.
+                    </span>
+                  </div>
+                  <div class="ascr-pill">
+                    <div class="ascr-pill-icon">
+                      <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <strong>Evidence-Based</strong>
+                    <span>
+                      Detects subtle performance challenges and supports
+                      clinical decisions.
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ascr-visual-wrap">
+                <div class="ascr-visual-card">
+                  <div class="ascr-visual-top">
+                    <div class="ascr-badge">
+                      <i class="fa-solid fa-shapes"></i>
+                      Functional Skills View
+                    </div>
+                  </div>
+                  <div class="ascr-visual-icon-panel">
+                    <img
+                      src="/assets/Science-images/360image2.png"
+                      alt="Functional Cognitive Skills"
+                      class="ascr-icon-image"
+                    />
+                  </div>
+                  <div class="ascr-visual-mini-grid">
+                    <div class="ascr-mini-card">
+                      <i class="fa-solid fa-route"></i>
+                      <span class="ascr-mini-title">Route Finding</span>
+                    </div>
+                    <div class="ascr-mini-card">
+                      <i class="fa-solid fa-puzzle-piece"></i>
+                      <span class="ascr-mini-title">Problem Solving</span>
+                    </div>
+                    <div class="ascr-mini-card">
+                      <i class="fa-solid fa-list-ol"></i>
+                      <span class="ascr-mini-title">Prioritization</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section ascr-advantages-section">
+          <div class="ascr-shell">
+            <div class="ascr-advantages-panel">
+              <div class="ascr-advantages-grid">
+                <div class="ascr-advantages-visual">
+                  <i class="fa-solid fa-shapes"></i>
+                  <strong>Whole-Person Insight</strong>
+                  <p>
+                    Practical, activity-based measures of the thinking skills
+                    people rely on every day.
+                  </p>
+                </div>
+
+                <div class="ascr-advantages-copy">
+                  <div class="ascr-advantages-copy-eyebrow">
+                    <i class="fa-solid fa-list-check"></i>
+                    Key Advantages
+                  </div>
+                  <h2>Measuring Cognition Where It Matters Most</h2>
+                  <div class="ascr-advantages-list">
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-house-chimney"></i>
+                      </div>
+                      <span>Measures real-world cognitive functioning.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                      </div>
+                      <span>Evaluates practical thinking skills.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-diagram-project"></i>
+                      </div>
+                      <span
+                        >Assesses multiple cognitive domains
+                        simultaneously.</span
+                      >
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                      </div>
+                      <span>Detects subtle performance challenges.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-user-doctor"></i>
+                      </div>
+                      <span>Supports evidence-based clinical decisions.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-file-waveform"></i>
+                      </div>
+                      <span>Generates actionable insights.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                      </div>
+                      <span>Easy-to-understand results.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-users"></i>
+                      </div>
+                      <span>Consistent testing experience.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section ascr-skills-section">
+          <div class="ascr-shell">
+            <div class="ascr-skills-panel">
+              <div class="ascr-skills-grid-outer">
+                <div class="ascr-skills-copy">
+                  <div class="ascr-skills-copy-eyebrow">
+                    <i class="fa-solid fa-atom"></i>
+                    Skills Assessed
+                  </div>
+                  <h2>Seven Core Functional Cognitive Skills</h2>
+                  <p>
+                    Each skill is assessed through interactive activities that
+                    mirror the practical demands of daily life.
+                  </p>
+                  <div class="ascr-skills-note">
+                    <strong>Real-World Relevance</strong>
+                    <span>
+                      These skills impact workplace productivity, academic
+                      performance, driving and navigation, financial
+                      management, daily decision making, time management, and
+                      independent living.
+                    </span>
+                  </div>
+                </div>
+
+                <div class="ascr-skill-grid">
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-brain"></i>
+                    Abstract Reasoning
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-cube"></i>
+                    Visual Spatial Skills
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-shapes"></i>
+                    Constructive Ability
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-puzzle-piece"></i>
+                    Problem Solving
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-route"></i>
+                    Route Finding
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-list-ol"></i>
+                    Prioritization
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-arrows-split-up-and-left"></i>
+                    Divided Attention
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section ascr-overview-section">
+          <div class="ascr-shell">
+            <div class="ascr-overview-grid">
+              <div class="ascr-copy">
+                <div class="ascr-eyebrow">
+                  <i class="fa-solid fa-tablet-screen-button"></i>
+                  3. Interactive Digital Assessment Experience
+                </div>
+                <h2>Interactive Digital Assessment Experience</h2>
+                <h3>A Modern, Standardized Testing Environment</h3>
+                <p>
+                  BrainFx SCREEN uses engaging tablet-based activities to
+                  assess cognitive performance in a structured and
+                  standardized environment.
+                </p>
+
+                <div class="ascr-highlights">
+                  <div class="ascr-pill">
+                    <div class="ascr-pill-icon">
+                      <i class="fa-solid fa-tablet-screen-button"></i>
+                    </div>
+                    <strong>Modern Interface</strong>
+                    <span>
+                      Touchscreen delivery with minimal training required.
+                    </span>
+                  </div>
+                  <div class="ascr-pill">
+                    <div class="ascr-pill-icon">
+                      <i class="fa-solid fa-hand-pointer"></i>
+                    </div>
+                    <strong>Interactive Tasks</strong>
+                    <span>
+                      Engaging activities supported by stylus accessibility.
+                    </span>
+                  </div>
+                  <div class="ascr-pill">
+                    <div class="ascr-pill-icon">
+                      <i class="fa-solid fa-clipboard-check"></i>
+                    </div>
+                    <strong>Standardized Administration</strong>
+                    <span> Improves engagement and reduces scoring errors. </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ascr-visual-wrap">
+                <div class="ascr-visual-card">
+                  <div class="ascr-visual-top">
+                    <div class="ascr-badge">
+                      <i class="fa-solid fa-tablet-screen-button"></i>
+                      Digital Assessment View
+                    </div>
+                  </div>
+                  <div
+                    class="ascr-visual-icon-panel ascr-visual-icon-panel--image"
+                  >
+                    <img
+                      src="/assets/Science-images/360image5.png"
+                      alt="Interactive Digital Assessment"
+                      class="ascr-icon-image-full"
+                    />
+                  </div>
+                  <div class="ascr-visual-mini-grid">
+                    <div class="ascr-mini-card">
+                      <i class="fa-solid fa-bolt"></i>
+                      <span class="ascr-mini-title">Instant Data Capture</span>
+                    </div>
+                    <div class="ascr-mini-card">
+                      <i class="fa-solid fa-cloud"></i>
+                      <span class="ascr-mini-title"
+                        >Cloud-Enabled Workflow</span
+                      >
+                    </div>
+                    <div class="ascr-mini-card">
+                      <i class="fa-solid fa-file-export"></i>
+                      <span class="ascr-mini-title">Easy Report Generation</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section ascr-advantages-section">
+          <div class="ascr-shell">
+            <div class="ascr-advantages-panel">
+              <div class="ascr-advantages-grid">
+                <div class="ascr-advantages-visual">
+                  <i class="fa-solid fa-microchip"></i>
+                  <strong>Built for Engagement</strong>
+                  <p>
+                    A secure digital platform designed for accuracy,
+                    consistency, and a better participant experience.
+                  </p>
+                </div>
+
+                <div class="ascr-advantages-copy">
+                  <div class="ascr-advantages-copy-eyebrow">
+                    <i class="fa-solid fa-list-check"></i>
+                    Key Advantages
+                  </div>
+                  <h2>Technology That Gets Out of the Way</h2>
+                  <div class="ascr-advantages-list">
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-tablet-screen-button"></i>
+                      </div>
+                      <span>Modern touchscreen interface.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-gamepad"></i>
+                      </div>
+                      <span>Interactive assessment tasks.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-user-graduate"></i>
+                      </div>
+                      <span>Minimal training required for participants.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-pen-nib"></i>
+                      </div>
+                      <span>Supports stylus accessibility.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                      </div>
+                      <span>Standardized administration.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-face-smile"></i>
+                      </div>
+                      <span>Improved participant engagement.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-database"></i>
+                      </div>
+                      <span>Accurate digital data collection.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-check-double"></i>
+                      </div>
+                      <span>Reduced manual scoring errors.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section ascr-skills-section">
+          <div class="ascr-shell">
+            <div class="ascr-skills-panel">
+              <div class="ascr-skills-grid-outer">
+                <div class="ascr-skills-copy">
+                  <div class="ascr-skills-copy-eyebrow">
+                    <i class="fa-solid fa-vial"></i>
+                    Assessment Activities
+                  </div>
+                  <h2>Structured Activities, Standardized Delivery</h2>
+                  <p>
+                    Every activity is delivered through a secure, cloud-enabled
+                    tablet platform designed for a consistent assessment
+                    environment.
+                  </p>
+                  <div class="ascr-skills-note">
+                    <strong>Technology Benefits</strong>
+                    <span>
+                      Tablet-based delivery, a secure digital platform, instant
+                      data capture, and easy report generation streamline the
+                      entire assessment workflow.
+                    </span>
+                  </div>
+                </div>
+
+                <div class="ascr-skill-grid">
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-brain"></i>
+                    Abstract Reasoning Tasks
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-cube"></i>
+                    Visual Spatial Activities
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-shapes"></i>
+                    Constructive Ability Exercises
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-puzzle-piece"></i>
+                    Problem Solving Challenges
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-route"></i>
+                    Route Finding Simulations
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-list-ol"></i>
+                    Prioritization Activities
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-arrows-split-up-and-left"></i>
+                    Divided Attention Exercises
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section ascr-overview-section">
+          <div class="ascr-shell">
+            <div class="ascr-overview-grid">
+              <div class="ascr-copy">
+                <div class="ascr-eyebrow">
+                  <i class="fa-solid fa-file-medical"></i>
+                  4. Actionable Reports &amp; Clinical Decision Support
+                </div>
+                <h2>Actionable Reports &amp; Clinical Decision Support</h2>
+                <h3>Turning Screening Results Into Clear Next Steps</h3>
+                <p>
+                  Following completion, BrainFx SCREEN provides clinicians
+                  with meaningful insights into cognitive strengths and areas
+                  of concern, supporting informed clinical decision-making and
+                  follow-up recommendations.
+                </p>
+
+                <div class="ascr-highlights">
+                  <div class="ascr-pill">
+                    <div class="ascr-pill-icon">
+                      <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <strong>Objective Data</strong>
+                    <span>
+                      Objective cognitive performance data with clear
+                      strengths and challenges.
+                    </span>
+                  </div>
+                  <div class="ascr-pill">
+                    <div class="ascr-pill-icon">
+                      <i class="fa-solid fa-notes-medical"></i>
+                    </div>
+                    <strong>Personalized Guidance</strong>
+                    <span>
+                      Supports personalized recommendations and referral
+                      decisions.
+                    </span>
+                  </div>
+                  <div class="ascr-pill">
+                    <div class="ascr-pill-icon">
+                      <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <strong>Tracked Over Time</strong>
+                    <span>
+                      Tracks cognitive health and improves clinical
+                      confidence.
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ascr-visual-wrap">
+                <div class="ascr-visual-card">
+                  <div class="ascr-visual-top">
+                    <div class="ascr-badge">
+                      <i class="fa-solid fa-file-medical"></i>
+                      Reporting View
+                    </div>
+                  </div>
+                  <div class="ascr-visual-icon-panel">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <strong>From Screening to Direction</strong>
+                    <span>
+                      Reports translate results into clear, actionable
+                      recommendations for the care team.
+                    </span>
+                  </div>
+                  <div class="ascr-visual-mini-grid">
+                    <div class="ascr-mini-card">
+                      <i class="fa-solid fa-people-arrows"></i>
+                      <span class="ascr-mini-title">Guides Referral Decisions</span>
+                    </div>
+                    <div class="ascr-mini-card">
+                      <i class="fa-solid fa-list-check"></i>
+                      <span class="ascr-mini-title"
+                        >Helps Prioritize Interventions</span
+                      >
+                    </div>
+                    <div class="ascr-mini-card">
+                      <i class="fa-solid fa-face-smile"></i>
+                      <span class="ascr-mini-title">Patient Education</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section ascr-advantages-section">
+          <div class="ascr-shell">
+            <div class="ascr-advantages-panel">
+              <div class="ascr-advantages-grid">
+                <div class="ascr-advantages-visual">
+                  <i class="fa-solid fa-file-medical"></i>
+                  <strong>Clarity for Care Teams</strong>
+                  <p>
+                    Clear reporting that supports confident, timely clinical
+                    decisions.
+                  </p>
+                </div>
+
+                <div class="ascr-advantages-copy">
+                  <div class="ascr-advantages-copy-eyebrow">
+                    <i class="fa-solid fa-list-check"></i>
+                    Key Advantages
+                  </div>
+                  <h2>Insight That Drives the Next Step</h2>
+                  <div class="ascr-advantages-list">
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                      </div>
+                      <span>Objective cognitive performance data.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                      </div>
+                      <span>Identifies strengths and challenges.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-notes-medical"></i>
+                      </div>
+                      <span>Supports personalized recommendations.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-people-arrows"></i>
+                      </div>
+                      <span>Guides referral decisions.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-list-check"></i>
+                      </div>
+                      <span>Helps prioritize interventions.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-face-smile"></i>
+                      </div>
+                      <span>Facilitates patient education.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                      </div>
+                      <span>Tracks cognitive health over time.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-user-doctor"></i>
+                      </div>
+                      <span>Improves clinical confidence.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section ascr-skills-section">
+          <div class="ascr-shell">
+            <div class="ascr-skills-panel">
+              <div class="ascr-skills-grid-outer" style="grid-template-columns: 1fr">
+                <div class="ascr-skills-copy" style="max-width: 720px; margin: 0 auto 2.5rem; text-align: center">
+                  <div class="ascr-skills-copy-eyebrow" style="margin: 0 auto">
+                    <i class="fa-solid fa-layer-group"></i>
+                    Understanding Your Results
+                  </div>
+                  <h2>Three Clear Report Categories</h2>
+                  <p>
+                    Every BrainFx SCREEN report falls into one of three
+                    categories, giving clinicians a clear, standardized path
+                    from results to recommendation.
+                  </p>
+                </div>
+
+                <div class="ascr-report-grid">
+                  <div class="ascr-report-card" style="--report-color: #4f7d1f; --report-bg: rgba(134, 194, 62, 0.14)">
+                    <div class="ascr-report-icon">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <span class="ascr-report-tag">No Concerns</span>
+                    <h3>Healthy Baseline Performance</h3>
+                    <ul>
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        General brain health education.
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        Preventive cognitive wellness recommendations.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="ascr-report-card" style="--report-color: #b8860b; --report-bg: rgba(184, 134, 11, 0.14)">
+                    <div class="ascr-report-icon">
+                      <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <span class="ascr-report-tag"
+                      >Some Concerns &middot; 1&ndash;3 Skills Below Norms</span
+                    >
+                    <h3>Targeted Monitoring Recommended</h3>
+                    <ul>
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        Review targeted cognitive strategies.
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        Monitor cognitive performance.
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        Consider additional support if required.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="ascr-report-card" style="--report-color: #0b5f95; --report-bg: rgba(17, 130, 207, 0.12)">
+                    <div class="ascr-report-icon">
+                      <i class="fa-solid fa-notes-medical"></i>
+                    </div>
+                    <span class="ascr-report-tag"
+                      >Significant Concerns &middot; 4&ndash;7 Skills Below
+                      Norms</span
+                    >
+                    <h3>Further Evaluation Advised</h3>
+                    <ul>
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        Recommend further evaluation.
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        Develop intervention plans.
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        Refer to appropriate healthcare professionals.
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        Support rehabilitation and treatment planning.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section ascr-reasons-section">
+          <div class="ascr-shell">
+            <div class="ascr-reasons-header">
+              <div class="ascr-eyebrow">
+                <i class="fa-solid fa-award"></i>
+                Why Choose BrainFx SCREEN?
+              </div>
+              <h2>Why Choose BrainFx SCREEN?</h2>
+              <p>
+                Clinicians and organizations trust BrainFx SCREEN to bring
+                fast, objective cognitive insight into everyday care
+                decisions.
+              </p>
+            </div>
+
+            <div class="ascr-reasons-grid">
+              <div class="ascr-reason-card">
+                <div class="ascr-reason-icon">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <h3>Early Detection</h3>
+                <p>
+                  Identify cognitive concerns before they significantly impact
+                  daily functioning.
+                </p>
+              </div>
+              <div class="ascr-reason-card">
+                <div class="ascr-reason-icon">
+                  <i class="fa-solid fa-gauge-high"></i>
+                </div>
+                <h3>Fast Screening</h3>
+                <p>
+                  Provides meaningful cognitive insights in a short assessment
+                  period.
+                </p>
+              </div>
+              <div class="ascr-reason-card">
+                <div class="ascr-reason-icon">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+                <h3>Objective Results</h3>
+                <p>
+                  Uses standardized digital activities to minimize bias.
+                </p>
+              </div>
+              <div class="ascr-reason-card">
+                <div class="ascr-reason-icon">
+                  <i class="fa-solid fa-house-chimney"></i>
+                </div>
+                <h3>Real-World Focus</h3>
+                <p>
+                  Measures cognitive abilities that affect everyday life and
+                  independence.
+                </p>
+              </div>
+              <div class="ascr-reason-card">
+                <div class="ascr-reason-icon">
+                  <i class="fa-solid fa-user-doctor"></i>
+                </div>
+                <h3>Better Clinical Decisions</h3>
+                <p>
+                  Supports referrals, interventions, and treatment planning.
+                </p>
+              </div>
+              <div class="ascr-reason-card">
+                <div class="ascr-reason-icon">
+                  <i class="fa-solid fa-hand-holding-heart"></i>
+                </div>
+                <h3>Enhanced Patient Care</h3>
+                <p>
+                  Helps clinicians provide personalized and targeted support.
+                </p>
+              </div>
+              <div class="ascr-reason-card">
+                <div class="ascr-reason-icon">
+                  <i class="fa-solid fa-diagram-project"></i>
+                </div>
+                <h3>Efficient Workflow</h3>
+                <p>
+                  Reduces assessment time while maintaining high-quality
+                  cognitive insights.
+                </p>
+              </div>
+              <div class="ascr-reason-card">
+                <div class="ascr-reason-icon">
+                  <i class="fa-solid fa-puzzle-piece"></i>
+                </div>
+                <h3>Seamless Integration</h3>
+                <p>
+                  Works alongside BrainFx 360 for a complete cognitive
+                  assessment pathway&mdash;from quick screening to
+                  comprehensive evaluation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <footer
           id="footer"
