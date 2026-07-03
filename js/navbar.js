@@ -215,7 +215,7 @@
                     </div>
                   </div>
                 </a>
-                <a href="#">
+                <a href="screen-assessment.html">
                   <div class="assessment-card">
                     <div class="image-container">
                       <i class="fa-solid fa-desktop"></i>
