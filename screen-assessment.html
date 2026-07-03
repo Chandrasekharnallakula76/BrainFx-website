@@ -470,6 +470,21 @@
         border-radius: 1.45rem;
         opacity: 0.96;
         box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+        animation: ascrImageZoom 6s ease-in-out infinite;
+      }
+
+      .ascr-icon-image-full--static {
+        animation: none;
+      }
+
+      @keyframes ascrImageZoom {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.08);
+        }
       }
 
       .ascr-visual-mini-grid {
@@ -1634,7 +1649,7 @@
                     <img
                       src="/assets/Science-images/screen-image4.png"
                       alt="Interactive Digital Assessment"
-                      class="ascr-icon-image-full"
+                      class="ascr-icon-image-full ascr-icon-image-full--static"
                     />
                   </div>
                   <div class="ascr-visual-mini-grid">
@@ -1882,7 +1897,7 @@
                     <img
                       src="/assets/Science-images/screen-image1.png"
                       alt="Interactive Digital Assessment"
-                      class="ascr-icon-image-full"
+                      class="ascr-icon-image-full ascr-icon-image-full--static"
                     />
                   </div>
                   <div class="ascr-visual-mini-grid">
