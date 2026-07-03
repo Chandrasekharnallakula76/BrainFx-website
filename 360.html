@@ -470,6 +470,17 @@
         border-radius: 1.45rem;
         opacity: 0.96;
         box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+        animation: a360ImageZoom 6s ease-in-out infinite;
+      }
+
+      @keyframes a360ImageZoom {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.08);
+        }
       }
 
       .a360-visual-mini-grid {
