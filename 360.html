@@ -254,15 +254,15 @@
       .a360-copy h2 {
         margin: 1rem 0 0.75rem;
         color: #0b5f95;
-        font-size: clamp(2.1rem, 3vw, 3.4rem);
-        line-height: 1.08;
+        font-size: clamp(1.7rem, 2.4vw, 2.5rem);
+        line-height: 1.12;
       }
 
       .a360-copy h3 {
         margin: 0 0 1.2rem;
         color: #4f7d1f;
-        font-size: clamp(1.1rem, 1.65vw, 1.45rem);
-        line-height: 1.35;
+        font-size: clamp(1rem, 1.3vw, 1.2rem);
+        line-height: 1.4;
       }
 
       .a360-copy p {
@@ -408,6 +408,7 @@
         z-index: 1;
         border-radius: 1.45rem;
         min-height: 200px;
+        max-height: 200px;
         background: rgba(255, 255, 255, 0.1);
         display: flex;
         flex-direction: column;
@@ -419,6 +420,7 @@
         box-shadow:
           inset 0 0 0 1px rgba(255, 255, 255, 0.12),
           0 12px 28px rgba(7, 52, 87, 0.12);
+        overflow: hidden;
       }
 
       .a360-visual-icon-panel i {
@@ -428,7 +430,7 @@
 
       .a360-visual-icon-panel strong {
         color: #ffffff;
-        font-size: 1.15rem;
+        font-size: 1.1rem;
       }
 
       .a360-visual-icon-panel span {
@@ -436,6 +438,34 @@
         font-size: 0.85rem;
         line-height: 1.6;
         max-width: 26ch;
+      }
+
+      .a360-icon-image {
+        display: block;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 140px;
+        object-fit: contain;
+        border-radius: 0.9rem;
+        box-shadow: 0 10px 22px rgba(7, 52, 87, 0.18);
+      }
+
+      .a360-visual-icon-panel--image {
+        padding: 0;
+        min-height: 280px;
+        max-height: 280px;
+      }
+
+      .a360-icon-image-full {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 1.45rem;
+        opacity: 0.96;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
       }
 
       .a360-visual-mini-grid {
@@ -536,7 +566,7 @@
         z-index: 1;
         display: block;
         color: #ffffff;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         margin-bottom: 0.6rem;
       }
 
@@ -566,8 +596,8 @@
       .a360-advantages-copy h2 {
         margin: 1rem 0 1.4rem;
         color: #0b5f95;
-        font-size: clamp(1.9rem, 2.7vw, 2.9rem);
-        line-height: 1.08;
+        font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+        line-height: 1.12;
       }
 
       .a360-advantages-list {
@@ -661,8 +691,8 @@
       .a360-skills-copy h2 {
         margin: 1rem 0 1rem;
         color: #0b5f95;
-        font-size: clamp(1.9rem, 2.7vw, 2.9rem);
-        line-height: 1.08;
+        font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+        line-height: 1.12;
       }
 
       .a360-skills-copy p {
@@ -747,8 +777,8 @@
       .a360-reasons-header h2 {
         margin: 1rem 0 0.75rem;
         color: #0b5f95;
-        font-size: clamp(2rem, 3vw, 2.9rem);
-        line-height: 1.1;
+        font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+        line-height: 1.12;
       }
 
       .a360-reasons-header p {
@@ -798,7 +828,7 @@
       .a360-reason-card h3 {
         margin: 0 0 0.5rem;
         color: #0b5f95;
-        font-size: 1.05rem;
+        font-size: 1rem;
         line-height: 1.3;
       }
 
@@ -847,7 +877,7 @@
         .a360-copy h2,
         .a360-advantages-copy h2,
         .a360-skills-copy h2 {
-          font-size: clamp(1.8rem, 7vw, 2.35rem);
+          font-size: clamp(1.5rem, 6vw, 1.85rem);
           line-height: 1.12;
         }
 
@@ -1767,13 +1797,14 @@
                       Digital Assessment View
                     </div>
                   </div>
-                  <div class="a360-visual-icon-panel">
-                    <i class="fa-solid fa-hand-point-up"></i>
-                    <strong>Simulated Everyday Tasks</strong>
-                    <span>
-                      Interactive activities mirror the challenges people face
-                      in daily life.
-                    </span>
+                  <div
+                    class="a360-visual-icon-panel a360-visual-icon-panel--image"
+                  >
+                    <img
+                      src="/assets/Science-images/360image5.png"
+                      alt="Simulated Everyday Tasks"
+                      class="a360-icon-image-full"
+                    />
                   </div>
                   <div class="a360-visual-mini-grid">
                     <div class="a360-mini-card">
@@ -2058,8 +2089,7 @@
                     </div>
                     <strong>Progress Tracking</strong>
                     <span>
-                      Tracks patient progress over time to guide care
-                      decisions.
+                      Tracks patient progress over time to guide care decisions.
                     </span>
                   </div>
                 </div>
@@ -2115,8 +2145,8 @@
                   <i class="fa-solid fa-file-medical"></i>
                   <strong>Reports That Drive Care</strong>
                   <p>
-                    Clear, detailed reporting that supports confident
-                    clinical decision-making.
+                    Clear, detailed reporting that supports confident clinical
+                    decision-making.
                   </p>
                 </div>
 
@@ -2193,19 +2223,19 @@
                   </div>
                   <h2>Where Personalized Reporting Makes a Difference</h2>
                   <p>
-                    Detailed BrainFx 360 reports support care planning across
-                    a wide range of clinical and rehabilitation settings.
+                    Detailed BrainFx 360 reports support care planning across a
+                    wide range of clinical and rehabilitation settings.
                   </p>
                   <p>
                     From concussion management to aging and cognitive health,
-                    reports give clinicians a shared, objective foundation
-                    for treatment decisions.
+                    reports give clinicians a shared, objective foundation for
+                    treatment decisions.
                   </p>
                   <div class="a360-skills-note">
                     <strong>Why it matters</strong>
                     <span>
-                      A common cognitive profile helps every member of the
-                      care team work from the same information.
+                      A common cognitive profile helps every member of the care
+                      team work from the same information.
                     </span>
                   </div>
                 </div>
@@ -2495,8 +2525,8 @@
                   <div class="a360-skills-note">
                     <strong>Why it matters</strong>
                     <span>
-                      A consistent digital experience reduces friction for
-                      both clinicians and participants.
+                      A consistent digital experience reduces friction for both
+                      clinicians and participants.
                     </span>
                   </div>
                 </div>
@@ -2544,8 +2574,8 @@
                   <i class="fa-solid fa-landmark"></i>
                   <strong>Organizational Benefits</strong>
                   <p>
-                    A modern platform that pays off in efficiency, quality,
-                    and scale.
+                    A modern platform that pays off in efficiency, quality, and
+                    scale.
                   </p>
                 </div>
 
@@ -2608,9 +2638,8 @@
               </div>
               <h2>Why Organizations Choose BrainFx 360</h2>
               <p>
-                Healthcare organizations trust BrainFx 360 to bring
-                objective, real-world cognitive insight into everyday
-                clinical decisions.
+                Healthcare organizations trust BrainFx 360 to bring objective,
+                real-world cognitive insight into everyday clinical decisions.
               </p>
             </div>
 
@@ -2631,8 +2660,8 @@
                 </div>
                 <h3>Functional Outcomes Focus</h3>
                 <p>
-                  Measures how cognition impacts everyday activities rather
-                  than only academic or laboratory tasks.
+                  Measures how cognition impacts everyday activities rather than
+                  only academic or laboratory tasks.
                 </p>
               </div>
               <div class="a360-reason-card">
@@ -2651,8 +2680,8 @@
                 </div>
                 <h3>Better Clinical Decisions</h3>
                 <p>
-                  Provides objective data that helps clinicians make
-                  informed recommendations.
+                  Provides objective data that helps clinicians make informed
+                  recommendations.
                 </p>
               </div>
               <div class="a360-reason-card">
@@ -2661,8 +2690,8 @@
                 </div>
                 <h3>Improved Efficiency</h3>
                 <p>
-                  Streamlines assessment, reporting, and treatment planning
-                  into a single workflow.
+                  Streamlines assessment, reporting, and treatment planning into
+                  a single workflow.
                 </p>
               </div>
               <div class="a360-reason-card">
@@ -2691,9 +2720,9 @@
                 </div>
                 <h3>Trusted Across Healthcare Settings</h3>
                 <p>
-                  Used by occupational therapists, rehabilitation
-                  specialists, cognitive health professionals, and
-                  multidisciplinary healthcare teams.
+                  Used by occupational therapists, rehabilitation specialists,
+                  cognitive health professionals, and multidisciplinary
+                  healthcare teams.
                 </p>
               </div>
             </div>
