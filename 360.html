@@ -215,7 +215,7 @@
     </style>
     <style>
       .a360-overview-section {
-        padding: 9.5rem 0 2.5rem;
+        padding: 5.5rem 0;
         background:
           radial-gradient(
             circle at top left,
@@ -223,6 +223,10 @@
             transparent 32%
           ),
           linear-gradient(180deg, #f8fbff 0%, #eef6fd 100%);
+      }
+
+      .a360-overview-section.a360-overview-section--hero {
+        padding: 9.5rem 0 2.5rem;
       }
 
       .a360-shell {
@@ -860,7 +864,7 @@
       }
 
       @media screen and (max-width: 767px) {
-        .a360-overview-section {
+        .a360-overview-section.a360-overview-section--hero {
           padding: 7rem 0 3.5rem;
         }
 
@@ -1473,7 +1477,7 @@
           </div>
         </nav>
 
-        <section class="section a360-overview-section">
+        <section class="a360-overview-section" style="padding-top: 150px">
           <div class="a360-shell">
             <div class="a360-overview-grid">
               <div class="a360-copy">
