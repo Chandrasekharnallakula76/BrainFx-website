@@ -578,7 +578,7 @@
 
       .a360-advantages-item {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         gap: 0.75rem;
         padding: 0.9rem 1rem;
         border-radius: 1rem;
@@ -733,6 +733,82 @@
         flex: 0 0 auto;
       }
 
+      .a360-reasons-section {
+        background: linear-gradient(180deg, #eef6fd 0%, #f8fbff 100%);
+        padding: 5.5rem 0;
+      }
+
+      .a360-reasons-header {
+        text-align: center;
+        max-width: 720px;
+        margin: 0 auto 3rem;
+      }
+
+      .a360-reasons-header h2 {
+        margin: 1rem 0 0.75rem;
+        color: #0b5f95;
+        font-size: clamp(2rem, 3vw, 2.9rem);
+        line-height: 1.1;
+      }
+
+      .a360-reasons-header p {
+        margin: 0;
+        color: #3f6183;
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+
+      .a360-reasons-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1.5rem;
+      }
+
+      .a360-reason-card {
+        background: #ffffff;
+        border-radius: 1.25rem;
+        border: 1px solid rgba(17, 130, 207, 0.08);
+        box-shadow: 0 16px 32px rgba(11, 95, 149, 0.08);
+        padding: 1.75rem 1.5rem;
+        transition:
+          transform 0.28s ease,
+          box-shadow 0.28s ease,
+          border-color 0.28s ease;
+      }
+
+      .a360-reason-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 22px 42px rgba(11, 95, 149, 0.14);
+        border-color: rgba(17, 130, 207, 0.2);
+      }
+
+      .a360-reason-icon {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 0.9rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(17, 130, 207, 0.1);
+        color: #0b5f95;
+        font-size: 1.15rem;
+        margin-bottom: 1rem;
+      }
+
+      .a360-reason-card h3 {
+        margin: 0 0 0.5rem;
+        color: #0b5f95;
+        font-size: 1.05rem;
+        line-height: 1.3;
+      }
+
+      .a360-reason-card p {
+        margin: 0;
+        color: #577899;
+        font-size: 0.86rem;
+        line-height: 1.6;
+      }
+
       @media screen and (max-width: 991px) {
         .a360-overview-grid,
         .a360-advantages-grid,
@@ -746,6 +822,10 @@
 
         .a360-advantages-list {
           grid-template-columns: 1fr;
+        }
+
+        .a360-reasons-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
       }
 
@@ -786,6 +866,10 @@
         .a360-advantages-panel,
         .a360-skills-panel {
           padding: 1.75rem;
+        }
+
+        .a360-reasons-grid {
+          grid-template-columns: 1fr;
         }
       }
     </style>
@@ -1926,6 +2010,691 @@
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section a360-overview-section">
+          <div class="a360-shell">
+            <div class="a360-overview-grid">
+              <div class="a360-copy">
+                <div class="a360-eyebrow">
+                  <i class="fa-solid fa-file-medical"></i>
+                  3. Personalized Reports &amp; Treatment Planning
+                </div>
+                <h2>Personalized Reports &amp; Treatment Planning</h2>
+                <h3>Turning Assessment Data Into Actionable Care</h3>
+                <p>
+                  After assessment completion, BrainFx 360 generates detailed
+                  reports that help clinicians understand a person&#x27;s
+                  cognitive strengths and challenges. These insights support
+                  personalized intervention and treatment planning.
+                </p>
+
+                <div class="a360-highlights">
+                  <div class="a360-pill">
+                    <div class="a360-pill-icon">
+                      <i class="fa-solid fa-file-waveform"></i>
+                    </div>
+                    <strong>Detailed Cognitive Profiles</strong>
+                    <span>
+                      Generates a clear picture of cognitive strengths and
+                      challenges.
+                    </span>
+                  </div>
+                  <div class="a360-pill">
+                    <div class="a360-pill-icon">
+                      <i class="fa-solid fa-notes-medical"></i>
+                    </div>
+                    <strong>Individualized Recommendations</strong>
+                    <span>
+                      Supports treatment planning tailored to each person.
+                    </span>
+                  </div>
+                  <div class="a360-pill">
+                    <div class="a360-pill-icon">
+                      <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <strong>Progress Tracking</strong>
+                    <span>
+                      Tracks patient progress over time to guide care
+                      decisions.
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="a360-visual-wrap">
+                <div class="a360-visual-card">
+                  <div class="a360-visual-top">
+                    <div class="a360-badge">
+                      <i class="fa-solid fa-file-medical"></i>
+                      Reporting &amp; Planning View
+                    </div>
+                  </div>
+                  <div class="a360-visual-icon-panel">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <strong>From Data to Direction</strong>
+                    <span>
+                      Reports translate results into clear, actionable next
+                      steps for care teams.
+                    </span>
+                  </div>
+                  <div class="a360-visual-mini-grid">
+                    <div class="a360-mini-card">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                      <span class="a360-mini-title"
+                        >Early Deficit Identification</span
+                      >
+                    </div>
+                    <div class="a360-mini-card">
+                      <i class="fa-solid fa-people-arrows"></i>
+                      <span class="a360-mini-title"
+                        >Multidisciplinary Collaboration</span
+                      >
+                    </div>
+                    <div class="a360-mini-card">
+                      <i class="fa-solid fa-list-check"></i>
+                      <span class="a360-mini-title"
+                        >Prioritized Intervention Goals</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section a360-advantages-section">
+          <div class="a360-shell">
+            <div class="a360-advantages-panel">
+              <div class="a360-advantages-grid">
+                <div class="a360-advantages-visual">
+                  <i class="fa-solid fa-file-medical"></i>
+                  <strong>Reports That Drive Care</strong>
+                  <p>
+                    Clear, detailed reporting that supports confident
+                    clinical decision-making.
+                  </p>
+                </div>
+
+                <div class="a360-advantages-copy">
+                  <div class="a360-advantages-copy-eyebrow">
+                    <i class="fa-solid fa-list-check"></i>
+                    Key Advantages
+                  </div>
+                  <h2>Insight That Powers Personalized Care</h2>
+                  <div class="a360-advantages-list">
+                    <div class="a360-advantages-item">
+                      <div class="a360-advantages-item-icon">
+                        <i class="fa-solid fa-file-waveform"></i>
+                      </div>
+                      <span>Detailed cognitive profile generation.</span>
+                    </div>
+                    <div class="a360-advantages-item">
+                      <div class="a360-advantages-item-icon">
+                        <i class="fa-solid fa-notes-medical"></i>
+                      </div>
+                      <span>Individualized treatment recommendations.</span>
+                    </div>
+                    <div class="a360-advantages-item">
+                      <div class="a360-advantages-item-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                      </div>
+                      <span>Early identification of cognitive deficits.</span>
+                    </div>
+                    <div class="a360-advantages-item">
+                      <div class="a360-advantages-item-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                      </div>
+                      <span>Tracks patient progress over time.</span>
+                    </div>
+                    <div class="a360-advantages-item">
+                      <div class="a360-advantages-item-icon">
+                        <i class="fa-solid fa-hand-holding-medical"></i>
+                      </div>
+                      <span>Supports rehabilitation planning.</span>
+                    </div>
+                    <div class="a360-advantages-item">
+                      <div class="a360-advantages-item-icon">
+                        <i class="fa-solid fa-list-check"></i>
+                      </div>
+                      <span>Helps prioritize intervention goals.</span>
+                    </div>
+                    <div class="a360-advantages-item">
+                      <div class="a360-advantages-item-icon">
+                        <i class="fa-solid fa-people-arrows"></i>
+                      </div>
+                      <span>Facilitates multidisciplinary collaboration.</span>
+                    </div>
+                    <div class="a360-advantages-item">
+                      <div class="a360-advantages-item-icon">
+                        <i class="fa-solid fa-chart-column"></i>
+                      </div>
+                      <span>Improves patient outcome monitoring.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section a360-skills-section">
+          <div class="a360-shell">
+            <div class="a360-skills-panel">
+              <div class="a360-skills-grid-outer">
+                <div class="a360-skills-copy">
+                  <div class="a360-skills-copy-eyebrow">
+                    <i class="fa-solid fa-briefcase-medical"></i>
+                    Clinical Applications
+                  </div>
+                  <h2>Where Personalized Reporting Makes a Difference</h2>
+                  <p>
+                    Detailed BrainFx 360 reports support care planning across
+                    a wide range of clinical and rehabilitation settings.
+                  </p>
+                  <p>
+                    From concussion management to aging and cognitive health,
+                    reports give clinicians a shared, objective foundation
+                    for treatment decisions.
+                  </p>
+                  <div class="a360-skills-note">
+                    <strong>Why it matters</strong>
+                    <span>
+                      A common cognitive profile helps every member of the
+                      care team work from the same information.
+                    </span>
+                  </div>
+                </div>
+
+                <div class="a360-skill-grid">
+                  <div class="a360-skill">
+                    <i class="fa-solid fa-head-side-virus"></i>
+                    Concussion Management
+                  </div>
+                  <div class="a360-skill">
+                    <i class="fa-solid fa-brain"></i>
+                    Brain Injury Rehabilitation
+                  </div>
+                  <div class="a360-skill">
+                    <i class="fa-solid fa-hand-holding-medical"></i>
+                    Occupational Therapy
+                  </div>
+                  <div class="a360-skill">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    Mental Health Programs
+                  </div>
+                  <div class="a360-skill">
+                    <i class="fa-solid fa-briefcase"></i>
+                    Return-to-Work Planning
+                  </div>
+                  <div class="a360-skill">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    Return-to-School Programs
+                  </div>
+                  <div class="a360-skill">
+                    <i class="fa-solid fa-user-clock"></i>
+                    Aging &amp; Cognitive Health
+                  </div>
+                  <div class="a360-skill">
+                    <i class="fa-solid fa-hospital-user"></i>
+                    Neurological Rehabilitation
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section a360-advantages-section">
+          <div class="a360-shell">
+            <div class="a360-advantages-panel">
+              <div class="a360-advantages-grid">
+                <div class="a360-advantages-visual">
+                  <i class="fa-solid fa-arrow-trend-up"></i>
+                  <strong>Real-World Outcomes</strong>
+                  <p>
+                    Personalized reporting leads to outcomes that matter for
+                    patients and care teams alike.
+                  </p>
+                </div>
+
+                <div class="a360-advantages-copy">
+                  <div class="a360-advantages-copy-eyebrow">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Real-World Outcomes
+                  </div>
+                  <h2>Outcomes Patients and Clinicians Can See</h2>
+                  <div class="a360-advantages-list is-single">
+                    <div class="a360-advantages-item">
+                      <div class="a360-advantages-item-icon">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                      </div>
+                      <span>Better treatment decisions.</span>
+                    </div>
+                    <div class="a360-advantages-item">
+                      <div class="a360-advantages-item-icon">
+                        <i class="fa-solid fa-bullseye"></i>
+                      </div>
+                      <span>More targeted interventions.</span>
+                    </div>
+                    <div class="a360-advantages-item">
+                      <div class="a360-advantages-item-icon">
+                        <i class="fa-solid fa-person-walking"></i>
+                      </div>
+                      <span>Improved patient independence.</span>
+                    </div>
+                    <div class="a360-advantages-item">
+                      <div class="a360-advantages-item-icon">
+                        <i class="fa-solid fa-face-smile"></i>
+                      </div>
+                      <span>Enhanced quality of life.</span>
+                    </div>
+                    <div class="a360-advantages-item">
+                      <div class="a360-advantages-item-icon">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                      </div>
+                      <span>Stronger rehabilitation outcomes.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section a360-overview-section">
+          <div class="a360-shell">
+            <div class="a360-overview-grid">
+              <div class="a360-copy">
+                <div class="a360-eyebrow">
+                  <i class="fa-solid fa-shield-alt"></i>
+                  4. Modern Platform, Security &amp; Reporting
+                </div>
+                <h2>Modern Platform, Security &amp; Reporting</h2>
+                <h3>A Secure, Cloud-Based Assessment Ecosystem</h3>
+                <p>
+                  BrainFx 360 provides a secure cloud-based ecosystem for
+                  assessment management, report generation, and clinician
+                  workflow optimization. The latest platform updates improve
+                  usability, security, and device compatibility.
+                </p>
+
+                <div class="a360-highlights">
+                  <div class="a360-pill">
+                    <div class="a360-pill-icon">
+                      <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <strong>Secure by Design</strong>
+                    <span>
+                      A secure assessment environment with authentication
+                      controls.
+                    </span>
+                  </div>
+                  <div class="a360-pill">
+                    <div class="a360-pill-icon">
+                      <i class="fa-solid fa-cloud"></i>
+                    </div>
+                    <strong>Cloud-Based Access</strong>
+                    <span>
+                      Reports and data are accessible wherever care happens.
+                    </span>
+                  </div>
+                  <div class="a360-pill">
+                    <div class="a360-pill-icon">
+                      <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <strong>Automated Reporting</strong>
+                    <span>
+                      Reports generate automatically with real-time status
+                      tracking.
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="a360-visual-wrap">
+                <div class="a360-visual-card">
+                  <div class="a360-visual-top">
+                    <div class="a360-badge">
+                      <i class="fa-solid fa-shield-alt"></i>
+                      Platform &amp; Security View
+                    </div>
+                  </div>
+                  <div class="a360-visual-icon-panel">
+                    <i class="fa-solid fa-server"></i>
+                    <strong>Built for Modern Care Teams</strong>
+                    <span>
+                      A secure, scalable platform designed around clinician
+                      workflows.
+                    </span>
+                  </div>
+                  <div class="a360-visual-mini-grid">
+                    <div class="a360-mini-card">
+                      <i class="fa-solid fa-tablet-screen-button"></i>
+                      <span class="a360-mini-title"
+                        >Enhanced Device Compatibility</span
+                      >
+                    </div>
+                    <div class="a360-mini-card">
+                      <i class="fa-solid fa-hand-pointer"></i>
+                      <span class="a360-mini-title"
+                        >Improved Fine Motor Features</span
+                      >
+                    </div>
+                    <div class="a360-mini-card">
+                      <i class="fa-solid fa-user-shield"></i>
+                      <span class="a360-mini-title"
+                        >Session Security &amp; Authentication</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section a360-advantages-section">
+          <div class="a360-shell">
+            <div class="a360-advantages-panel">
+              <div class="a360-advantages-grid">
+                <div class="a360-advantages-visual">
+                  <i class="fa-solid fa-shield-alt"></i>
+                  <strong>Secure. Cloud-Based. Reliable.</strong>
+                  <p>
+                    A modern platform foundation built for security and
+                    day-to-day usability.
+                  </p>
+                </div>
+
+                <div class="a360-advantages-copy">
+                  <div class="a360-advantages-copy-eyebrow">
+                    <i class="fa-solid fa-list-check"></i>
+                    Key Advantages
+                  </div>
+                  <h2>A Platform Built Around Trust and Usability</h2>
+                  <div class="a360-advantages-list">
+                    <div class="a360-advantages-item">
+                      <div class="a360-advantages-item-icon">
+                        <i class="fa-solid fa-lock"></i>
+                      </div>
+                      <span>Secure assessment environment.</span>
+                    </div>
+                    <div class="a360-advantages-item">
+                      <div class="a360-advantages-item-icon">
+                        <i class="fa-solid fa-cloud"></i>
+                      </div>
+                      <span>Cloud-based report access.</span>
+                    </div>
+                    <div class="a360-advantages-item">
+                      <div class="a360-advantages-item-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                      </div>
+                      <span>Automated report generation.</span>
+                    </div>
+                    <div class="a360-advantages-item">
+                      <div class="a360-advantages-item-icon">
+                        <i class="fa-solid fa-gauge-high"></i>
+                      </div>
+                      <span>Real-time report status tracking.</span>
+                    </div>
+                    <div class="a360-advantages-item">
+                      <div class="a360-advantages-item-icon">
+                        <i class="fa-solid fa-tablet-screen-button"></i>
+                      </div>
+                      <span>Enhanced device compatibility.</span>
+                    </div>
+                    <div class="a360-advantages-item">
+                      <div class="a360-advantages-item-icon">
+                        <i class="fa-solid fa-hand-pointer"></i>
+                      </div>
+                      <span>Improved fine motor assessment features.</span>
+                    </div>
+                    <div class="a360-advantages-item">
+                      <div class="a360-advantages-item-icon">
+                        <i class="fa-solid fa-eye"></i>
+                      </div>
+                      <span>Visual guidance for assessment tasks.</span>
+                    </div>
+                    <div class="a360-advantages-item">
+                      <div class="a360-advantages-item-icon">
+                        <i class="fa-solid fa-user-shield"></i>
+                      </div>
+                      <span>Session security and authentication controls.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section a360-skills-section">
+          <div class="a360-shell">
+            <div class="a360-skills-panel">
+              <div class="a360-skills-grid-outer">
+                <div class="a360-skills-copy">
+                  <div class="a360-skills-copy-eyebrow">
+                    <i class="fa-solid fa-microchip"></i>
+                    Technology Features
+                  </div>
+                  <h2>A Platform Built for Every Device and Setting</h2>
+                  <p>
+                    BrainFx 360 is designed to work seamlessly across the
+                    devices and environments clinicians already use.
+                  </p>
+                  <p>
+                    Secure authentication, cloud processing, and automated
+                    status indicators keep assessment delivery simple and
+                    dependable.
+                  </p>
+                  <div class="a360-skills-note">
+                    <strong>Why it matters</strong>
+                    <span>
+                      A consistent digital experience reduces friction for
+                      both clinicians and participants.
+                    </span>
+                  </div>
+                </div>
+
+                <div class="a360-skill-grid">
+                  <div class="a360-skill">
+                    <i class="fa-solid fa-tablet-screen-button"></i>
+                    Tablet-Based Assessment Delivery
+                  </div>
+                  <div class="a360-skill">
+                    <i class="fa-solid fa-hand-pointer"></i>
+                    Touchscreen Optimization
+                  </div>
+                  <div class="a360-skill">
+                    <i class="fa-solid fa-mobile-alt"></i>
+                    Multi-Device Support
+                  </div>
+                  <div class="a360-skill">
+                    <i class="fa-solid fa-user-shield"></i>
+                    Secure User Authentication
+                  </div>
+                  <div class="a360-skill">
+                    <i class="fa-solid fa-cloud"></i>
+                    Cloud Data Processing
+                  </div>
+                  <div class="a360-skill">
+                    <i class="fa-solid fa-download"></i>
+                    Digital Report Downloads
+                  </div>
+                  <div class="a360-skill">
+                    <i class="fa-solid fa-circle-check"></i>
+                    Automated Status Indicators
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section a360-advantages-section">
+          <div class="a360-shell">
+            <div class="a360-advantages-panel">
+              <div class="a360-advantages-grid">
+                <div class="a360-advantages-visual">
+                  <i class="fa-solid fa-landmark"></i>
+                  <strong>Organizational Benefits</strong>
+                  <p>
+                    A modern platform that pays off in efficiency, quality,
+                    and scale.
+                  </p>
+                </div>
+
+                <div class="a360-advantages-copy">
+                  <div class="a360-advantages-copy-eyebrow">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Organizational Benefits
+                  </div>
+                  <h2>Efficiency and Scale for Every Organization</h2>
+                  <div class="a360-advantages-list is-single">
+                    <div class="a360-advantages-item">
+                      <div class="a360-advantages-item-icon">
+                        <i class="fa-solid fa-money-bill-wave"></i>
+                      </div>
+                      <span>Reduced operational costs.</span>
+                    </div>
+                    <div class="a360-advantages-item">
+                      <div class="a360-advantages-item-icon">
+                        <i class="fa-solid fa-gauge-high"></i>
+                      </div>
+                      <span>Faster report turnaround times.</span>
+                    </div>
+                    <div class="a360-advantages-item">
+                      <div class="a360-advantages-item-icon">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                      </div>
+                      <span>Improved clinician productivity.</span>
+                    </div>
+                    <div class="a360-advantages-item">
+                      <div class="a360-advantages-item-icon">
+                        <i class="fa-solid fa-diagram-project"></i>
+                      </div>
+                      <span>Simplified assessment management.</span>
+                    </div>
+                    <div class="a360-advantages-item">
+                      <div class="a360-advantages-item-icon">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                      </div>
+                      <span>Consistent assessment quality.</span>
+                    </div>
+                    <div class="a360-advantages-item">
+                      <div class="a360-advantages-item-icon">
+                        <i class="fa-solid fa-building"></i>
+                      </div>
+                      <span>Enterprise-level scalability.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section a360-reasons-section">
+          <div class="a360-shell">
+            <div class="a360-reasons-header">
+              <div class="a360-eyebrow">
+                <i class="fa-solid fa-award"></i>
+                Why Organizations Choose BrainFx 360
+              </div>
+              <h2>Why Organizations Choose BrainFx 360</h2>
+              <p>
+                Healthcare organizations trust BrainFx 360 to bring
+                objective, real-world cognitive insight into everyday
+                clinical decisions.
+              </p>
+            </div>
+
+            <div class="a360-reasons-grid">
+              <div class="a360-reason-card">
+                <div class="a360-reason-icon">
+                  <i class="fa-solid fa-flask"></i>
+                </div>
+                <h3>Evidence-Based Assessment</h3>
+                <p>
+                  Uses scientifically developed methodologies to assess
+                  cognitive performance in real-life contexts.
+                </p>
+              </div>
+              <div class="a360-reason-card">
+                <div class="a360-reason-icon">
+                  <i class="fa-solid fa-bullseye"></i>
+                </div>
+                <h3>Functional Outcomes Focus</h3>
+                <p>
+                  Measures how cognition impacts everyday activities rather
+                  than only academic or laboratory tasks.
+                </p>
+              </div>
+              <div class="a360-reason-card">
+                <div class="a360-reason-icon">
+                  <i class="fa-solid fa-hand-holding-heart"></i>
+                </div>
+                <h3>Personalized Care</h3>
+                <p>
+                  Supports individualized treatment planning based on each
+                  person&#x27;s unique cognitive profile.
+                </p>
+              </div>
+              <div class="a360-reason-card">
+                <div class="a360-reason-icon">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+                <h3>Better Clinical Decisions</h3>
+                <p>
+                  Provides objective data that helps clinicians make
+                  informed recommendations.
+                </p>
+              </div>
+              <div class="a360-reason-card">
+                <div class="a360-reason-icon">
+                  <i class="fa-solid fa-gauge-high"></i>
+                </div>
+                <h3>Improved Efficiency</h3>
+                <p>
+                  Streamlines assessment, reporting, and treatment planning
+                  into a single workflow.
+                </p>
+              </div>
+              <div class="a360-reason-card">
+                <div class="a360-reason-icon">
+                  <i class="fa-solid fa-face-smile"></i>
+                </div>
+                <h3>Enhanced Patient Experience</h3>
+                <p>
+                  Interactive digital activities create a more engaging and
+                  user-friendly assessment experience.
+                </p>
+              </div>
+              <div class="a360-reason-card">
+                <div class="a360-reason-icon">
+                  <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <h3>Long-Term Monitoring</h3>
+                <p>
+                  Allows organizations to measure progress and outcomes over
+                  time.
+                </p>
+              </div>
+              <div class="a360-reason-card">
+                <div class="a360-reason-icon">
+                  <i class="fa-solid fa-hospital"></i>
+                </div>
+                <h3>Trusted Across Healthcare Settings</h3>
+                <p>
+                  Used by occupational therapists, rehabilitation
+                  specialists, cognitive health professionals, and
+                  multidisciplinary healthcare teams.
+                </p>
               </div>
             </div>
           </div>
