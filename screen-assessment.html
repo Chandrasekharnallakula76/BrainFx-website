@@ -411,8 +411,8 @@
         position: relative;
         z-index: 1;
         border-radius: 1.45rem;
-        min-height: 200px;
-        max-height: 200px;
+        min-height: 240px;
+        max-height: 240px;
         background: rgba(255, 255, 255, 0.1);
         display: flex;
         flex-direction: column;
@@ -449,7 +449,7 @@
         width: auto;
         max-width: 100%;
         height: auto;
-        max-height: 140px;
+        max-height: 180px;
         object-fit: contain;
         border-radius: 0.9rem;
         box-shadow: 0 10px 22px rgba(7, 52, 87, 0.18);
@@ -470,17 +470,6 @@
         border-radius: 1.45rem;
         opacity: 0.96;
         box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
-        animation: ascrImageZoom 6s ease-in-out infinite;
-      }
-
-      @keyframes ascrImageZoom {
-        0%,
-        100% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.08);
-        }
       }
 
       .ascr-visual-mini-grid {
@@ -1639,11 +1628,13 @@
                       Rapid Cognitive Screening
                     </div>
                   </div>
-                  <div class="ascr-visual-icon-panel">
+                  <div
+                    class="ascr-visual-icon-panel ascr-visual-icon-panel--image"
+                  >
                     <img
                       src="/assets/Science-images/screen-image4.png"
-                      alt="BrainFx SCREEN Snapshot"
-                      class="ascr-icon-image"
+                      alt="Interactive Digital Assessment"
+                      class="ascr-icon-image-full"
                     />
                   </div>
                   <div class="ascr-visual-mini-grid">
