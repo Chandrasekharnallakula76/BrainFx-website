@@ -654,6 +654,7 @@
         height: auto;
         border-radius: 1rem;
         transition: transform 0.35s ease;
+        animation: scienceFunctionalImageZoom 6s ease-in-out infinite;
       }
 
       .science-functional-visual:hover {
@@ -663,7 +664,17 @@
       }
 
       .science-functional-visual:hover img {
-        transform: scale(1.02);
+        transform: scale(1.08);
+      }
+
+      @keyframes scienceFunctionalImageZoom {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.06);
+        }
       }
 
       .science-functional-visual-caption {
@@ -1944,6 +1955,10 @@
 
         .science-functional-visual::before,
         .science-functional-visual::after {
+          animation: none;
+        }
+
+        .science-functional-visual img {
           animation: none;
         }
 
