@@ -226,7 +226,7 @@
                     </div>
                   </div>
                 </a>
-                <a href="#">
+                <a href="VCA-assessment.html">
                   <div class="assessment-card">
                     <div class="image-container">
                       <i class="fa-solid fa-chart-column"></i>
