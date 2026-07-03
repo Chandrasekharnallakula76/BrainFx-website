@@ -1,0 +1,3226 @@
+<!doctype html>
+<!-- This site was created in Webflow. https://webflow.com --><!-- Last Published: Wed Mar 19 2025 08:12:06 GMT+0000 (Coordinated Universal Time) -->
+<html
+  data-wf-domain="brainfx.webflow.io"
+  data-wf-page="676e8ef2c167631a650a1b6b"
+  data-wf-site="6760858fd1c261f9adc849e6"
+  lang="en"
+  data-wf-locale="en"
+>
+  <head>
+    <meta charset="utf-8" />
+    <title>VCA Assessment</title>
+    <meta content="About" property="og:title" />
+    <meta
+      content="/logochanged-images/Brainfx_slide%20(1).png"
+      property="og:image"
+    />
+    <meta content="About" property="twitter:title" />
+    <meta
+      content="/logochanged-images/Brainfx_slide%20(1).png"
+      property="twitter:image"
+    />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Webflow" name="generator" />
+    <link
+      href="6760858fd1c261f9adc849e6/css/brainfx.webflow.6eada65e0.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script type="text/javascript">
+      !(function (o, c) {
+        var n = c.documentElement,
+          t = " w-mod-";
+        ((n.className += t + "js"),
+          ("ontouchstart" in o ||
+            (o.DocumentTouch && c instanceof DocumentTouch)) &&
+            (n.className += t + "touch"));
+      })(window, document);
+    </script>
+    <link
+      href="assets/images/brainFX_new_logo_icon.png"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link
+      href="assets/images/brainFX_new_logo_icon.png"
+      rel="apple-touch-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/css/Newnavbar.css" />
+    <link rel="stylesheet" href="css/css/footer.css" />
+    <style>
+      .image-container i {
+        font-size: 30px !important; /* Force the icon to be larger */
+        color: var(
+          --nav-card-icon-color,
+          #4f7d1f
+        ) !important; /* Optional: Set icon color */
+      }
+      .provider-card:hover .image-container i,
+      .assessment-card:hover .image-container i,
+      .research-card:hover .image-container i {
+        color: var(--nav-card-icon-hover-color, #86c23e) !important;
+      }
+    </style>
+    <style>
+      .assessment-dropdown {
+        max-height: 80vh;
+        overflow: visible;
+      }
+
+      .assessment-dropdown .assessment-cards {
+        max-height: calc(80vh - 20px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+
+        padding-bottom: 20px; /* space at bottom */
+
+        /* Firefox */
+        scrollbar-width: none;
+      }
+
+      /* Chrome, Edge, Safari */
+      .assessment-dropdown .assessment-cards::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <style>
+      .avatar-wrapper {
+        width: 64px;
+        height: 64px;
+        position: relative;
+      }
+
+      .avatar-wrapper img {
+        width: 100%;
+        height: 100%;
+        border-radius: 8%;
+        object-fit: cover;
+      }
+
+      .avatar-fallback {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        border-radius: 8%;
+        background-color: #e3e3e3;
+        color: #374151;
+        font-weight: 600;
+        font-size: 18px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .is-about-values .check-circle {
+        color: #0b5f95 !important;
+      }
+
+      .is-about-values .check-icon {
+        color: #ffffff !important;
+      }
+
+      .our-story-founders {
+        background: #0b5f95 !important;
+        color: #ffffff;
+      }
+
+      .our-story-founders h2,
+      .our-story-founders .h1-size,
+      .our-story-founders .h5-size,
+      .our-story-founders .eyebrow,
+      .our-story-founders p,
+      .our-story-founders div {
+        color: #ffffff;
+      }
+
+      .our-story-founders .founders-link .h5-size {
+        color: #acccf9 !important;
+      }
+
+      .our-story-founders .founders-link-underiline {
+        background-color: #acccf9 !important;
+      }
+
+      .mission-vision-blue {
+        background: #0b5f95 !important;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      .mission-vision-blue .visual-col-5-6 {
+        position: relative;
+        z-index: 1;
+      }
+
+      .mission-vision-blue .graphic-light-bgr.is-dark {
+        z-index: 0;
+        background: #0b5f95 !important;
+        border-radius: inherit;
+        overflow: hidden;
+      }
+
+      .mission-vision-blue .wavy-bgr-texture.opacity-8 {
+        opacity: 0.14;
+      }
+
+      .partners-cta-blue {
+        background: #0b5f95 !important;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      .partners-cta-blue .visual-col-5-6 {
+        position: relative;
+        z-index: 1;
+      }
+
+      .partners-cta-blue .graphic-light-bgr.is-dark {
+        z-index: 0;
+        background: #0b5f95 !important;
+        border-radius: inherit;
+        overflow: hidden;
+      }
+
+      .partners-cta-blue .wavy-bgr-texture.opacity-8 {
+        opacity: 0.14;
+      }
+
+      .partners-cta-blue,
+      .partners-cta-blue h2,
+      .partners-cta-blue .h3-size {
+        color: #ffffff !important;
+      }
+
+      .partners-cta-blue .btn-secondary-light {
+        background: #1182cf !important;
+      }
+
+      .partners-cta-blue .btn-secondary-light .btn-label-txt {
+        color: #ffffff !important;
+      }
+
+      .mission-vision-blue,
+      .mission-vision-blue *,
+      .mission-vision-blue .txt-light,
+      .mission-vision-blue .h3-size,
+      .mission-vision-blue .h5-size,
+      .mission-vision-blue p {
+        color: #ffffff !important;
+      }
+    </style>
+    <style>
+      .ascr-overview-section {
+        padding: 5.5rem 0;
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(172, 204, 249, 0.3),
+            transparent 32%
+          ),
+          linear-gradient(180deg, #f8fbff 0%, #eef6fd 100%);
+      }
+
+      .ascr-overview-section.ascr-overview-section--hero {
+        padding: 9.5rem 0 2.5rem;
+      }
+
+      .ascr-shell {
+        width: min(1440px, calc(100% - 1rem));
+        margin: 0 auto;
+      }
+
+      .ascr-overview-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+        gap: 2.75rem;
+        align-items: center;
+      }
+
+      .ascr-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.45rem 0.9rem;
+        border-radius: 999px;
+        background: rgba(17, 130, 207, 0.1);
+        color: #0b5f95;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .ascr-copy h2 {
+        margin: 1rem 0 0.75rem;
+        color: #0b5f95;
+        font-size: clamp(1.7rem, 2.4vw, 2.5rem);
+        line-height: 1.12;
+      }
+
+      .ascr-copy h3 {
+        margin: 0 0 1.2rem;
+        color: #4f7d1f;
+        font-size: clamp(1rem, 1.3vw, 1.2rem);
+        line-height: 1.4;
+      }
+
+      .ascr-copy p {
+        margin: 0 0 1rem;
+        color: #35597d;
+        font-size: 1rem;
+        line-height: 1.8;
+      }
+
+      .ascr-highlights {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.9rem;
+        margin-top: 1.8rem;
+      }
+
+      .ascr-pill {
+        padding: 1rem;
+        border-radius: 1.1rem;
+        background: rgba(255, 255, 255, 0.82);
+        border: 1px solid rgba(17, 130, 207, 0.1);
+        box-shadow: 0 16px 32px rgba(11, 95, 149, 0.08);
+        position: relative;
+        overflow: hidden;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          border-color 0.3s ease;
+        animation: ascrCardFloat 5.6s ease-in-out infinite;
+      }
+
+      .ascr-pill:nth-child(2) {
+        animation-delay: 0.4s;
+      }
+
+      .ascr-pill:nth-child(3) {
+        animation-delay: 0.8s;
+      }
+
+      .ascr-pill:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 36px rgba(11, 95, 149, 0.14);
+        border-color: rgba(17, 130, 207, 0.22);
+      }
+
+      .ascr-pill-icon {
+        width: 2.35rem;
+        height: 2.35rem;
+        border-radius: 0.85rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(17, 130, 207, 0.12);
+        color: #0b5f95;
+        font-size: 0.95rem;
+        margin-bottom: 0.65rem;
+      }
+
+      .ascr-pill strong {
+        display: block;
+        margin-bottom: 0.3rem;
+        color: #0b5f95;
+        font-size: 0.95rem;
+      }
+
+      .ascr-pill span {
+        color: #577899;
+        font-size: 0.84rem;
+        line-height: 1.55;
+      }
+
+      @keyframes ascrCardFloat {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-4px);
+        }
+      }
+
+      .ascr-visual-wrap {
+        position: relative;
+        padding: 0.25rem 0 0.25rem 0.5rem;
+      }
+
+      .ascr-visual-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 2rem;
+        background: linear-gradient(145deg, #0b5f95 0%, #1182cf 100%);
+        box-shadow: 0 30px 60px rgba(11, 95, 149, 0.2);
+        padding: 1.6rem;
+      }
+
+      .ascr-visual-card::before {
+        content: "";
+        position: absolute;
+        inset: auto auto -80px -70px;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .ascr-visual-card::after {
+        content: "";
+        position: absolute;
+        top: -48px;
+        right: -26px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: rgba(234, 246, 217, 0.2);
+      }
+
+      .ascr-visual-top {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1.1rem;
+      }
+
+      .ascr-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.55rem 0.9rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.14);
+        color: #ffffff;
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .ascr-visual-icon-panel {
+        position: relative;
+        z-index: 1;
+        border-radius: 1.45rem;
+        min-height: 240px;
+        max-height: 240px;
+        background: rgba(255, 255, 255, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.9rem;
+        padding: 1.5rem;
+        text-align: center;
+        box-shadow:
+          inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+          0 12px 28px rgba(7, 52, 87, 0.12);
+        overflow: hidden;
+      }
+
+      .ascr-visual-icon-panel i {
+        font-size: 2.6rem;
+        color: #eaf6d9;
+      }
+
+      .ascr-visual-icon-panel strong {
+        color: #ffffff;
+        font-size: 1.1rem;
+      }
+
+      .ascr-visual-icon-panel span {
+        color: rgba(234, 246, 217, 0.92);
+        font-size: 0.85rem;
+        line-height: 1.6;
+        max-width: 26ch;
+      }
+
+      .ascr-visual-mini-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.8rem;
+        margin-top: 1rem;
+      }
+
+      .ascr-mini-card {
+        padding: 0.9rem 0.85rem;
+        border-radius: 1rem;
+        background: rgba(255, 255, 255, 0.14);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        box-shadow: 0 10px 22px rgba(8, 74, 123, 0.12);
+        backdrop-filter: blur(10px);
+        transition:
+          transform 0.25s ease,
+          background 0.25s ease,
+          border-color 0.25s ease;
+      }
+
+      .ascr-mini-card:hover {
+        transform: translateY(-4px);
+        background: rgba(255, 255, 255, 0.18);
+        border-color: rgba(255, 255, 255, 0.24);
+      }
+
+      .ascr-mini-card i {
+        color: #eaf6d9;
+        font-size: 1rem;
+        margin-bottom: 0.35rem;
+        display: inline-block;
+      }
+
+      .ascr-mini-title {
+        display: block;
+        color: #ffffff;
+        font-size: 0.86rem;
+        font-weight: 700;
+        line-height: 1.3;
+      }
+
+      .ascr-advantages-section {
+        background: #ffffff;
+        padding: 5.5rem 0;
+      }
+
+      .ascr-advantages-panel {
+        border-radius: 2rem;
+        background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+        box-shadow: 0 24px 60px rgba(10, 75, 122, 0.08);
+        border: 1px solid rgba(17, 130, 207, 0.08);
+        padding: 3rem;
+      }
+
+      .ascr-advantages-grid {
+        display: grid;
+        grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.15fr);
+        gap: 2.25rem;
+        align-items: center;
+      }
+
+      .ascr-advantages-visual {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1.75rem;
+        background: linear-gradient(145deg, #0b5f95 0%, #1182cf 100%);
+        box-shadow: 0 24px 46px rgba(11, 95, 149, 0.18);
+        padding: 2rem 1.5rem;
+        text-align: center;
+      }
+
+      .ascr-advantages-visual::after {
+        content: "";
+        position: absolute;
+        bottom: -30px;
+        left: -24px;
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .ascr-advantages-visual i {
+        position: relative;
+        z-index: 1;
+        font-size: 3rem;
+        color: #eaf6d9;
+        margin-bottom: 1rem;
+        display: inline-block;
+      }
+
+      .ascr-advantages-visual strong {
+        position: relative;
+        z-index: 1;
+        display: block;
+        color: #ffffff;
+        font-size: 1.25rem;
+        margin-bottom: 0.6rem;
+      }
+
+      .ascr-advantages-visual p {
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        color: rgba(234, 246, 217, 0.94);
+        font-size: 0.88rem;
+        line-height: 1.6;
+      }
+
+      .ascr-advantages-copy-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 0.9rem;
+        border-radius: 999px;
+        background: rgba(17, 130, 207, 0.08);
+        color: #0b5f95;
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .ascr-advantages-copy h2 {
+        margin: 1rem 0 1.4rem;
+        color: #0b5f95;
+        font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+        line-height: 1.12;
+      }
+
+      .ascr-advantages-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.9rem;
+      }
+
+      .ascr-advantages-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.9rem 1rem;
+        border-radius: 1rem;
+        background: #f6fbff;
+        border: 1px solid rgba(17, 130, 207, 0.08);
+        box-shadow: 0 10px 24px rgba(11, 95, 149, 0.04);
+        transition:
+          transform 0.28s ease,
+          box-shadow 0.28s ease,
+          border-color 0.28s ease,
+          background 0.28s ease;
+      }
+
+      .ascr-advantages-item:hover {
+        transform: translateY(-4px);
+        background: #ffffff;
+        border-color: rgba(17, 130, 207, 0.16);
+        box-shadow: 0 18px 36px rgba(11, 95, 149, 0.1);
+      }
+
+      .ascr-advantages-item-icon {
+        width: 2.1rem;
+        height: 2.1rem;
+        border-radius: 0.7rem;
+        flex: 0 0 auto;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(134, 194, 62, 0.14);
+        color: #4f7d1f;
+        font-size: 0.85rem;
+      }
+
+      .ascr-advantages-item span {
+        color: #375a7c;
+        font-size: 0.88rem;
+        line-height: 1.5;
+      }
+
+      .ascr-advantages-list.is-single {
+        grid-template-columns: 1fr;
+        max-width: 640px;
+      }
+
+      .ascr-skills-section {
+        background: linear-gradient(180deg, #f4f8fc 0%, #edf5fb 100%);
+        padding: 5.5rem 0 6rem;
+      }
+
+      .ascr-skills-panel {
+        padding: 3rem;
+        border-radius: 2rem;
+        background: rgba(255, 255, 255, 0.78);
+        border: 1px solid rgba(17, 130, 207, 0.08);
+        box-shadow: 0 24px 60px rgba(10, 75, 122, 0.08);
+        backdrop-filter: blur(10px);
+      }
+
+      .ascr-skills-grid-outer {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
+        gap: 2.5rem;
+        align-items: start;
+      }
+
+      .ascr-skills-copy-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 0.9rem;
+        border-radius: 999px;
+        background: rgba(134, 194, 62, 0.12);
+        color: #4f7d1f;
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .ascr-skills-copy h2 {
+        margin: 1rem 0 1rem;
+        color: #0b5f95;
+        font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+        line-height: 1.12;
+      }
+
+      .ascr-skills-copy p {
+        margin: 0 0 1rem;
+        color: #3f6183;
+        font-size: 1rem;
+        line-height: 1.8;
+      }
+
+      .ascr-skills-note {
+        margin-top: 1.5rem;
+        padding: 1rem 1.1rem;
+        border-radius: 1rem;
+        background: linear-gradient(135deg, #f7fbff 0%, #eef7e3 100%);
+        border: 1px solid rgba(17, 130, 207, 0.08);
+      }
+
+      .ascr-skills-note strong {
+        display: block;
+        margin-bottom: 0.3rem;
+        color: #0b5f95;
+        font-size: 0.96rem;
+      }
+
+      .ascr-skills-note span {
+        color: #5c7b99;
+        font-size: 0.84rem;
+        line-height: 1.6;
+      }
+
+      .ascr-skill-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.85rem;
+        width: 100%;
+      }
+
+      .ascr-skill-grid--3col {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .ascr-skill-grid--4col {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .ascr-skill {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.95rem 1rem;
+        border-radius: 1rem;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid rgba(17, 130, 207, 0.08);
+        box-shadow: 0 12px 26px rgba(11, 95, 149, 0.05);
+        color: #335d83;
+        font-size: 0.85rem;
+        font-weight: 600;
+        line-height: 1.35;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          border-color 0.25s ease;
+      }
+
+      .ascr-skill:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 32px rgba(11, 95, 149, 0.09);
+        border-color: rgba(17, 130, 207, 0.16);
+      }
+
+      .ascr-skill i {
+        color: #1182cf;
+        font-size: 0.9rem;
+        width: 1.1rem;
+        text-align: center;
+        flex: 0 0 auto;
+      }
+
+      .ascr-reasons-section {
+        background: linear-gradient(180deg, #eef6fd 0%, #f8fbff 100%);
+        padding: 5.5rem 0;
+      }
+
+      .ascr-reasons-header {
+        text-align: center;
+        max-width: 720px;
+        margin: 0 auto 3rem;
+      }
+
+      .ascr-reasons-header .ascr-eyebrow {
+        margin: 0 auto 1rem;
+      }
+
+      .ascr-reasons-header h2 {
+        margin: 1rem 0 0.75rem;
+        color: #0b5f95;
+        font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+        line-height: 1.12;
+      }
+
+      .ascr-reasons-header p {
+        margin: 0;
+        color: #3f6183;
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+
+      .ascr-reasons-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1.5rem;
+      }
+
+      .ascr-reason-card {
+        background: #ffffff;
+        border-radius: 1.25rem;
+        border: 1px solid rgba(17, 130, 207, 0.08);
+        box-shadow: 0 16px 32px rgba(11, 95, 149, 0.08);
+        padding: 1.75rem 1.5rem;
+        transition:
+          transform 0.28s ease,
+          box-shadow 0.28s ease,
+          border-color 0.28s ease;
+      }
+
+      .ascr-reason-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 22px 42px rgba(11, 95, 149, 0.14);
+        border-color: rgba(17, 130, 207, 0.2);
+      }
+
+      .ascr-reason-icon {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 0.9rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(17, 130, 207, 0.1);
+        color: #0b5f95;
+        font-size: 1.15rem;
+        margin-bottom: 1rem;
+      }
+
+      .ascr-reason-card h3 {
+        margin: 0 0 0.5rem;
+        color: #0b5f95;
+        font-size: 1rem;
+        line-height: 1.3;
+      }
+
+      .ascr-reason-card p {
+        margin: 0;
+        color: #577899;
+        font-size: 0.86rem;
+        line-height: 1.6;
+      }
+
+      .ascr-report-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.5rem;
+      }
+
+      .ascr-report-grid--2col {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .ascr-report-card {
+        position: relative;
+        overflow: hidden;
+        background: #ffffff;
+        border-radius: 1.25rem;
+        border: 1px solid rgba(17, 130, 207, 0.08);
+        box-shadow: 0 16px 32px rgba(11, 95, 149, 0.08);
+        padding: 2rem 1.75rem;
+        transition:
+          transform 0.28s ease,
+          box-shadow 0.28s ease,
+          border-color 0.28s ease;
+      }
+
+      .ascr-report-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: var(--report-color, #1182cf);
+      }
+
+      .ascr-report-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 22px 42px rgba(11, 95, 149, 0.14);
+        border-color: rgba(17, 130, 207, 0.2);
+      }
+
+      .ascr-report-icon {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 0.9rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--report-bg, rgba(17, 130, 207, 0.1));
+        color: var(--report-color, #0b5f95);
+        font-size: 1.15rem;
+        margin-bottom: 1rem;
+      }
+
+      .ascr-report-tag {
+        display: block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--report-color, #0b5f95);
+        margin-bottom: 0.4rem;
+      }
+
+      .ascr-report-card h3 {
+        margin: 0 0 1rem;
+        color: #0b5f95;
+        font-size: 1.1rem;
+        line-height: 1.3;
+      }
+
+      .ascr-report-card ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+
+      .ascr-report-card li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.55rem;
+        color: #4a6b8a;
+        font-size: 0.86rem;
+        line-height: 1.55;
+      }
+
+      .ascr-report-card li i {
+        color: var(--report-color, #1182cf);
+        font-size: 0.78rem;
+        margin-top: 0.3rem;
+        flex: 0 0 auto;
+      }
+
+      @media screen and (max-width: 991px) {
+        .ascr-overview-grid,
+        .ascr-advantages-grid,
+        .ascr-skills-grid-outer {
+          grid-template-columns: 1fr;
+        }
+
+        .ascr-visual-wrap {
+          padding-left: 0;
+        }
+
+        .ascr-advantages-list {
+          grid-template-columns: 1fr;
+        }
+
+        .ascr-reasons-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .ascr-skill-grid--3col,
+        .ascr-skill-grid--4col {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .ascr-report-grid,
+        .ascr-report-grid--2col {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .ascr-overview-section.ascr-overview-section--hero {
+          padding: 7rem 0 3.5rem;
+        }
+
+        .ascr-shell {
+          width: min(100% - 1.25rem, 1440px);
+        }
+
+        .ascr-overview-grid,
+        .ascr-advantages-grid,
+        .ascr-skills-grid-outer {
+          gap: 1.4rem;
+        }
+
+        .ascr-copy h2,
+        .ascr-advantages-copy h2,
+        .ascr-skills-copy h2 {
+          font-size: clamp(1.5rem, 6vw, 1.85rem);
+          line-height: 1.12;
+        }
+
+        .ascr-highlights {
+          grid-template-columns: 1fr;
+        }
+
+        .ascr-visual-mini-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .ascr-skill-grid,
+        .ascr-skill-grid--3col,
+        .ascr-skill-grid--4col {
+          grid-template-columns: 1fr;
+        }
+
+        .ascr-advantages-panel,
+        .ascr-skills-panel {
+          padding: 1.75rem;
+        }
+
+        .ascr-reasons-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div class="global-custom-css w-embed">
+        <style>
+          html {
+            font-size: 1.1875rem;
+          }
+          @media screen and (max-width: 1920px) {
+            html {
+              font-size: calc(0.4374999999999999rem + 0.6250000000000001vw);
+            }
+          }
+          @media screen and (max-width: 1440px) {
+            html {
+              font-size: calc(0.37500000000000006rem + 0.6249999999999999vw);
+            }
+          }
+          @media screen and (max-width: 960px) {
+            html {
+              font-size: calc(0.7505197505197505rem + 0.4158004158004158vw);
+            }
+          }
+          @media screen and (max-width: 479px) {
+            html {
+              font-size: calc(0.7494769874476988rem + 0.8368200836820083vw);
+            }
+          }
+
+          .marquee-logos {
+            mask-image: linear-gradient(
+              90deg,
+              transparent,
+              #000 15%,
+              #000 85%,
+              transparent 100%
+            );
+          }
+
+          ::selection {
+            background: #0b5f95;
+            color: #ffffff;
+          }
+        </style>
+      </div>
+      <main class="main-wrapper">
+        <div class="top-page-bar">
+          <div class="content">
+            <div class="container-padding-global is-top-bar">
+              <div class="base-grid">
+                <div
+                  id="w-node-e2b8ba89-0725-6719-9a04-e97eb499049f-b499049b"
+                  class="top-bar-col-1"
+                >
+                  <div class="eyebrow"></div>
+                </div>
+                <div
+                  id="w-node-e2b8ba89-0725-6719-9a04-e97eb49904a4-b499049b"
+                  class="top-bar-col-2"
+                  style="
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                  "
+                >
+                  <div class="top-bar-links">
+                    <a
+                      href="become-an-assessor.html"
+                      class="top-bar-link w-inline-block"
+                      ><div class="eyebrow">Become an Assessor</div></a
+                    ><a href="login.html" class="top-bar-link w-inline-block"
+                      ><div class="eyebrow">Login</div></a
+                    >
+                  </div>
+                  <!-- <a href="request-a-demo.html" class="demo-btn w-inline-block"
+                    ><div class="eyebrow txt-bold">Request a demo</div></a
+                  > -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav
+          id="navbar"
+          data-w-id="a0c7a8fe-37d7-7802-2d0d-41b7778bceb0"
+          class="navbar"
+        >
+          <div class="nav-contain">
+            <div class="nav-wrap">
+              <a
+                href="index.html"
+                aria-current="page"
+                class="nav-logo w-inline-block w--current"
+                ><img
+                  src="/assets/images/Brainfx_new_logo_Light-02-removebg-preview.png"
+                  loading="lazy"
+                  alt=""
+                  class="nav-logo-img"
+              /></a>
+              <div class="nav-links-wrap">
+                <div class="drop-login-wrap">
+                  <div class="mobile-menu-login-links">
+                    <a
+                      href="become-an-assessor.html"
+                      class="top-bar-link is-mob w-inline-block"
+                      ><div class="eyebrow is-mob">Become an Assessor</div></a
+                    >
+                  </div>
+                  <!-- <a
+                    href="request-a-demo.html"
+                    class="demo-btn is-mob w-inline-block"
+                    ><div class="eyebrow txt-bold is-mob">
+                      Request a demo
+                    </div></a
+                  > -->
+                </div>
+
+                <div class="mobile-nav">
+                  <div class="home-link">
+                    <a href="index.html">
+                      <i class="fas fa-home"></i> <span>Home</span>
+                    </a>
+                    <a href="about.html">
+                      <i class="fas fa-user"></i> <span>About</span>
+                    </a>
+                    <a href="#">
+                      <i class="fa-solid fa-flask"></i> <span>Science</span>
+                    </a>
+                    <div class="horizental-line"></div>
+
+                    <div class="submenu">
+                      <a href="science-behind-brainfx.html">
+                        <i class="fa-solid fa-brain"></i>
+                        <span>The Science Behind BrainFx</span>
+                      </a>
+                      <a href="scientific-validation.html">
+                        <i class="fa-solid fa-vials"></i>
+                        <span>Scientific Validation</span>
+                      </a>
+                    </div>
+                    <div class="horizental-line"></div>
+                    <a href="providers.html">
+                      <i class="fab fa-product-hunt"></i> <span>Provider</span>
+                    </a>
+                    <div class="horizental-line"></div>
+
+                    <div class="submenu">
+                      <a href="physicians.html">
+                        <i class="fas fa-user-doctor"></i>
+                        <span>Physicians</span>
+                      </a>
+                      <a href="#">
+                        <i class="fa-solid fa-hospital"></i>
+                        <span>Health Care Organizations</span>
+                      </a>
+                      <a href="senior-care.html">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                        <span>Senior Care</span>
+                      </a>
+                      <a href="employers.html">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <span>Employers</span>
+                      </a>
+                      <a href="athletics.html">
+                        <i class="fa-solid fa-person-running"></i>
+                        <span>Athletics</span>
+                      </a>
+                    </div>
+                    <div class="horizental-line"></div>
+                    <a href="assessments-training.html">
+                      <i class="fas fa-chalkboard-teacher"></i>
+                      <span>Assessments</span>
+                    </a>
+                    <div class="horizental-line"></div>
+
+                    <div class="submenu">
+                      <a href="https://360ax.brainfx.ai/" target="_blank">
+                        <i class="fa-solid fa-globe"></i>
+                        <span>360 Assessment</span>
+                      </a>
+                      <a href="https://screen.brainfx.ai/" target="_blank">
+                        <i class="fa-solid fa-desktop"></i>
+                        <span>Screen Assessment</span>
+                      </a>
+                      <a href="https://vcax.brainfx.com" target="_blank">
+                        <i class="fa-solid fa-chart-column"></i>
+                        <span>VCA Assessment</span>
+                      </a>
+                    </div>
+                    <div class="horizental-line"></div>
+
+                    <a href="assessments-training.html">
+                      <i class="fas fa-chalkboard-teacher"></i>
+                      <span>Training</span>
+                    </a>
+                    <div class="horizental-line"></div>
+
+                    <div class="submenu">
+                      <a href="comprehensive.html">
+                        <i class="fa-solid fa-hand-holding-medical"></i>
+                        <span>Comprehensive</span>
+                      </a>
+                      <a href="screen-track.html">
+                        <i class="fa-solid fa-weight-scale"></i>
+                        <span>Screen &amp; Track</span>
+                      </a>
+                      <a href="telehealth.html">
+                        <i class="fa-solid fa-suitcase-medical"></i>
+                        <span>Telehealth</span>
+                      </a>
+                      <a href="brainfx-training.html">
+                        <i class="fa-solid fa-clipboard"></i>
+                        <span>BrainFx Training</span>
+                      </a>
+                      <a href="brainfx-philosophy.html">
+                        <i class="fa-solid fa-brain"></i>
+                        <span>BrainFx Philosophy</span>
+                      </a>
+                    </div>
+                    <div class="mobile-cta-group">
+                      <a
+                        href="request-a-demo.html"
+                        class="mobile-cta is-demo w-inline-block"
+                        >Request a Demo</a
+                      >
+                      <a
+                        href="login.html"
+                        class="mobile-cta is-login w-inline-block"
+                        >Login</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="nav-pages-links">
+                  <div class="nav-links">
+                    <div class="nav-link-wrapper">
+                      <a href="#">
+                        <span class="nav-link science">
+                          <i class="fa-solid fa-flask"></i> Science
+                        </span>
+                      </a>
+                      <div class="dropdown science-dropdown">
+                        <div class="arrow"></div>
+                        <div class="science-cards">
+                          <a href="science-behind-brainfx.html">
+                            <div class="science-card">
+                              <div class="image-container">
+                                <i class="fa-solid fa-brain"></i>
+                              </div>
+                              <div class="card-text-main">
+                                <h3>The Science Behind BrainFx</h3>
+                                <p>
+                                  Explore the research foundation behind the
+                                  BrainFx approach to brain health and function.
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="scientific-validation.html">
+                            <div class="science-card">
+                              <div class="image-container">
+                                <i class="fa-solid fa-vials"></i>
+                              </div>
+                              <div class="card-text-main">
+                                <h3>Scientific Validation</h3>
+                                <p>
+                                  Review the evidence supporting BrainFx
+                                  accuracy, reliability, and clinical value.
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="nav-link-wrapper">
+                      <a href="providers.html">
+                        <span class="nav-link provider">
+                          <i class="fa-brands fa-product-hunt"></i> Provider
+                        </span>
+                      </a>
+                      <div class="dropdown provider-dropdown">
+                        <div class="arrow"></div>
+                        <div class="provider-cards">
+                          <a href="physicians.html">
+                            <div class="provider-card">
+                              <div class="image-container">
+                                <i class="fa-solid fa-user-doctor"></i>
+                              </div>
+                              <div class="card-text-main">
+                                <h3>Physicians</h3>
+                                <p>
+                                  Physicians carefully diagnose and effectively
+                                  treat health conditions.
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="#">
+                            <div class="provider-card">
+                              <div class="image-container">
+                                <i class="fa-solid fa-hospital"></i>
+                              </div>
+                              <div class="card-text-main">
+                                <h3>Health Care Organizations</h3>
+                                <p>
+                                  Health care organizations can use BrainFx to
+                                  support integrated care and service planning.
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="senior-care.html">
+                            <div class="provider-card">
+                              <div class="image-container">
+                                <i class="fa-solid fa-hand-holding-heart"></i>
+                              </div>
+                              <div class="card-text-main">
+                                <h3>Senior Care</h3>
+                                <p>
+                                  Senior care supports comfort, safety, and
+                                  well-being for older adults.
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="employers.html">
+                            <div class="provider-card">
+                              <div class="image-container">
+                                <i class="fa-solid fa-user-tie"></i>
+                              </div>
+                              <div class="card-text-main">
+                                <h3>Employers</h3>
+                                <p>
+                                  Employers benefit from practical cognitive
+                                  insights that support workforce health.
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="athletics.html">
+                            <div class="provider-card">
+                              <div class="image-container">
+                                <i class="fa-solid fa-person-running"></i>
+                              </div>
+                              <div class="card-text-main">
+                                <h3>Athletics</h3>
+                                <p>
+                                  Athletics programs can use BrainFx to support
+                                  performance and recovery decisions.
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Assessment & Training nav-link with special class 'assessment' -->
+                    <div class="nav-link-wrapper">
+                      <a href="assessments-training.html">
+                        <span class="nav-link assessment">
+                          <i class="fas fa-chalkboard-teacher"></i>
+                          Assessments
+                        </span>
+                      </a>
+                      <!-- Assessment Dropdown -->
+                      <div class="dropdown assessment-dropdown is-brainfx-mega">
+                        <div class="arrow"></div>
+                        <div class="assessment-mega-shell">
+                          <div class="assessment-cards">
+                            <a href="https://360ax.brainfx.ai/" target="_blank">
+                              <div class="assessment-card">
+                                <div class="image-container">
+                                  <i class="fa-solid fa-globe"></i>
+                                </div>
+                                <div class="card-text-main">
+                                  <h3>360</h3>
+                                  <p>
+                                    BrainFx 360 offers a broader connected view
+                                    of neurofunction and performance.
+                                  </p>
+                                </div>
+                              </div>
+                            </a>
+                            <a
+                              href="https://screen.brainfx.ai/"
+                              target="_blank"
+                            >
+                              <div class="assessment-card">
+                                <div class="image-container">
+                                  <i class="fa-solid fa-desktop"></i>
+                                </div>
+                                <div class="card-text-main">
+                                  <h3>Screen</h3>
+                                  <p>
+                                    BrainFx SCREEN supports fast cognitive
+                                    screening for focused clinical review.
+                                  </p>
+                                </div>
+                              </div>
+                            </a>
+                            <a href="https://vcax.brainfx.com" target="_blank">
+                              <div class="assessment-card">
+                                <div class="image-container">
+                                  <i class="fa-solid fa-chart-column"></i>
+                                </div>
+                                <div class="card-text-main">
+                                  <h3>VCA</h3>
+                                  <p>
+                                    BrainFx VCA presents visual cognitive
+                                    insights in a compact and practical format.
+                                  </p>
+                                </div>
+                              </div>
+                            </a>
+                            <a href="assessments-training.html"
+                              >`r`n
+                              <div
+                                class="assessment-card is-featured"
+                                data-training-card="true"
+                              >
+                                <div class="image-container">
+                                  <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div class="card-text-main">
+                                  <h3>Training</h3>
+                                  <p>
+                                    BrainFx training supports learning,
+                                    certification, and confident assessment
+                                    delivery.
+                                  </p>
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                        <div
+                          class="assessment-floating-submenu"
+                          data-training-submenu="true"
+                        >
+                          <p class="assessment-submenu-label">Learning Path</p>
+                          <div class="assessment-submenu-links">
+                            <a
+                              href="comprehensive.html"
+                              class="assessment-submenu-link"
+                            >
+                              <div class="assessment-submenu-link-icon">
+                                <i class="fa-solid fa-hand-holding-medical"></i>
+                              </div>
+                              <div class="assessment-submenu-link-copy">
+                                <span>Comprehensive</span>
+                                <small>
+                                  Good planning helps make things clear, work
+                                  well, and succeed.
+                                </small>
+                              </div>
+                            </a>
+                            <a
+                              href="screen-track.html"
+                              class="assessment-submenu-link"
+                            >
+                              <div class="assessment-submenu-link-icon">
+                                <i class="fa-solid fa-clipboard-check"></i>
+                              </div>
+                              <div class="assessment-submenu-link-copy">
+                                <span>Screen &amp; Track</span>
+                                <small>
+                                  Check and follow progress carefully to manage
+                                  the project well.
+                                </small>
+                              </div>
+                            </a>
+                            <a
+                              href="telehealth.html"
+                              class="assessment-submenu-link"
+                            >
+                              <div class="assessment-submenu-link-icon">
+                                <i class="fa-solid fa-briefcase-medical"></i>
+                              </div>
+                              <div class="assessment-submenu-link-copy">
+                                <span>Telehealth</span>
+                                <small>
+                                  Telehealth enables remote medical
+                                  consultations and convenient access.
+                                </small>
+                              </div>
+                            </a>
+                            <a
+                              href="brainfx-training.html"
+                              class="assessment-submenu-link"
+                            >
+                              <div class="assessment-submenu-link-icon">
+                                <i class="fa-solid fa-clipboard"></i>
+                              </div>
+                              <div class="assessment-submenu-link-copy">
+                                <span>BrainFx Training</span>
+                                <small>
+                                  BrainFx training helps improve thinking
+                                  skills, testing, and recovery.
+                                </small>
+                              </div>
+                            </a>
+                            <a
+                              href="brainfx-philosophy.html"
+                              class="assessment-submenu-link"
+                            >
+                              <div class="assessment-submenu-link-icon">
+                                <i class="fa-solid fa-brain"></i>
+                              </div>
+                              <div class="assessment-submenu-link-copy">
+                                <span>BrainFx Philosophy</span>
+                                <small>
+                                  BrainFx philosophy values personalized
+                                  cognitive assessment.
+                                </small>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <a href="pricing.html">
+                      <span class="nav-link">
+                        <i class="fas fa-tags"></i> Pricing
+                      </span>
+                    </a>
+                  </div>
+                  <div class="nav-cta-group">
+                    <div
+                      id="w-node-a0c7a8fe-37d7-7802-2d0d-41b7778bcede-778bceb0"
+                      class="btn-nav-wrap btn-nav-demo"
+                    >
+                      <div aria-hidden="true" class="btn-label">
+                        <div class="btn-label-txt">Request a Demo</div>
+                      </div>
+                      <div class="btn-clickabe">
+                        <a
+                          href="request-a-demo.html"
+                          class="btn-link w-inline-block"
+                          ><span class="screen-reader-only"
+                            >Request a Demo</span
+                          ></a
+                        >
+                      </div>
+                    </div>
+                    <div class="btn-nav-wrap">
+                      <div aria-hidden="true" class="btn-label">
+                        <div class="btn-label-txt">Login</div>
+                      </div>
+                      <div class="btn-clickabe">
+                        <a href="login.html" class="btn-link w-inline-block"
+                          ><span class="screen-reader-only">Login</span></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button aria-label="Open Close Navigation Menu" class="menu-btn">
+                <div class="menu-btn-hamburger-wrap">
+                  <div class="burger-line-top"></div>
+                  <div class="burger-line-middle"></div>
+                  <div class="burger-line-bottom"></div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </nav>
+
+        <section class="ascr-overview-section ascr-overview-section--hero">
+          <div class="ascr-shell">
+            <div class="ascr-overview-grid">
+              <div class="ascr-copy">
+                <div class="ascr-eyebrow">
+                  <i class="fa-solid fa-chart-column"></i>
+                  1. Comprehensive Virtual Cognitive Assessment
+                </div>
+                <h2>Comprehensive Virtual Cognitive Assessment</h2>
+                <h3>Evaluate Real-World Cognitive Function, Anywhere</h3>
+                <p>
+                  BrainFx VCA is a virtual cognitive assessment platform
+                  designed to evaluate how cognitive abilities affect
+                  real-world functioning. It helps clinicians identify
+                  strengths, challenges, and areas requiring intervention
+                  through structured cognitive tasks completed remotely.
+                </p>
+
+                <div class="ascr-highlights">
+                  <div class="ascr-pill">
+                    <div class="ascr-pill-icon">
+                      <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <strong>Faster Access</strong>
+                    <span>Faster access to cognitive evaluation.</span>
+                  </div>
+                  <div class="ascr-pill">
+                    <div class="ascr-pill-icon">
+                      <i class="fa-solid fa-house-laptop"></i>
+                    </div>
+                    <strong>Accessible Anywhere</strong>
+                    <span>Increased accessibility for clients.</span>
+                  </div>
+                  <div class="ascr-pill">
+                    <div class="ascr-pill-icon">
+                      <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <strong>Evidence-Based</strong>
+                    <span>Supports evidence-based decision making.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ascr-visual-wrap">
+                <div class="ascr-visual-card">
+                  <div class="ascr-visual-top">
+                    <div class="ascr-badge">
+                      <i class="fa-solid fa-laptop-medical"></i>
+                      Virtual Cognitive Assessment
+                    </div>
+                  </div>
+                  <div class="ascr-visual-icon-panel">
+                    <i class="fa-solid fa-chart-column"></i>
+                    <strong>BrainFx VCA Platform</strong>
+                    <span
+                      >Secure, standardized, and fully remote cognitive
+                      evaluation.</span
+                    >
+                  </div>
+                  <div class="ascr-visual-mini-grid">
+                    <div class="ascr-mini-card">
+                      <i class="fa-solid fa-house-laptop"></i>
+                      <span class="ascr-mini-title">Remote &amp; Accessible</span>
+                    </div>
+                    <div class="ascr-mini-card">
+                      <i class="fa-solid fa-user-check"></i>
+                      <span class="ascr-mini-title"
+                        >Objective &amp; Standardized</span
+                      >
+                    </div>
+                    <div class="ascr-mini-card">
+                      <i class="fa-solid fa-shield-alt"></i>
+                      <span class="ascr-mini-title"
+                        >Secure Digital Reporting</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section ascr-advantages-section">
+          <div class="ascr-shell">
+            <div class="ascr-advantages-panel">
+              <div class="ascr-advantages-grid">
+                <div class="ascr-advantages-visual">
+                  <i class="fa-solid fa-globe"></i>
+                  <strong>Why BrainFx VCA</strong>
+                  <p>
+                    A fully virtual, objective way to evaluate real-world
+                    cognitive performance from anywhere.
+                  </p>
+                </div>
+
+                <div class="ascr-advantages-copy">
+                  <div class="ascr-advantages-copy-eyebrow">
+                    <i class="fa-solid fa-list-check"></i>
+                    Key Advantages
+                  </div>
+                  <h2>What Sets BrainFx VCA Apart</h2>
+                  <div class="ascr-advantages-list">
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-laptop"></i>
+                      </div>
+                      <span>Fully virtual cognitive assessment.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-house-laptop"></i>
+                      </div>
+                      <span>Accessible from home or remote locations.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                      </div>
+                      <span>Objective and standardized evaluation.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-street-view"></i>
+                      </div>
+                      <span>Assesses real-world cognitive performance.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                      </div>
+                      <span
+                        >Supports early identification of cognitive
+                        concerns.</span
+                      >
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                      </div>
+                      <span>Generates detailed cognitive profiles.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-route"></i>
+                      </div>
+                      <span
+                        >Reduces travel and in-person appointment
+                        requirements.</span
+                      >
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-satellite-dish"></i>
+                      </div>
+                      <span>Enables remote monitoring and follow-up.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-lock"></i>
+                      </div>
+                      <span>Secure digital reporting system.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-briefcase-medical"></i>
+                      </div>
+                      <span
+                        >Suitable for rehabilitation and return-to-work
+                        programs.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section ascr-skills-section">
+          <div class="ascr-shell">
+            <div class="ascr-skills-panel">
+              <div class="ascr-skills-grid-outer">
+                <div class="ascr-skills-copy">
+                  <div class="ascr-skills-copy-eyebrow">
+                    <i class="fa-solid fa-star"></i>
+                    Core Benefits
+                  </div>
+                  <h2>Built to Deliver Better Outcomes</h2>
+                  <p>
+                    BrainFx VCA is designed to make cognitive evaluation
+                    faster, more consistent, and easier to act on for clients
+                    and care teams alike.
+                  </p>
+                  <div class="ascr-skills-note">
+                    <strong>Why it matters</strong>
+                    <span>
+                      Faster, more accessible evaluation means concerns are
+                      identified sooner and care teams can plan personalized
+                      treatment with greater confidence.
+                    </span>
+                  </div>
+                </div>
+
+                <div class="ascr-skill-grid">
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    Faster Access to Evaluation
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-users"></i>
+                    Increased Client Accessibility
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    Consistent Assessment Experience
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    Evidence-Based Decision Making
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-notes-medical"></i>
+                    Personalized Treatment Planning
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section ascr-overview-section">
+          <div class="ascr-shell">
+            <div class="ascr-overview-grid">
+              <div class="ascr-copy">
+                <div class="ascr-eyebrow">
+                  <i class="fa-solid fa-diagram-project"></i>
+                  2. Functional Cognitive Skills Assessment
+                </div>
+                <h2>Functional Cognitive Skills Assessment</h2>
+                <h3>Practical Thinking Skills for Everyday Life</h3>
+                <p>
+                  BrainFx VCA measures cognitive skills that directly impact
+                  daily living, education, work performance, communication,
+                  and independent functioning.
+                </p>
+
+                <div class="ascr-highlights">
+                  <div class="ascr-pill">
+                    <div class="ascr-pill-icon">
+                      <i class="fa-solid fa-house-chimney"></i>
+                    </div>
+                    <strong>Practical Life Skills</strong>
+                    <span>Evaluates practical life skills.</span>
+                  </div>
+                  <div class="ascr-pill">
+                    <div class="ascr-pill-icon">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <strong>Subtle Difficulties</strong>
+                    <span>Identifies subtle cognitive difficulties.</span>
+                  </div>
+                  <div class="ascr-pill">
+                    <div class="ascr-pill-icon">
+                      <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <strong>Higher-Order Thinking</strong>
+                    <span>Measures higher-order thinking abilities.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ascr-visual-wrap">
+                <div class="ascr-visual-card">
+                  <div class="ascr-visual-top">
+                    <div class="ascr-badge">
+                      <i class="fa-solid fa-shapes"></i>
+                      Functional Skills View
+                    </div>
+                  </div>
+                  <div class="ascr-visual-icon-panel">
+                    <i class="fa-solid fa-brain"></i>
+                    <strong>Functional Skills Assessment</strong>
+                    <span
+                      >Interactive tasks that mirror the practical demands of
+                      daily life.</span
+                    >
+                  </div>
+                  <div class="ascr-visual-mini-grid">
+                    <div class="ascr-mini-card">
+                      <i class="fa-solid fa-briefcase"></i>
+                      <span class="ascr-mini-title">Work Performance</span>
+                    </div>
+                    <div class="ascr-mini-card">
+                      <i class="fa-solid fa-graduation-cap"></i>
+                      <span class="ascr-mini-title">Academic Success</span>
+                    </div>
+                    <div class="ascr-mini-card">
+                      <i class="fa-solid fa-house"></i>
+                      <span class="ascr-mini-title">Independent Living</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section ascr-advantages-section">
+          <div class="ascr-shell">
+            <div class="ascr-advantages-panel">
+              <div class="ascr-advantages-grid">
+                <div class="ascr-advantages-visual">
+                  <i class="fa-solid fa-shapes"></i>
+                  <strong>Whole-Person Insight</strong>
+                  <p>
+                    Practical, activity-based measures of the thinking skills
+                    people rely on every day.
+                  </p>
+                </div>
+
+                <div class="ascr-advantages-copy">
+                  <div class="ascr-advantages-copy-eyebrow">
+                    <i class="fa-solid fa-list-check"></i>
+                    Key Advantages
+                  </div>
+                  <h2>Measuring Cognition Where It Matters Most</h2>
+                  <div class="ascr-advantages-list">
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-house-chimney"></i>
+                      </div>
+                      <span>Evaluates practical life skills.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                      </div>
+                      <span>Identifies subtle cognitive difficulties.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                      </div>
+                      <span>Measures higher-order thinking abilities.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-person-walking"></i>
+                      </div>
+                      <span
+                        >Supports functional rehabilitation planning.</span
+                      >
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-file-waveform"></i>
+                      </div>
+                      <span>Provides meaningful clinical insights.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-user-doctor"></i>
+                      </div>
+                      <span
+                        >Helps clinicians understand real-world
+                        challenges.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section ascr-skills-section">
+          <div class="ascr-shell">
+            <div class="ascr-skills-panel">
+              <div class="ascr-skills-grid-outer">
+                <div class="ascr-skills-copy">
+                  <div class="ascr-skills-copy-eyebrow">
+                    <i class="fa-solid fa-atom"></i>
+                    Skills Assessed
+                  </div>
+                  <h2>Fifteen Core Functional Cognitive Skills</h2>
+                  <p>
+                    Each skill is assessed through structured activities that
+                    mirror the practical demands of daily life.
+                  </p>
+                  <div class="ascr-skills-note">
+                    <strong>Real-World Relevance</strong>
+                    <span>
+                      These skills impact workplace productivity, academic
+                      performance, communication, safety, and independent
+                      living.
+                    </span>
+                  </div>
+                </div>
+
+                <div class="ascr-skill-grid">
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-brain"></i>
+                    Abstract Thinking
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-eye"></i>
+                    Attention &amp; Concentration
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-comments"></i>
+                    Communication
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-comment-dots"></i>
+                    Comprehension
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-list-check"></i>
+                    Decision Making
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-battery-half"></i>
+                    Endurance
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    Executive Functioning
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-route"></i>
+                    Following Directions
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    Information Processing Speed
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    Judgment for Safety
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    Memory
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-shuffle"></i>
+                    Mental Flexibility
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-puzzle-piece"></i>
+                    Problem Solving
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-hourglass-half"></i>
+                    Temporal Awareness
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    Emotional Regulation
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section ascr-skills-section">
+          <div class="ascr-shell">
+            <div class="ascr-skills-panel">
+              <div
+                class="ascr-skills-grid-outer"
+                style="grid-template-columns: 1fr"
+              >
+                <div
+                  class="ascr-skills-copy"
+                  style="
+                    max-width: 720px;
+                    margin: 0 auto 2.5rem;
+                    text-align: center;
+                  "
+                >
+                  <div class="ascr-skills-copy-eyebrow" style="margin: 0 auto">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    Real-World Applications
+                  </div>
+                  <h2>Where BrainFx VCA Makes a Difference</h2>
+                  <p>
+                    The functional skills BrainFx VCA measures show up across
+                    every part of daily life&mdash;at work, at school, and at
+                    home.
+                  </p>
+                </div>
+
+                <div class="ascr-skill-grid ascr-skill-grid--4col">
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-briefcase"></i>
+                    Work Performance
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    Academic Success
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-car"></i>
+                    Driving Safety
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-money-bill"></i>
+                    Financial Management
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-pills"></i>
+                    Medication Management
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-list-ol"></i>
+                    Daily Task Planning
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-house"></i>
+                    Independent Living
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-comments"></i>
+                    Social Communication
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section ascr-overview-section">
+          <div class="ascr-shell">
+            <div class="ascr-overview-grid">
+              <div class="ascr-copy">
+                <div class="ascr-eyebrow">
+                  <i class="fa-solid fa-user-doctor"></i>
+                  3. Personalized Cognitive Insights &amp; Rehabilitation
+                  Planning
+                </div>
+                <h2>Personalized Cognitive Insights &amp; Rehabilitation Planning</h2>
+                <h3>Individualized Care Planning, Powered by Data</h3>
+                <p>
+                  BrainFx VCA provides detailed information about cognitive
+                  strengths and challenge areas, helping healthcare
+                  professionals create personalized intervention and
+                  rehabilitation plans.
+                </p>
+
+                <div class="ascr-highlights">
+                  <div class="ascr-pill">
+                    <div class="ascr-pill-icon">
+                      <i class="fa-solid fa-id-card-clip"></i>
+                    </div>
+                    <strong>Individual Profiling</strong>
+                    <span>Individualized cognitive profiling.</span>
+                  </div>
+                  <div class="ascr-pill">
+                    <div class="ascr-pill-icon">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <strong>Strengths &amp; Challenges</strong>
+                    <span>Strength and challenge identification.</span>
+                  </div>
+                  <div class="ascr-pill">
+                    <div class="ascr-pill-icon">
+                      <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <strong>Goal-Oriented</strong>
+                    <span>Goal-oriented rehabilitation support.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ascr-visual-wrap">
+                <div class="ascr-visual-card">
+                  <div class="ascr-visual-top">
+                    <div class="ascr-badge">
+                      <i class="fa-solid fa-user-doctor"></i>
+                      Personalized Insights
+                    </div>
+                  </div>
+                  <div class="ascr-visual-icon-panel">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <strong>Rehabilitation Planning</strong>
+                    <span
+                      >Detailed profiles that guide personalized care
+                      decisions.</span
+                    >
+                  </div>
+                  <div class="ascr-visual-mini-grid">
+                    <div class="ascr-mini-card">
+                      <i class="fa-solid fa-head-side-virus"></i>
+                      <span class="ascr-mini-title"
+                        >Brain Injury Rehabilitation</span
+                      >
+                    </div>
+                    <div class="ascr-mini-card">
+                      <i class="fa-solid fa-hand-holding-medical"></i>
+                      <span class="ascr-mini-title">Occupational Therapy</span>
+                    </div>
+                    <div class="ascr-mini-card">
+                      <i class="fa-solid fa-briefcase"></i>
+                      <span class="ascr-mini-title"
+                        >Return-to-Work Programs</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section ascr-advantages-section">
+          <div class="ascr-shell">
+            <div class="ascr-advantages-panel">
+              <div class="ascr-advantages-grid">
+                <div class="ascr-advantages-visual">
+                  <i class="fa-solid fa-user-doctor"></i>
+                  <strong>Individualized Care</strong>
+                  <p>
+                    Detailed cognitive profiles that guide personalized
+                    rehabilitation and treatment planning.
+                  </p>
+                </div>
+
+                <div class="ascr-advantages-copy">
+                  <div class="ascr-advantages-copy-eyebrow">
+                    <i class="fa-solid fa-list-check"></i>
+                    Key Advantages
+                  </div>
+                  <h2>Personalized Plans, Better Outcomes</h2>
+                  <div class="ascr-advantages-list">
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-id-card-clip"></i>
+                      </div>
+                      <span>Individualized cognitive profiling.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                      </div>
+                      <span>Strength and challenge identification.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-bullseye"></i>
+                      </div>
+                      <span>Personalized intervention planning.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-flag-checkered"></i>
+                      </div>
+                      <span>Goal-oriented rehabilitation support.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                      </div>
+                      <span>Functional outcome tracking.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-notes-medical"></i>
+                      </div>
+                      <span>Improved treatment recommendations.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-face-smile"></i>
+                      </div>
+                      <span>Better patient engagement.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-users"></i>
+                      </div>
+                      <span>Supports multidisciplinary care teams.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section ascr-skills-section">
+          <div class="ascr-shell">
+            <div class="ascr-skills-panel">
+              <div class="ascr-skills-grid-outer">
+                <div class="ascr-skills-copy">
+                  <div class="ascr-skills-copy-eyebrow">
+                    <i class="fa-solid fa-hospital"></i>
+                    Clinical Uses
+                  </div>
+                  <h2>Supporting a Wide Range of Clinical Programs</h2>
+                  <p>
+                    BrainFx VCA is used across rehabilitation, mental health,
+                    and return-to-work and return-to-school programs.
+                  </p>
+                  <div class="ascr-skills-note">
+                    <strong>Outcome Benefits</strong>
+                    <span>
+                      Better treatment targeting, enhanced patient
+                      independence, improved cognitive performance, faster
+                      recovery planning, and better long-term outcomes.
+                    </span>
+                  </div>
+                </div>
+
+                <div class="ascr-skill-grid">
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-head-side-virus"></i>
+                    Brain Injury Rehabilitation
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-user-injured"></i>
+                    Concussion Recovery
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-hand-holding-medical"></i>
+                    Occupational Therapy
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-brain"></i>
+                    Cognitive Rehabilitation
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    Mental Health Programs
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-stethoscope"></i>
+                    Neurological Assessments
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-briefcase"></i>
+                    Return-to-Work Programs
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    Return-to-School Planning
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section ascr-overview-section">
+          <div class="ascr-shell">
+            <div class="ascr-overview-grid">
+              <div class="ascr-copy">
+                <div class="ascr-eyebrow">
+                  <i class="fa-solid fa-microchip"></i>
+                  4. Advanced Digital Platform &amp; Reporting
+                </div>
+                <h2>Advanced Digital Platform &amp; Reporting</h2>
+                <h3>Smarter Scoring, Streamlined Workflows</h3>
+                <p>
+                  BrainFx VCA 2.0 introduces enhanced scoring, improved
+                  reporting, better reliability, and streamlined clinician
+                  workflows. Assessment data is securely captured and
+                  automatically processed to generate comprehensive reports.
+                </p>
+
+                <div class="ascr-highlights">
+                  <div class="ascr-pill">
+                    <div class="ascr-pill-icon">
+                      <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <strong>Automated Scoring</strong>
+                    <span>Automated scoring system.</span>
+                  </div>
+                  <div class="ascr-pill">
+                    <div class="ascr-pill-icon">
+                      <i class="fa-solid fa-chart-bar"></i>
+                    </div>
+                    <strong>Norm-Based</strong>
+                    <span>Norm-based comparisons.</span>
+                  </div>
+                  <div class="ascr-pill">
+                    <div class="ascr-pill-icon">
+                      <i class="fa-solid fa-shield-alt"></i>
+                    </div>
+                    <strong>Reliable</strong>
+                    <span>Enhanced assessment reliability.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ascr-visual-wrap">
+                <div class="ascr-visual-card">
+                  <div class="ascr-visual-top">
+                    <div class="ascr-badge">
+                      <i class="fa-solid fa-microchip"></i>
+                      Digital Platform View
+                    </div>
+                  </div>
+                  <div class="ascr-visual-icon-panel">
+                    <i class="fa-solid fa-cloud"></i>
+                    <strong>BrainFx VCA 2.0</strong>
+                    <span
+                      >Cloud-based scoring, secure storage, and real-time
+                      reporting.</span
+                    >
+                  </div>
+                  <div class="ascr-visual-mini-grid">
+                    <div class="ascr-mini-card">
+                      <i class="fa-solid fa-cloud"></i>
+                      <span class="ascr-mini-title"
+                        >Cloud-Based Platform</span
+                      >
+                    </div>
+                    <div class="ascr-mini-card">
+                      <i class="fa-solid fa-lock"></i>
+                      <span class="ascr-mini-title">Secure Data Storage</span>
+                    </div>
+                    <div class="ascr-mini-card">
+                      <i class="fa-solid fa-chart-line"></i>
+                      <span class="ascr-mini-title"
+                        >Real-Time Progress Tracking</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section ascr-advantages-section">
+          <div class="ascr-shell">
+            <div class="ascr-advantages-panel">
+              <div class="ascr-advantages-grid">
+                <div class="ascr-advantages-visual">
+                  <i class="fa-solid fa-microchip"></i>
+                  <strong>Built for Modern Workflows</strong>
+                  <p>
+                    A secure digital platform designed for accuracy,
+                    consistency, and confident clinical decisions.
+                  </p>
+                </div>
+
+                <div class="ascr-advantages-copy">
+                  <div class="ascr-advantages-copy-eyebrow">
+                    <i class="fa-solid fa-list-check"></i>
+                    Key Advantages
+                  </div>
+                  <h2>Technology That Powers Confident Decisions</h2>
+                  <div class="ascr-advantages-list">
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-robot"></i>
+                      </div>
+                      <span>Automated scoring system.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-chart-bar"></i>
+                      </div>
+                      <span>Norm-based comparisons.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-medal"></i>
+                      </div>
+                      <span>Standardized cognitive scores.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-percent"></i>
+                      </div>
+                      <span>Percentile, Z-score, T-score reporting.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-stopwatch"></i>
+                      </div>
+                      <span>Built-in timers.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-shield-alt"></i>
+                      </div>
+                      <span>Enhanced assessment reliability.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                      </div>
+                      <span>Automatic data saving.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-circle-pause"></i>
+                      </div>
+                      <span>Pause, skip, and stop functionality.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                      </div>
+                      <span>Practice sessions for administrators.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-comment-medical"></i>
+                      </div>
+                      <span>Integrated comments and observations.</span>
+                    </div>
+                    <div class="ascr-advantages-item">
+                      <div class="ascr-advantages-item-icon">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                      </div>
+                      <span>Direct report download capability.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section ascr-skills-section">
+          <div class="ascr-shell">
+            <div class="ascr-skills-panel">
+              <div
+                class="ascr-skills-grid-outer"
+                style="grid-template-columns: 1fr"
+              >
+                <div
+                  class="ascr-skills-copy"
+                  style="
+                    max-width: 720px;
+                    margin: 0 auto 2.5rem;
+                    text-align: center;
+                  "
+                >
+                  <div class="ascr-skills-copy-eyebrow" style="margin: 0 auto">
+                    <i class="fa-solid fa-layer-group"></i>
+                    Platform &amp; Organizational Benefits
+                  </div>
+                  <h2>Reporting Built for Every Care Team</h2>
+                  <p>
+                    A cloud-based platform designed to streamline assessment
+                    delivery, secure client data, and simplify reporting for
+                    healthcare organizations of every size.
+                  </p>
+                </div>
+
+                <div class="ascr-report-grid ascr-report-grid--2col">
+                  <div
+                    class="ascr-report-card"
+                    style="
+                      --report-color: #0b5f95;
+                      --report-bg: rgba(17, 130, 207, 0.12);
+                    "
+                  >
+                    <div class="ascr-report-icon">
+                      <i class="fa-solid fa-cloud"></i>
+                    </div>
+                    <span class="ascr-report-tag">Technology Features</span>
+                    <h3>A Modern, Cloud-Based Platform</h3>
+                    <ul>
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        Cloud-based assessment platform.
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        Secure data storage.
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        Automatic data upload.
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        Digital report generation.
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        Online report access.
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        Real-time progress tracking.
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        Improved user experience.
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        Standardized administration process.
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    class="ascr-report-card"
+                    style="
+                      --report-color: #4f7d1f;
+                      --report-bg: rgba(134, 194, 62, 0.14);
+                    "
+                  >
+                    <div class="ascr-report-icon">
+                      <i class="fa-solid fa-building"></i>
+                    </div>
+                    <span class="ascr-report-tag">Organizational Benefits</span>
+                    <h3>Efficiency at Every Scale</h3>
+                    <ul>
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        Reduced administrative workload.
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        Faster report generation.
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        Improved clinician efficiency.
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        Better data accuracy.
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        Consistent assessment quality.
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        Scalable across healthcare organizations.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section ascr-reasons-section">
+          <div class="ascr-shell">
+            <div class="ascr-reasons-header">
+              <div class="ascr-eyebrow">
+                <i class="fa-solid fa-award"></i>
+                Why Choose BrainFx VCA?
+              </div>
+              <h2>Why Choose BrainFx VCA?</h2>
+              <p>
+                Clinicians and organizations trust BrainFx VCA to bring
+                secure, remote, and evidence-based cognitive insight into
+                everyday care decisions.
+              </p>
+            </div>
+
+            <div class="ascr-reasons-grid">
+              <div class="ascr-reason-card">
+                <div class="ascr-reason-icon">
+                  <i class="fa-solid fa-house-laptop"></i>
+                </div>
+                <h3>Remote Accessibility</h3>
+                <p>
+                  Conduct comprehensive cognitive assessments from virtually
+                  anywhere.
+                </p>
+              </div>
+              <div class="ascr-reason-card">
+                <div class="ascr-reason-icon">
+                  <i class="fa-solid fa-flask"></i>
+                </div>
+                <h3>Evidence-Based Evaluation</h3>
+                <p>
+                  Uses standardized methods and norm-referenced scoring to
+                  ensure reliable results.
+                </p>
+              </div>
+              <div class="ascr-reason-card">
+                <div class="ascr-reason-icon">
+                  <i class="fa-solid fa-street-view"></i>
+                </div>
+                <h3>Functional Focus</h3>
+                <p>
+                  Measures cognition as it relates to everyday life activities
+                  and independence.
+                </p>
+              </div>
+              <div class="ascr-reason-card">
+                <div class="ascr-reason-icon">
+                  <i class="fa-solid fa-user-gear"></i>
+                </div>
+                <h3>Personalized Care</h3>
+                <p>
+                  Supports individualized rehabilitation and treatment
+                  planning.
+                </p>
+              </div>
+              <div class="ascr-reason-card">
+                <div class="ascr-reason-icon">
+                  <i class="fa-solid fa-hand-holding-heart"></i>
+                </div>
+                <h3>Enhanced Clinical Confidence</h3>
+                <p>
+                  Provides objective performance data to support clinical
+                  decisions.
+                </p>
+              </div>
+              <div class="ascr-reason-card">
+                <div class="ascr-reason-icon">
+                  <i class="fa-solid fa-face-smile"></i>
+                </div>
+                <h3>Improved Patient Experience</h3>
+                <p>
+                  Convenient virtual format with easy-to-use digital tools.
+                </p>
+              </div>
+              <div class="ascr-reason-card">
+                <div class="ascr-reason-icon">
+                  <i class="fa-solid fa-lock"></i>
+                </div>
+                <h3>Secure &amp; Reliable Platform</h3>
+                <p>
+                  Automatic saving and secure report management reduce data
+                  loss risks.
+                </p>
+              </div>
+              <div class="ascr-reason-card">
+                <div class="ascr-reason-icon">
+                  <i class="fa-solid fa-brain"></i>
+                </div>
+                <h3>Comprehensive Cognitive Insights</h3>
+                <p>
+                  Provides a deep understanding of cognitive strengths,
+                  limitations, and functional implications.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section ascr-skills-section">
+          <div class="ascr-shell">
+            <div class="ascr-skills-panel">
+              <div
+                class="ascr-skills-grid-outer"
+                style="grid-template-columns: 1fr"
+              >
+                <div
+                  class="ascr-skills-copy"
+                  style="
+                    max-width: 720px;
+                    margin: 0 auto 2.5rem;
+                    text-align: center;
+                  "
+                >
+                  <div class="ascr-skills-copy-eyebrow" style="margin: 0 auto">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    Cognitive Performance Areas
+                  </div>
+                  <h2>BrainFx VCA Assessment Domains</h2>
+                  <p>
+                    BrainFx VCA evaluates a broad set of cognitive performance
+                    areas that together paint a complete picture of
+                    functional cognition.
+                  </p>
+                </div>
+
+                <div class="ascr-skill-grid ascr-skill-grid--4col">
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    Abstract Thinking
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-eye"></i>
+                    Attention &amp; Concentration
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-comments"></i>
+                    Communication Skills
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-comment-dots"></i>
+                    Verbal Comprehension
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-list-check"></i>
+                    Decision Making
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-battery-half"></i>
+                    Cognitive Endurance
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    Executive Functioning
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-route"></i>
+                    Following Directions
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    Information Processing Speed
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    Safety Judgment
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    Immediate &amp; Delayed Memory
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Prospective Memory
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-shuffle"></i>
+                    Mental Flexibility
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-calculator"></i>
+                    Numerical Problem Solving
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-hourglass-half"></i>
+                    Time Awareness
+                  </div>
+                  <div class="ascr-skill">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    Mood Regulation
+                  </div>
+                </div>
+
+                <div
+                  class="ascr-skills-note"
+                  style="max-width: 820px; margin: 2rem auto 0; text-align: center"
+                >
+                  <strong>Why These Domains Matter</strong>
+                  <span>
+                    These domains help clinicians understand how cognitive
+                    abilities impact work, school, home management, social
+                    interactions, and independent living.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer
+          id="footer"
+          class="footer"
+          style="background: #0b5f95; color: #fff"
+        >
+          <div class="content">
+            <div class="container-padding-global">
+              <div class="footer-wrapper">
+                <div class="footer-contact-cta">
+                  <div class="bgr-texture-wrap">
+                    <div class="visual-col-5-6">
+                      <div class="base-grid is-footer-cta">
+                        <div
+                          id="w-node-_57d487c8-0f2c-78e5-6b6c-43fbf9f1e54d-f9f1e545"
+                          class="vis-col-5 is-light-texture"
+                        >
+                          <div class="text-content-wrap no-gap">
+                            <h2 class="h3-size">
+                              Interested in working with us?
+                            </h2>
+                            <p>
+                              Let&#x27;s make the invisible effects of brain
+                              disorders visible, together.
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          id="w-node-_57d487c8-0f2c-78e5-6b6c-43fbf9f1e555-f9f1e545"
+                          class="vis-col-6 is-light-texture"
+                        >
+                          <div class="btn-secondary-dark">
+                            <div aria-hidden="true" class="btn-label">
+                              <div class="btn-label-txt txt-prim-2">
+                                Request a Demo
+                              </div>
+                            </div>
+                            <div class="btn-clickabe">
+                              <a
+                                href="request-a-demo.html"
+                                class="btn-link w-inline-block"
+                                ><span class="screen-reader-only"
+                                  >Request a Demo</span
+                                ></a
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="graphic-light-bgr">
+                      <img
+                        src="6760858fd1c261f9adc849e6/6762a740a6145fc1369d7e29_Wavy%20Texture.png"
+                        loading="lazy"
+                        sizes="(max-width: 479px) 92vw, (max-width: 767px) 94vw, (max-width: 991px) 95vw, 89vw"
+                        srcset="
+                          6760858fd1c261f9adc849e6/6762a740a6145fc1369d7e29_Wavy%20Texture-p-500.png   500w,
+                          6760858fd1c261f9adc849e6/6762a740a6145fc1369d7e29_Wavy%20Texture-p-800.png   800w,
+                          6760858fd1c261f9adc849e6/6762a740a6145fc1369d7e29_Wavy%20Texture-p-1080.png 1080w,
+                          6760858fd1c261f9adc849e6/6762a740a6145fc1369d7e29_Wavy%20Texture.png        2063w
+                        "
+                        alt=""
+                        class="wavy-bgr-texture opacity-20"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="base-grid is-footer">
+                  <div
+                    id="w-node-_57d487c8-0f2c-78e5-6b6c-43fbf9f1e55b-f9f1e545"
+                    class="footer-col-1"
+                  >
+                    <a
+                      href="index.html"
+                      aria-current="page"
+                      class="footer-logo w-inline-block w--current"
+                      ><img
+                        src="assets/images/Brainfx_new_logo_Dark.png"
+                        loading="lazy"
+                        alt=""
+                        class="footer-logo-svg"
+                    /></a>
+                    <div class="btn-secondary-light">
+                      <div aria-hidden="true" class="btn-label">
+                        <div class="btn-label-txt">Get Started</div>
+                      </div>
+                      <div class="btn-clickabe">
+                        <a href="contact.html" class="btn-link w-inline-block"
+                          ><span class="screen-reader-only"
+                            >Get Started</span
+                          ></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    id="w-node-_57d487c8-0f2c-78e5-6b6c-43fbf9f1e55f-f9f1e545"
+                    class="footer-col-2"
+                  >
+                    <a
+                      href="index.html"
+                      aria-current="page"
+                      class="footer-header-link w-inline-block w--current"
+                      ><div class="p-size txt-bold">Home</div></a
+                    ><a
+                      href="about.html"
+                      class="footer-header-link w-inline-block"
+                      ><div class="p-size txt-bold">About</div></a
+                    ><a
+                      href="faq.html"
+                      class="footer-header-link w-inline-block"
+                      ><div class="p-size txt-bold">FAQ</div></a
+                    ><a
+                      href="contact.html"
+                      class="footer-header-link w-inline-block"
+                      ><div class="p-size txt-bold">Contact Us</div></a
+                    >
+                  </div>
+                  <div
+                    id="w-node-_57d487c8-0f2c-78e5-6b6c-43fbf9f1e56e-f9f1e545"
+                    class="footer-col-3"
+                  >
+                    <a
+                      href="providers.html"
+                      class="footer-header-link w-inline-block"
+                      ><div class="p-size txt-bold">Providers</div></a
+                    ><a
+                      href="physicians.html"
+                      class="footer-link w-inline-block"
+                      ><div class="p-size">Physicians</div></a
+                    ><a href="providers.html" class="footer-link w-inline-block"
+                      ><div class="p-size">Health Care Organizations</div></a
+                    ><a
+                      href="senior-care.html"
+                      class="footer-link w-inline-block"
+                      ><div class="p-size">Senior Care</div></a
+                    ><a href="employers.html" class="footer-link w-inline-block"
+                      ><div class="p-size">Employers</div></a
+                    ><a href="athletics.html" class="footer-link w-inline-block"
+                      ><div class="p-size">Athletics</div></a
+                    >
+                  </div>
+                  <div
+                    id="w-node-_84459e8c-2d53-fe1b-382e-89a4e7cc342b-f9f1e545"
+                    class="footer-col-4"
+                  >
+                    <a
+                      href="assessments-training.html"
+                      class="footer-header-link w-inline-block"
+                      ><div class="p-size txt-bold">Assessments</div></a
+                    ><a
+                      href="https://360ax.brainfx.ai/"
+                      target="_blank"
+                      class="footer-link w-inline-block"
+                      ><div class="p-size">360 Assessment</div></a
+                    ><a
+                      href="https://screen.brainfx.ai/"
+                      target="_blank"
+                      class="footer-link w-inline-block"
+                      ><div class="p-size">Screen Assessment</div></a
+                    ><a
+                      href="https://vcax.brainfx.com"
+                      target="_blank"
+                      class="footer-link w-inline-block"
+                      ><div class="p-size">VCA Assessment</div></a
+                    >
+                  </div>
+                  <div
+                    id="w-node-_32866bd6-512b-9903-ec51-6c6d3f35447e-f9f1e545"
+                    class="footer-col-5"
+                  >
+                    <a
+                      href="science-behind-brainfx.html"
+                      class="footer-header-link w-inline-block"
+                      ><div class="p-size txt-bold">Science</div></a
+                    ><a
+                      href="science-behind-brainfx.html"
+                      class="footer-link w-inline-block"
+                      ><div class="p-size">The Science behind BrainFx</div></a
+                    ><a
+                      href="scientific-validation.html"
+                      class="footer-link w-inline-block"
+                      ><div class="p-size">Scientific Validation</div></a
+                    >
+                  </div>
+                  <div
+                    id="w-node-f2c1db58-cdf1-f905-0fa7-a4f15acafc2c-f9f1e545"
+                    class="footer-col-8"
+                  >
+                    <a href="#" class="footer-header-link w-inline-block"
+                      ><div class="p-size txt-bold">Our Portals</div></a
+                    ><a
+                      href="https://admin.brainfx.ai/"
+                      target="_blank"
+                      class="footer-link w-inline-block"
+                      ><div class="p-size">BrainFx Admin</div></a
+                    ><a
+                      href="https://360ax.brainfx.ai/"
+                      target="_blank"
+                      class="footer-link w-inline-block"
+                      ><div class="p-size">BrainFx 360</div></a
+                    ><a
+                      href="https://screen.brainfx.ai/"
+                      target="_blank"
+                      class="footer-link w-inline-block"
+                      ><div class="p-size">BrainFx SCREEN</div></a
+                    ><a
+                      href="https://vcax.brainfx.com"
+                      target="_blank"
+                      class="footer-link w-inline-block"
+                      ><div class="p-size">BrainFx VCA</div></a
+                    ><a
+                      href="brainfx-training.html"
+                      class="footer-link w-inline-block"
+                      ><div class="p-size">BrainFx Training</div></a
+                    >
+                  </div>
+                </div>
+                <div class="footer-bottom-row">
+                  <div class="footer-info-wrap">
+                    <p class="eyebrow">
+                      Important Information: BrainFx Assessments only provide
+                      information about neurofunctional performance. Assessment
+                      results detail the patient/client&#x27;s performance on
+                      assessment activities completed and only assist the health
+                      care team in identifying potential areas of strength or
+                      challenge as related to function. Assessments DO NOT
+                      provide any diagnosis or treatment recommendations.
+                      BrainFx Assessments are only permitted to be delivered by
+                      trained clinicians. Assessment reports are not stand-alone
+                      and require the interpretation of a health professional
+                      within their scope of practice and in the context of all
+                      information that they have gathered about their
+                      patient/client. In Canada, BrainFx Assessments are cleared
+                      by Health Canada as a Class 1 Software as a Medical
+                      Device. BrainFx Assessments and the statements made on
+                      this website have not been evaluated by any other
+                      regulatory bodies. Assessments are not intended to
+                      diagnose, treat, cure, or prevent any disease. Information
+                      provided by BrainFx is not a substitute for face-to-face
+                      consultation with your health care professional and should
+                      not be construed as individual medical advice.
+                    </p>
+                  </div>
+
+                  <div class="recognition-section">
+                    <h5 class="recognition-heading">
+                      See where we've been recognized
+                    </h5>
+
+                    <div class="recognition-logos">
+                      <div class="recognition-card">
+                        <img
+                          src="/assets/images/SOC2-removebg-preview.png"
+                          alt="SOC 2"
+                        />
+                      </div>
+
+                      <div class="recognition-card">
+                        <img
+                          src="/assets/images/ISO_27001_Final-Logo-removebg-preview.png"
+                          alt="ISO 27001"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-divider-line"></div>
+                <div class="base-grid is-footer-imressum">
+                  <div
+                    id="w-node-_57d487c8-0f2c-78e5-6b6c-43fbf9f1e57f-f9f1e545"
+                    class="footer-impressum-col-1"
+                  >
+                    <div class="eyebrow txt-neut-4">
+                      Copyright Ã‚Â© 2026 - BrainFx AI Inc. All rights reserved.
+                    </div>
+                  </div>
+                  <div
+                    id="w-node-_57d487c8-0f2c-78e5-6b6c-43fbf9f1e582-f9f1e545"
+                    class="footer-impressum-col-2"
+                  >
+                    <a
+                      href="privacy-policy.html"
+                      class="footer-link w-inline-block"
+                      ><div class="eyebrow">Privacy Policy</div></a
+                    ><a
+                      href="terms-conditions.html"
+                      class="footer-link w-inline-block"
+                      ><div class="eyebrow">Terms &amp; Conditions</div></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <script
+      src="js/jquery-3.5.1.min.dc5e7f18c8.js?site=6760858fd1c261f9adc849e6"
+      type="text/javascript"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="6760858fd1c261f9adc849e6/js/webflow.schunk.4a394eb5af8156f2.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="6760858fd1c261f9adc849e6/js/webflow.schunk.5df64632827d9c02.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="6760858fd1c261f9adc849e6/js/webflow.2436e4b3.ce2a18540c0557c8.js"
+      type="text/javascript"
+    ></script>
+  </body>
+  <script src="js/navbar.js"></script>
+  <script>
+    const trainingCard = document.querySelector("[data-training-card='true']");
+    const trainingSubmenu = document.querySelector(
+      "[data-training-submenu='true']",
+    );
+
+    if (trainingCard && trainingSubmenu) {
+      let submenuTimer = null;
+      const assessmentDropdown = trainingSubmenu.closest(
+        ".assessment-dropdown",
+      );
+
+      function positionTrainingSubmenu() {
+        if (!assessmentDropdown) {
+          return;
+        }
+
+        const dropdownRect = assessmentDropdown.getBoundingClientRect();
+        const cardRect = trainingCard.getBoundingClientRect();
+        const submenuHeight = trainingSubmenu.offsetHeight || 260;
+        const desiredTop =
+          cardRect.top -
+          dropdownRect.top +
+          cardRect.height / 2 -
+          submenuHeight / 2 +
+          48;
+        const maxTop = Math.max(
+          16,
+          assessmentDropdown.clientHeight - submenuHeight - 16,
+        );
+
+        trainingSubmenu.style.top = `${Math.min(
+          Math.max(16, desiredTop),
+          maxTop,
+        )}px`;
+      }
+
+      function openTrainingSubmenu() {
+        if (submenuTimer) {
+          clearTimeout(submenuTimer);
+          submenuTimer = null;
+        }
+
+        positionTrainingSubmenu();
+        trainingCard.classList.add("is-featured");
+        trainingSubmenu.classList.add("is-open");
+      }
+
+      function closeTrainingSubmenu() {
+        trainingCard.classList.remove("is-featured");
+        trainingSubmenu.classList.remove("is-open");
+      }
+
+      function scheduleTrainingClose() {
+        if (submenuTimer) {
+          clearTimeout(submenuTimer);
+        }
+
+        submenuTimer = setTimeout(() => {
+          if (
+            !trainingCard.matches(":hover") &&
+            !trainingSubmenu.matches(":hover")
+          ) {
+            closeTrainingSubmenu();
+          }
+        }, 120);
+      }
+
+      trainingCard.addEventListener("mouseenter", openTrainingSubmenu);
+      trainingCard.addEventListener("mouseleave", scheduleTrainingClose);
+      trainingSubmenu.addEventListener("mouseenter", openTrainingSubmenu);
+      trainingSubmenu.addEventListener("mouseleave", scheduleTrainingClose);
+      window.addEventListener("resize", positionTrainingSubmenu);
+
+      const assessmentWrapper = trainingCard.closest(".nav-link-wrapper");
+      if (assessmentWrapper) {
+        assessmentWrapper.addEventListener("mouseleave", scheduleTrainingClose);
+      }
+    }
+  </script>
+</html>
