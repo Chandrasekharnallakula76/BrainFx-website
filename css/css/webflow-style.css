@@ -387,7 +387,9 @@ pre.w-code-block code {
 .w-webflow-badge {
   white-space: nowrap;
   cursor: pointer;
-  box-shadow: 0 0 0 1px #0000001a, 0 1px 3px #0000001a;
+  box-shadow:
+    0 0 0 1px #0000001a,
+    0 1px 3px #0000001a;
   visibility: visible !important;
   opacity: 1 !important;
   z-index: 2147483647 !important;
@@ -1335,7 +1337,9 @@ textarea.w-select {
   width: 1em;
   height: 1em;
   margin: 0 3px 0.5em;
-  transition: background-color 0.1s, color 0.1s;
+  transition:
+    background-color 0.1s,
+    color 0.1s;
   display: inline-block;
   position: relative;
 }
@@ -1510,7 +1514,13 @@ textarea.w-select {
   -webkit-tap-highlight-color: transparent;
   background: #000000e6;
   outline: 0;
-  font-family: Helvetica Neue, Helvetica, Ubuntu, Segoe UI, Verdana, sans-serif;
+  font-family:
+    Helvetica Neue,
+    Helvetica,
+    Ubuntu,
+    Segoe UI,
+    Verdana,
+    sans-serif;
   font-size: 17px;
   font-style: normal;
   font-weight: 300;
@@ -3330,7 +3340,9 @@ figcaption {
   background-color: var(--primary-1);
   color: var(--light);
   padding: 1rem 2em;
-  transition: background-color 0.32s, transform 0.32s cubic-bezier(0.363, 0.153, 0.409, 1.007);
+  transition:
+    background-color 0.32s,
+    transform 0.32s cubic-bezier(0.363, 0.153, 0.409, 1.007);
   display: inline-block;
   position: relative;
 }
@@ -3392,7 +3404,9 @@ figcaption {
   background-color: var(--primary-2);
   color: var(--dark);
   padding: 1rem 2em;
-  transition: background-color 0.32s, transform 0.32s cubic-bezier(0.363, 0.153, 0.409, 1.007);
+  transition:
+    background-color 0.32s,
+    transform 0.32s cubic-bezier(0.363, 0.153, 0.409, 1.007);
   display: inline-block;
   position: relative;
 }
@@ -3407,7 +3421,9 @@ figcaption {
   background-color: var(--dark);
   color: var(--light);
   padding: 1rem 2em;
-  transition: background-color 0.32s, transform 0.32s cubic-bezier(0.363, 0.153, 0.409, 1.007);
+  transition:
+    background-color 0.32s,
+    transform 0.32s cubic-bezier(0.363, 0.153, 0.409, 1.007);
   display: inline-block;
   position: relative;
 }
@@ -3478,7 +3494,10 @@ figcaption {
   grid-template-rows: auto;
   grid-template-columns:
     minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)
-    minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)
+    minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(
+      0,
+      1fr
+    ) minmax(0, 1fr)
     minmax(0, 1fr) minmax(0, 1fr);
   grid-auto-flow: row dense;
   width: 100%;
@@ -3986,8 +4005,6 @@ figcaption {
   grid-row-gap: var(--gap-t);
   flex-flow: column;
   display: flex;
- 
- 
 }
 
 .graphic-light-bgr {
@@ -4199,7 +4216,8 @@ figcaption {
   background-color: var(--primary-2);
   border-radius: 0.5rem;
   padding: 0.25rem 0.5rem 0.35rem;
-  transition: transform 0.32s cubic-bezier(0.398, 0.205, 0.25, 1),
+  transition:
+    transform 0.32s cubic-bezier(0.398, 0.205, 0.25, 1),
     background-color 0.32s cubic-bezier(0.404, 0.205, 0.25, 1);
 }
 
@@ -4348,7 +4366,9 @@ figcaption {
   background-color: var(--primary-1);
   color: var(--light);
   padding: 0.5rem 1.5em 0.6rem;
-  transition: background-color 0.32s, transform 0.32s cubic-bezier(0.363, 0.153, 0.409, 1.007);
+  transition:
+    background-color 0.32s,
+    transform 0.32s cubic-bezier(0.363, 0.153, 0.409, 1.007);
   display: inline-block;
   position: relative;
 }
@@ -4570,7 +4590,8 @@ figcaption {
   background-color: var(--primary-2);
   width: 100%;
   height: 100%;
-  transition: background-color 0.32s cubic-bezier(0.31, 0.001, 0.298, 1.007),
+  transition:
+    background-color 0.32s cubic-bezier(0.31, 0.001, 0.298, 1.007),
     color 0.32s cubic-bezier(0.31, 0.001, 0.298, 1.007);
   position: relative;
   overflow: hidden;
@@ -4932,7 +4953,6 @@ figcaption {
 .x-1,
 .x-2 {
   color: var(--light);
- 
 }
 
 .simple-card-title-wrap {
@@ -5095,13 +5115,11 @@ figcaption {
 
 .partners-logo {
   height: 3rem;
-
 }
 
 .partners-logo-img {
   object-fit: cover;
   height: 100%;
-
 }
 
 .partners-content {
@@ -5220,7 +5238,8 @@ figcaption {
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.4;
-  transition: transform 0.32s cubic-bezier(0.398, 0.001, 0.304, 1.007),
+  transition:
+    transform 0.32s cubic-bezier(0.398, 0.001, 0.304, 1.007),
     background-color 0.32s cubic-bezier(0.398, 0.001, 0.304, 1.007);
 }
 
@@ -5467,9 +5486,12 @@ figcaption {
 .pricing-tabs {
   border-radius: var(--global-corner-radius);
   background-color: var(--dark);
-  background-image: linear-gradient(#0a0e2ee6, #0a0e2ee6),
+  background-image:
+    linear-gradient(#0a0e2ee6, #0a0e2ee6),
     url("../images/hero-topography-texture-01-01.svg");
-  background-position: 0 0, 50%;
+  background-position:
+    0 0,
+    50%;
   background-size: auto, cover;
   justify-content: center;
   align-items: center;
@@ -5528,9 +5550,12 @@ figcaption {
   border-radius: var(--global-corner-radius);
   text-align: left;
   background-color: #5fb662;
-  background-image: linear-gradient(#5fb662e6, #5fb662e6),
+  background-image:
+    linear-gradient(#5fb662e6, #5fb662e6),
     url("../images/hero-topography-texture-01-01.svg");
-  background-position: 0 0, 50%;
+  background-position:
+    0 0,
+    50%;
   background-size: auto, cover;
   min-height: 48rem;
   padding: 2rem;
@@ -5649,7 +5674,10 @@ figcaption {
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
   grid-template-rows: auto;
-  grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.4fr) minmax(0, 0.4fr) minmax(0, 0.4fr);
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.4fr) minmax(
+      0,
+      0.4fr
+    ) minmax(0, 0.4fr);
   grid-auto-columns: 1fr;
   display: grid;
 }
@@ -5817,9 +5845,12 @@ figcaption {
   border-radius: var(--global-corner-radius);
   text-align: left;
   background-color: #5fb662;
-  background-image: linear-gradient(#5fb662e6, #5fb662e6),
+  background-image:
+    linear-gradient(#5fb662e6, #5fb662e6),
     url("../images/hero-topography-texture-01-01.svg");
-  background-position: 0 0, 50%;
+  background-position:
+    0 0,
+    50%;
   background-size: auto, cover;
   min-height: 34rem;
   padding: 2rem;
@@ -5960,7 +5991,8 @@ figcaption {
   margin-left: 0;
   margin-right: 0;
   padding: 1rem 2rem;
-  transition: background-color 0.32s cubic-bezier(0.304, 0.001, 0.298, 0.995),
+  transition:
+    background-color 0.32s cubic-bezier(0.304, 0.001, 0.298, 0.995),
     transform 0.32s cubic-bezier(0.31, 0.001, 0.298, 1.001);
 }
 
@@ -6450,10 +6482,10 @@ figcaption {
 
   .base-grid.is-footer {
     grid-template-rows: auto auto auto;
-    grid-template-columns: minmax(0, 0.5fr) minmax(0, 1fr) minmax(0, 1fr) repeat(
-        auto-fit,
-        minmax(0, 1fr)
-      );
+    grid-template-columns: minmax(0, 0.5fr) minmax(0, 1fr) minmax(
+        0,
+        1fr
+      ) repeat(auto-fit, minmax(0, 1fr));
   }
 
   .base-grid.is-2-col-vis {
@@ -6475,17 +6507,20 @@ figcaption {
   .base-grid.is-cognitive-assessments.is-top-row {
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
-    grid-template-columns: minmax(0, 0.75fr) minmax(0, 0.5fr) minmax(0, 0.5fr) repeat(
-        auto-fit,
-        minmax(0, 0.5fr)
-      );
+    grid-template-columns: minmax(0, 0.75fr) minmax(0, 0.5fr) minmax(
+        0,
+        0.5fr
+      ) repeat(auto-fit, minmax(0, 0.5fr));
     padding-bottom: 0.5rem;
   }
 
   .base-grid.is-cognitive-assessments.rows {
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
-    grid-template-columns: minmax(0, 0.75fr) minmax(0, 0.5fr) minmax(0, 0.5fr) minmax(0, 0.5fr);
+    grid-template-columns: minmax(0, 0.75fr) minmax(0, 0.5fr) minmax(
+        0,
+        0.5fr
+      ) minmax(0, 0.5fr);
   }
 
   .vis-col-5.is-dark-texture {
