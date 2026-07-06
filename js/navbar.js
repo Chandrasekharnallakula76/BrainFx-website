@@ -66,23 +66,6 @@
     );
     const employersActive = getCardActiveClass(currentPage, "employers.html");
     const athleticsActive = getCardActiveClass(currentPage, "athletics.html");
-    const comprehensiveActive = getCardActiveClass(
-      currentPage,
-      "comprehensive.html",
-    );
-    const screenTrackActive = getCardActiveClass(
-      currentPage,
-      "screen-track.html",
-    );
-    const telehealthActive = getCardActiveClass(currentPage, "telehealth.html");
-    const brainfxTrainingActive = getCardActiveClass(
-      currentPage,
-      "brainfx-training.html",
-    );
-    const brainfxPhilosophyActive = getCardActiveClass(
-      currentPage,
-      "brainfx-philosophy.html",
-    );
     const assessmentBundleActive =
       currentPage === "assessmentbundle.html" ||
       currentPage === "assessmentbundlenew.html"
@@ -249,7 +232,7 @@
                     </div>
                   </div>
                 </a>
-                <a href="#">
+                <a href="brainfx-training.html">
                   <div class="assessment-card${trainingFeaturedClass}" data-training-card="true">
                     <div class="image-container">
                       <i class="fa-solid fa-graduation-cap"></i>
@@ -260,57 +243,6 @@
                     </div>
                   </div>
                 </a>
-              </div>
-            </div>
-            <div class="assessment-floating-submenu" data-training-submenu="true">
-              <p class="assessment-submenu-label">Learning Path</p>
-              <div class="assessment-submenu-links">
-                <a href="comprehensive.html" class="assessment-submenu-link${comprehensiveActive}">
-                  <div class="assessment-submenu-link-icon">
-                    <i class="fa-solid fa-hand-holding-medical"></i>
-                  </div>
-                  <div class="assessment-submenu-link-copy">
-                    <span>Comprehensive</span>
-                    <small>Good planning helps make things clear, work well, and succeed.</small>
-                  </div>
-                </a>
-                <a href="screen-track.html" class="assessment-submenu-link${screenTrackActive}">
-                  <div class="assessment-submenu-link-icon">
-                    <i class="fa-solid fa-clipboard-check"></i>
-                  </div>
-                  <div class="assessment-submenu-link-copy">
-                    <span>Screen & Track</span>
-                    <small>Check and follow progress carefully to manage the project well.</small>
-                  </div>
-                </a>
-                <a href="telehealth.html" class="assessment-submenu-link${telehealthActive}">
-                  <div class="assessment-submenu-link-icon">
-                    <i class="fa-solid fa-briefcase-medical"></i>
-                  </div>
-                  <div class="assessment-submenu-link-copy">
-                    <span>Telehealth</span>
-                    <small>Telehealth enables remote medical consultations and convenient access.</small>
-                  </div>
-                </a>
-                <a href="brainfx-training.html" class="assessment-submenu-link${brainfxTrainingActive}">
-                  <div class="assessment-submenu-link-icon">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                  </div>
-                  <div class="assessment-submenu-link-copy">
-                    <span>BrainFx Training</span>
-                    <small>BrainFx training helps improve thinking skills, testing, and recovery.</small>
-                  </div>
-                </a>
-                <a href="brainfx-philosophy.html" class="assessment-submenu-link${brainfxPhilosophyActive}">
-                  <div class="assessment-submenu-link-icon">
-                    <i class="fa-solid fa-brain"></i>
-                  </div>
-                  <div class="assessment-submenu-link-copy">
-                    <span>BrainFx Philosophy</span>
-                    <small>BrainFx philosophy values personalized cognitive assessment.</small>
-                  </div>
-                </a>
-               
               </div>
             </div>
           </div>
@@ -428,99 +360,6 @@
     dropdown.addEventListener("mouseleave", scheduleClose);
   }
 
-  function setupTrainingSubmenu() {
-    const trainingCard = document.querySelector("[data-training-card='true']");
-    const trainingSubmenu = document.querySelector(
-      "[data-training-submenu='true']",
-    );
-    const keepTrainingFeaturedByDefault = getCurrentPage() === "index.html";
-
-    if (
-      !trainingCard ||
-      !trainingSubmenu ||
-      trainingCard.dataset.trainingSubmenuBound === "true"
-    ) {
-      return;
-    }
-
-    trainingCard.dataset.trainingSubmenuBound = "true";
-    const assessmentDropdown = trainingSubmenu.closest(".assessment-dropdown");
-    let submenuTimer = null;
-
-    function positionTrainingSubmenu() {
-      if (!assessmentDropdown) {
-        return;
-      }
-
-      const dropdownRect = assessmentDropdown.getBoundingClientRect();
-      const cardRect = trainingCard.getBoundingClientRect();
-      const submenuHeight = trainingSubmenu.offsetHeight || 260;
-      const desiredTop =
-        cardRect.top -
-        dropdownRect.top +
-        cardRect.height / 2 -
-        submenuHeight / 2 +
-        48;
-      const maxTop = Math.max(
-        16,
-        assessmentDropdown.clientHeight - submenuHeight - 16,
-      );
-
-      trainingSubmenu.style.top = `${Math.min(
-        Math.max(16, desiredTop),
-        maxTop,
-      )}px`;
-    }
-
-    function openTrainingSubmenu() {
-      if (submenuTimer) {
-        clearTimeout(submenuTimer);
-        submenuTimer = null;
-      }
-
-      positionTrainingSubmenu();
-      trainingCard.classList.add("is-featured");
-      trainingSubmenu.classList.add("is-open");
-    }
-
-    function closeTrainingSubmenu() {
-      trainingCard.classList.remove("is-featured");
-      trainingSubmenu.classList.remove("is-open");
-    }
-
-    function scheduleTrainingClose() {
-      if (submenuTimer) {
-        clearTimeout(submenuTimer);
-      }
-
-      submenuTimer = setTimeout(function () {
-        if (
-          !trainingCard.matches(":hover") &&
-          !trainingSubmenu.matches(":hover")
-        ) {
-          closeTrainingSubmenu();
-        }
-      }, 120);
-    }
-
-    trainingCard.addEventListener("mouseenter", openTrainingSubmenu);
-    trainingCard.addEventListener("mouseleave", scheduleTrainingClose);
-    trainingSubmenu.addEventListener("mouseenter", openTrainingSubmenu);
-    trainingSubmenu.addEventListener("mouseleave", scheduleTrainingClose);
-    window.addEventListener("resize", positionTrainingSubmenu);
-
-    const assessmentWrapper = trainingCard.closest(".nav-link-wrapper");
-    if (assessmentWrapper) {
-      assessmentWrapper.addEventListener("mouseleave", scheduleTrainingClose);
-    }
-
-    if (keepTrainingFeaturedByDefault) {
-      openTrainingSubmenu();
-    } else {
-      closeTrainingSubmenu();
-    }
-  }
-
   function setupMobileMenu() {
     const menuButton = document.querySelector(".menu-btn");
     const navLinksWrap = document.querySelector(".nav-links-wrap");
@@ -612,7 +451,6 @@
   setupDropdownHover(".nav-link.assessment", ".assessment-dropdown");
   setupDropdownHover(".nav-link.research", ".research-dropdown");
   setupDropdownHover(".nav-link.science", ".science-dropdown");
-  setupTrainingSubmenu();
   setupMobileMenu();
   setActiveNavLink();
 })();
