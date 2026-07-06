@@ -47,6 +47,7 @@
       "pricing.html",
       "pricing-contct.html",
     ]);
+    const novaBrainActive = getCardActiveClass(currentPage, "nova-brain.html");
     const scienceBehindActive = getCardActiveClass(
       currentPage,
       "science-behind-brainfx.html",
@@ -250,6 +251,11 @@
         <a href="pricing.html">
           <span class="nav-link${pricingActive}">
             <i class="fas fa-tags"></i> Pricing
+          </span>
+        </a>
+        <a href="nova-brain.html">
+          <span class="nav-link${novaBrainActive}">
+            <i class="fas fa-brain"></i> Nova Brain
           </span>
         </a>
       </div>
