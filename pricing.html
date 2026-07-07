@@ -518,6 +518,187 @@
           padding-right: 1.25rem;
         }
       }
+
+      .comparison-section {
+        padding: 5rem 0 6rem;
+      }
+
+      .comparison-content {
+        width: 100%;
+        max-width: 90rem;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+      }
+
+      .comparison-container {
+        padding-left: 4.38em;
+        padding-right: 4.38em;
+      }
+
+      .comparison-heading-wrap {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .comparison-heading-bar {
+        width: 4px;
+        align-self: stretch;
+        min-height: 2.5rem;
+        background: #0e6694;
+        border-radius: 999px;
+        flex-shrink: 0;
+      }
+
+      .comparison-heading {
+        font-size: 1.9rem;
+        font-weight: 700;
+        color: #050d3a;
+        margin: 0;
+        line-height: 1.25;
+      }
+
+      .comparison-card {
+        background: #ffffff;
+        border: 1px solid #e3edf7;
+        border-radius: 1rem;
+        box-shadow: 0 10px 30px rgba(5, 13, 58, 0.08);
+        padding: 1rem 1.75rem 1.5rem;
+        overflow-x: auto;
+      }
+
+      .comparison-table {
+        min-width: 48rem;
+      }
+
+      .comparison-row {
+        display: grid;
+        grid-template-columns: 1.8fr repeat(3, 1fr);
+        gap: 1rem;
+        align-items: center;
+        padding: 1.1rem 0.5rem;
+        border-bottom: 1px solid #eef3f8;
+      }
+
+      .comparison-row:last-child {
+        border-bottom: none;
+      }
+
+      .comparison-row-head {
+        padding-top: 0.5rem;
+        padding-bottom: 1.35rem;
+        border-bottom: 2px solid #e3edf7;
+      }
+
+      .comparison-cell {
+        text-align: center;
+      }
+
+      .comparison-cell-label {
+        text-align: left;
+        font-size: 0.92rem;
+        font-weight: 600;
+        color: #050d3a;
+        line-height: 1.4;
+      }
+
+      .comparison-row-head .comparison-cell-label {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: #5b6b8c;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+      }
+
+      .comparison-logo {
+        height: 2rem;
+        width: auto;
+        margin: 0 auto;
+      }
+
+      .comparison-cell-competitor {
+        font-size: 0.72rem;
+        font-weight: 600;
+        color: #0e6694;
+        line-height: 1.4;
+        text-transform: uppercase;
+        letter-spacing: 0.01em;
+      }
+
+      .comparison-cell-value {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #050d3a;
+      }
+
+      .comparison-cell-value.is-strong {
+        color: #0e6694;
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      .comparison-cell-value.is-negative {
+        color: #b5502c;
+        font-weight: 600;
+        font-size: 0.85rem;
+      }
+
+      .comparison-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        font-size: 0.85rem;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      .comparison-icon.is-check {
+        background: #0b5f95;
+        color: #ffffff;
+      }
+
+      .comparison-icon.is-cross {
+        background: #d7e7f6;
+        color: #5b7a99;
+      }
+
+      @media screen and (max-width: 991px) {
+        .comparison-container {
+          padding-left: 2.2rem;
+          padding-right: 2.2rem;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .comparison-container {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+        }
+
+        .comparison-heading {
+          font-size: 1.5rem;
+        }
+
+        .comparison-card {
+          padding: 1rem 1.25rem 1.25rem;
+        }
+
+        .comparison-row {
+          grid-template-columns: 1.4fr repeat(3, 1fr);
+        }
+      }
+
+      @media screen and (max-width: 479px) {
+        .comparison-container {
+          padding-left: 1.25rem;
+          padding-right: 1.25rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1285,10 +1466,6 @@
                         <span class="pricing-plan-price-value"
                           >Flexible Pricing</span
                         >
-                        <span class="pricing-plan-note"
-                          >First 5 members no charge, $175.00/member
-                          afterwards</span
-                        >
                       </div>
                     </div>
 
@@ -1307,10 +1484,9 @@
                         <span class="pricing-plan-price-period">/member</span>
                       </div>
                       <div class="pricing-plan-cell">
-                        <a
-                          href="Pricing-contct.html"
-                          class="pricing-cta-button is-contact"
-                          >Contact us</a
+                        <span class="pricing-plan-note"
+                          >First 5 members no charge, $175.00/member
+                          afterwards</span
                         >
                       </div>
                     </div>
@@ -1320,9 +1496,7 @@
                         Nova Brain Access
                       </div>
                       <div class="pricing-plan-cell">
-                        <a
-                          href="Pricing-contct.html"
-                          class="pricing-cta-button is-primary"
+                        <a href="#" class="pricing-cta-button is-primary"
                           >Enroll</a
                         >
                       </div>
@@ -1466,10 +1640,6 @@
                         <span class="pricing-plan-price-value"
                           >Flexible Pricing</span
                         >
-                        <span class="pricing-plan-note"
-                          >First 5 members no charge, $150.00/member
-                          afterwards</span
-                        >
                       </div>
                     </div>
 
@@ -1488,10 +1658,9 @@
                         <span class="pricing-plan-price-period">/member</span>
                       </div>
                       <div class="pricing-plan-cell">
-                        <a
-                          href="Pricing-contct.html"
-                          class="pricing-cta-button is-contact"
-                          >Contact us</a
+                        <span class="pricing-plan-note"
+                          >First 5 members no charge, $150.00/member
+                          afterwards</span
                         >
                       </div>
                     </div>
@@ -1501,9 +1670,7 @@
                         Nova Brain Access
                       </div>
                       <div class="pricing-plan-cell">
-                        <a
-                          href="Pricing-contct.html"
-                          class="pricing-cta-button is-primary"
+                        <a href="#" class="pricing-cta-button is-primary"
                           >Enroll</a
                         >
                       </div>
@@ -1521,6 +1688,169 @@
                           >Contact us</a
                         >
                       </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="comparison-section">
+          <div class="comparison-content">
+            <div class="comparison-container">
+              <div class="comparison-heading-wrap">
+                <div class="comparison-heading-bar"></div>
+                <h2 class="comparison-heading">
+                  How BrainFx Compares to Other Cognitive Assessments
+                </h2>
+              </div>
+              <div class="comparison-card">
+                <div class="comparison-table">
+                  <div class="comparison-row comparison-row-head">
+                    <div class="comparison-cell comparison-cell-label">
+                      Key Assessment Features
+                    </div>
+                    <div class="comparison-cell">
+                      <img
+                        src="assets/images/Brainfx_new_logo_Light-02-removebg-preview.png"
+                        loading="lazy"
+                        alt="BrainFx"
+                        class="comparison-logo"
+                      />
+                    </div>
+                    <div class="comparison-cell comparison-cell-competitor">
+                      Traditional Pen &amp; Paper Tests Used in Primary Care
+                      &amp; Rehabilitation
+                    </div>
+                    <div class="comparison-cell comparison-cell-competitor">
+                      Leading Digitized Pen &amp; Paper Tests Used in Primary
+                      Care &amp; Rehabilitation
+                    </div>
+                  </div>
+
+                  <div class="comparison-row">
+                    <div class="comparison-cell comparison-cell-label">
+                      Number of Skills/Domains Measured
+                    </div>
+                    <div
+                      class="comparison-cell comparison-cell-value is-strong"
+                    >
+                      &gt;30
+                    </div>
+                    <div class="comparison-cell comparison-cell-value">
+                      5-10
+                    </div>
+                    <div class="comparison-cell comparison-cell-value">
+                      5-10
+                    </div>
+                  </div>
+
+                  <div class="comparison-row">
+                    <div class="comparison-cell comparison-cell-label">
+                      More Than Cognition
+                    </div>
+                    <div class="comparison-cell comparison-cell-value">
+                      <span class="comparison-icon is-check">&#10003;</span>
+                    </div>
+                    <div
+                      class="comparison-cell comparison-cell-value is-negative"
+                    >
+                      Not typically
+                    </div>
+                    <div
+                      class="comparison-cell comparison-cell-value is-negative"
+                    >
+                      Not typically
+                    </div>
+                  </div>
+
+                  <div class="comparison-row">
+                    <div class="comparison-cell comparison-cell-label">
+                      Unique Assessments (i.e. Not digitized versions of paper
+                      tests)
+                    </div>
+                    <div class="comparison-cell comparison-cell-value">
+                      <span class="comparison-icon is-check">&#10003;</span>
+                    </div>
+                    <div class="comparison-cell comparison-cell-value">
+                      <span class="comparison-icon is-cross">&#10005;</span>
+                    </div>
+                    <div class="comparison-cell comparison-cell-value">
+                      <span class="comparison-icon is-cross">&#10005;</span>
+                    </div>
+                  </div>
+
+                  <div class="comparison-row">
+                    <div class="comparison-cell comparison-cell-label">
+                      Connected to Real Life Function
+                    </div>
+                    <div class="comparison-cell comparison-cell-value">
+                      <span class="comparison-icon is-check">&#10003;</span>
+                    </div>
+                    <div
+                      class="comparison-cell comparison-cell-value is-negative"
+                    >
+                      Very little
+                    </div>
+                    <div
+                      class="comparison-cell comparison-cell-value is-negative"
+                    >
+                      Very little
+                    </div>
+                  </div>
+
+                  <div class="comparison-row">
+                    <div class="comparison-cell comparison-cell-label">
+                      Actionable Results to Care Plans (i.e. More than the test
+                      scores)
+                    </div>
+                    <div class="comparison-cell comparison-cell-value">
+                      <span class="comparison-icon is-check">&#10003;</span>
+                    </div>
+                    <div
+                      class="comparison-cell comparison-cell-value is-negative"
+                    >
+                      Very little
+                    </div>
+                    <div
+                      class="comparison-cell comparison-cell-value is-negative"
+                    >
+                      Very little
+                    </div>
+                  </div>
+
+                  <div class="comparison-row">
+                    <div class="comparison-cell comparison-cell-label">
+                      Real-Time Normative Cohort Filtering
+                    </div>
+                    <div class="comparison-cell comparison-cell-value">
+                      <span class="comparison-icon is-check">&#10003;</span>
+                    </div>
+                    <div class="comparison-cell comparison-cell-value">
+                      <span class="comparison-icon is-cross">&#10005;</span>
+                    </div>
+                    <div class="comparison-cell comparison-cell-value">
+                      <span class="comparison-icon is-cross">&#10005;</span>
+                    </div>
+                  </div>
+
+                  <div class="comparison-row">
+                    <div class="comparison-cell comparison-cell-label">
+                      Diagnosis Agnostic
+                    </div>
+                    <div class="comparison-cell comparison-cell-value">
+                      <span class="comparison-icon is-check">&#10003;</span>
+                    </div>
+                    <div
+                      class="comparison-cell comparison-cell-value is-negative"
+                    >
+                      Not typically
+                    </div>
+                    <div
+                      class="comparison-cell comparison-cell-value is-negative"
+                    >
+                      Not typically
                     </div>
                   </div>
                 </div>
