@@ -1235,7 +1235,134 @@
                   <div class="margin-bottom spacing-l">
                     <div class="h1-size">Leadership Team</div>
                   </div>
-                  <div class="_2-col-grid is-our-story">
+                  <div class="_2-col-grid is-our-story leadership-grid">
+                    <style>
+                      .leadership-grid {
+                        display: grid;
+                        grid-template-columns: repeat(2, minmax(0, 1fr));
+                        gap: 28px;
+                      }
+
+                      .leadership-grid > .founders-card {
+                        background: #ffffff;
+                        border-radius: 14px;
+                        padding: 22px;
+                        box-shadow: 0 10px 26px rgba(11, 31, 58, 0.18);
+                        transition:
+                          transform 0.2s ease,
+                          box-shadow 0.2s ease;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        gap: 18px;
+                      }
+
+                      .leadership-grid > .founders-card:hover {
+                        transform: translateY(-4px);
+                        box-shadow: 0 16px 34px rgba(11, 31, 58, 0.24);
+                      }
+
+                      .leadership-grid .founders-card-content {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 18px;
+                      }
+
+                      .leadership-grid .founders-img-wrap {
+                        flex: none;
+                        width: 6.5rem;
+                        aspect-ratio: 1;
+                        border-radius: 9px;
+                        overflow: hidden;
+                        border: 3px solid #e3edf9;
+                        box-shadow: 0 4px 10px rgba(11, 95, 149, 0.15);
+                      }
+
+                      .leadership-grid .founders-img-wrap img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                      }
+
+                      .leadership-grid .founders-content {
+                        gap: 0.5rem;
+                      }
+
+                      .leadership-grid .founders-content .h5-size,
+                      .leadership-grid .founders-content div,
+                      .leadership-grid .founders-content p {
+                        color: #10233f !important;
+                      }
+
+                      .leadership-grid .founders-content .h5-size {
+                        font-weight: 700;
+                        font-size: 1.05rem;
+                      }
+
+                      .leadership-grid .founders-content .eyebrow {
+                        color: #0b5f95 !important;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        letter-spacing: 0.03em;
+                        font-size: 0.8rem;
+                      }
+
+                      .leadership-grid .founders-content p {
+                        line-height: 1.6;
+                        font-size: 0.85rem;
+                        color: #33415c !important;
+                      }
+
+                      .leadership-grid .founders-link {
+                        align-self: flex-end;
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 6px;
+                        padding: 8px 16px;
+                        border-radius: 10px;
+                        background: #e9edff;
+                        transition:
+                          background 0.3s ease,
+                          transform 0.2s ease;
+                      }
+
+                      .leadership-grid .founders-link .h5-size {
+                        color: #0b5f95 !important;
+                        font-size: 0.9rem;
+                      }
+
+                      .leadership-grid .founders-link-underiline {
+                        display: none;
+                      }
+
+                      .leadership-grid .founders-link:hover {
+                        background: #0b5f95;
+                        transform: translateY(-1px);
+                      }
+
+                      .leadership-grid .founders-link:hover .h5-size {
+                        color: #ffffff !important;
+                      }
+
+                      @media (max-width: 991px) {
+                        .leadership-grid {
+                          grid-template-columns: 1fr;
+                          gap: 18px;
+                        }
+
+                        .leadership-grid > .founders-card {
+                          padding: 18px;
+                        }
+                      }
+
+                      @media (max-width: 767px) {
+                        .leadership-grid .founders-img-wrap {
+                          width: 5.5rem;
+                        }
+                      }
+                    </style>
                     <div class="founders-card">
                       <div class="founders-card-content">
                         <div class="founders-img-wrap">
@@ -1282,7 +1409,7 @@
                       <div class="founders-card-content">
                         <div class="founders-img-wrap">
                           <img
-                            src="assets/images/Kipton1.jpg"
+                            src="assets/images/Kipton3.jpg"
                             loading="lazy"
                             sizes="(max-width: 479px) 61vw, (max-width: 767px) 31vw, (max-width: 991px) 21vw, 13vw"
                             alt=""
