@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create a BrainFX Profile</title>
+  <meta name="description" content="Submit a clinician or clinic profile request for the BrainFX marketplace.">
+  <link rel="stylesheet" href="assets/brainfx-directory.css">
+  <style>
+    .join-hero{background:linear-gradient(135deg,var(--navy),var(--blue) 62%,#4fa45f 140%);color:#fff;padding:72px 24px 54px}
+    .join-hero .wrap{display:grid;grid-template-columns:1fr .72fr;gap:34px;align-items:center}
+    .join-hero h1{color:#fff;max-width:760px}
+    .join-hero p{color:rgba(255,255,255,.84);font-size:18px;line-height:1.7;max-width:680px;margin-top:18px}
+    .join-note{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.2);border-radius:22px;padding:20px;backdrop-filter:blur(14px)}
+    .join-note strong{display:block;font-size:34px;line-height:1;color:#fff}.join-note span{display:block;color:rgba(255,255,255,.78);margin-top:8px}
+    .form-shell{padding:48px 0;background:#fff}
+    .profile-form{display:grid;gap:18px;background:#fff;border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);padding:24px}
+    .form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .form-card{border:1px solid var(--line);border-radius:18px;padding:18px;background:#f8fafc}
+    .form-card h2{font-size:22px;margin-bottom:12px}
+    .field.full{grid-column:1/-1}
+    .field textarea{min-height:116px}
+    .submit-row{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:18px}
+    .submit-row p{color:var(--muted);max-width:700px}
+    @media(max-width:900px){.join-hero .wrap,.form-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html"><img src="assets/brainfx-mark-cropped.png" alt="BrainFX"><span>Brain<span>FX</span></span></a>
+      <div class="nav-links">
+        <a href="profiles.html">Clinicians &amp; Clinics</a>
+        <a href="find-care.html">Find Care</a>
+        <a class="active" href="create-profile.html">Join Network</a>
+        <a href="https://www.brainfx.com" target="_blank" rel="noopener">About Us</a>
+      </div>
+      <div class="nav-actions">
+        <a class="icon-btn" href="admin.html" aria-label="Private admin"><span class="admin-lock"></span></a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="join-hero">
+    <div class="wrap">
+      <div>
+        <h1>Create your BrainFX marketplace profile.</h1>
+        <p>Submit your clinician or clinic details for BrainFX review. Once approved, your team can be added to the marketplace with specialties, availability, experience, services, and Calendly booking.</p>
+      </div>
+      <div class="join-note">
+        <strong>Profile review</strong>
+        <span>Your submission goes to the BrainFX team through Netlify Forms.</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="form-shell">
+    <div class="wrap">
+      <form class="profile-form" name="brainfx-profile-request" method="POST" action="profile-request-success.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="brainfx-profile-request">
+        <p hidden><label>Do not fill this out: <input name="bot-field"></label></p>
+
+        <div class="form-card">
+          <h2>Profile type</h2>
+          <div class="form-grid">
+            <div class="field">
+              <label for="profileType">Type</label>
+              <select id="profileType" name="profileType" required>
+                <option value="">Select one</option>
+                <option>Clinician</option>
+                <option>Clinic</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="availability">Availability</label>
+              <input id="availability" name="availability" placeholder="Available this week, 2 week wait..." required>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h2>Contact</h2>
+          <div class="form-grid">
+            <div class="field">
+              <label for="contactName">Contact name</label>
+              <input id="contactName" name="contactName" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="calendly">Calendly link</label>
+              <input id="calendly" name="calendly" type="url" placeholder="https://calendly.com/...">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h2>Public profile</h2>
+          <div class="form-grid">
+            <div class="field">
+              <label for="displayName">Clinician or clinic name</label>
+              <input id="displayName" name="displayName" required>
+            </div>
+            <div class="field">
+              <label for="role">Role or clinic type</label>
+              <input id="role" name="role" placeholder="Clinical Neuropsychologist, OT, Clinic..." required>
+            </div>
+            <div class="field">
+              <label for="city">City</label>
+              <input id="city" name="city" required>
+            </div>
+            <div class="field">
+              <label for="region">Province / region</label>
+              <input id="region" name="region" required>
+            </div>
+            <div class="field">
+              <label for="languages">Languages</label>
+              <input id="languages" name="languages" placeholder="English, French...">
+            </div>
+            <div class="field">
+              <label for="specialties">Specialties</label>
+              <input id="specialties" name="specialties" placeholder="ABI, Stroke, Concussion..." required>
+            </div>
+            <div class="field full">
+              <label for="bio">Profile bio</label>
+              <textarea id="bio" name="bio" placeholder="Short patient-facing summary..." required></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h2>Background</h2>
+          <div class="form-grid">
+            <div class="field full">
+              <label for="education">Education / studies</label>
+              <textarea id="education" name="education" placeholder="Degrees, certifications, BrainFX training..."></textarea>
+            </div>
+            <div class="field full">
+              <label for="experience">Experience</label>
+              <textarea id="experience" name="experience" placeholder="Years, settings, programs, patient groups..."></textarea>
+            </div>
+            <div class="field full">
+              <label for="services">Services offered</label>
+              <textarea id="services" name="services" placeholder="Assessments, rehabilitation planning, caregiver consultation..."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="submit-row">
+          <p>Submitting this form does not instantly publish a profile. BrainFX can review and approve requests before adding them to the public directory.</p>
+          <button class="btn green" type="submit">Submit profile request</button>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

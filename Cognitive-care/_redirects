@@ -1,0 +1,11 @@
+/profiles /profiles.html 200
+/clinicians-and-clinics /profiles.html 200
+/create-profile /create-profile.html 200
+/profile-request-success /profile-request-success.html 200
+/clinicians /clinicians.html 200
+/clinics /clinics.html 200
+/find-care /find-care.html 200
+/find /find-care.html 200
+/admin /admin.html 200
+/marketplace /index.html 200
+/* /index.html 200

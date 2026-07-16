@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrainFX Marketplace</title>
+  <meta name="description" content="Find BrainFX verified clinicians and clinics for cognitive assessment, rehabilitation planning, and care support.">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="assets/brainfx-directory.css">
+  <style>
+    .market-hero{min-height:620px;display:grid;align-items:center;background:linear-gradient(135deg,var(--navy) 0%,var(--blue) 58%,#4fa45f 135%);color:#fff;padding:44px 24px 34px;position:relative;overflow:hidden}
+    .market-hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 18% 18%,rgba(255,255,255,.16),transparent 28%),radial-gradient(circle at 80% 70%,rgba(134,194,62,.18),transparent 30%);pointer-events:none}
+    .market-inner{position:relative;z-index:1;width:min(1180px,100%);margin:auto;text-align:center}
+    .market-hero h1{margin:0 auto;font-size:clamp(46px,7vw,84px);line-height:.98;max-width:920px;color:#fff}
+    .market-copy{max-width:760px;margin:18px auto 22px;color:rgba(255,255,255,.88);font-size:20px;line-height:1.6}
+    .market-search{width:min(820px,100%);margin:0 auto;display:grid;grid-template-columns:1fr 176px 132px;background:#fff;border:1px solid rgba(255,255,255,.28);border-radius:16px;overflow:hidden;box-shadow:0 22px 60px rgba(10,14,46,.2)}
+    .market-search input,.market-search select{height:62px;border:0;border-right:1px solid var(--line);padding:0 18px;color:var(--ink);outline:none;background:#fff}
+    .market-search .btn{height:62px;border-radius:0}
+    .market-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+    .market-actions .btn{min-width:190px}
+    .home-band{background:#fff;padding:54px 0}
+    .center-head{text-align:center;display:block;margin:0 auto 26px}
+    .center-head h2,.center-head p{margin-left:auto;margin-right:auto}
+    .center-head .btn{margin-top:18px}
+    .info-panel{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--line);border-radius:28px;background:#fff;box-shadow:0 18px 48px rgba(10,14,46,.07);overflow:hidden}
+    .info-item{min-height:252px;padding:34px 32px;text-align:center;display:grid;place-items:center;align-content:center;gap:16px;position:relative}
+    .info-item:not(:last-child):after{content:"";position:absolute;right:0;top:36px;bottom:36px;width:1px;background:var(--line)}
+    .info-icon{width:72px;height:72px;border-radius:22px;display:grid;place-items:center;background:linear-gradient(135deg,#eef7ff,#f4fbeb);border:1px solid rgba(11,95,149,.12);color:var(--blue)}
+    .info-icon.green{color:var(--green)}
+    .info-icon svg{width:34px;height:34px;stroke:currentColor;stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .info-item h3{font-size:24px;margin:0}
+    .info-item p{color:var(--muted);line-height:1.7;max-width:310px;margin:0 auto}
+    .home-map-section{padding:46px 0;background:linear-gradient(180deg,#fff,#f6f8fb)}
+    .home-map-shell{height:620px;min-height:620px;border-radius:28px;overflow:hidden;border:1px solid rgba(228,231,236,.9);box-shadow:0 22px 62px rgba(10,14,46,.08)}
+    .home-map-shell .map-grid{padding:14px;grid-template-columns:minmax(320px,390px) 1fr}
+    .home-map-shell .search-panel{background:rgba(255,255,255,.84)}
+    .home-map-shell .map-canvas{background:rgba(255,255,255,.68)}
+    .market-footer{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;padding:34px 0}
+    .footer-inner{width:min(1220px,calc(100% - 40px));margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .footer-inner .brand{color:#fff}
+    .footer-inner p{color:rgba(255,255,255,.74)}
+    @media(max-width:900px){.market-search,.info-panel{grid-template-columns:1fr}.info-item:not(:last-child):after{left:32px;right:32px;top:auto;bottom:0;width:auto;height:1px}.market-search input,.market-search select{border-right:0;border-bottom:1px solid var(--line)}.market-hero{min-height:auto}.home-map-shell{height:auto}.footer-inner{display:grid}}
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html"><img src="assets/brainfx-mark-cropped.png" alt="BrainFX"><span>Brain<span>FX</span></span></a>
+      <div class="nav-links">
+        <a href="profiles.html">Clinicians &amp; Clinics</a>
+        <a href="find-care.html">Find Care</a>
+        <a href="create-profile.html">Join Network</a>
+        <a href="https://www.brainfx.com" target="_blank" rel="noopener">About Us</a>
+      </div>
+      <div class="nav-actions">
+        <a class="icon-btn" href="admin.html" aria-label="Private admin"><span class="admin-lock"></span></a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="market-hero">
+    <div class="market-inner">
+      <h1>Cognitive care, wherever you are</h1>
+      <p class="market-copy">Search BrainFX verified clinicians and clinics, compare availability, review full profiles, and request booking through a clean patient first marketplace.</p>
+      <form class="market-search" id="marketSearch">
+        <input id="homeQuery" type="search" placeholder="Search city, clinician, clinic, or specialty" autocomplete="off">
+        <select id="homeFilter" aria-label="Specialty filter">
+          <option value="">All specialties</option>
+          <option>ABI</option>
+          <option>Stroke</option>
+          <option>Concussion</option>
+          <option>Dementia</option>
+          <option>Rehabilitation</option>
+        </select>
+        <button class="btn" type="submit">Search</button>
+      </form>
+      <div class="market-actions">
+        <a class="btn green" href="clinicians.html">Find a Clinician</a>
+        <a class="btn ghost" href="profiles.html">View Clinicians &amp; Clinics</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section home-band">
+      <div class="wrap">
+        <div class="section-head center-head">
+          <div>
+            <h2>Verified care profiles in one place</h2>
+            <p>A structured marketplace experience for finding, reviewing, and onboarding BrainFX verified care providers.</p>
+          </div>
+        </div>
+        <div class="info-panel">
+          <article class="info-item">
+            <div class="info-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16.5 16.5 4 4"></path></svg></div>
+            <h3>Search the network</h3>
+            <p>Filter by specialty, city, availability, provider type, and care focus in one simple experience.</p>
+          </article>
+          <article class="info-item">
+            <div class="info-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6z"></path><path d="M15 3v4h4"></path><circle cx="12" cy="12" r="2.5"></circle><path d="M8.5 18c.8-2 2.1-3 3.5-3s2.7 1 3.5 3"></path></svg></div>
+            <h3>Review provider context</h3>
+            <p>Compare credentials, background, services, languages, verification, and booking options.</p>
+          </article>
+          <article class="info-item">
+            <div class="info-icon green"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"></path><circle cx="9.5" cy="7" r="4"></circle><path d="M19 8v6"></path><path d="M22 11h-6"></path></svg></div>
+            <h3>Submit profile requests</h3>
+            <p>Clinicians and clinics can share profile details for BrainFX review and marketplace approval.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="home-map-section">
+      <div class="wrap">
+        <div class="section-head center-head">
+          <div>
+            <h2>Find care on the map</h2>
+            <p>Search by city, clinician, clinic, service, or specialty. Select any profile for full details and booking.</p>
+          </div>
+          <a class="btn ghost" href="find-care.html">Open full map</a>
+        </div>
+        <div class="map-page home-map-shell">
+          <div class="map-bg"></div>
+          <div class="map-grid">
+            <aside class="search-panel glass">
+              <div class="section-head" style="display:block;margin-bottom:14px">
+                <h2 style="font-size:28px">Live directory</h2>
+                <p>Clinicians and clinics update as you search.</p>
+              </div>
+              <div class="search-row">
+                <input data-search type="text" placeholder="Search city, clinician, clinic...">
+                <button class="btn green" type="button" id="resetSearch">Clear</button>
+              </div>
+              <div class="toolbar" style="margin-top:12px">
+                <button class="filter on" data-filter="All">All</button>
+                <button class="filter" data-filter="clinician">Clinicians</button>
+                <button class="filter" data-filter="clinic">Clinics</button>
+                <button class="filter" data-filter="Available">Available</button>
+                <button class="filter" data-filter="ABI">ABI</button>
+                <button class="filter" data-filter="Concussion">Concussion</button>
+              </div>
+              <div class="hero-stat-grid" style="margin-top:14px">
+                <div class="hero-stat"><strong id="totalProfiles">0</strong><span>total profiles</span></div>
+                <div class="hero-stat"><strong id="availableProfiles">0</strong><span>available now</span></div>
+              </div>
+              <div class="results-count"><span id="mapCount">0</span> matching profiles</div>
+              <div class="results" id="mapResults"></div>
+            </aside>
+            <section class="map-canvas glass">
+              <div class="real-map" data-map="home"></div>
+              <div class="map-label glass"><strong>Verified BrainFX network</strong><span>Click any profile pin.</span></div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="market-footer">
+    <div class="footer-inner">
+      <a class="brand" href="index.html"><img src="assets/brainfx-mark-cropped.png" alt="BrainFX"><span>Brain<span>FX</span></span></a>
+      <p>BrainFX Marketplace, verified clinicians and clinics</p>
+    </div>
+  </footer>
+
+  <div class="modal" id="profileModal">
+    <div class="modal-scrim"></div>
+    <div class="modal-card"><div id="profileContent"></div></div>
+  </div>
+  <form name="brainfx-lead" netlify netlify-honeypot="bot-field" hidden>
+    <input name="bot-field">
+    <input name="id">
+    <input name="createdAt">
+    <input name="status">
+    <input name="priority">
+    <input name="patientName">
+    <input name="email">
+    <input name="phone">
+    <input name="need">
+    <textarea name="message"></textarea>
+    <input name="source">
+    <input name="profileName">
+    <input name="profileType">
+    <input name="profileRole">
+    <input name="location">
+    <input name="availability">
+    <input name="calendly">
+  </form>
+  <div class="toast" id="toast"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    document.getElementById("marketSearch").addEventListener("submit", function(event){
+      event.preventDefault();
+      const params = new URLSearchParams();
+      const query = document.getElementById("homeQuery").value.trim();
+      const filter = document.getElementById("homeFilter").value.trim();
+      if(query) params.set("q", query);
+      if(filter) params.set("filter", filter);
+      window.location.href = "find-care.html" + (params.toString() ? "?" + params.toString() : "");
+    });
+  </script>
+  <script src="assets/brainfx-directory.js"></script>
+</body>
+</html>

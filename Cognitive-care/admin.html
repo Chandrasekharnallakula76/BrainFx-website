@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrainFX Owner Admin</title>
+  <link rel="stylesheet" href="assets/brainfx-admin.css">
+</head>
+<body>
+  <a class="admin-home" href="index.html" aria-label="Back to marketplace"><span class="home-icon"></span></a>
+  <section class="login-gate" id="loginGate">
+    <div class="login-card">
+      <div class="brand"><img src="assets/brainfx-mark-cropped.png" alt="BrainFX"><span>Brain<span>FX</span></span></div>
+      <h1>Owner admin</h1>
+      <p>Private lead management for profile requests, Calendly intent, and directory bookings.</p>
+      <form id="loginForm">
+        <label for="ownerPasscode">Owner passcode</label>
+        <input id="ownerPasscode" type="password" autocomplete="current-password" placeholder="Enter passcode">
+        <div class="login-error" id="loginError">Passcode not accepted.</div>
+        <button class="btn green" type="submit">Open admin</button>
+      </form>
+      <small>Use your owner passcode to manage marketplace activity.</small>
+    </div>
+  </section>
+
+  <main class="admin-shell locked" id="adminShell">
+    <aside class="side">
+      <a class="brand" href="index.html"><img src="assets/brainfx-mark-cropped.png" alt="BrainFX"><span>Brain<span>FX</span></span></a>
+      <nav>
+        <button class="side-link active" data-view="leads">Leads</button>
+        <button class="side-link" data-view="command">Command Centre</button>
+        <button class="side-link" data-view="profiles">Profiles</button>
+        <button class="side-link" data-view="settings">Settings</button>
+      </nav>
+      <button class="side-logout" id="logoutBtn" type="button">Lock admin</button>
+    </aside>
+
+    <section class="workspace">
+      <header class="topbar">
+        <div>
+          <p class="label">Private portal</p>
+          <h1>Command Centre</h1>
+        </div>
+        <div class="top-actions">
+          <a class="btn ghost" href="find-care.html">View public site</a>
+          <button class="btn" id="exportBtn" type="button">Export CSV</button>
+        </div>
+      </header>
+
+      <section class="kpis">
+        <div class="kpi"><span>Total leads</span><strong id="totalLeads">0</strong></div>
+        <div class="kpi"><span>New</span><strong id="newLeads">0</strong></div>
+        <div class="kpi"><span>High priority</span><strong id="highLeads">0</strong></div>
+        <div class="kpi"><span>Booked</span><strong id="bookedLeads">0</strong></div>
+      </section>
+
+      <section class="panel view active" id="viewLeads">
+        <div class="panel-head">
+          <div>
+            <h2>Lead inbox</h2>
+            <p>Captured from public booking actions before Calendly opens.</p>
+          </div>
+          <div class="filters">
+            <input id="leadSearch" type="search" placeholder="Search name, email, profile, need...">
+            <select id="statusFilter">
+              <option>All</option>
+              <option>New</option>
+              <option>Contacted</option>
+              <option>Booked</option>
+              <option>Closed</option>
+            </select>
+          </div>
+        </div>
+        <div class="lead-layout">
+          <div class="lead-list" id="leadList"></div>
+          <article class="lead-detail" id="leadDetail"></article>
+        </div>
+      </section>
+
+      <section class="panel view" id="viewCommand">
+        <div class="panel-head">
+          <div>
+            <h2>Command Centre</h2>
+            <p>Move leads through contact, booking, and close stages.</p>
+          </div>
+        </div>
+        <div class="command-board" id="commandBoard"></div>
+      </section>
+
+      <section class="panel view" id="viewProfiles">
+        <div class="panel-head">
+          <div>
+            <h2>Directory profiles</h2>
+            <p>Manage clinicians and clinics, then publish only the profiles that are ready.</p>
+          </div>
+          <div class="filters">
+            <button class="status-btn active" type="button" data-profile-filter="All">All</button>
+            <button class="status-btn" type="button" data-profile-filter="clinician">Clinicians</button>
+            <button class="status-btn" type="button" data-profile-filter="clinic">Clinics</button>
+          </div>
+        </div>
+        <div class="profile-workbench">
+          <div class="profile-admin-grid" id="profileAdminGrid"></div>
+          <form class="profile-editor" id="profileEditor">
+            <div class="detail-empty"><div><strong>Select a profile</strong><p>Edit clinicians and clinics from here.</p></div></div>
+          </form>
+        </div>
+      </section>
+
+      <section class="panel view" id="viewSettings">
+        <div class="panel-head">
+          <div>
+            <h2>Settings</h2>
+            <p>Control lead routing, notifications, and directory defaults.</p>
+          </div>
+        </div>
+        <form class="settings-grid" id="settingsForm">
+          <div class="setting-card">
+            <h3>Lead routing</h3>
+            <label for="routingEmail">Owner email</label>
+            <input id="routingEmail" name="routingEmail" type="email" placeholder="owner@brainfx.com">
+            <label for="routingMode">Routing mode</label>
+            <select id="routingMode" name="routingMode">
+              <option>Manual assignment</option>
+              <option>Assign by city</option>
+              <option>Assign by specialty</option>
+            </select>
+          </div>
+          <div class="setting-card">
+            <h3>Calendly links</h3>
+            <label for="defaultCalendly">Fallback Calendly link</label>
+            <input id="defaultCalendly" name="defaultCalendly" type="url" placeholder="https://calendly.com/brainfx/intake">
+            <label for="bookingWindow">Default booking window</label>
+            <select id="bookingWindow" name="bookingWindow">
+              <option>Available this week</option>
+              <option>This month</option>
+              <option>2 week wait</option>
+            </select>
+          </div>
+          <div class="setting-card">
+            <h3>Email notifications</h3>
+            <label for="notifyEmail">Notification email</label>
+            <input id="notifyEmail" name="notifyEmail" type="email" placeholder="team@brainfx.com">
+            <label class="check-row"><input id="notifyLeads" name="notifyLeads" type="checkbox"> Notify on new lead</label>
+            <label class="check-row"><input id="notifyProfiles" name="notifyProfiles" type="checkbox"> Notify on profile request</label>
+          </div>
+          <div class="setting-card">
+            <h3>Directory controls</h3>
+            <label class="check-row"><input id="showOnlyPublished" name="showOnlyPublished" type="checkbox"> Show only published profiles publicly</label>
+            <button class="btn ghost" id="resetProfilesBtn" type="button">Reset directory profiles</button>
+          </div>
+          <div class="setting-card danger">
+            <h3>Lead cleanup</h3>
+            <p>Remove saved leads from this owner inbox.</p>
+            <button class="btn ghost" id="clearBtn" type="button">Clear leads</button>
+          </div>
+          <div class="setting-card action-card">
+            <h3>Save settings</h3>
+            <p>Apply these controls to this admin portal.</p>
+            <button class="btn green" type="submit">Save changes</button>
+          </div>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <div class="toast" id="adminToast"></div>
+  <script src="assets/brainfx-directory.js"></script>
+  <script src="assets/brainfx-admin.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrainFX Verified Clinics</title>
+  <link rel="stylesheet" href="assets/brainfx-directory.css">
+</head>
+<body data-page="clinics">
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html"><img src="assets/brainfx-mark-cropped.png" alt="BrainFX"><span>Brain<span>FX</span></span></a>
+      <div class="nav-links">
+        <a class="active" href="profiles.html">Clinicians &amp; Clinics</a>
+        <a href="find-care.html">Find Care</a>
+        <a href="create-profile.html">Join Network</a>
+        <a href="https://www.brainfx.com" target="_blank" rel="noopener">About Us</a>
+      </div>
+      <div class="nav-actions">
+        <a class="icon-btn" href="admin.html" aria-label="Private admin"><span class="admin-lock"></span></a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="hero-inner">
+      <div>
+        <h1>Find BrainFX verified clinics and care teams.</h1>
+        <p class="lead">Clinic profiles include services, team, verification background, experience, availability, and Calendly booking links.</p>
+        <div class="card-actions" style="max-width:360px"><a class="btn green" href="#directory">View clinics</a><a class="btn ghost" href="find-care.html">Find Care</a></div>
+      </div>
+      <div class="hero-panel">
+        <div class="hero-stat-grid">
+          <div class="hero-stat"><strong id="profileCount">0</strong><span>verified clinics</span></div>
+          <div class="hero-stat"><strong>12+</strong><span>team members</span></div>
+          <div class="hero-stat"><strong>4.8</strong><span>average rating</span></div>
+          <div class="hero-stat"><strong>3</strong><span>intake pathways</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="section" id="directory">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>Clinics</h2>
+          <p>Each clinic has a complete profile for patients to understand the team, services, availability, and BrainFX verification.</p>
+        </div>
+        <a class="btn green" href="create-profile.html">Join Network</a>
+        <div class="toolbar">
+          <button class="filter on" data-filter="All">All</button>
+          <button class="filter" data-filter="ABI">ABI</button>
+          <button class="filter" data-filter="Concussion">Concussion</button>
+          <button class="filter" data-filter="Dementia">Dementia</button>
+          <button class="filter" data-filter="Return to Work">Return to Work</button>
+        </div>
+      </div>
+      <div class="search-row" style="max-width:560px;margin-bottom:18px">
+        <input data-search type="text" placeholder="Search clinic, city, specialty, service...">
+        <button class="btn ghost" id="resetSearch" type="button">Reset</button>
+      </div>
+      <div class="directory-grid" id="directoryGrid"></div>
+    </div>
+  </main>
+
+  <div class="modal" id="profileModal">
+    <div class="modal-scrim"></div>
+    <div class="modal-card"><div id="profileContent"></div></div>
+  </div>
+  <form name="brainfx-lead" netlify netlify-honeypot="bot-field" hidden>
+    <input name="bot-field">
+    <input name="id">
+    <input name="createdAt">
+    <input name="status">
+    <input name="priority">
+    <input name="patientName">
+    <input name="email">
+    <input name="phone">
+    <input name="need">
+    <textarea name="message"></textarea>
+    <input name="source">
+    <input name="profileName">
+    <input name="profileType">
+    <input name="profileRole">
+    <input name="location">
+    <input name="availability">
+    <input name="calendly">
+  </form>
+  <div class="toast" id="toast"></div>
+  <script src="assets/brainfx-directory.js"></script>
+</body>
+</html>
+

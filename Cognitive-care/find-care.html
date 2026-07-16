@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find BrainFX Care</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="assets/brainfx-directory.css">
+</head>
+<body data-page="find">
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html"><img src="assets/brainfx-mark-cropped.png" alt="BrainFX"><span>Brain<span>FX</span></span></a>
+      <div class="nav-links">
+        <a href="profiles.html">Clinicians &amp; Clinics</a>
+        <a class="active" href="find-care.html">Find Care</a>
+        <a href="create-profile.html">Join Network</a>
+        <a href="https://www.brainfx.com" target="_blank" rel="noopener">About Us</a>
+      </div>
+      <div class="nav-actions">
+        <a class="icon-btn" href="admin.html" aria-label="Private admin"><span class="admin-lock"></span></a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="map-page">
+    <div class="map-bg"></div>
+    <div class="map-grid">
+      <aside class="search-panel glass">
+        <div class="section-head" style="display:block;margin-bottom:14px">
+          <h2 style="font-size:30px">Find clinicians and clinics</h2>
+          <p>Search verified profiles, compare availability, and request booking from one simple map view.</p>
+        </div>
+        <div class="search-row">
+          <input data-search type="text" placeholder="Search city, clinician, clinic, specialty...">
+          <button class="btn green" type="button" id="resetSearch">Clear</button>
+        </div>
+        <div class="toolbar" style="margin-top:12px">
+          <button class="filter on" data-filter="All">All</button>
+          <button class="filter" data-filter="clinician">Clinicians</button>
+          <button class="filter" data-filter="clinic">Clinics</button>
+          <button class="filter" data-filter="Available">Available</button>
+          <button class="filter" data-filter="ABI">ABI</button>
+          <button class="filter" data-filter="Concussion">Concussion</button>
+          <button class="filter" data-filter="Dementia">Dementia</button>
+          <button class="filter" data-filter="Rehabilitation">Rehabilitation</button>
+          <button class="filter" data-filter="Stroke">Stroke</button>
+        </div>
+        <div class="hero-stat-grid" style="margin-top:14px">
+          <div class="hero-stat"><strong id="totalProfiles">0</strong><span>total profiles</span></div>
+          <div class="hero-stat"><strong id="availableProfiles">0</strong><span>available now</span></div>
+        </div>
+        <div class="results-count"><span id="mapCount">0</span> matching profiles</div>
+        <div class="results" id="mapResults"></div>
+      </aside>
+      <section class="map-canvas glass">
+        <div class="real-map" data-map="find"></div>
+        <div class="map-label glass"><strong>Verified BrainFX network</strong><span>Click a pin or profile to view full details.</span></div>
+      </section>
+    </div>
+  </main>
+
+  <div class="modal" id="profileModal">
+    <div class="modal-scrim"></div>
+    <div class="modal-card"><div id="profileContent"></div></div>
+  </div>
+  <form name="brainfx-lead" netlify netlify-honeypot="bot-field" hidden>
+    <input name="bot-field">
+    <input name="id">
+    <input name="createdAt">
+    <input name="status">
+    <input name="priority">
+    <input name="patientName">
+    <input name="email">
+    <input name="phone">
+    <input name="need">
+    <textarea name="message"></textarea>
+    <input name="source">
+    <input name="profileName">
+    <input name="profileType">
+    <input name="profileRole">
+    <input name="location">
+    <input name="availability">
+    <input name="calendly">
+  </form>
+  <div class="toast" id="toast"></div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="assets/brainfx-directory.js"></script>
+</body>
+</html>
+
