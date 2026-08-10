@@ -260,7 +260,7 @@
         </a>
         <a href="market-places/index.html" target="_blank" rel="noopener">
           <span class="nav-link">
-            <i class="fas fa-store"></i> Market Places
+            <i class="fas fa-store"></i> Market Place
           </span>
         </a>
       </div>
@@ -371,6 +371,42 @@
     dropdown.addEventListener("mouseleave", scheduleClose);
   }
 
+  function renderMobileMarketPlacesLink() {
+    const homeLink = document.querySelector(".mobile-nav .home-link");
+
+    if (!homeLink || homeLink.dataset.marketPlacesRendered === "true") {
+      return;
+    }
+
+    homeLink.dataset.marketPlacesRendered = "true";
+
+    const lineBefore = document.createElement("div");
+    lineBefore.className = "horizental-line";
+
+    const marketPlacesLink = document.createElement("a");
+    marketPlacesLink.className = "mobile-market-places";
+    marketPlacesLink.href = "market-places/index.html";
+    marketPlacesLink.target = "_blank";
+    marketPlacesLink.rel = "noopener";
+    marketPlacesLink.innerHTML =
+      '<i class="fas fa-store"></i> <span>Market Place</span>';
+
+    const lineAfter = document.createElement("div");
+    lineAfter.className = "horizental-line";
+
+    const ctaGroup = homeLink.querySelector(".mobile-cta-group");
+
+    if (ctaGroup) {
+      homeLink.insertBefore(lineBefore, ctaGroup);
+      homeLink.insertBefore(marketPlacesLink, ctaGroup);
+      homeLink.insertBefore(lineAfter, ctaGroup);
+    } else {
+      homeLink.appendChild(lineBefore);
+      homeLink.appendChild(marketPlacesLink);
+      homeLink.appendChild(lineAfter);
+    }
+  }
+
   function setupMobileMenu() {
     const menuButton = document.querySelector(".menu-btn");
     const navLinksWrap = document.querySelector(".nav-links-wrap");
@@ -462,6 +498,7 @@
   setupDropdownHover(".nav-link.assessment", ".assessment-dropdown");
   setupDropdownHover(".nav-link.research", ".research-dropdown");
   setupDropdownHover(".nav-link.science", ".science-dropdown");
+  renderMobileMarketPlacesLink();
   setupMobileMenu();
   setActiveNavLink();
 })();
