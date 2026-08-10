@@ -258,6 +258,11 @@
             <i class="fas fa-brain"></i> Nova Brain
           </span>
         </a>
+        <a href="market-places/index.html" target="_blank" rel="noopener">
+          <span class="nav-link">
+            <i class="fas fa-store"></i> Market Places
+          </span>
+        </a>
       </div>
       <div class="nav-cta-group">
         <div class="btn-nav-wrap btn-nav-demo">
